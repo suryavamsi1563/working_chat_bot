@@ -1,0 +1,2182 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "of course"
+      },
+      {
+        "intent": "affirm",
+        "text": "sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "okay"
+      },
+      {
+        "intent": "affirm",
+        "text": "cool"
+      },
+      {
+        "intent": "affirm",
+        "text": "go for it"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep, will do thank you"
+      },
+      {
+        "intent": "affirm",
+        "text": "I'm sure I will!"
+      },
+      {
+        "intent": "affirm",
+        "text": "oh awesome!"
+      },
+      {
+        "intent": "affirm",
+        "text": "Yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "accept"
+      },
+      {
+        "intent": "affirm",
+        "text": "I accept"
+      },
+      {
+        "intent": "affirm",
+        "text": "i accept"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok i accept"
+      },
+      {
+        "intent": "affirm",
+        "text": "I changed my mind. I want to accept it"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok cool"
+      },
+      {
+        "intent": "affirm",
+        "text": "alright"
+      },
+      {
+        "intent": "affirm",
+        "text": "i will!"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok, I behave now"
+      },
+      {
+        "intent": "affirm",
+        "text": "yop"
+      },
+      {
+        "intent": "affirm",
+        "text": "oki doki"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes please"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes please!"
+      },
+      {
+        "intent": "affirm",
+        "text": "jo"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep if i have to"
+      },
+      {
+        "intent": "affirm",
+        "text": "amayzing"
+      },
+      {
+        "intent": "affirm",
+        "text": "confirm"
+      },
+      {
+        "intent": "affirm",
+        "text": "nice"
+      },
+      {
+        "intent": "affirm",
+        "text": "coolio"
+      },
+      {
+        "intent": "affirm",
+        "text": "definitely yes without a doubt"
+      },
+      {
+        "intent": "affirm",
+        "text": "yas"
+      },
+      {
+        "intent": "affirm",
+        "text": "yup"
+      },
+      {
+        "intent": "affirm",
+        "text": "perfect"
+      },
+      {
+        "intent": "affirm",
+        "text": "sure thing"
+      },
+      {
+        "intent": "affirm",
+        "text": "absolutely"
+      },
+      {
+        "intent": "affirm",
+        "text": "Oh, ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "Sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "hm, i'd like that"
+      },
+      {
+        "intent": "affirm",
+        "text": "ja"
+      },
+      {
+        "intent": "affirm",
+        "text": "sure!"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes i accept"
+      },
+      {
+        "intent": "affirm",
+        "text": "Sweet"
+      },
+      {
+        "intent": "affirm",
+        "text": "amazing!"
+      },
+      {
+        "intent": "affirm",
+        "text": "how nice!"
+      },
+      {
+        "intent": "affirm",
+        "text": "cool!"
+      },
+      {
+        "intent": "affirm",
+        "text": "yay"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes accept please"
+      },
+      {
+        "intent": "affirm",
+        "text": "great"
+      },
+      {
+        "intent": "affirm",
+        "text": "oh cool"
+      },
+      {
+        "intent": "affirm",
+        "text": "fine"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a real bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you really a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "what are you, a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "tell me, are you a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a Skynet ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you ai"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you artificial intelligence"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you artificial"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "i guess you are a chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are ai"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you're a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you the bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Hi there, are you the bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you a chat bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Ar you a bot ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "What are you ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real lol"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "cuz you are a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "oh are you chatbot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you sure that you're a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a BOT"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is this"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who am i talking to"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what's your name"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who am i speaking with"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who r u"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what's your name bot"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "whats ur name"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what are you called?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is talking?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who speaks?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who talks?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are you and what do you want from me"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are you?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is it?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are u?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are you"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "I want to know who you are"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are y"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "yes but who are you in your heart"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "are you a bot?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is this?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "hi! what's your name?"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "goodnight"
+      },
+      {
+        "intent": "bye",
+        "text": "good bye"
+      },
+      {
+        "intent": "bye",
+        "text": "good night"
+      },
+      {
+        "intent": "bye",
+        "text": "see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "toodle-oo"
+      },
+      {
+        "intent": "bye",
+        "text": "bye bye"
+      },
+      {
+        "intent": "bye",
+        "text": "gotta go"
+      },
+      {
+        "intent": "bye",
+        "text": "farewell"
+      },
+      {
+        "intent": "bye",
+        "text": "catch you later"
+      },
+      {
+        "intent": "bye",
+        "text": "bye for now"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "bye was nice talking to you"
+      },
+      {
+        "intent": "bye",
+        "text": "bye udo"
+      },
+      {
+        "intent": "bye",
+        "text": "bye bye bot"
+      },
+      {
+        "intent": "bye",
+        "text": "bye bot"
+      },
+      {
+        "intent": "bye",
+        "text": "k byyye #slay"
+      },
+      {
+        "intent": "bye",
+        "text": "tlak to you later"
+      },
+      {
+        "intent": "bye",
+        "text": "ciao"
+      },
+      {
+        "intent": "bye",
+        "text": "Bye bye"
+      },
+      {
+        "intent": "bye",
+        "text": "then bye"
+      },
+      {
+        "intent": "bye",
+        "text": "tschüssikowski"
+      },
+      {
+        "intent": "bye",
+        "text": "bye!"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "take care"
+      },
+      {
+        "intent": "bye",
+        "text": "see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "later"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "canthelp",
+        "text": "ok then you cant help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "that was shit, you're not helping"
+      },
+      {
+        "intent": "canthelp",
+        "text": "you can't help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "you can't help me with what i need"
+      },
+      {
+        "intent": "canthelp",
+        "text": "i guess you can't help me then"
+      },
+      {
+        "intent": "canthelp",
+        "text": "ok i guess you can't help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "that's not what i want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "ok, but that doesnt help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "this is leading to nothing"
+      },
+      {
+        "intent": "canthelp",
+        "text": "this conversation is not really helpful"
+      },
+      {
+        "intent": "canthelp",
+        "text": "you cannot help me with what I want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "I think you cant help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "hm i don't think you can do what i want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "stop"
+      },
+      {
+        "intent": "canthelp",
+        "text": "stop go back"
+      },
+      {
+        "intent": "canthelp",
+        "text": "do you get anything?"
+      },
+      {
+        "intent": "canthelp",
+        "text": "and you call yourself bot company? pff"
+      },
+      {
+        "intent": "canthelp",
+        "text": "and that's it?"
+      },
+      {
+        "intent": "canthelp",
+        "text": "nothing else?"
+      },
+      {
+        "intent": "createreport",
+        "text": "report"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "file my expenses"
+      },
+      {
+        "intent": "createreport",
+        "text": "start a new a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "add my all expenses"
+      },
+      {
+        "intent": "createreport",
+        "text": "make a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a record"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a document"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a new report"
+      },
+      {
+        "intent": "createreport",
+        "text": "create report"
+      },
+      {
+        "intent": "createreport",
+        "text": "make a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "generate a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "generate me a new report"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 27,
+            "end": 43,
+            "value": "trip to new york",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name \"trip to new york\""
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 42,
+            "value": "trip to new york",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name trip to new york"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 39,
+            "end": 50,
+            "value": "finalreport",
+            "entity": "name"
+          }
+        ],
+        "text": "I travelled to bangalore.Make a report finalreport"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 31,
+            "end": 44,
+            "value": "15th Jan 2019",
+            "entity": "startdate"
+          },
+          {
+            "start": 48,
+            "end": 61,
+            "value": "19th Jan 2019",
+            "entity": "enddate"
+          },
+          {
+            "start": 72,
+            "end": 83,
+            "value": "lead_summit",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report for my trip on 15th Jan 2019 to 19th Jan 2019 with name lead_summit"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "Jan 20th",
+            "entity": "startdate"
+          },
+          {
+            "start": 39,
+            "end": 47,
+            "value": "Jan 23rd",
+            "entity": "enddate"
+          },
+          {
+            "start": 68,
+            "end": 71,
+            "value": "XYZ",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transcactions from Jan 20th to Jan 23rd to the report named XYZ"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 37,
+            "value": "firstreport",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name firstreport"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 16,
+            "end": 27,
+            "value": "finalreport",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report finalreport"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 14,
+            "end": 17,
+            "value": "XYZ",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report XYZ"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 14,
+            "end": 23,
+            "value": "final_one",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report final_one"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "travel",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report with name travel"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 35,
+            "end": 43,
+            "value": "Jan 20th",
+            "entity": "enddate"
+          },
+          {
+            "start": 63,
+            "end": 79,
+            "value": "trip to new york",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transactions from Jan 15th Jan 20th to the report name trip to new york"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "Jan15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 34,
+            "end": 41,
+            "value": "Jan20th",
+            "entity": "enddate"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "hummer",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transactions from Jan15th Jan20th to the report name hummer"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "Hello",
+            "entity": "name"
+          },
+          {
+            "start": 51,
+            "end": 61,
+            "value": "02-04-2019",
+            "entity": "startdate"
+          },
+          {
+            "start": 66,
+            "end": 76,
+            "value": "14/01/2019",
+            "entity": "enddate"
+          }
+        ],
+        "text": "get a report with name Hello for my travel between 02-04-2019 and 14/01/2019"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "12th Dec",
+            "entity": "startdate"
+          },
+          {
+            "start": 36,
+            "end": 44,
+            "value": "14th Jan",
+            "entity": "enddate"
+          },
+          {
+            "start": 48,
+            "end": 56,
+            "value": "longtrip",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report between 12th Dec to 14th Jan as longtrip"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 12,
+            "end": 22,
+            "value": "india trip",
+            "entity": "name"
+          },
+          {
+            "start": 40,
+            "end": 48,
+            "value": "jan 20th",
+            "entity": "startdate"
+          },
+          {
+            "start": 53,
+            "end": 61,
+            "value": "jan 29th",
+            "entity": "enddate"
+          }
+        ],
+        "text": "make report india trip traveled between jan 20th and jan 29th"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 30,
+            "end": 38,
+            "value": "USA trip",
+            "entity": "name"
+          },
+          {
+            "start": 56,
+            "end": 64,
+            "value": "jan 20th",
+            "entity": "startdate"
+          },
+          {
+            "start": 69,
+            "end": 77,
+            "value": "jan 29th",
+            "entity": "enddate"
+          }
+        ],
+        "text": "create a new report with name USA trip traveled between jan 20th and jan 29th"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 13,
+            "end": 30,
+            "value": "Trip to Hyderabad",
+            "entity": "name"
+          },
+          {
+            "start": 46,
+            "end": 54,
+            "value": "27th Sep",
+            "entity": "startdate"
+          },
+          {
+            "start": 70,
+            "end": 78,
+            "value": "29th Dec",
+            "entity": "enddate"
+          }
+        ],
+        "text": "get a report Trip to Hyderabad with startdate 27th Sep and enddate as 29th Dec"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 29,
+            "end": 32,
+            "value": "LSD",
+            "entity": "name"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "Jan25th",
+            "entity": "startdate"
+          },
+          {
+            "start": 49,
+            "end": 56,
+            "value": "23rdFeb",
+            "entity": "enddate"
+          }
+        ],
+        "text": "construct a report with name LSD from Jan25th to 23rdFeb"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 31,
+            "end": 48,
+            "value": "trip to Hyderabad",
+            "entity": "name"
+          }
+        ],
+        "text": "file my expenses into a report trip to Hyderabad"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 25,
+            "end": 33,
+            "value": "Jan 12th",
+            "entity": "startdate"
+          },
+          {
+            "start": 37,
+            "end": 49,
+            "value": "latestReport",
+            "entity": "name"
+          }
+        ],
+        "text": "report transactions from Jan 12th as latestReport"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Xyz_date",
+            "entity": "name"
+          },
+          {
+            "start": 54,
+            "end": 69,
+            "value": "13th March 2018",
+            "entity": "startdate"
+          },
+          {
+            "start": 73,
+            "end": 88,
+            "value": "26th April 2018",
+            "entity": "enddate"
+          }
+        ],
+        "text": "create a report with name Xyz_date for my travel from 13th March 2018 to 26th April 2018"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 24,
+            "end": 28,
+            "value": "sara",
+            "entity": "name"
+          },
+          {
+            "start": 51,
+            "end": 65,
+            "value": "12th June 2013",
+            "entity": "startdate"
+          },
+          {
+            "start": 70,
+            "end": 84,
+            "value": "31st July 2018",
+            "entity": "enddate"
+          }
+        ],
+        "text": "make a report with name sara for my travel between 12th June 2013 and 31st July 2018"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "trip to US",
+            "entity": "name"
+          },
+          {
+            "start": 59,
+            "end": 73,
+            "value": "12th June 2013",
+            "entity": "startdate"
+          },
+          {
+            "start": 78,
+            "end": 92,
+            "value": "31st July 2018",
+            "entity": "enddate"
+          }
+        ],
+        "text": "make a report with name 'trip to US' for my travel between 12th June 2013 and 31st July 2018"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 37,
+            "value": "finalreport",
+            "entity": "name"
+          },
+          {
+            "start": 55,
+            "end": 63,
+            "value": "Jan 21st",
+            "entity": "startdate"
+          },
+          {
+            "start": 67,
+            "end": 76,
+            "value": "26th July",
+            "entity": "enddate"
+          }
+        ],
+        "text": "create a report with name finalreport for my travel on Jan 21st to 26th July"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 35,
+            "end": 43,
+            "value": "jan 20th",
+            "entity": "enddate"
+          },
+          {
+            "start": 63,
+            "end": 79,
+            "value": "trip to new york",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transactions from Jan 15th Jan 20th to the report name trip to new york"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 53,
+            "end": 66,
+            "value": "14th jan 2019",
+            "entity": "startdate"
+          },
+          {
+            "start": 70,
+            "end": 83,
+            "value": "16th jan 2019",
+            "entity": "enddate"
+          },
+          {
+            "start": 94,
+            "end": 104,
+            "value": "india_trip",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a report for my previous india trip between 14th jan 2019 to 16th Jan 2019 with name india_trip"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "hawaii",
+            "entity": "name"
+          },
+          {
+            "start": 55,
+            "end": 63,
+            "value": "26th feb",
+            "entity": "startdate"
+          },
+          {
+            "start": 67,
+            "end": 75,
+            "value": "29th feb",
+            "entity": "enddate"
+          }
+        ],
+        "text": "create a report with name hawaii which I traveled from 26th Feb to 29th Feb"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "anything",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report anything"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 45,
+            "end": 52,
+            "value": "meeting",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report on my Delhi trip with the name meeting"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "usa_trip",
+            "entity": "name"
+          }
+        ],
+        "text": "file a new report with name USA_trip"
+      },
+      {
+        "intent": "createreportfull",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "delhi_trip",
+            "entity": "name"
+          },
+          {
+            "start": 45,
+            "end": 53,
+            "value": "20th nov",
+            "entity": "startdate"
+          },
+          {
+            "start": 57,
+            "end": 65,
+            "value": "20th dec",
+            "entity": "enddate"
+          }
+        ],
+        "text": "create a report with name Delhi_trip between 20th nov to 20th dec"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "No"
+      },
+      {
+        "intent": "deny",
+        "text": "definitely not"
+      },
+      {
+        "intent": "deny",
+        "text": "never"
+      },
+      {
+        "intent": "deny",
+        "text": "absolutely not"
+      },
+      {
+        "intent": "deny",
+        "text": "i don't think so"
+      },
+      {
+        "intent": "deny",
+        "text": "i'm afraid not"
+      },
+      {
+        "intent": "deny",
+        "text": "no sir"
+      },
+      {
+        "intent": "deny",
+        "text": "no ma'am"
+      },
+      {
+        "intent": "deny",
+        "text": "no way"
+      },
+      {
+        "intent": "deny",
+        "text": "no sorry"
+      },
+      {
+        "intent": "deny",
+        "text": "No, not really."
+      },
+      {
+        "intent": "deny",
+        "text": "nah not for me"
+      },
+      {
+        "intent": "deny",
+        "text": "nah"
+      },
+      {
+        "intent": "deny",
+        "text": "no and no again"
+      },
+      {
+        "intent": "deny",
+        "text": "no go"
+      },
+      {
+        "intent": "deny",
+        "text": "no thanks"
+      },
+      {
+        "intent": "deny",
+        "text": "decline"
+      },
+      {
+        "intent": "deny",
+        "text": "deny"
+      },
+      {
+        "intent": "deny",
+        "text": "i decline"
+      },
+      {
+        "intent": "deny",
+        "text": "never mind"
+      },
+      {
+        "intent": "deny",
+        "text": "I'm not giving you my email address"
+      },
+      {
+        "intent": "deny",
+        "text": "no I haven't decided yet if I want to sign up"
+      },
+      {
+        "intent": "deny",
+        "text": "I don't want to give it to you"
+      },
+      {
+        "intent": "deny",
+        "text": "I'm not going to give it to you"
+      },
+      {
+        "intent": "deny",
+        "text": "no i don't accept"
+      },
+      {
+        "intent": "deny",
+        "text": "no!!!!"
+      },
+      {
+        "intent": "deny",
+        "text": "no you did it wrong"
+      },
+      {
+        "intent": "deny",
+        "text": "no i can't"
+      },
+      {
+        "intent": "deny",
+        "text": "i'm not sure"
+      },
+      {
+        "intent": "deny",
+        "text": "NEIN"
+      },
+      {
+        "intent": "deny",
+        "text": "nein"
+      },
+      {
+        "intent": "deny",
+        "text": "not really"
+      },
+      {
+        "intent": "deny",
+        "text": "i guess it means - no"
+      },
+      {
+        "intent": "deny",
+        "text": "i don't want to"
+      },
+      {
+        "intent": "deny",
+        "text": "i don't want either of those"
+      },
+      {
+        "intent": "deny",
+        "text": "nah thanks"
+      },
+      {
+        "intent": "deny",
+        "text": "neither of these"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "15th jan 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "30 jan 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "start a new report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "16 feb 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "28 feb 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "make a report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "finalreport"
+      },
+      {
+        "intent": "enterdata",
+        "text": "30-12-2018"
+      },
+      {
+        "intent": "enterdata",
+        "text": "30/01/2019"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 15,
+            "end": 18,
+            "value": "XYZ",
+            "entity": "name"
+          }
+        ],
+        "text": "report name is XYZ"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 14,
+            "end": 24,
+            "value": "04-03-2015",
+            "entity": "startdate"
+          }
+        ],
+        "text": "start date is 04-03-2015"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "14-02-2016",
+            "entity": "startdate"
+          }
+        ],
+        "text": "trip has started on 14-02-2016"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "9th jan 2016",
+            "entity": "enddate"
+          }
+        ],
+        "text": "end date is 9th jan 2016"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 18,
+            "end": 31,
+            "value": "23rd Feb 2018",
+            "entity": "enddate"
+          }
+        ],
+        "text": "trip has ended on 23rd Feb 2018"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 17,
+            "end": 28,
+            "value": "firstreport",
+            "entity": "name"
+          }
+        ],
+        "text": "make the name as firstreport"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "extrem123",
+            "entity": "name"
+          }
+        ],
+        "text": "name it extrem123"
+      },
+      {
+        "intent": "enterdata",
+        "text": "uk report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "13th feb 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "20th feb 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "24th jan 2018"
+      },
+      {
+        "intent": "enterdata",
+        "text": "20th feb 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "final report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "20th june 2018"
+      },
+      {
+        "intent": "enterdata",
+        "text": "jan 20th 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "hyderabad"
+      },
+      {
+        "intent": "enterdata",
+        "text": "26th Jan 2018"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1st february 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "may 5th 2014"
+      },
+      {
+        "intent": "enterdata",
+        "text": "14th July 2016"
+      },
+      {
+        "intent": "enterdata",
+        "text": "25th jan"
+      },
+      {
+        "intent": "enterdata",
+        "text": "28th feb"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello"
+      },
+      {
+        "intent": "greet",
+        "text": "Good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hi again"
+      },
+      {
+        "intent": "greet",
+        "text": "hi folks"
+      },
+      {
+        "intent": "greet",
+        "text": "hi Mister"
+      },
+      {
+        "intent": "greet",
+        "text": "hi pal!"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "greetings"
+      },
+      {
+        "intent": "greet",
+        "text": "hello everybody"
+      },
+      {
+        "intent": "greet",
+        "text": "hello is anybody there"
+      },
+      {
+        "intent": "greet",
+        "text": "hello robot"
+      },
+      {
+        "intent": "greet",
+        "text": "hallo"
+      },
+      {
+        "intent": "greet",
+        "text": "heeey"
+      },
+      {
+        "intent": "greet",
+        "text": "hi hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hey hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "yo"
+      },
+      {
+        "intent": "greet",
+        "text": "hola"
+      },
+      {
+        "intent": "greet",
+        "text": "hi?"
+      },
+      {
+        "intent": "greet",
+        "text": "hey bot!"
+      },
+      {
+        "intent": "greet",
+        "text": "hello friend"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hello sweet boy"
+      },
+      {
+        "intent": "greet",
+        "text": "yoo"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "hiihihi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello sweatheart"
+      },
+      {
+        "intent": "greet",
+        "text": "hellooo"
+      },
+      {
+        "intent": "greet",
+        "text": "helloooo"
+      },
+      {
+        "intent": "greet",
+        "text": "heyo"
+      },
+      {
+        "intent": "greet",
+        "text": "ayyyy whaddup"
+      },
+      {
+        "intent": "greet",
+        "text": "hello?"
+      },
+      {
+        "intent": "greet",
+        "text": "Hallo"
+      },
+      {
+        "intent": "greet",
+        "text": "heya"
+      },
+      {
+        "intent": "greet",
+        "text": "hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "Hellllooooooo"
+      },
+      {
+        "intent": "greet",
+        "text": "whats up"
+      },
+      {
+        "intent": "greet",
+        "text": "Whats Up"
+      },
+      {
+        "intent": "greet",
+        "text": "Hei"
+      },
+      {
+        "intent": "greet",
+        "text": "Well hello there ;)"
+      },
+      {
+        "intent": "greet",
+        "text": "I said, helllllloooooO!!!!"
+      },
+      {
+        "intent": "greet",
+        "text": "Heya"
+      },
+      {
+        "intent": "greet",
+        "text": "Whats up my bot"
+      },
+      {
+        "intent": "greet",
+        "text": "hiii"
+      },
+      {
+        "intent": "greet",
+        "text": "heyho"
+      },
+      {
+        "intent": "greet",
+        "text": "hey, let's talk"
+      },
+      {
+        "intent": "greet",
+        "text": "hey let's talk"
+      },
+      {
+        "intent": "greet",
+        "text": "jojojo"
+      },
+      {
+        "intent": "greet",
+        "text": "hey dude"
+      },
+      {
+        "intent": "greet",
+        "text": "hello it is me again"
+      },
+      {
+        "intent": "greet",
+        "text": "what up"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "jop"
+      },
+      {
+        "intent": "greet",
+        "text": "hi friend"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there it's me"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "pending"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "reports on hold"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "ready for approval"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show the outstanding reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show the drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show the pending approvals"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show me all the drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "retrieve pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "get all drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "get my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "list out all my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "list my drafts"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "Thank you so much"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks bot"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks for that"
+      },
+      {
+        "intent": "thank",
+        "text": "cheers"
+      },
+      {
+        "intent": "thank",
+        "text": "cheers bro"
+      },
+      {
+        "intent": "thank",
+        "text": "ok thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "perfect thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks a bunch for everything"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks for the help"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks a lot"
+      },
+      {
+        "intent": "thank",
+        "text": "amazing, thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "cool, thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "cool thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "Cool. Thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks this is great news"
+      },
+      {
+        "intent": "thank",
+        "text": "thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "great thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "cool thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks for forum link, I'll check it out"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks!"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": [
+      {
+        "value": "jan 15th",
+        "synonyms": [
+          "Jan 15th"
+        ]
+      },
+      {
+        "value": "jan 20th",
+        "synonyms": [
+          "Jan 20th"
+        ]
+      },
+      {
+        "value": "16th jan 2019",
+        "synonyms": [
+          "16th Jan 2019"
+        ]
+      },
+      {
+        "value": "26th feb",
+        "synonyms": [
+          "26th Feb"
+        ]
+      },
+      {
+        "value": "29th feb",
+        "synonyms": [
+          "29th Feb"
+        ]
+      },
+      {
+        "value": "usa_trip",
+        "synonyms": [
+          "USA_trip"
+        ]
+      },
+      {
+        "value": "delhi_trip",
+        "synonyms": [
+          "Delhi_trip"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+%YAML 1.1
+---
+actions:
+- utter_slots_values
+- pending_report
+- utter_created_report
+- utter_noworries
+- utter_ask_continue
+- utter_goodbye
+- utter_confirm_booking
+- utter_not_confirm_booking
+- action_slot_reset
+- utter_greet
+config:
+  store_entities_as_slots: true
+entities:
+- startdate
+- name
+- enddate
+forms:
+- create_report_form
+intents:
+- createreportfull:
+    use_entities: true
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- enterdata:
+    use_entities: true
+- createreport:
+    use_entities: true
+- pendingreport:
+    use_entities: true
+- ask_whoisit:
+    use_entities: true
+- canthelp:
+    use_entities: true
+- ask_isbot:
+    use_entities: true
+- deny:
+    use_entities: true
+- thank:
+    use_entities: true
+- affirm:
+    use_entities: true
+slots:
+  enddate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  startdate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+templates:
+  utter_ask_continue:
+  - text: Do you want me to continue?
+  utter_ask_enddate:
+  - text: Please provide the enddate of the report?
+  utter_ask_name:
+  - text: Please provide the name of the report?
+  - text: Lets start with a name for your report - what would you like to name it?
+  utter_ask_startdate:
+  - text: Please provide the startdate of the report?
+  utter_confirm_booking:
+  - text: Done.Your Request has been processed.
+  utter_created_report:
+  - text: Report Created Successfully
+  utter_default:
+  - text: sorry, I didn't understand you, please try input something else
+  utter_enddate:
+  - text: Please provide the enddate of the report?
+  utter_goodbye:
+  - text: Bye.Take Care
+  utter_greet:
+  - text: Hey there, welcome to Suti!
+  utter_name:
+  - text: Please provide the name of the report?
+  - text: Lets start with a name for your report - what would you like to name it?
+  utter_not_confirm_booking:
+  - text: Your request has been cancelled.
+  utter_noworries:
+  - text: You are welcome :)
+  utter_slots_values:
+  - text: "I am going to create a report as per the following parameters:\n - Report\
+      \ Name: {name}\n - Start Date: {startdate}\n - End Date: {enddate}\n"
+  utter_startdate:
+  - text: Please provide the startdate of the report?
+  utter_submit:
+  - text: Created Report {name} with start-date as {startdate} and end-date as {enddate}
