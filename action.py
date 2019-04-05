@@ -2,6 +2,10 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
 
+from datetime import datetime
+import parsedatetime
+from dateutil.parser import parse
+import requests
 
 from typing import Dict, Text, Any, List, Union
 from rasa_core_sdk import Action, Tracker
@@ -22,7 +26,7 @@ class CreateReportForm(FormAction):
 
     def slot_mappings(self):
         return {"name": [self.from_entity(entity="name",intent=["enterdata"]),
-                             self.from_text(intent="enterdata")],
+                             self.from_text()],
 
                 "startdate":[self.from_entity(entity="startdate",  intent=["enterdata"]),
                              self.from_text(intent="enterdata")],
@@ -62,17 +66,25 @@ class CreateReportForm(FormAction):
                tracker: Tracker,
                domain: Dict[Text, Any]) -> List[Dict]:
 
-        from datetime import datetime
-        import parsedatetime
-        from dateutil.parser import parse
+        
         def date_formater(dt):
-            try:
-                dt = parse(dt)
-                return f"{dt}"
-            except ValueError:
-                cal = parsedatetime.Calendar()
-                time_struct, parse_status = cal.parse(dt)
-                return f"{datetime(*time_struct[:6])}"
+                try:
+                    dt = parse(dt)
+                    # currentMonth = datetime.now().month
+                    # currentYear = datetime.now().year
+                    # if currentMonth < dt.month:
+                    #     if currentYear <= dt.year:
+                    #         return f"{(dt.year)-1}-{dt.month}-{dt.day}"
+                    #     else:
+                    #         return f"{dt}"
+                    # else:
+                    #     return f"{dt}"
+                    return f"{dt}"   
+                except ValueError:
+                    cal = parsedatetime.Calendar()
+                    time_struct, parse_status = cal.parse(dt)
+                    return f"{datetime(*time_struct[:6])} "
+                    
 
         name = tracker.get_slot('name')
         startdate = tracker.get_slot('startdate')
@@ -81,8 +93,40 @@ class CreateReportForm(FormAction):
         startdate = date_formater(startdate)[:10]
 
         enddate = date_formater(enddate)[:10]
-
-        dispatcher.utter_message(f'Created a report {name} with start-date as {startdate} and end-date as {enddate}')
+        r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneexpsave.do?navfrom=android&sutitest=true', data =  {"compid": "1403","userid": "1552","delusr": "0","version": "8.4.0","copylines": "Slelect","mcurr": "","Department Name": "Dept1","Product Line Code": "gfg - Cghg","Client Code": "kkkkkk","Project Code": "fdfdf - fdfdf","expType": "report","expNm": f"{name}","expDt": f'{startdate}',"fdate": f'{enddate}',"tdate": f"{startdate}","expDesc": "","isencrypt":"No"})
+        if r.status_code == 200:
+            json_data = r.json()
+            if json_data.get('status') == 'success':
+                expid = json_data.get('expid')
+                response = f'Created a report "{name}" with start-date as {startdate} and end-date as {enddate}.Expense id of the created report is {expid}'
+                # all slots reset
+                # tracker._reset_slots()
+                dispatcher.utter_message(response)
+                return [AllSlotsReset()]
+            elif json_data.get('status') == 'fail':
+                print("status failed")
+                print(name)
+                print(startdate)
+                print(enddate)
+                if json_data.get('errmsg'):
+                    if json_data.get('errmsg') == 'Duplicate expense name':
+                        msg = f".Name already exists: {name}"
+                        response = json_data.get('errmsg') + msg
+                        print("got into fail and name error")
+                        dispatcher.utter_message(response)
+                        return [SlotSet("name", None)]
+                    else:
+                        response = json_data.get('errmsg')
+                    # reset slot name
+                else:
+                    response = "Couldnt create the report at the moment."
+            else:
+                response = "Tried to create the report.Got an unexpected message"
+        else:
+            response = "Couldnt get the reports at this point of time."
+        dispatcher.utter_message(response)
+        # dispactcher.utter_template("utter_ask_lineitem",tracker)
+        # dispatcher.utter_message(f'Created a report {name} with start-date as {startdate} and end-date as {enddate}')
         return []
 
 class ActionSlotReset(Action):
@@ -117,25 +161,67 @@ class ActionSlotReset(Action):
 #             else:
 #                 return []
 
+# class SendForApprove(Action):
+#     def name(self):
+#         return "send_for_approve"
+
+#     def run(self, dispatcher, tracker,domain):
+#         expid = tracker.get_slot('expid')
+#         if not expid:
+#             dispatcher.utter_template("utter_ask_expid", tracker)
+#             expid = tracker.latest_message.get('text')
+#         if expid.isdigit():
+#             dispatcher.utter_message(f"Sent the report with expid: {expid}, for approval.")
+
 
 class PendingReport(Action):
     def name(self):
         return "pending_report"
 
     def run(self, dispatcher, tracker, domain):
-        import requests
+        print(tracker.__dir__())
         response = ''
-        r = requests.post('http://192.168.0.92/SutiExpense/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data =  {"userid": "7624","compid": "552","delusr": "0","version": "8.4.0","isencrypt":"No"})
+        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data = {"userid": "9364","compid": "1403","delusr": "0","version": "8.4.0","isencrypt":"No"})
         if r.status_code == 200:
             json_data = r.json()
-            if json_data['exps']:
-                response += f"Total their are {len(json_data['exps'])} pending reports.The following reports are pending:"
-                for exp in json_data['exps']:
-                    response += f"{exp['expname']} with report id {exp['expid']}, generated on {exp['expdt']} \n"
+            if json_data.get('status') == 'success':
+                if json_data['exps']:
+                    response += f"Total their are {len(json_data['exps'])} pending reports as follows: @#$"
+                    for exp in json_data['exps']:
+                        response += f"{exp['expname']} with report id {exp['expid']}, generated on {exp['expdt']}.@#$"
+                else:
+                    response("No pending reports available.")
+            elif json_data.get('status') == 'fail':
+                if json_data.get('errmsg'):
+                    response = json_data.get('errmsg')
+                else:
+                    response = "Couldnt create the report at the moment."
             else:
-                response("No pending reports available.")
-
+                response = "Tried to create the report.Got an unexpected message"
         else:
             response = "Couldnt get the reports at this point of time."
         dispatcher.utter_message(response)
         return []
+
+
+class NavToLineitems(Action):
+    def name(self):
+        return "nav_to_lineitems"
+
+    def run(self, dispatcher, tracker, domain):
+
+# <------------------ API CALL BELOW ---------------->
+
+        # r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data = {"userid": "9364","compid": "1403","delusr": "0","version": "8.4.0","isencrypt":"No", "screen": "create lineitem","navigation": "navigation"})
+        # if r.status_code == 200:
+        #     json_data = r.json()
+        #     if json_data.get('status') == 'success':
+        #         dispatcher.utter_template('utter_navlineitems',tracker)
+        #     else:
+        #         dispatcher.utter_message("Failed to navigate to 'Creation of line items'")
+        # else:
+        #     dispatcher.utter_message("Failed to make a request for navigating to 'Creation of line items'")
+        # return []
+
+# <------------------ API CALL ENDED ---------------->
+        dispatcher.utter_template('utter_navlineitems',tracker)

@@ -1,48 +1,39 @@
 %YAML 1.1
 ---
 actions:
-- utter_slots_values
+- utter_approve
 - pending_report
+- utter_ask_lineitem
 - utter_created_report
-- utter_noworries
-- utter_ask_continue
-- utter_goodbye
-- utter_confirm_booking
-- utter_not_confirm_booking
-- action_slot_reset
+- utter_okay
 - utter_greet
+- utter_goodbye
+- nav_to_lineitems
+- action_slot_reset
 config:
   store_entities_as_slots: true
 entities:
+- enddate
 - startdate
 - name
-- enddate
 forms:
 - create_report_form
 intents:
-- createreportfull:
-    use_entities: true
-- greet:
-    use_entities: true
-- bye:
+- deny:
     use_entities: true
 - enterdata:
     use_entities: true
 - createreport:
     use_entities: true
-- pendingreport:
+- greet:
     use_entities: true
-- ask_whoisit:
-    use_entities: true
-- canthelp:
-    use_entities: true
-- ask_isbot:
-    use_entities: true
-- deny:
-    use_entities: true
-- thank:
+- createreportfull:
     use_entities: true
 - affirm:
+    use_entities: true
+- bye:
+    use_entities: true
+- pendingreport:
     use_entities: true
 slots:
   enddate:
@@ -62,17 +53,25 @@ slots:
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
 templates:
-  utter_ask_continue:
-  - text: Do you want me to continue?
+  utter_approve:
+  - text: Do you want to approve any of the reports?
   utter_ask_enddate:
-  - text: Please provide the enddate of the report?
+  - text: Cool. Give me the enddate of the report?
+  utter_ask_expid:
+  - text: Yep.give me the expid(Expense_ID) so I can send it for approval?
+  - text: Give me the expid(Expense_ID) ?
+  - text: Can you provide expid(Expense_ID) ?
+  utter_ask_lineitem:
+  - text: Great!.Do you want to create a line item ?
+  - text: Shall I create a lineitem ?
+  - text: Do you require a lineitem ?
   utter_ask_name:
-  - text: Please provide the name of the report?
+  - text: Give me a name of the report ?
+  - text: What would you like to name the report ?
   - text: Lets start with a name for your report - what would you like to name it?
   utter_ask_startdate:
-  - text: Please provide the startdate of the report?
-  utter_confirm_booking:
-  - text: Done.Your Request has been processed.
+  - text: Great.Can you say the startdate of the report?
+  - text: Cool. Give me the startdate of the report?
   utter_created_report:
   - text: Report Created Successfully
   utter_default:
@@ -86,13 +85,11 @@ templates:
   utter_name:
   - text: Please provide the name of the report?
   - text: Lets start with a name for your report - what would you like to name it?
-  utter_not_confirm_booking:
-  - text: Your request has been cancelled.
-  utter_noworries:
-  - text: You are welcome :)
-  utter_slots_values:
-  - text: "I am going to create a report as per the following parameters:\n - Report\
-      \ Name: {name}\n - Start Date: {startdate}\n - End Date: {enddate}\n"
+  utter_navlineitems:
+  - text: Cool!. navigating you to creation page...
+  - text: Moving to lineitems .....
+  utter_okay:
+  - text: Okay.
   utter_startdate:
   - text: Please provide the startdate of the report?
   utter_submit:

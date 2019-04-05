@@ -1,16 +1,15 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_continue
-- utter_noworries
+- utter_ask_lineitem
 - utter_greet
-- pending_report
-- utter_confirm_booking
 - utter_goodbye
+- nav_to_lineitems
+- pending_report
 - action_slot_reset
-- utter_slots_values
+- utter_approve
+- utter_okay
 - utter_created_report
-- utter_not_confirm_booking
 entities:
 - name
 - enddate
@@ -18,18 +17,14 @@ entities:
 forms:
 - create_report_form
 intents:
-- greet
-- pendingreport
+- deny
 - createreportfull
-- bye
 - enterdata
 - createreport
-- ask_whoisit
-- canthelp
-- ask_isbot
-- deny
-- thank
+- greet
 - affirm
+- bye
+- pendingreport
 slots:
   enddate:
     type: unfeaturized
@@ -40,17 +35,25 @@ slots:
   startdate:
     type: unfeaturized
 templates:
-  utter_ask_continue:
-  - text: Do you want me to continue?
+  utter_approve:
+  - text: Do you want to approve any of the reports?
   utter_ask_enddate:
-  - text: Please provide the enddate of the report?
+  - text: Cool. Give me the enddate of the report?
+  utter_ask_expid:
+  - text: Yep.give me the expid(Expense_ID) so I can send it for approval?
+  - text: Give me the expid(Expense_ID) ?
+  - text: Can you provide expid(Expense_ID) ?
+  utter_ask_lineitem:
+  - text: Great!.Do you want to create a line item ?
+  - text: Shall I create a lineitem ?
+  - text: Do you require a lineitem ?
   utter_ask_name:
-  - text: Please provide the name of the report?
+  - text: Give me a name of the report ?
+  - text: What would you like to name the report ?
   - text: Lets start with a name for your report - what would you like to name it?
   utter_ask_startdate:
-  - text: Please provide the startdate of the report?
-  utter_confirm_booking:
-  - text: Done.Your Request has been processed.
+  - text: Great.Can you say the startdate of the report?
+  - text: Cool. Give me the startdate of the report?
   utter_created_report:
   - text: Report Created Successfully
   utter_default:
@@ -64,13 +67,11 @@ templates:
   utter_name:
   - text: Please provide the name of the report?
   - text: Lets start with a name for your report - what would you like to name it?
-  utter_not_confirm_booking:
-  - text: Your request has been cancelled.
-  utter_noworries:
-  - text: You are welcome :)
-  utter_slots_values:
-  - text: "I am going to create a report as per the following parameters:\n - Report\
-      \ Name: {name}\n - Start Date: {startdate}\n - End Date: {enddate}\n"
+  utter_navlineitems:
+  - text: Cool!. navigating you to creation page...
+  - text: Moving to lineitems .....
+  utter_okay:
+  - text: Okay.
   utter_startdate:
   - text: Please provide the startdate of the report?
   utter_submit:

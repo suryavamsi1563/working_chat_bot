@@ -11,10 +11,6 @@
       },
       {
         "intent": "affirm",
-        "text": "S"
-      },
-      {
-        "intent": "affirm",
         "text": "sure"
       },
       {
@@ -43,7 +39,7 @@
       },
       {
         "intent": "affirm",
-        "text": "yep, I want to create"
+        "text": "yep, will do thank you"
       },
       {
         "intent": "affirm",
@@ -75,6 +71,10 @@
       },
       {
         "intent": "affirm",
+        "text": "I changed my mind. I want to accept it"
+      },
+      {
+        "intent": "affirm",
         "text": "ok cool"
       },
       {
@@ -84,6 +84,10 @@
       {
         "intent": "affirm",
         "text": "i will!"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok, I behave now"
       },
       {
         "intent": "affirm",
@@ -107,23 +111,23 @@
       },
       {
         "intent": "affirm",
-        "text": "yo"
-      },
-      {
-        "intent": "affirm",
         "text": "yep if i have to"
       },
       {
         "intent": "affirm",
-        "text": "amazing"
-      },
-      {
-        "intent": "affirm",
-        "text": "amazying"
+        "text": "amayzing"
       },
       {
         "intent": "affirm",
         "text": "confirm"
+      },
+      {
+        "intent": "affirm",
+        "text": "nice"
+      },
+      {
+        "intent": "affirm",
+        "text": "coolio"
       },
       {
         "intent": "affirm",
@@ -163,15 +167,7 @@
       },
       {
         "intent": "affirm",
-        "text": "hm, i'd like to"
-      },
-      {
-        "intent": "affirm",
         "text": "ja"
-      },
-      {
-        "intent": "affirm",
-        "text": "ya"
       },
       {
         "intent": "affirm",
@@ -183,7 +179,15 @@
       },
       {
         "intent": "affirm",
+        "text": "Sweet"
+      },
+      {
+        "intent": "affirm",
         "text": "amazing!"
+      },
+      {
+        "intent": "affirm",
+        "text": "how nice!"
       },
       {
         "intent": "affirm",
@@ -195,7 +199,7 @@
       },
       {
         "intent": "affirm",
-        "text": "yes create please"
+        "text": "yes accept please"
       },
       {
         "intent": "affirm",
@@ -210,48 +214,236 @@
         "text": "fine"
       },
       {
-        "intent": "affirm",
-        "text": "I want to"
+        "intent": "ask_isbot",
+        "text": "are you a bot?"
       },
       {
-        "intent": "affirm",
-        "text": "I want to create lineitem"
+        "intent": "ask_isbot",
+        "text": "are you a real bot?"
       },
       {
-        "intent": "affirm",
-        "text": "Need to create a lineitem"
+        "intent": "ask_isbot",
+        "text": "are you a bot"
       },
       {
-        "intent": "affirm",
-        "text": "generate a lineitem"
+        "intent": "ask_isbot",
+        "text": "are you really a bot"
       },
       {
-        "intent": "affirm",
-        "text": "create it please"
+        "intent": "ask_isbot",
+        "text": "are you a robot"
       },
       {
-        "intent": "affirm",
-        "text": "file my lineitems"
+        "intent": "ask_isbot",
+        "text": "are you a robot"
       },
       {
-        "intent": "affirm",
-        "text": "Yes"
+        "intent": "ask_isbot",
+        "text": "are you a rasa bot?"
       },
       {
-        "intent": "affirm",
-        "text": "s"
+        "intent": "ask_isbot",
+        "text": "are you a rasa bot?"
       },
       {
-        "intent": "affirm",
-        "text": "yes"
+        "intent": "ask_isbot",
+        "text": "what are you, a bot?"
       },
       {
-        "intent": "affirm",
-        "text": "s"
+        "intent": "ask_isbot",
+        "text": "tell me, are you a bot?"
       },
       {
-        "intent": "affirm",
-        "text": "Yes"
+        "intent": "ask_isbot",
+        "text": "are you a Skynet ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you ai"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you artificial intelligence"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you artificial"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "i guess you are a chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are ai"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you're a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you the bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Hi there, are you the bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you a chat bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Ar you a bot ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "What are you ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real lol"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "cuz you are a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "oh are you chatbot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you sure that you're a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a BOT"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is this"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who am i talking to"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what's your name"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who am i speaking with"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who r u"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what's your name bot"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "whats ur name"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what are you called?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is talking?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who speaks?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who talks?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are you and what do you want from me"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are you?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is it?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are u?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are you"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "I want to know who you are"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who are y"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "yes but who are you in your heart"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "are you a bot?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "who is this?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "hi! what's your name?"
       },
       {
         "intent": "bye",
@@ -296,6 +488,10 @@
       {
         "intent": "bye",
         "text": "bye for now"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
       },
       {
         "intent": "bye",
@@ -347,11 +543,19 @@
       },
       {
         "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
         "text": "take care"
       },
       {
         "intent": "bye",
         "text": "see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
       },
       {
         "intent": "bye",
@@ -363,31 +567,83 @@
       },
       {
         "intent": "bye",
-        "text": "see you later"
-      },
-      {
-        "intent": "bye",
         "text": "bye"
       },
       {
-        "intent": "bye",
-        "text": "thanks"
+        "intent": "canthelp",
+        "text": "ok then you cant help me"
       },
       {
-        "intent": "bye",
-        "text": "bye"
+        "intent": "canthelp",
+        "text": "that was shit, you're not helping"
       },
       {
-        "intent": "bye",
-        "text": "goodbye"
+        "intent": "canthelp",
+        "text": "you can't help me"
       },
       {
-        "intent": "bye",
-        "text": "bye"
+        "intent": "canthelp",
+        "text": "you can't help me with what i need"
       },
       {
-        "intent": "bye",
-        "text": "bye"
+        "intent": "canthelp",
+        "text": "i guess you can't help me then"
+      },
+      {
+        "intent": "canthelp",
+        "text": "ok i guess you can't help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "that's not what i want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "ok, but that doesnt help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "this is leading to nothing"
+      },
+      {
+        "intent": "canthelp",
+        "text": "this conversation is not really helpful"
+      },
+      {
+        "intent": "canthelp",
+        "text": "you cannot help me with what I want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "I think you cant help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "hm i don't think you can do what i want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "stop"
+      },
+      {
+        "intent": "canthelp",
+        "text": "stop go back"
+      },
+      {
+        "intent": "canthelp",
+        "text": "do you get anything?"
+      },
+      {
+        "intent": "canthelp",
+        "text": "and you call yourself bot company? pff"
+      },
+      {
+        "intent": "canthelp",
+        "text": "and that's it?"
+      },
+      {
+        "intent": "canthelp",
+        "text": "nothing else?"
       },
       {
         "intent": "createreport",
@@ -440,46 +696,6 @@
       {
         "intent": "createreport",
         "text": "generate me a new report"
-      },
-      {
-        "intent": "createreport",
-        "text": "generate a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "need to create a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "need a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "file my expenses"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a new report"
-      },
-      {
-        "intent": "createreport",
-        "text": "build a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "create report"
-      },
-      {
-        "intent": "createreport",
-        "text": "generate a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "need to create a report"
       },
       {
         "intent": "createreportfull",
@@ -576,30 +792,6 @@
           }
         ],
         "text": "create a report with name firstreport"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 26,
-            "value": "travel_Del",
-            "entity": "name"
-          },
-          {
-            "start": 32,
-            "end": 40,
-            "value": "12th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 44,
-            "end": 52,
-            "value": "18 March",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report travel_Del from 12th jan to 18 March"
       },
       {
         "intent": "createreportfull",
@@ -1136,566 +1328,6 @@
         "text": "Create a report titled trip to SF from jan 1st to jan 6th"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 7,
-            "end": 20,
-            "value": "trip to India",
-            "entity": "name"
-          },
-          {
-            "start": 42,
-            "end": 49,
-            "value": "5th Jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "26th Jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "Titled trip to India create a report from 5th Jan to 26th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 37,
-            "value": "finalreport",
-            "entity": "name"
-          },
-          {
-            "start": 42,
-            "end": 50,
-            "value": "24th Jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 54,
-            "end": 62,
-            "value": "23rd feb",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name finalreport for 24th Jan to 23rd feb"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 35,
-            "value": "australia",
-            "entity": "name"
-          },
-          {
-            "start": 44,
-            "end": 55,
-            "value": "last monday",
-            "entity": "startdate"
-          },
-          {
-            "start": 59,
-            "end": 72,
-            "value": "last saturday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name australia between last monday to last saturday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 27,
-            "end": 40,
-            "value": "central board",
-            "entity": "name"
-          },
-          {
-            "start": 58,
-            "end": 68,
-            "value": "last month",
-            "entity": "startdate"
-          },
-          {
-            "start": 72,
-            "end": 81,
-            "value": "yesterday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "need to create report with central board traveled between last month to yesterday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 20,
-            "end": 31,
-            "value": "last sunday",
-            "entity": "startdate"
-          },
-          {
-            "start": 35,
-            "end": 47,
-            "value": "this sunaday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "file my report from last sunday to this sunaday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 19,
-            "end": 34,
-            "value": "campus_training",
-            "entity": "name"
-          },
-          {
-            "start": 44,
-            "end": 56,
-            "value": "last jan 8th",
-            "entity": "startdate"
-          },
-          {
-            "start": 60,
-            "end": 71,
-            "value": "last monday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make report a with campus_training between  last jan 8th to last monday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 23,
-            "end": 30,
-            "value": "feb 2nd",
-            "entity": "startdate"
-          },
-          {
-            "start": 31,
-            "end": 44,
-            "value": "last mar 13th",
-            "entity": "enddate"
-          },
-          {
-            "start": 48,
-            "end": 59,
-            "value": "CEO meeting",
-            "entity": "name"
-          }
-        ],
-        "text": "generate a report from feb 2nd last mar 13th as CEO meeting"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 38,
-            "value": " last monday",
-            "entity": "startdate"
-          },
-          {
-            "start": 43,
-            "end": 51,
-            "value": "saturday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a new from between  last monday and saturday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 21,
-            "end": 32,
-            "value": "last monday",
-            "entity": "startdate"
-          }
-        ],
-        "text": "create a report from last monday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 39,
-            "value": "last apr 14th",
-            "entity": "startdate"
-          },
-          {
-            "start": 54,
-            "end": 66,
-            "value": "chennai trip",
-            "entity": "name"
-          }
-        ],
-        "text": "add all transactions from last apr 14th and  named as chennai trip"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 31,
-            "end": 41,
-            "value": "last march",
-            "entity": "startdate"
-          },
-          {
-            "start": 45,
-            "end": 54,
-            "value": "last week",
-            "entity": "enddate"
-          }
-        ],
-        "text": "need to generate a report from last march to last week"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 24,
-            "end": 29,
-            "value": "Paris",
-            "entity": "name"
-          },
-          {
-            "start": 38,
-            "end": 48,
-            "value": "13/03/2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "last jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report trip to Paris between 13/03/2018 and last jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 25,
-            "end": 36,
-            "value": "last sunday",
-            "entity": "startdate"
-          },
-          {
-            "start": 48,
-            "end": 59,
-            "value": "Turkey trip",
-            "entity": "name"
-          }
-        ],
-        "text": "start date of my trip is last sunday named with Turkey trip"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 20,
-            "end": 28,
-            "value": "15th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 33,
-            "end": 43,
-            "value": "last month",
-            "entity": "enddate"
-          }
-        ],
-        "text": "my trip in  between 15th jan and last month"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 28,
-            "value": "trip to dallas",
-            "entity": "name"
-          },
-          {
-            "start": 40,
-            "end": 48,
-            "value": "25th Jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 52,
-            "end": 60,
-            "value": "29th Jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report trip to dallas with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 22,
-            "value": "keralite",
-            "entity": "name"
-          },
-          {
-            "start": 34,
-            "end": 42,
-            "value": "25th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 46,
-            "end": 54,
-            "value": "29th jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report keralite with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 20,
-            "value": "kerala",
-            "entity": "name"
-          },
-          {
-            "start": 32,
-            "end": 40,
-            "value": "25th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 44,
-            "end": 52,
-            "value": "29th jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report kerala with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 33,
-            "end": 41,
-            "value": "25th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 45,
-            "end": 53,
-            "value": "29th jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report nellore with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 44,
-            "value": "Walmart tire repair May 2017",
-            "entity": "name"
-          },
-          {
-            "start": 65,
-            "end": 73,
-            "value": "may 2017",
-            "entity": "startdate"
-          },
-          {
-            "start": 77,
-            "end": 86,
-            "value": "june 2018",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report Walmart tire repair May 2017 for my trip between May 2017 to June 2018"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 30,
-            "value": "who conference",
-            "entity": "name"
-          },
-          {
-            "start": 41,
-            "end": 49,
-            "value": "jan 23rd",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "feb 25th",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report who conference for dates jan 23rd to feb 25th"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 35,
-            "end": 41,
-            "value": "29 dec",
-            "entity": "startdate"
-          },
-          {
-            "start": 45,
-            "end": 51,
-            "value": "28 jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "generate a report for my travel on 29 dec to 28 jan titled conderence 2018"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 27,
-            "value": "trip to usa",
-            "entity": "name"
-          },
-          {
-            "start": 38,
-            "end": 48,
-            "value": "21 - 03 - 2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 52,
-            "end": 62,
-            "value": "25 - 04 -2018",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report trip to USA dates are 21-03-2018 to 25-04-2018"
-      },
-      {
-        "intent": "createreportfull",
-        "text": "create a custom report"
-      },
-      {
-        "intent": "createreportfull",
-        "text": "November travel to China"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 15,
-            "end": 25,
-            "value": "Nov_travel",
-            "entity": "name"
-          },
-          {
-            "start": 43,
-            "end": 52,
-            "value": "29 - 5 - 2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 56,
-            "end": 65,
-            "value": "29-6-2019",
-            "entity": "enddate"
-          }
-        ],
-        "text": "build a report Nov_travel for my trip from 29-5-2018 to 29-6-2019"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 19,
-            "end": 32,
-            "value": "trip to paris",
-            "entity": "name"
-          }
-        ],
-        "text": "create report with trip to paris"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 34,
-            "value": "xyz12354",
-            "entity": "name"
-          },
-          {
-            "start": 57,
-            "end": 65,
-            "value": "29th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 69,
-            "end": 78,
-            "value": "23rd feb .",
-            "entity": "enddate"
-          }
-        ],
-        "text": "Create a report with name XYZ12354 for my travel between 29th Jan to 23rd Feb."
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 41,
-            "value": "conference_meet",
-            "entity": "name"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "20th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 66,
-            "end": 74,
-            "value": "15th feb",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name conference_meet in between 20th jan and 15th feb"
-      },
-      {
         "intent": "deny",
         "text": "no"
       },
@@ -1721,15 +1353,15 @@
       },
       {
         "intent": "deny",
-        "text": "i dont"
-      },
-      {
-        "intent": "deny",
         "text": "i'm afraid not"
       },
       {
         "intent": "deny",
-        "text": "not required"
+        "text": "no sir"
+      },
+      {
+        "intent": "deny",
+        "text": "no ma'am"
       },
       {
         "intent": "deny",
@@ -1781,15 +1413,19 @@
       },
       {
         "intent": "deny",
-        "text": "Not at the moment"
+        "text": "I'm not giving you my email address"
       },
       {
         "intent": "deny",
-        "text": "No.I will do it later"
+        "text": "no I haven't decided yet if I want to sign up"
       },
       {
         "intent": "deny",
-        "text": "I dont want to"
+        "text": "I don't want to give it to you"
+      },
+      {
+        "intent": "deny",
+        "text": "I'm not going to give it to you"
       },
       {
         "intent": "deny",
@@ -1798,6 +1434,14 @@
       {
         "intent": "deny",
         "text": "no!!!!"
+      },
+      {
+        "intent": "deny",
+        "text": "no you did it wrong"
+      },
+      {
+        "intent": "deny",
+        "text": "no i can't"
       },
       {
         "intent": "deny",
@@ -1817,6 +1461,10 @@
       },
       {
         "intent": "deny",
+        "text": "i guess it means - no"
+      },
+      {
+        "intent": "deny",
         "text": "i don't want to"
       },
       {
@@ -1829,51 +1477,7 @@
       },
       {
         "intent": "deny",
-        "text": "no thanks"
-      },
-      {
-        "intent": "deny",
         "text": "neither of these"
-      },
-      {
-        "intent": "deny",
-        "text": "I  dont want to create lineitem"
-      },
-      {
-        "intent": "deny",
-        "text": "I dont need now"
-      },
-      {
-        "intent": "deny",
-        "text": "No Need to create a lineitem"
-      },
-      {
-        "intent": "deny",
-        "text": "dont generate a lineitem"
-      },
-      {
-        "intent": "deny",
-        "text": "dont create it"
-      },
-      {
-        "intent": "deny",
-        "text": "dont file my lineitems"
-      },
-      {
-        "intent": "deny",
-        "text": "no"
-      },
-      {
-        "intent": "deny",
-        "text": "no"
-      },
-      {
-        "intent": "deny",
-        "text": "no"
-      },
-      {
-        "intent": "deny",
-        "text": "no"
       },
       {
         "intent": "enterdata",
@@ -1902,6 +1506,10 @@
       {
         "intent": "enterdata",
         "text": "28 feb 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "make a report"
       },
       {
         "intent": "enterdata",
@@ -2068,400 +1676,8 @@
         "text": "last month"
       },
       {
-        "intent": "enterdata",
-        "text": "last week"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last year"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous week"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous month"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous year"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous sunday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous monday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous tuesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous wednesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous thursday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous friday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous saturday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last sunday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last monday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last tuesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last wednesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last thursday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last friday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last saturday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "yesterday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "today"
-      },
-      {
-        "intent": "enterdata",
-        "text": "nellore"
-      },
-      {
-        "intent": "enterdata",
-        "text": "sep trip"
-      },
-      {
-        "intent": "enterdata",
-        "text": "jan 15"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last sunday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "dell meeting"
-      },
-      {
-        "intent": "enterdata",
-        "text": "03/03/2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last week"
-      },
-      {
-        "intent": "enterdata",
-        "text": "project demo"
-      },
-      {
-        "intent": "enterdata",
-        "text": "25th nov"
-      },
-      {
-        "intent": "enterdata",
-        "text": "jan 26th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Powell - November 2014"
-      },
-      {
-        "intent": "enterdata",
-        "text": "dec 16th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "july 8th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "GGAP Audits- Driscoll's Growers (week of 4.2.18)"
-      },
-      {
-        "intent": "enterdata",
-        "text": "4.2.18"
-      },
-      {
-        "intent": "enterdata",
-        "text": "26th feb 2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "conference 2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "25th Jan"
-      },
-      {
-        "intent": "enterdata",
-        "text": "23 Feb"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Lauren Kristick Expenses"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Jan 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Dec 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Delhi"
-      },
-      {
-        "intent": "enterdata",
-        "text": "jan 26th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "dec 18th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "india-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20-03-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "30-04-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "march 13th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "april 4th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Cash Advance May"
-      },
-      {
-        "intent": "enterdata",
-        "text": "james"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20 jan"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20 feb"
-      },
-      {
-        "intent": "enterdata",
-        "text": "UK trip"
-      },
-      {
-        "intent": "enterdata",
-        "text": "feb 20th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "mar 13th"
-      },
-      {
-        "intent": "greet",
-        "text": "whats up"
-      },
-      {
-        "intent": "greet",
-        "text": "hi friend"
-      },
-      {
-        "intent": "greet",
-        "text": "hey bot!"
-      },
-      {
-        "intent": "greet",
-        "text": "yo"
-      },
-      {
-        "intent": "greet",
-        "text": "yoo"
-      },
-      {
-        "intent": "greet",
-        "text": "heeey"
-      },
-      {
-        "intent": "greet",
-        "text": "hii"
-      },
-      {
-        "intent": "greet",
-        "text": "ayyyy whaddup"
-      },
-      {
-        "intent": "greet",
-        "text": "hi there it's me"
-      },
-      {
-        "intent": "greet",
-        "text": "hiihihi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi Mister"
-      },
-      {
-        "intent": "greet",
-        "text": "hello friend"
-      },
-      {
-        "intent": "greet",
-        "text": "Hallo"
-      },
-      {
-        "intent": "greet",
-        "text": "hi?"
-      },
-      {
-        "intent": "greet",
-        "text": "Hei"
-      },
-      {
-        "intent": "greet",
-        "text": "hey there"
-      },
-      {
-        "intent": "greet",
-        "text": "jop"
-      },
-      {
-        "intent": "greet",
-        "text": "Well hello there ;)"
-      },
-      {
-        "intent": "greet",
-        "text": "hello everybody"
-      },
-      {
-        "intent": "greet",
-        "text": "hey dude"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi folks"
-      },
-      {
-        "intent": "greet",
-        "text": "Hi bot"
-      },
-      {
-        "intent": "greet",
-        "text": "hello robot"
-      },
-      {
-        "intent": "greet",
-        "text": "hi hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hello there"
-      },
-      {
-        "intent": "greet",
-        "text": "good morning"
-      },
-      {
-        "intent": "greet",
-        "text": "heyo"
-      },
-      {
-        "intent": "greet",
-        "text": "Whats Up"
-      },
-      {
-        "intent": "greet",
-        "text": "hallo"
-      },
-      {
-        "intent": "greet",
-        "text": "Hellllooooooo"
-      },
-      {
-        "intent": "greet",
-        "text": "Hey bot"
-      },
-      {
-        "intent": "greet",
-        "text": "hey"
-      },
-      {
-        "intent": "greet",
-        "text": "Heya"
-      },
-      {
-        "intent": "greet",
-        "text": "heya"
-      },
-      {
-        "intent": "greet",
-        "text": "helloooo"
-      },
-      {
-        "intent": "greet",
-        "text": "hi again"
-      },
-      {
-        "intent": "greet",
-        "text": "I said, helllllloooooO!!!!"
-      },
-      {
-        "intent": "greet",
-        "text": "Hello"
-      },
-      {
         "intent": "greet",
         "text": "Hi"
-      },
-      {
-        "intent": "greet",
-        "text": "Whats up my bot"
       },
       {
         "intent": "greet",
@@ -2469,7 +1685,15 @@
       },
       {
         "intent": "greet",
-        "text": "hey bot"
+        "text": "Hi bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello"
       },
       {
         "intent": "greet",
@@ -2477,31 +1701,19 @@
       },
       {
         "intent": "greet",
-        "text": "good evening"
+        "text": "hi again"
       },
       {
         "intent": "greet",
-        "text": "jojojo"
+        "text": "hi folks"
       },
       {
         "intent": "greet",
-        "text": "hiii"
+        "text": "hi Mister"
       },
       {
         "intent": "greet",
-        "text": "hello is anybody there"
-      },
-      {
-        "intent": "greet",
-        "text": "good afternoon"
-      },
-      {
-        "intent": "greet",
-        "text": "howdy"
-      },
-      {
-        "intent": "greet",
-        "text": "hello?"
+        "text": "hi pal!"
       },
       {
         "intent": "greet",
@@ -2509,75 +1721,31 @@
       },
       {
         "intent": "greet",
-        "text": "hello"
-      },
-      {
-        "intent": "greet",
-        "text": "hey hey"
-      },
-      {
-        "intent": "greet",
-        "text": "heyho"
-      },
-      {
-        "intent": "greet",
-        "text": "hey let's talk"
-      },
-      {
-        "intent": "greet",
-        "text": "what up"
-      },
-      {
-        "intent": "greet",
         "text": "greetings"
       },
       {
         "intent": "greet",
-        "text": "hola"
+        "text": "hello everybody"
       },
       {
         "intent": "greet",
-        "text": "hii- hi pal!"
+        "text": "hello is anybody there"
       },
       {
         "intent": "greet",
-        "text": "hello sweet boy"
+        "text": "hello robot"
       },
       {
         "intent": "greet",
-        "text": "hey, let's talk"
+        "text": "hallo"
       },
       {
         "intent": "greet",
-        "text": "hellooo"
+        "text": "heeey"
       },
       {
         "intent": "greet",
-        "text": "hello it is me again"
-      },
-      {
-        "intent": "greet",
-        "text": "hello sweatheart"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "whats up"
+        "text": "hi hi"
       },
       {
         "intent": "greet",
@@ -2585,7 +1753,223 @@
       },
       {
         "intent": "greet",
+        "text": "hey hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
         "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "yo"
+      },
+      {
+        "intent": "greet",
+        "text": "hola"
+      },
+      {
+        "intent": "greet",
+        "text": "hi?"
+      },
+      {
+        "intent": "greet",
+        "text": "hey bot!"
+      },
+      {
+        "intent": "greet",
+        "text": "hello friend"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hello sweet boy"
+      },
+      {
+        "intent": "greet",
+        "text": "yoo"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "hiihihi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello sweatheart"
+      },
+      {
+        "intent": "greet",
+        "text": "hellooo"
+      },
+      {
+        "intent": "greet",
+        "text": "helloooo"
+      },
+      {
+        "intent": "greet",
+        "text": "heyo"
+      },
+      {
+        "intent": "greet",
+        "text": "ayyyy whaddup"
+      },
+      {
+        "intent": "greet",
+        "text": "hello?"
+      },
+      {
+        "intent": "greet",
+        "text": "Hallo"
+      },
+      {
+        "intent": "greet",
+        "text": "heya"
+      },
+      {
+        "intent": "greet",
+        "text": "hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "Hellllooooooo"
+      },
+      {
+        "intent": "greet",
+        "text": "whats up"
+      },
+      {
+        "intent": "greet",
+        "text": "Whats Up"
+      },
+      {
+        "intent": "greet",
+        "text": "Hei"
+      },
+      {
+        "intent": "greet",
+        "text": "Well hello there ;)"
+      },
+      {
+        "intent": "greet",
+        "text": "I said, helllllloooooO!!!!"
+      },
+      {
+        "intent": "greet",
+        "text": "Heya"
+      },
+      {
+        "intent": "greet",
+        "text": "Whats up my bot"
+      },
+      {
+        "intent": "greet",
+        "text": "hiii"
+      },
+      {
+        "intent": "greet",
+        "text": "heyho"
+      },
+      {
+        "intent": "greet",
+        "text": "hey, let's talk"
+      },
+      {
+        "intent": "greet",
+        "text": "hey let's talk"
+      },
+      {
+        "intent": "greet",
+        "text": "jojojo"
+      },
+      {
+        "intent": "greet",
+        "text": "hey dude"
+      },
+      {
+        "intent": "greet",
+        "text": "hello it is me again"
+      },
+      {
+        "intent": "greet",
+        "text": "what up"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "jop"
+      },
+      {
+        "intent": "greet",
+        "text": "hi friend"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there it's me"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good afternoon"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
       },
       {
         "intent": "greet",
@@ -2597,7 +1981,23 @@
       },
       {
         "intent": "greet",
-        "text": "hey hi"
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
       },
       {
         "intent": "pendingreport",
@@ -2610,10 +2010,6 @@
       {
         "intent": "pendingreport",
         "text": "show pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show me pending report"
       },
       {
         "intent": "pendingreport",
@@ -2645,10 +2041,6 @@
       },
       {
         "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
         "text": "pending reports"
       },
       {
@@ -2676,28 +2068,108 @@
         "text": "list my drafts"
       },
       {
-        "intent": "pendingreport",
-        "text": "show all pending reports"
+        "intent": "thank",
+        "text": "Thanks"
       },
       {
-        "intent": "pendingreport",
-        "text": "show me peding reports"
+        "intent": "thank",
+        "text": "Thank you"
       },
       {
-        "intent": "pendingreport",
-        "text": "get my pending reports"
+        "intent": "thank",
+        "text": "Thank you so much"
       },
       {
-        "intent": "pendingreport",
-        "text": "show me all pending reports"
+        "intent": "thank",
+        "text": "Thanks bot"
       },
       {
-        "intent": "pendingreport",
-        "text": "list out my pending reports"
+        "intent": "thank",
+        "text": "Thanks for that"
       },
       {
-        "intent": "pendingreport",
-        "text": "pending reports"
+        "intent": "thank",
+        "text": "cheers"
+      },
+      {
+        "intent": "thank",
+        "text": "cheers bro"
+      },
+      {
+        "intent": "thank",
+        "text": "ok thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "perfect thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks a bunch for everything"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks for the help"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks a lot"
+      },
+      {
+        "intent": "thank",
+        "text": "amazing, thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "cool, thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "cool thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "Cool. Thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks this is great news"
+      },
+      {
+        "intent": "thank",
+        "text": "thank you"
+      },
+      {
+        "intent": "thank",
+        "text": "great thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "cool thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks for forum link, I'll check it out"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks!"
       }
     ],
     "regex_features": [],
@@ -2743,66 +2215,6 @@
         "value": "delhi_trip",
         "synonyms": [
           "Delhi_trip"
-        ]
-      },
-      {
-        "value": "25th jan",
-        "synonyms": [
-          "25th Jan"
-        ]
-      },
-      {
-        "value": "29th jan",
-        "synonyms": [
-          "29th Jan"
-        ]
-      },
-      {
-        "value": "may 2017",
-        "synonyms": [
-          "May 2017"
-        ]
-      },
-      {
-        "value": "june 2018",
-        "synonyms": [
-          "June 2018"
-        ]
-      },
-      {
-        "value": "trip to usa",
-        "synonyms": [
-          "trip to USA"
-        ]
-      },
-      {
-        "value": "21 - 03 - 2018",
-        "synonyms": [
-          "21-03-2018"
-        ]
-      },
-      {
-        "value": "25 - 04 -2018",
-        "synonyms": [
-          "25-04-2018"
-        ]
-      },
-      {
-        "value": "29 - 5 - 2018",
-        "synonyms": [
-          "29-5-2018"
-        ]
-      },
-      {
-        "value": "xyz12354",
-        "synonyms": [
-          "XYZ12354"
-        ]
-      },
-      {
-        "value": "23rd feb .",
-        "synonyms": [
-          "23rd Feb."
         ]
       }
     ]

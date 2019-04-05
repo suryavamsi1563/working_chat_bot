@@ -3,25 +3,28 @@
     "action_listen": {
       "slots": [
         "name",
-        "enddate",
-        "startdate"
+        "startdate",
+        "enddate"
       ]
     },
     "create_report_form": {
       "slots": [
         "name",
-        "requested_slot",
+        "startdate",
         "enddate",
-        "startdate"
+        "requested_slot"
       ]
     },
     "utter_goodbye": {
       "slots": []
     },
+    "nav_to_lineitems": {
+      "slots": []
+    },
     "pending_report": {
       "slots": []
     },
-    "utter_greet": {
+    "utter_okay": {
       "slots": []
     }
   },
@@ -37,7 +40,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190402-175324",
+  "trained_at": "20190404-172706",
   "rasa_core": "0.13.5",
   "tensorflow": "1.12.0",
   "sklearn": "0.20.3"

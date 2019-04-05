@@ -1,7 +1,26 @@
+## intent:approvals
+- can you approve my all  pending reports
+- can you approve pending reports
+- approve my first report
+- approve my second report
+- approve my last report
+- submit all reports
+- submit my first report
+- submit second report
+- submit last report
+- approve my report having id [54232](expid)
+- need to submit this report having id [12345](expid)
+- approve [65412](expid)
+- clear my pending reports
+- [54624](expid) approve this report
+- [32145](expid) need to submit this report
+- [12036](expid) clear this report
+- approve report with expid [56098](expid)
+- approve report with expid [56100](expid)
+
 ## intent:affirm
 - yes
 - of course
-- S
 - sure
 - yeah
 - ok
@@ -9,7 +28,7 @@
 - cool
 - go for it
 - yep
-- yep, I want to create
+- yep, will do thank you
 - I'm sure I will!
 - oh awesome!
 - Yes
@@ -17,19 +36,21 @@
 - I accept
 - i accept
 - ok i accept
+- I changed my mind. I want to accept it
 - ok cool
 - alright
 - i will!
+- ok, I behave now
 - yop
 - oki doki
 - yes please
 - yes please!
 - jo
-- yo
 - yep if i have to
-- amazing
-- amazying
+- amayzing
 - confirm
+- nice
+- coolio
 - definitely yes without a doubt
 - yas
 - yup
@@ -39,29 +60,80 @@
 - Oh, ok
 - Sure
 - hm, i'd like that
-- hm, i'd like to
 - ja
-- ya
 - sure!
 - yes i accept
+- Sweet
 - amazing!
+- how nice!
 - cool!
 - yay
-- yes create please
+- yes accept please
 - great
 - oh cool
 - fine
-- I want to
-- I want to create lineitem
-- Need to create a lineitem
-- generate a lineitem
-- create it please
-- file my lineitems
-- Yes
-- s
-- yes
-- s
-- Yes
+
+## intent:ask_isbot
+- are you a bot?
+- are you a real bot?
+- are you a bot
+- are you really a bot
+- are you a robot
+- are you a robot
+- are you a rasa bot?
+- are you a rasa bot?
+- what are you, a bot?
+- tell me, are you a bot?
+- are you a Skynet ?
+- are you a chatbot
+- are you ai
+- are you artificial intelligence
+- are you artificial
+- i guess you are a chatbot
+- you are a robot
+- you are ai
+- you are chatbot
+- are you bot
+- are you a bot ?
+- you're a bot
+- Are you the bot?
+- Hi there, are you the bot?
+- Are you a chat bot?
+- are you rasa bot?
+- Ar you a bot ?
+- are you robot
+- are you real
+- What are you ?
+- are you real lol
+- cuz you are a bot
+- are you bot?
+- oh are you chatbot?
+- are you sure that you're a bot?
+- are you a BOT
+
+## intent:ask_whoisit
+- who is this
+- who am i talking to
+- what's your name
+- who am i speaking with
+- who r u
+- what's your name bot
+- whats ur name
+- what are you called?
+- who is talking?
+- who speaks?
+- who talks?
+- who are you and what do you want from me
+- who are you?
+- who is it?
+- who are u?
+- who are you
+- I want to know who you are
+- who are y
+- yes but who are you in your heart
+- are you a bot?
+- who is this?
+- hi! what's your name?
 
 ## intent:bye
 - goodbye
@@ -75,6 +147,7 @@
 - farewell
 - catch you later
 - bye for now
+- bye
 - bye was nice talking to you
 - bye udo
 - bye bye bot
@@ -87,17 +160,34 @@
 - tschüssikowski
 - bye!
 - bye
+- bye
 - take care
 - see ya
+- bye
 - goodbye
 - later
-- see you later
 - bye
-- thanks
-- bye
-- goodbye
-- bye
-- bye
+
+## intent:canthelp
+- ok then you cant help me
+- that was shit, you're not helping
+- you can't help me
+- you can't help me with what i need
+- i guess you can't help me then
+- ok i guess you can't help me
+- that's not what i want
+- ok, but that doesnt help me
+- this is leading to nothing
+- this conversation is not really helpful
+- you cannot help me with what I want
+- I think you cant help me
+- hm i don't think you can do what i want
+- stop
+- stop go back
+- do you get anything?
+- and you call yourself bot company? pff
+- and that's it?
+- nothing else?
 
 ## intent:createreport
 - report
@@ -117,12 +207,6 @@
 - need to create a report
 - need a report
 - file my expenses
-- create a new report
-- build a report
-- create report
-- generate a report
-- create a report
-- need to create a report
 
 ## intent:createreportfull
 - create a report with name "[trip to new york](name)"
@@ -131,7 +215,6 @@
 - create a report for my trip on [15th Jan 2019](startdate) to [19th Jan 2019](enddate) with name [lead_summit](name)
 - add all transcactions from [Jan 20th](startdate) to [Jan 23rd](enddate) to the report named [XYZ](name)
 - create a report with name [firstreport](name)
-- create a report [travel_Del](name) from [12th jan](startdate) to [18 March](enddate)
 - create a report [finalreport](name)
 - make a report [XYZ](name)
 - make a report [final_one](name)
@@ -177,16 +260,6 @@
 - make a report [keralite](name) with dates [25th Jan](startdate:25th jan) to [29th Jan](enddate:29th jan)
 - make a report [kerala](name) with dates [25th Jan](startdate:25th jan) to [29th Jan](enddate:29th jan)
 - make a report nellore with dates [25th Jan](startdate:25th jan) to [29th Jan](enddate:29th jan)
-- create a report [Walmart tire repair May 2017](name) for my trip between [May 2017](startdate:may 2017) to [June 2018](enddate:june 2018)
-- create a report [who conference](name) for dates [jan 23rd](startdate) to [feb 25th](enddate)
-- generate a report for my travel on [29 dec](startdate) to [28 jan](enddate) titled conderence 2018
-- create a report [trip to USA](name:trip to usa) dates are [21-03-2018](startdate:21 - 03 - 2018) to [25-04-2018](enddate:25 - 04 -2018)
-- create a custom report
-- November travel to China
-- build a report [Nov_travel](name) for my trip from [29-5-2018](startdate:29 - 5 - 2018) to [29-6-2019](enddate)
-- create report with [trip to paris](name)
-- Create a report with name [XYZ12354](name:xyz12354) for my travel between [29th Jan](startdate:29th jan) to [23rd Feb.](enddate:23rd feb .)
-- create a report with name [conference_meet](name) in between [20th jan](startdate) and [15th feb](enddate)
 
 ## intent:deny
 - no
@@ -195,9 +268,9 @@
 - never
 - absolutely not
 - i don't think so
-- i dont
 - i'm afraid not
-- not required
+- no sir
+- no ma'am
 - no way
 - no sorry
 - No, not really.
@@ -210,30 +283,23 @@
 - deny
 - i decline
 - never mind
-- Not at the moment
-- No.I will do it later
-- I dont want to
+- I'm not giving you my email address
+- no I haven't decided yet if I want to sign up
+- I don't want to give it to you
+- I'm not going to give it to you
 - no i don't accept
 - no!!!!
+- no you did it wrong
+- no i can't
 - i'm not sure
 - NEIN
 - nein
 - not really
+- i guess it means - no
 - i don't want to
 - i don't want either of those
 - nah thanks
-- no thanks
 - neither of these
-- I  dont want to create lineitem
-- I dont need now
-- No Need to create a lineitem
-- dont generate a lineitem
-- dont create it
-- dont file my lineitems
-- no
-- no
-- no
-- no
 
 ## intent:enterdata
 - first report
@@ -243,6 +309,7 @@
 - second report
 - 16 feb 2019
 - 28 feb 2019
+- make a report
 - finalreport
 - 30-12-2018
 - 30/01/2019
@@ -304,107 +371,92 @@
 - Powell - November 2014
 - dec 16th
 - july 8th
-- GGAP Audits- Driscoll's Growers (week of 4.2.18)
-- 4.2.18
-- 26th feb 2018
-- conference 2018
-- 25th Jan
-- 23 Feb
-- Lauren Kristick Expenses
-- Jan 2019
-- Dec 2019
-- Delhi
-- jan 26th
-- dec 18th
-- india-2018
-- 20-03-2018
-- 30-04-2018
-- march 13th
-- april 4th
-- Cash Advance May
-- james
-- 20 jan
-- 20 feb
-- UK trip
-- feb 20th
-- mar 13th
 
 ## intent:greet
-- whats up
-- hi friend
-- hey bot!
-- yo
-- yoo
-- heeey
-- hii
-- ayyyy whaddup
-- hi there it's me
-- hiihihi
-- hi Mister
-- hello friend
-- Hallo
-- hi?
-- Hei
-- hey there
-- jop
-- Well hello there ;)
-- hello everybody
-- hey dude
-- hi
-- hi folks
-- Hi bot
-- hello robot
-- hi hi
-- hello there
-- good morning
-- heyo
-- Whats Up
-- hallo
-- Hellllooooooo
-- Hey bot
-- hey
-- Heya
-- heya
-- helloooo
-- hi again
-- I said, helllllloooooO!!!!
-- Hello
 - Hi
-- Whats up my bot
 - Hey
-- hey bot
+- Hi bot
+- Hey bot
+- Hello
 - Good morning
-- good evening
-- jojojo
-- hiii
-- hello is anybody there
-- good afternoon
-- howdy
-- hello?
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
 - hi there
-- hello
-- hey hey
-- heyho
-- hey let's talk
-- what up
 - greetings
-- hola
-- hii- hi pal!
-- hello sweet boy
-- hey, let's talk
-- hellooo
-- hello it is me again
-- hello sweatheart
-- hi
-- hi
-- hi
-- hi
-- whats up
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
 - hey
+- hey hey
+- hello there
+- hi
+- hello
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+- good morning
+- hii
+- hello sweet boy
+- yoo
+- hey there
+- hiihihi
+- hello sweatheart
+- hellooo
+- helloooo
+- heyo
+- ayyyy whaddup
+- hello?
+- Hallo
+- heya
+- hey bot
+- howdy
+- Hellllooooooo
+- whats up
+- Whats Up
+- Hei
+- Well hello there ;)
+- I said, helllllloooooO!!!!
+- Heya
+- Whats up my bot
+- hiii
+- heyho
+- hey, let's talk
+- hey let's talk
+- jojojo
+- hey dude
+- hello it is me again
+- what up
+- hi there
+- hi
+- jop
+- hi friend
+- hi there it's me
+- good evening
+- good morning
+- good afternoon
+- hi
+- hii
+- hi
+- hello
+- hello
+- hii
 - hi
 - hi
 - hi
-- hey hi
+- Hi
+- hii
+- hi
+- hi
+- hi
+- hii
+- hello
 
 ## intent:pendingreport
 - pending
@@ -418,7 +470,6 @@
 - show the drafts
 - show the pending approvals
 - show me all the drafts
-- show all pending reports
 - pending reports
 - retrieve pending reports
 - get all drafts
@@ -426,33 +477,43 @@
 - get my pending reports
 - list out all my pending reports
 - list my drafts
-- show all pending reports
-- show me peding reports
-- get my pending reports
-- show me all pending reports
-- list out my pending reports
-- pending reports
+
+## intent:thank
+- Thanks
+- Thank you
+- Thank you so much
+- Thanks bot
+- Thanks for that
+- cheers
+- cheers bro
+- ok thanks!
+- perfect thank you
+- thanks a bunch for everything
+- thanks for the help
+- thanks a lot
+- amazing, thanks
+- cool, thanks
+- cool thank you
+- thanks
+- thanks!
+- Cool. Thanks
+- thanks
+- thanks this is great news
+- thank you
+- great thanks
+- Thanks!
+- cool thanks
+- thanks for forum link, I'll check it out
+- thanks!
 
 ## synonym:16th jan 2019
 - 16th Jan 2019
-
-## synonym:21 - 03 - 2018
-- 21-03-2018
-
-## synonym:23rd feb .
-- 23rd Feb.
-
-## synonym:25 - 04 -2018
-- 25-04-2018
 
 ## synonym:25th jan
 - 25th Jan
 
 ## synonym:26th feb
 - 26th Feb
-
-## synonym:29 - 5 - 2018
-- 29-5-2018
 
 ## synonym:29th feb
 - 29th Feb
@@ -469,17 +530,5 @@
 ## synonym:jan 20th
 - Jan 20th
 
-## synonym:june 2018
-- June 2018
-
-## synonym:may 2017
-- May 2017
-
-## synonym:trip to usa
-- trip to USA
-
 ## synonym:usa_trip
 - USA_trip
-
-## synonym:xyz12354
-- XYZ12354
