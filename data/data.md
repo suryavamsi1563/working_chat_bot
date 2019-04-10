@@ -62,6 +62,10 @@
 - yes
 - s
 - Yes
+- i want
+- /affirm
+- /affirm
+- /affirm
 
 ## intent:bye
 - goodbye
@@ -98,95 +102,121 @@
 - goodbye
 - bye
 - bye
+- bye
+- good bye
+- bye
+- take care
+- see ya
+- thanks
+- bye
+- bye
+- bye
+- goodbye
+- goodbye
+- bye
+- see you later
+- see you later
+- goodbye
+- see you later
+
+## intent:choose
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
+- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
 
 ## intent:createreport
-- report
-- create a report
-- file my expenses
-- start a new a report
-- add my all expenses
-- make a report
-- create a record
-- create a document
-- create a new report
-- create report
-- make a report
-- generate a report
-- generate me a new report
-- generate a report
-- need to create a report
-- need a report
-- file my expenses
-- create a new report
-- build a report
-- create report
-- generate a report
-- create a report
-- need to create a report
-
-## intent:createreportfull
-- create a report with name "[trip to new york](name)"
-- create a report with name [trip to new york](name)
-- I travelled to bangalore.Make a report [finalreport](name)
-- create a report for my trip on [15th Jan 2019](startdate) to [19th Jan 2019](enddate) with name [lead_summit](name)
-- add all transcactions from [Jan 20th](startdate) to [Jan 23rd](enddate) to the report named [XYZ](name)
-- create a report with name [firstreport](name)
-- create a report [travel_Del](name) from [12th jan](startdate) to [18 March](enddate)
-- create a report [finalreport](name)
-- make a report [XYZ](name)
-- make a report [final_one](name)
-- make a report with name [travel](name)
-- add all transactions from [Jan 15th](startdate) [Jan 20th](enddate) to the report name [trip to new york](name)
-- add all transactions from [Jan15th](startdate) [Jan20th](enddate) to the report name [hummer](name)
-- get a report with name [Hello](name) for my travel between [02-04-2019](startdate) and [14/01/2019](enddate)
-- create a report between [12th Dec](startdate) to [14th Jan](enddate) as [longtrip](name)
-- make report [india trip](name) traveled between [jan 20th](startdate) and [jan 29th](enddate)
-- create a new report with name [USA trip](name) traveled between [jan 20th](startdate) and [jan 29th](enddate)
-- get a report [Trip to Hyderabad](name) with startdate [27th Sep](startdate) and enddate as [29th Dec](enddate)
-- construct a report with name [LSD](name) from [Jan25th](startdate) to [23rdFeb](enddate)
-- file my expenses into a report [trip to Hyderabad](name)
-- report transactions from [Jan 12th](startdate) as [latestReport](name)
-- create a report with name [Xyz_date](name) for my travel from [13th March 2018](startdate) to [26th April 2018](enddate)
-- make a report with name [sara](name) for my travel between [12th June 2013](startdate) and [31st July 2018](enddate)
-- make a report with name '[trip to US](name)' for my travel between [12th June 2013](startdate) and [31st July 2018](enddate)
-- create a report with name [finalreport](name) for my travel on [Jan 21st](startdate) to [26th July](enddate)
-- add all transactions from [Jan 15th](startdate:jan 15th) [Jan 20th](enddate:jan 20th) to the report name [trip to new york](name)
-- generate a report for my previous india trip between [14th jan 2019](startdate) to [16th Jan 2019](enddate:16th jan 2019) with name [india_trip](name)
-- create a report with name [hawaii](name) which I traveled from [26th Feb](startdate:26th feb) to [29th Feb](enddate:29th feb)
-- create a report [anything](name)
-- make a report on my Delhi trip with the name [meeting](name)
-- file a new report with name [USA_trip](name:usa_trip)
-- create a report with name [Delhi_trip](name:delhi_trip) between [20th nov](startdate) to [20th dec](enddate)
-- need to create a report with [hyderabad](name)
-- Create a report titled [trip to SF](name) from [jan 1st](startdate) to [jan 6th](enddate)
-- Titled [trip to India](name) create a report from [5th Jan](startdate) to [26th Jan](enddate)
-- create a report with name [finalreport](name) for [24th Jan](startdate) to [23rd feb](enddate)
-- create a report with name [australia](name) between [last monday](startdate) to [last saturday](enddate)
-- need to create report with [central board](name) traveled between [last month](startdate) to [yesterday](enddate)
-- file my report from [last sunday](startdate) to [this sunaday](enddate)
-- make report a with [campus_training](name) between  [last jan 8th](startdate) to [last monday](enddate)
-- generate a report from [feb 2nd](startdate) [last mar 13th](enddate) as [CEO meeting](name)
-- create a new from between [ last monday](startdate) and [saturday](enddate)
-- create a report from [last monday](startdate)
-- add all transactions from [last apr 14th](startdate) and  named as [chennai trip](name)
-- need to generate a report from [last march](startdate) to [last week](enddate)
-- create a report trip to [Paris](name) between [13/03/2018](startdate) and [last jan](enddate)
-- start date of my trip is [last sunday](startdate) named with [Turkey trip](name)
-- my trip in  between [15th jan](startdate) and [last month](enddate)
-- make a report [trip to dallas](name) with dates [25th Jan](startdate) to [29th Jan](enddate)
-- make a report [keralite](name) with dates [25th Jan](startdate:25th jan) to [29th Jan](enddate:29th jan)
-- make a report [kerala](name) with dates [25th Jan](startdate:25th jan) to [29th Jan](enddate:29th jan)
-- make a report nellore with dates [25th Jan](startdate:25th jan) to [29th Jan](enddate:29th jan)
-- create a report [Walmart tire repair May 2017](name) for my trip between [May 2017](startdate:may 2017) to [June 2018](enddate:june 2018)
-- create a report [who conference](name) for dates [jan 23rd](startdate) to [feb 25th](enddate)
-- generate a report for my travel on [29 dec](startdate) to [28 jan](enddate) titled conderence 2018
-- create a report [trip to USA](name:trip to usa) dates are [21-03-2018](startdate:21 - 03 - 2018) to [25-04-2018](enddate:25 - 04 -2018)
-- create a custom report
 - November travel to China
-- build a report [Nov_travel](name) for my trip from [29-5-2018](startdate:29 - 5 - 2018) to [29-6-2019](enddate)
-- create report with [trip to paris](name)
-- Create a report with name [XYZ12354](name:xyz12354) for my travel between [29th Jan](startdate:29th jan) to [23rd Feb.](enddate:23rd feb .)
-- create a report with name [conference_meet](name) in between [20th jan](startdate) and [15th feb](enddate)
+- build a report
+- make a report [final_one](name)
+- make a report [XYZ](name)
+- file a new report with titled [Grzandziel - November 2014](name)
+- generate a report titled [Brandi Jordan EXP 12.2016](name)
+- generate a report with  [Renne - April 2017 Monthly Expenditures](name)
+- create a record
+- create a report [anything](name)
+- create a report with name [Dual monitor mount for HR rep](name)
+- create a new report titled [Zerlina Oppenheim PNC 12.2016](name)
+- make a report with name [travel](name)
+- create a report [Brandi Jordan EXP 12.2016](name)
+- create a report with [ME08312018](name)
+- create a report
+- create report with name [WE11192017](name)
+- make a report titled [Expenses April 14-29](name)- create a custom report
+- need to generate a report with[OA09262017](name)
+- make a report
+- create a report [finalreport](name)
+- start a new report with titled [P/E 3/17/18](name)
+- file a new report with name [USA_trip](name:usa_trip)
+- create a report with name [Filip - April 2016](name)
+- file a new report with [Shiwarski - February 2015](name)
+- generate a report with  [Baer - March 2015 - meal at CalU](name)
+- create a report with name [trip to new york](name)
+- need to generate a report with name [repeater Ops aug 2-2](name)
+- create a report with name [Rasky - October 2014](name)
+- generate a document titled [Netz Mar 5-9](name)
+- make a report on my Delhi trip with the name [meeting](name)
+- create a report with [ek05062018](name)
+- file my expenses into a report [trip to Hyderabad](name)
+- create a report with titled [Jeanette Thomas EXP 01.2017](name)
+- generate a report with [ez01142019](name)
+- create a report with [Hall - February 2015](name)
+- I travelled to bangalore.Make a report [finalreport](name)
+- generate a report
+- need a report
+- need to create a report with [hyderabad](name)
+- generate a report with  [Bill - Dec 2018](name)
+- create a document
+- report
+- need to create a report
+- create a report with name [Dec 17 Cell](name)
+- createa report with titled [Conway - February 2019](name)
+- file my expenses titled [HR Charges for August 2017-1](name)
+- create report with titled [P/E 06/17/18](name)
+- create report with titled [ez01142019](name)
+- create a report with name [hyderabad_trip](name)
+- generate a report with name [Bishop - December 2018-1](name)
+- file a new report
+- file my expenses
+- generate a report with name [Boyd - April 2017](name)
+- create a report with week of 2/5/18
+- need to generate a report with [Underwood - June 2015](name)
+- create a report with name [Feldmeier November 2015-1](name)
+- create a report with name "[trip to new york](name)"
+- add my all expenses
+- make a report with [W/E 06/20/18](name)
+- make a report titled [Expenses April 14-29](name)- report
+- start a new a report
+- create report
+- need to generate a report
+- generate a report with name [Dec 17 Cell](name:dec 17 cell)
+- need to create a report [Jeanette Thomas PNC 01.2017](name)
+- generate a report with name [Baer - March 2015 - meal at CalU](name)
+- generate me a new report
+- create a new report
+- create report with [W/E 9/07/2017](name)
+- create a report with name [firstreport](name)
+- create a report with name [Wachter - May 2016](name)
+- create a report [Hanschen - October 2014](name:hanschen - october 2014)
+- generate a new report [Wolfe - November 2014-1](name:wolfe - november 2014 - 1)
 
 ## intent:deny
 - no
@@ -230,22 +260,15 @@
 - dont generate a lineitem
 - dont create it
 - dont file my lineitems
-- no
-- no
-- no
-- no
+- i dont
+- /deny
+- /deny
 
 ## intent:enterdata
 - first report
-- 15th jan 2019
-- 30 jan 2019
 - start a new report
 - second report
-- 16 feb 2019
-- 28 feb 2019
 - finalreport
-- 30-12-2018
-- 30/01/2019
 - report name is [XYZ](name)
 - start date is [04-03-2015](startdate)
 - trip has started on [14-02-2016](startdate)
@@ -254,80 +277,34 @@
 - make the name as [firstreport](name)
 - name it [extrem123](name)
 - uk report
-- 13th feb 2019
-- 20th feb 2019
 - second report
-- 24th jan 2018
-- 20th feb 2019
 - final report
-- 20th june 2018
-- jan 20th 2019
 - hyderabad
-- 26th Jan 2018
-- 1st february 2019
-- may 5th 2014
-- 14th July 2016
-- 25th jan
-- 28th feb
-- last month
-- last week
-- last year
-- previous week
-- previous month
-- previous year
-- previous sunday
-- previous monday
-- previous tuesday
-- previous wednesday
-- previous thursday
-- previous friday
-- previous saturday
-- last sunday
-- last monday
-- last tuesday
-- last wednesday
-- last thursday
-- last friday
-- last saturday
-- yesterday
-- today
 - nellore
 - sep trip
 - jan 15
 - last sunday
 - dell meeting
-- 03/03/2018
-- last week
 - project demo
-- 25th nov
-- jan 26th
 - Powell - November 2014
-- dec 16th
-- july 8th
 - GGAP Audits- Driscoll's Growers (week of 4.2.18)
-- 4.2.18
-- 26th feb 2018
 - conference 2018
-- 25th Jan
-- 23 Feb
 - Lauren Kristick Expenses
-- Jan 2019
-- Dec 2019
 - Delhi
-- jan 26th
-- dec 18th
-- india-2018
-- 20-03-2018
-- 30-04-2018
-- march 13th
-- april 4th
 - Cash Advance May
 - james
-- 20 jan
-- 20 feb
 - UK trip
-- feb 20th
-- mar 13th
+- londontrip4
+- transport
+- Landers - November 2014
+- West - April 2015 2nd Report-1
+- Jennison - April 2015
+- Cthearle - May 2015 Expenses-1
+- Lewis - May 2015
+- Routine Expenses Tyler Smith through Jan 30 2019
+- Blakey - May 2015-1
+- JC 1-8-19
+- week of 2/5/18
 
 ## intent:greet
 - whats up
@@ -396,15 +373,22 @@
 - hello it is me again
 - hello sweatheart
 - hi
-- hi
-- hi
-- hi
 - whats up
 - hey
+- hey hi
 - hi
+- hi
+- Hi
 - hi
 - hi
 - hey hi
+- hello
+- hello
+- hello
+- hi
+- hi
+- hello bot
+- hello
 
 ## intent:pendingreport
 - pending
@@ -432,54 +416,31 @@
 - show me all pending reports
 - list out my pending reports
 - pending reports
+- show all pending reports
 
-## synonym:16th jan 2019
-- 16th Jan 2019
+## synonym:No
+- {"no_more_receipts":"No"}
 
-## synonym:21 - 03 - 2018
-- 21-03-2018
+## synonym:attach
+- {"no_more_receipts":"attach"}
 
-## synonym:23rd feb .
-- 23rd Feb.
+## synonym:camera
+- {"no_more_receipts":"camera"}
 
-## synonym:25 - 04 -2018
-- 25-04-2018
+## synonym:dec 17 cell
+- Dec 17 Cell
 
-## synonym:25th jan
-- 25th Jan
-
-## synonym:26th feb
-- 26th Feb
-
-## synonym:29 - 5 - 2018
-- 29-5-2018
-
-## synonym:29th feb
-- 29th Feb
-
-## synonym:29th jan
-- 29th Jan
-
-## synonym:delhi_trip
-- Delhi_trip
-
-## synonym:jan 15th
-- Jan 15th
-
-## synonym:jan 20th
-- Jan 20th
-
-## synonym:june 2018
-- June 2018
-
-## synonym:may 2017
-- May 2017
-
-## synonym:trip to usa
-- trip to USA
+## synonym:hanschen - october 2014
+- Hanschen - October 2014
 
 ## synonym:usa_trip
 - USA_trip
 
-## synonym:xyz12354
-- XYZ12354
+## regex:name
+- (\s)(create|generate|file|need to create|need)\sreport(\swith)?(\s(name|titled|named|title|))(\s(as|for|to be|be|being))(\s)?.*
+- (\s)*(create|generate|file|need to create)\sreport.*
+- [A-Z]{2}\d{8}
+- [A-Za-z\s]+\s(EXP|PNC)\s\d{2}\.\d{4}
+- [A-Za-z\s]+\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s\d+-\d+
+- [A-Za-z]+\s-\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s[2]\d{3}
+- [A-Za-z]\/[A-Za-z]\s\d+\/\d{2}\/\d+

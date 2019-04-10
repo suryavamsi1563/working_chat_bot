@@ -1,19 +1,9 @@
 {
-  "jan 15th": "jan 15th",
-  "jan 20th": "jan 20th",
-  "16th jan 2019": "16th jan 2019",
-  "26th feb": "26th feb",
-  "29th feb": "29th feb",
+  "{\"no_more_receipts\":\"camera\"}": "camera",
+  "{\"no_more_receipts\":\"attach\"}": "attach",
+  "{\"no_more_receipts\":\"no\"}": "No",
   "usa_trip": "usa_trip",
-  "delhi_trip": "delhi_trip",
-  "25th jan": "25th jan",
-  "29th jan": "29th jan",
-  "may 2017": "may 2017",
-  "june 2018": "june 2018",
-  "trip to usa": "trip to usa",
-  "21-03-2018": "21 - 03 - 2018",
-  "25-04-2018": "25 - 04 -2018",
-  "29-5-2018": "29 - 5 - 2018",
-  "xyz12354": "xyz12354",
-  "23rd feb.": "23rd feb ."
+  "dec 17 cell": "dec 17 cell",
+  "hanschen - october 2014": "hanschen - october 2014",
+  "wolfe - november 2014-1": "wolfe - november 2014 - 1"
 }

@@ -1,3 +1,7 @@
+## greet story
+* greet
+    - utter_greet
+
 ## pending report with greet and bye
 * greet
     - utter_greet
@@ -11,10 +15,9 @@
     - utter_greet
 * pendingreport
     - pending_report
-* bye
-    - utter_goodbye
 
-## Create report with line item affirm
+
+## Generated Story 2686991663111706778
 * greet
     - utter_greet
 * createreport
@@ -23,131 +26,222 @@
     - slot{"requested_slot": "name"}
 * form: enterdata
     - form: create_report_form
-    - slot{"name": "uk report"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "13th feb 2019"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "20th feb 2019"}
+    - slot{"name": "West - April 2015 2nd Report-1"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
 * affirm
-    - nav_to_lineitems
-* bye
-    - utter_goodbye
-
-## Create report with line item deny
-* greet
-    - utter_greet
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "uk report"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "13th feb 2019"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "20th feb 2019"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* deny
+    - action_submit_report
+    - action_slot_reset
     - utter_okay
-* bye
-    - utter_goodbye
-
-## Create report with line item deny along with pending report
-* greet
-    - utter_greet
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "second report"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "24th jan 2018"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "20th feb 2019"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* deny
-    - utter_okay
-* pendingreport
-    - pending_report
-* bye
-    - utter_goodbye
-
-## create report full with affirm lineitem
-* createreportfull{"startdate": "jan 15th", "enddate": "jan 20th", "name": "trip to new york"}
-    - slot{"enddate": "jan 20th"}
-    - slot{"name": "trip to new york"}
-    - slot{"startdate": "jan 15th"}
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* affirm
-    - nav_to_lineitems
-* bye
-    - utter_goodbye
-
-## create report full with deny lineitem
-* createreportfull{"startdate": "jan 15th", "enddate": "jan 20th", "name": "trip to new york"}
-    - slot{"enddate": "jan 20th"}
-    - slot{"name": "trip to new york"}
-    - slot{"startdate": "jan 15th"}
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* deny
-    - utter_okay
-* bye
-    - utter_goodbye
     
-    
-## Generated Story -3920549272918082505
-* bye
-    - utter_goodbye
 
-## Generated Story -4080747822277795457
+## Generated Story 2564268866482652283
 * greet
     - utter_greet
-* createreportfull{"name": "Nov_travel", "startdate": "29 - 5 - 2018", "enddate": "29-6-2019"}
-    - slot{"enddate": "29-6-2019"}
-    - slot{"name": "Nov_travel"}
-    - slot{"startdate": "29 - 5 - 2018"}
+* createreport
     - create_report_form
     - form{"name": "create_report_form"}
-    - form: reset_slots
+    - slot{"requested_slot": "name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"name": "Jennison - April 2015"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
 * deny
+    - utter_okay
+    - action_slot_reset
+
+## Generated Story 55085010115142509
+* greet
+    - utter_greet
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"name": "Cthearle - May 2015 Expenses-1"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* deny
+    - utter_okay
+    - action_slot_reset
+
+## Generated Story 1002004506990139782
+* greet
+    - utter_greet
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"name": "Lewis - May 2015"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - utter_okay
+
+## Generated Story -1288192080090115682
+* greet
+    - utter_greet
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"name": "Routine Expenses Tyler Smith through Jan 30 2019"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - utter_okay
+
+## Generated Story 7807415952395738139
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"name": "Blakey - May 2015-1"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
     - utter_okay
 * bye
     - utter_goodbye
 
-## Generated Story 2308451252466435333
+## Generated Story -5235559010194957009
 * greet
     - utter_greet
 * createreport
@@ -156,194 +250,334 @@
     - slot{"requested_slot": "name"}
 * form: enterdata
     - form: create_report_form
-    - slot{"name": "Lauren Kristick Expenses"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "Jan 2019"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "Dec 2019"}
-    - form: reset_slots
+    - slot{"name": "JC 1-8-19"}
+    - slot{"compexpid": "E102221"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
 * affirm
-    - nav_to_lineitems
-* pendingreport
-    - pending_report
-* bye
-    - utter_goodbye
-
-## Generated Story 935356270827042538
-* greet
-    - utter_greet
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "Delhi"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "jan 26th"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "dec 18th"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* affirm
-    - nav_to_lineitems
-* pendingreport
-    - pending_report
-* bye
-    - utter_goodbye
-
-## Generated Story 6746415488072468526
-* greet
-    - utter_greet
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "india-2018"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "20-03-2018"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "30-04-2018"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* deny
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
     - utter_okay
 * bye
     - utter_goodbye
-* pendingreport
-    - pending_report
 
-## Generated Story 2369050880694273926
-* pendingreport
-    - pending_report
-* createreportfull{"name": "trip to paris"}
-    - slot{"name": "trip to paris"}
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "march 13th"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "april 4th"}
-    - slot{"name": null}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "Cash Advance May"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* affirm
-    - nav_to_lineitems
-* pendingreport
-    - pending_report
-* bye
-    - utter_goodbye
-
-## Generated Story 467928534844767140
-* greet
-    - utter_greet
+## Generated Story -5696692326278751666
 * createreport
     - create_report_form
     - form{"name": "create_report_form"}
     - slot{"requested_slot": "name"}
 * form: enterdata
     - form: create_report_form
-    - slot{"name": "james"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "20 jan"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "20 feb"}
-    - form: reset_slots
+    - slot{"name": "week of 2/5/18"}
+    - slot{"compexpid": "E102221"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
+    - utter_okay
 * bye
     - utter_goodbye
 
-## Generated Story -6245304831182315095
-* createreportfull{"name": "xyz12354", "startdate": "29th jan", "enddate": "23rd feb ."}
-    - slot{"enddate": "23rd feb ."}
-    - slot{"name": "xyz12354"}
-    - slot{"startdate": "29th jan"}
+## Generated Story -252555865541267198
+* createreport{"name": "Dec 17 Cell"}
+    - slot{"name": "Dec 17 Cell"}
     - create_report_form
     - form{"name": "create_report_form"}
-    - form: reset_slots
+    - slot{"compexpid": "E102221"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* affirm
-    - nav_to_lineitems
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "attach"}
+    - slot{"no_more_receipts": "attach"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "attach"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* deny
+    - utter_okay
+    - action_slot_reset
+    - reset_slots
+* bye
+    - utter_goodbye
 
-## Generated Story 5518866695195701783
+## Generated Story -395339882576267122
 * greet
     - utter_greet
-* createreport
+* createreport{"name": "hyderabad_trip"}
+    - slot{"name": "hyderabad_trip"}
     - create_report_form
     - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "UK trip"}
-    - slot{"requested_slot": "startdate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"startdate": "feb 20th"}
-    - slot{"requested_slot": "enddate"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"enddate": "mar 13th"}
-    - form: reset_slots
+    - slot{"compexpid": "E000114"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
 * deny
     - utter_okay
+    - action_slot_reset
+    - reset_slots
+* bye
+    - utter_goodbye
 
-## Generated Story -1088928183619466223
-* createreportfull{"name": "conference_meet", "startdate": "20th jan", "enddate": "15th feb"}
-    - slot{"enddate": "15th feb"}
-    - slot{"name": "conference_meet"}
-    - slot{"startdate": "20th jan"}
+## Generated Story 8773553794715781915
+* greet
+    - utter_greet
+* createreport{"name": "dec 17 cell"}
+    - slot{"name": "dec 17 cell"}
     - create_report_form
     - form{"name": "create_report_form"}
-    - form: reset_slots
+    - slot{"compexpid": "E000115"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_lineitem
-* deny
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
     - utter_okay
+* bye
+    - utter_goodbye
+
+## Generated Story 787668454841770196
+* createreport{"name": "Rasky - October 2014"}
+    - slot{"name": "Rasky - October 2014"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000116"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
+    - utter_okay
+* bye
+    - utter_goodbye
+
+## Generated Story 4804152964659728738
+* greet
+    - utter_greet
+* createreport{"name": "Grzandziel - November 2014"}
+    - slot{"name": "Grzandziel - November 2014"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000117"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "camera"}
+    - slot{"no_more_receipts": "camera"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "camera"}
+    - form: followup{"name": "utter_ask_receipt"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
+    - utter_okay
+* bye
+    - utter_goodbye
+
+## Generated Story -8083090070214785419
+* createreport{"name": "hanschen - october 2014"}
+    - slot{"name": "hanschen - october 2014"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000130"}
+    - slot{"expid": 56215}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
+    - utter_okay
+* bye
+    - utter_goodbye
+
+## Generated Story 159757378610241439
+* greet
+    - utter_greet
+* createreport{"name": "wolfe - november 2014 - 1"}
+    - slot{"name": "wolfe - november 2014 - 1"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000131"}
+    - slot{"expid": 56216}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_receipt
+* choose{"no_more_receipts": "No"}
+    - slot{"no_more_receipts": "No"}
+    - add_receipt_form
+    - form{"name": "add_receipt_form"}
+    - slot{"no_more_receipts": "No"}
+    - form: followup{"name": "utter_ask_submit_report"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_submit_report
+* affirm
+    - action_submit_report
+    - action_slot_reset
+    - reset_slots
+    - utter_okay
+* bye
+    - utter_goodbye
 

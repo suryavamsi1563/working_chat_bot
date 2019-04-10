@@ -1,42 +1,48 @@
 %YAML 1.1
 ---
 actions:
-- utter_approve
-- pending_report
-- utter_ask_lineitem
-- utter_created_report
-- utter_okay
-- utter_greet
-- utter_goodbye
-- nav_to_lineitems
 - action_slot_reset
+- utter_ask_receipt
+- utter_greet
+- utter_ask_submit_report
+- action_submit_report
+- utter_goodbye
+- utter_okay
+- utter_created_report
+- pending_report
 config:
   store_entities_as_slots: true
 entities:
-- enddate
-- startdate
+- expid
+- compexpid
 - name
+- no_more_receipts
 forms:
+- add_receipt_form
 - create_report_form
 intents:
+- choose:
+    use_entities: true
+- bye:
+    use_entities: true
+- createreport:
+    use_entities: true
+- affirm:
+    use_entities: true
+- greet:
+    use_entities: true
 - deny:
     use_entities: true
 - enterdata:
     use_entities: true
-- createreport:
-    use_entities: true
-- greet:
-    use_entities: true
-- createreportfull:
-    use_entities: true
-- affirm:
-    use_entities: true
-- bye:
-    use_entities: true
 - pendingreport:
     use_entities: true
 slots:
-  enddate:
+  compexpid:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  expid:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
@@ -44,53 +50,42 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  no_more_receipts:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   requested_slot:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
-  startdate:
-    auto_fill: true
-    initial_value: null
-    type: rasa_core.slots.UnfeaturizedSlot
 templates:
-  utter_approve:
-  - text: Do you want to approve any of the reports?
-  utter_ask_enddate:
-  - text: Cool. Give me the enddate of the report?
-  utter_ask_expid:
-  - text: Yep.give me the expid(Expense_ID) so I can send it for approval?
-  - text: Give me the expid(Expense_ID) ?
-  - text: Can you provide expid(Expense_ID) ?
-  utter_ask_lineitem:
-  - text: Great!.Do you want to create a line item ?
-  - text: Shall I create a lineitem ?
-  - text: Do you require a lineitem ?
   utter_ask_name:
-  - text: Give me a name of the report ?
-  - text: What would you like to name the report ?
-  - text: Lets start with a name for your report - what would you like to name it?
-  utter_ask_startdate:
-  - text: Great.Can you say the startdate of the report?
-  - text: Cool. Give me the startdate of the report?
+  - text: Provide a name for your report ?
+  utter_ask_receipt:
+  - buttons:
+    - payload: /choose{"no_more_receipts":"camera"}
+      title: Open Camera
+    - payload: /choose{"no_more_receipts":"attach"}
+      title: Attach Receipt
+    - payload: /choose{"no_more_receipts":"No"}
+      title: No Receipt
+    text: Do you want to add a receipt?
+  utter_ask_submit_report:
+  - buttons:
+    - payload: /affirm
+      title: 'Yes'
+    - payload: /deny
+      title: 'No'
+    text: Do you want to submit the report for approval ?
   utter_created_report:
   - text: Report Created Successfully
   utter_default:
   - text: sorry, I didn't understand you, please try input something else
-  utter_enddate:
-  - text: Please provide the enddate of the report?
   utter_goodbye:
   - text: Bye.Take Care
   utter_greet:
   - text: Hey there, welcome to Suti!
-  utter_name:
-  - text: Please provide the name of the report?
-  - text: Lets start with a name for your report - what would you like to name it?
-  utter_navlineitems:
-  - text: Cool!. navigating you to creation page...
-  - text: Moving to lineitems .....
+  utter_navcamera:
+  - text: Cool!. navigating you to camera...
   utter_okay:
-  - text: Okay.
-  utter_startdate:
-  - text: Please provide the startdate of the report?
-  utter_submit:
-  - text: Created Report {name} with start-date as {startdate} and end-date as {enddate}
+  - text: Okay.can i help you with anything else ?

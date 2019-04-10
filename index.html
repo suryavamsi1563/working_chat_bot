@@ -13,11 +13,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
     <script src="https://unpkg.com/botui/build/botui.min.js"></script>
+    <style>
+    a{
+        color: white;
+    }
+    
+    </style>
 </head>
 <body>
     
     <div class="container">
-        <h1>Rasa BOT</h1>
+        <h1>Rasa Expense Bot</h1>
         <div class="row">
             <div class="col-md-8" id="my-botui-app">
                 <bot-ui></botui>
@@ -32,17 +38,48 @@
 
 </body>
 <script>
-     var botui = new BotUI('my-botui-app');
-    data = JSON.stringify({ sender:"rasa", message:"in Dallas ?"})
-    $("button").click(function(){
-        entered_data = $("#entered").val()
+    "use strict";
+    var botui = new BotUI('my-botui-app');
+    var print_data = ""
+    var entered_data = ""
+    var user_credentials = {}
+    var arr
+    var outdata
+
+    function IsJsonString(str) {
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
+
+    function chat_button(payload){
+        console.log(payload)
+        var mid_data = payload.replace('/choose{"no_more_receipts":"','')
+        mid_data = mid_data.replace('"}','')
+        console.log(mid_data)
+        var data = "";
+        if (mid_data == "camera"){
+            data = "Open Camera"
+        } else if (mid_data == "attach"){
+            data = "Attach Receipt"
+        } else if (mid_data == "No"){
+            data = "No Receipt"
+        } else if (mid_data == "/affirm"){
+            data = "Yes"
+        } else {
+            data = "No"
+        }
+        console.log(data)
         botui.message.add({
             human: true,
-            content: entered_data
+            content: data
         });
-        console.log(entered_data)
-        $("#entered").val("")
-        arr = { sender:"rasa", message:entered_data}
+        
+        user_credentials = {user_id:9364,comp_id:1403}
+        arr = { sender: user_credentials, message:payload}
         $.ajax({
         type: "POST",
         url: 'http://localhost:5005/webhooks/rest/webhook',
@@ -52,14 +89,76 @@
         success: function (msg) {
             console.log(msg)
             msg.forEach(function(element) {
-                console.log(element);
                 outdata = element.text
-                if (outdata.startsWith("Total their are")){
-                    outdata = outdata.split("@#$").join("<br />")
+                if (element.hasOwnProperty("buttons")) {
+                    element.buttons.forEach(function(button){
+                        if (button.title == "No Receipt" ){
+                            outdata += "<br><button onclick='chat_button(this.id)' class = 'btn btn-sm btn-danger mt-3 chat_btn' id = '" + button.payload +"'>"+ button.title  +"</button>"
+                        } else {
+                            outdata += "<br><button onclick='chat_button(this.id)' class = 'btn btn-sm btn-primary mt-3 chat_btn' id = '" + button.payload +"'>"+ button.title  +"</button>"
+                        }
+                    })
+                }
+                if (IsJsonString(outdata)){
+                    var json_data = JSON.parse(outdata)
+                    outdata = "Total their are " + json_data.length +  " pending reports as follows: <br><br>"
+                    if (typeof(json_data) == 'object') {
+                        for (var i = 0; i < json_data.length; i++){
+                            outdata += "<a href = '#'>" + json_data[i].text + "</a>" + "<br />"
+                        }
+                    }
                 }
                 botui.message.add({
                     content: outdata
-                });
+                }); 
+            })
+        },
+        fail: function(xhr, textStatus, errorThrown){
+          alert('request failed');
+        }
+    })
+}
+
+    $("button").click(function(){
+        entered_data = $("#entered").val()
+        botui.message.add({
+            human: true,
+            content: entered_data
+        });
+        user_credentials = {user_id:9364,comp_id:1403}
+        $("#entered").val("")
+        arr = { sender: user_credentials, message:entered_data}
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost:5005/webhooks/rest/webhook',
+        data: JSON.stringify(arr),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (msg) {
+            console.log(msg)
+            msg.forEach(function(element) {
+                outdata = element.text
+                if (element.hasOwnProperty("buttons")) {
+                    element.buttons.forEach(function(button){
+                        if (button.title == "No Receipt" ){
+                            outdata += "<br><button onclick='chat_button(this.id)' class = 'btn btn-sm btn-danger mt-3 chat_btn' id = '" + button.payload +"'>"+ button.title  +"</button>"
+                        } else {
+                            outdata += "<br><button onclick='chat_button(this.id)' class = 'btn btn-sm btn-primary mt-3 chat_btn' id = '" + button.payload +"'>"+ button.title  +"</button>"
+                        }
+                    })
+                }
+                if (IsJsonString(outdata)){
+                    var json_data = JSON.parse(outdata)
+                    outdata = "Total their are " + json_data.length +  " pending reports as follows: <br><br>"
+                    if (typeof(json_data) == 'object') {
+                        for (var i = 0; i < json_data.length; i++){
+                            outdata += "<a href = '#'>" + json_data[i].text + "</a>" + "<br />"
+                        }
+                    }
+                }
+                botui.message.add({
+                    content: outdata
+                });              
             });
         },
 

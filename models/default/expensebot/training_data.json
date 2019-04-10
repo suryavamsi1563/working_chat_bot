@@ -254,6 +254,22 @@
         "text": "Yes"
       },
       {
+        "intent": "affirm",
+        "text": "i want"
+      },
+      {
+        "intent": "affirm",
+        "text": "/affirm"
+      },
+      {
+        "intent": "affirm",
+        "text": "/affirm"
+      },
+      {
+        "intent": "affirm",
+        "text": "/affirm"
+      },
+      {
         "intent": "bye",
         "text": "goodbye"
       },
@@ -390,76 +406,336 @@
         "text": "bye"
       },
       {
-        "intent": "createreport",
-        "text": "report"
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "good bye"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "take care"
+      },
+      {
+        "intent": "bye",
+        "text": "see ya"
+      },
+      {
+        "intent": "bye",
+        "text": "thanks"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
+      },
+      {
+        "intent": "bye",
+        "text": "see you later"
+      },
+      {
+        "intent": "bye",
+        "text": "see you later"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "see you later"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "attach",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"attach\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "attach",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"attach\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "attach",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"attach\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "attach",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"attach\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "attach",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"attach\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 36,
+            "value": "camera",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
+      },
+      {
+        "intent": "choose",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "No",
+            "entity": "no_more_receipts"
+          }
+        ],
+        "text": "/choose{\"no_more_receipts\":\"No\"}"
       },
       {
         "intent": "createreport",
-        "text": "create a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "file my expenses"
-      },
-      {
-        "intent": "createreport",
-        "text": "start a new a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "add my all expenses"
-      },
-      {
-        "intent": "createreport",
-        "text": "make a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a record"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a document"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a new report"
-      },
-      {
-        "intent": "createreport",
-        "text": "create report"
-      },
-      {
-        "intent": "createreport",
-        "text": "make a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "generate a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "generate me a new report"
-      },
-      {
-        "intent": "createreport",
-        "text": "generate a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "need to create a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "need a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "file my expenses"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a new report"
+        "text": "November travel to China"
       },
       {
         "intent": "createreport",
@@ -467,166 +743,6 @@
       },
       {
         "intent": "createreport",
-        "text": "create report"
-      },
-      {
-        "intent": "createreport",
-        "text": "generate a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "create a report"
-      },
-      {
-        "intent": "createreport",
-        "text": "need to create a report"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 27,
-            "end": 43,
-            "value": "trip to new york",
-            "entity": "name"
-          }
-        ],
-        "text": "create a report with name \"trip to new york\""
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 42,
-            "value": "trip to new york",
-            "entity": "name"
-          }
-        ],
-        "text": "create a report with name trip to new york"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 39,
-            "end": 50,
-            "value": "finalreport",
-            "entity": "name"
-          }
-        ],
-        "text": "I travelled to bangalore.Make a report finalreport"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 31,
-            "end": 44,
-            "value": "15th Jan 2019",
-            "entity": "startdate"
-          },
-          {
-            "start": 48,
-            "end": 61,
-            "value": "19th Jan 2019",
-            "entity": "enddate"
-          },
-          {
-            "start": 72,
-            "end": 83,
-            "value": "lead_summit",
-            "entity": "name"
-          }
-        ],
-        "text": "create a report for my trip on 15th Jan 2019 to 19th Jan 2019 with name lead_summit"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 27,
-            "end": 35,
-            "value": "Jan 20th",
-            "entity": "startdate"
-          },
-          {
-            "start": 39,
-            "end": 47,
-            "value": "Jan 23rd",
-            "entity": "enddate"
-          },
-          {
-            "start": 68,
-            "end": 71,
-            "value": "XYZ",
-            "entity": "name"
-          }
-        ],
-        "text": "add all transcactions from Jan 20th to Jan 23rd to the report named XYZ"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 37,
-            "value": "firstreport",
-            "entity": "name"
-          }
-        ],
-        "text": "create a report with name firstreport"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 26,
-            "value": "travel_Del",
-            "entity": "name"
-          },
-          {
-            "start": 32,
-            "end": 40,
-            "value": "12th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 44,
-            "end": 52,
-            "value": "18 March",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report travel_Del from 12th jan to 18 March"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 27,
-            "value": "finalreport",
-            "entity": "name"
-          }
-        ],
-        "text": "create a report finalreport"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 17,
-            "value": "XYZ",
-            "entity": "name"
-          }
-        ],
-        "text": "make a report XYZ"
-      },
-      {
-        "intent": "createreportfull",
         "entities": [
           {
             "start": 14,
@@ -638,409 +754,59 @@
         "text": "make a report final_one"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
-            "start": 24,
-            "end": 30,
-            "value": "travel",
+            "start": 14,
+            "end": 17,
+            "value": "XYZ",
             "entity": "name"
           }
         ],
-        "text": "make a report with name travel"
+        "text": "make a report XYZ"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 34,
-            "value": "Jan 15th",
-            "entity": "startdate"
-          },
-          {
-            "start": 35,
-            "end": 43,
-            "value": "Jan 20th",
-            "entity": "enddate"
-          },
-          {
-            "start": 63,
-            "end": 79,
-            "value": "trip to new york",
-            "entity": "name"
-          }
-        ],
-        "text": "add all transactions from Jan 15th Jan 20th to the report name trip to new york"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 33,
-            "value": "Jan15th",
-            "entity": "startdate"
-          },
-          {
-            "start": 34,
-            "end": 41,
-            "value": "Jan20th",
-            "entity": "enddate"
-          },
-          {
-            "start": 61,
-            "end": 67,
-            "value": "hummer",
-            "entity": "name"
-          }
-        ],
-        "text": "add all transactions from Jan15th Jan20th to the report name hummer"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 23,
-            "end": 28,
-            "value": "Hello",
-            "entity": "name"
-          },
-          {
-            "start": 51,
-            "end": 61,
-            "value": "02-04-2019",
-            "entity": "startdate"
-          },
-          {
-            "start": 66,
-            "end": 76,
-            "value": "14/01/2019",
-            "entity": "enddate"
-          }
-        ],
-        "text": "get a report with name Hello for my travel between 02-04-2019 and 14/01/2019"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 24,
-            "end": 32,
-            "value": "12th Dec",
-            "entity": "startdate"
-          },
-          {
-            "start": 36,
-            "end": 44,
-            "value": "14th Jan",
-            "entity": "enddate"
-          },
-          {
-            "start": 48,
-            "end": 56,
-            "value": "longtrip",
-            "entity": "name"
-          }
-        ],
-        "text": "create a report between 12th Dec to 14th Jan as longtrip"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 12,
-            "end": 22,
-            "value": "india trip",
-            "entity": "name"
-          },
-          {
-            "start": 40,
-            "end": 48,
-            "value": "jan 20th",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "jan 29th",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make report india trip traveled between jan 20th and jan 29th"
-      },
-      {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 30,
-            "end": 38,
-            "value": "USA trip",
-            "entity": "name"
-          },
-          {
-            "start": 56,
-            "end": 64,
-            "value": "jan 20th",
-            "entity": "startdate"
-          },
-          {
-            "start": 69,
-            "end": 77,
-            "value": "jan 29th",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a new report with name USA trip traveled between jan 20th and jan 29th"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 13,
-            "end": 30,
-            "value": "Trip to Hyderabad",
-            "entity": "name"
-          },
-          {
-            "start": 46,
-            "end": 54,
-            "value": "27th Sep",
-            "entity": "startdate"
-          },
-          {
-            "start": 70,
-            "end": 78,
-            "value": "29th Dec",
-            "entity": "enddate"
-          }
-        ],
-        "text": "get a report Trip to Hyderabad with startdate 27th Sep and enddate as 29th Dec"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 29,
-            "end": 32,
-            "value": "LSD",
-            "entity": "name"
-          },
-          {
-            "start": 38,
-            "end": 45,
-            "value": "Jan25th",
-            "entity": "startdate"
-          },
-          {
-            "start": 49,
             "end": 56,
-            "value": "23rdFeb",
-            "entity": "enddate"
-          }
-        ],
-        "text": "construct a report with name LSD from Jan25th to 23rdFeb"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 31,
-            "end": 48,
-            "value": "trip to Hyderabad",
+            "value": "Grzandziel - November 2014",
             "entity": "name"
           }
         ],
-        "text": "file my expenses into a report trip to Hyderabad"
+        "text": "file a new report with titled Grzandziel - November 2014"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 25,
-            "end": 33,
-            "value": "Jan 12th",
-            "entity": "startdate"
-          },
-          {
-            "start": 37,
-            "end": 49,
-            "value": "latestReport",
+            "end": 50,
+            "value": "Brandi Jordan EXP 12.2016",
             "entity": "name"
           }
         ],
-        "text": "report transactions from Jan 12th as latestReport"
+        "text": "generate a report titled Brandi Jordan EXP 12.2016"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 34,
-            "value": "Xyz_date",
-            "entity": "name"
-          },
-          {
-            "start": 54,
-            "end": 69,
-            "value": "13th March 2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 73,
-            "end": 88,
-            "value": "26th April 2018",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name Xyz_date for my travel from 13th March 2018 to 26th April 2018"
-      },
-      {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 24,
-            "end": 28,
-            "value": "sara",
-            "entity": "name"
-          },
-          {
-            "start": 51,
-            "end": 65,
-            "value": "12th June 2013",
-            "entity": "startdate"
-          },
-          {
-            "start": 70,
-            "end": 84,
-            "value": "31st July 2018",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report with name sara for my travel between 12th June 2013 and 31st July 2018"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 25,
-            "end": 35,
-            "value": "trip to US",
-            "entity": "name"
-          },
-          {
-            "start": 59,
-            "end": 73,
-            "value": "12th June 2013",
-            "entity": "startdate"
-          },
-          {
-            "start": 78,
-            "end": 92,
-            "value": "31st July 2018",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report with name 'trip to US' for my travel between 12th June 2013 and 31st July 2018"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 37,
-            "value": "finalreport",
-            "entity": "name"
-          },
-          {
-            "start": 55,
             "end": 63,
-            "value": "Jan 21st",
-            "entity": "startdate"
-          },
-          {
-            "start": 67,
-            "end": 76,
-            "value": "26th July",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name finalreport for my travel on Jan 21st to 26th July"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 34,
-            "value": "jan 15th",
-            "entity": "startdate"
-          },
-          {
-            "start": 35,
-            "end": 43,
-            "value": "jan 20th",
-            "entity": "enddate"
-          },
-          {
-            "start": 63,
-            "end": 79,
-            "value": "trip to new york",
+            "value": "Renne - April 2017 Monthly Expenditures",
             "entity": "name"
           }
         ],
-        "text": "add all transactions from Jan 15th Jan 20th to the report name trip to new york"
+        "text": "generate a report with  Renne - April 2017 Monthly Expenditures"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 53,
-            "end": 66,
-            "value": "14th jan 2019",
-            "entity": "startdate"
-          },
-          {
-            "start": 70,
-            "end": 83,
-            "value": "16th jan 2019",
-            "entity": "enddate"
-          },
-          {
-            "start": 94,
-            "end": 104,
-            "value": "india_trip",
-            "entity": "name"
-          }
-        ],
-        "text": "generate a report for my previous india trip between 14th jan 2019 to 16th Jan 2019 with name india_trip"
+        "intent": "createreport",
+        "text": "create a record"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 32,
-            "value": "hawaii",
-            "entity": "name"
-          },
-          {
-            "start": 55,
-            "end": 63,
-            "value": "26th feb",
-            "entity": "startdate"
-          },
-          {
-            "start": 67,
-            "end": 75,
-            "value": "29th feb",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name hawaii which I traveled from 26th Feb to 29th Feb"
-      },
-      {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 16,
@@ -1052,19 +818,135 @@
         "text": "create a report anything"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
-            "start": 45,
-            "end": 52,
-            "value": "meeting",
+            "start": 26,
+            "end": 55,
+            "value": "Dual monitor mount for HR rep",
             "entity": "name"
           }
         ],
-        "text": "make a report on my Delhi trip with the name meeting"
+        "text": "create a report with name Dual monitor mount for HR rep"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 27,
+            "end": 56,
+            "value": "Zerlina Oppenheim PNC 12.2016",
+            "entity": "name"
+          }
+        ],
+        "text": "create a new report titled Zerlina Oppenheim PNC 12.2016"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "travel",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report with name travel"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 16,
+            "end": 41,
+            "value": "Brandi Jordan EXP 12.2016",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report Brandi Jordan EXP 12.2016"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "ME08312018",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with ME08312018"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 24,
+            "end": 34,
+            "value": "WE11192017",
+            "entity": "name"
+          }
+        ],
+        "text": "create report with name WE11192017"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 21,
+            "end": 41,
+            "value": "Expenses April 14-29",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report titled Expenses April 14-29- create a custom report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 30,
+            "end": 40,
+            "value": "OA09262017",
+            "entity": "name"
+          }
+        ],
+        "text": "need to generate a report withOA09262017"
+      },
+      {
+        "intent": "createreport",
+        "text": "make a report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 16,
+            "end": 27,
+            "value": "finalreport",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report finalreport"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 31,
+            "end": 42,
+            "value": "P/E 3/17/18",
+            "entity": "name"
+          }
+        ],
+        "text": "start a new report with titled P/E 3/17/18"
+      },
+      {
+        "intent": "createreport",
         "entities": [
           {
             "start": 28,
@@ -1076,31 +958,183 @@
         "text": "file a new report with name USA_trip"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 26,
-            "end": 36,
-            "value": "delhi_trip",
+            "end": 44,
+            "value": "Filip - April 2016",
             "entity": "name"
-          },
-          {
-            "start": 45,
-            "end": 53,
-            "value": "20th nov",
-            "entity": "startdate"
-          },
-          {
-            "start": 57,
-            "end": 65,
-            "value": "20th dec",
-            "entity": "enddate"
           }
         ],
-        "text": "create a report with name Delhi_trip between 20th nov to 20th dec"
+        "text": "create a report with name Filip - April 2016"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 23,
+            "end": 48,
+            "value": "Shiwarski - February 2015",
+            "entity": "name"
+          }
+        ],
+        "text": "file a new report with Shiwarski - February 2015"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 24,
+            "end": 56,
+            "value": "Baer - March 2015 - meal at CalU",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a report with  Baer - March 2015 - meal at CalU"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 42,
+            "value": "trip to new york",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name trip to new york"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 36,
+            "end": 56,
+            "value": "repeater Ops aug 2-2",
+            "entity": "name"
+          }
+        ],
+        "text": "need to generate a report with name repeater Ops aug 2-2"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 46,
+            "value": "Rasky - October 2014",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name Rasky - October 2014"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 27,
+            "end": 39,
+            "value": "Netz Mar 5-9",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a document titled Netz Mar 5-9"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 45,
+            "end": 52,
+            "value": "meeting",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report on my Delhi trip with the name meeting"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "ek05062018",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with ek05062018"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 31,
+            "end": 48,
+            "value": "trip to Hyderabad",
+            "entity": "name"
+          }
+        ],
+        "text": "file my expenses into a report trip to Hyderabad"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 28,
+            "end": 55,
+            "value": "Jeanette Thomas EXP 01.2017",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with titled Jeanette Thomas EXP 01.2017"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "ez01142019",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a report with ez01142019"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 21,
+            "end": 41,
+            "value": "Hall - February 2015",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with Hall - February 2015"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 39,
+            "end": 50,
+            "value": "finalreport",
+            "entity": "name"
+          }
+        ],
+        "text": "I travelled to bangalore.Make a report finalreport"
+      },
+      {
+        "intent": "createreport",
+        "text": "generate a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "need a report"
+      },
+      {
+        "intent": "createreport",
         "entities": [
           {
             "start": 29,
@@ -1112,588 +1146,316 @@
         "text": "need to create a report with hyderabad"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
-            "start": 23,
-            "end": 33,
-            "value": "trip to SF",
+            "start": 24,
+            "end": 39,
+            "value": "Bill - Dec 2018",
             "entity": "name"
-          },
-          {
-            "start": 39,
-            "end": 46,
-            "value": "jan 1st",
-            "entity": "startdate"
-          },
-          {
-            "start": 50,
-            "end": 57,
-            "value": "jan 6th",
-            "entity": "enddate"
           }
         ],
-        "text": "Create a report titled trip to SF from jan 1st to jan 6th"
+        "text": "generate a report with  Bill - Dec 2018"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 7,
-            "end": 20,
-            "value": "trip to India",
-            "entity": "name"
-          },
-          {
-            "start": 42,
-            "end": 49,
-            "value": "5th Jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "26th Jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "Titled trip to India create a report from 5th Jan to 26th Jan"
+        "intent": "createreport",
+        "text": "create a document"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
+        "text": "report"
+      },
+      {
+        "intent": "createreport",
+        "text": "need to create a report"
+      },
+      {
+        "intent": "createreport",
         "entities": [
           {
             "start": 26,
             "end": 37,
-            "value": "finalreport",
+            "value": "Dec 17 Cell",
             "entity": "name"
-          },
-          {
-            "start": 42,
-            "end": 50,
-            "value": "24th Jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 54,
-            "end": 62,
-            "value": "23rd feb",
-            "entity": "enddate"
           }
         ],
-        "text": "create a report with name finalreport for 24th Jan to 23rd feb"
+        "text": "create a report with name Dec 17 Cell"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 26,
-            "end": 35,
-            "value": "australia",
-            "entity": "name"
-          },
-          {
-            "start": 44,
-            "end": 55,
-            "value": "last monday",
-            "entity": "startdate"
-          },
-          {
-            "start": 59,
-            "end": 72,
-            "value": "last saturday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report with name australia between last monday to last saturday"
-      },
-      {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 27,
-            "end": 40,
-            "value": "central board",
-            "entity": "name"
-          },
-          {
-            "start": 58,
-            "end": 68,
-            "value": "last month",
-            "entity": "startdate"
-          },
-          {
-            "start": 72,
-            "end": 81,
-            "value": "yesterday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "need to create report with central board traveled between last month to yesterday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 20,
-            "end": 31,
-            "value": "last sunday",
-            "entity": "startdate"
-          },
-          {
-            "start": 35,
-            "end": 47,
-            "value": "this sunaday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "file my report from last sunday to this sunaday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 19,
-            "end": 34,
-            "value": "campus_training",
-            "entity": "name"
-          },
-          {
-            "start": 44,
-            "end": 56,
-            "value": "last jan 8th",
-            "entity": "startdate"
-          },
-          {
-            "start": 60,
-            "end": 71,
-            "value": "last monday",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make report a with campus_training between  last jan 8th to last monday"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 23,
-            "end": 30,
-            "value": "feb 2nd",
-            "entity": "startdate"
-          },
-          {
-            "start": 31,
-            "end": 44,
-            "value": "last mar 13th",
-            "entity": "enddate"
-          },
-          {
-            "start": 48,
-            "end": 59,
-            "value": "CEO meeting",
+            "end": 49,
+            "value": "Conway - February 2019",
             "entity": "name"
           }
         ],
-        "text": "generate a report from feb 2nd last mar 13th as CEO meeting"
+        "text": "createa report with titled Conway - February 2019"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 24,
+            "end": 52,
+            "value": "HR Charges for August 2017-1",
+            "entity": "name"
+          }
+        ],
+        "text": "file my expenses titled HR Charges for August 2017-1"
+      },
+      {
+        "intent": "createreport",
         "entities": [
           {
             "start": 26,
             "end": 38,
-            "value": " last monday",
-            "entity": "startdate"
-          },
-          {
-            "start": 43,
-            "end": 51,
-            "value": "saturday",
-            "entity": "enddate"
+            "value": "P/E 06/17/18",
+            "entity": "name"
           }
         ],
-        "text": "create a new from between  last monday and saturday"
+        "text": "create report with titled P/E 06/17/18"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 21,
-            "end": 32,
-            "value": "last monday",
-            "entity": "startdate"
-          }
-        ],
-        "text": "create a report from last monday"
-      },
-      {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 26,
-            "end": 39,
-            "value": "last apr 14th",
-            "entity": "startdate"
-          },
-          {
-            "start": 54,
-            "end": 66,
-            "value": "chennai trip",
+            "end": 36,
+            "value": "ez01142019",
             "entity": "name"
           }
         ],
-        "text": "add all transactions from last apr 14th and  named as chennai trip"
+        "text": "create report with titled ez01142019"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 40,
+            "value": "hyderabad_trip",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name hyderabad_trip"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 28,
+            "end": 52,
+            "value": "Bishop - December 2018-1",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a report with name Bishop - December 2018-1"
+      },
+      {
+        "intent": "createreport",
+        "text": "file a new report"
+      },
+      {
+        "intent": "createreport",
+        "text": "file my expenses"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 28,
+            "end": 45,
+            "value": "Boyd - April 2017",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a report with name Boyd - April 2017"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a report with week of 2/5/18"
+      },
+      {
+        "intent": "createreport",
         "entities": [
           {
             "start": 31,
-            "end": 41,
-            "value": "last march",
-            "entity": "startdate"
-          },
-          {
-            "start": 45,
-            "end": 54,
-            "value": "last week",
-            "entity": "enddate"
+            "end": 52,
+            "value": "Underwood - June 2015",
+            "entity": "name"
           }
         ],
-        "text": "need to generate a report from last march to last week"
+        "text": "need to generate a report with Underwood - June 2015"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 51,
+            "value": "Feldmeier November 2015-1",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name Feldmeier November 2015-1"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 27,
+            "end": 43,
+            "value": "trip to new york",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report with name \"trip to new york\""
+      },
+      {
+        "intent": "createreport",
+        "text": "add my all expenses"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 19,
+            "end": 31,
+            "value": "W/E 06/20/18",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report with W/E 06/20/18"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 21,
+            "end": 41,
+            "value": "Expenses April 14-29",
+            "entity": "name"
+          }
+        ],
+        "text": "make a report titled Expenses April 14-29- report"
+      },
+      {
+        "intent": "createreport",
+        "text": "start a new a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "create report"
+      },
+      {
+        "intent": "createreport",
+        "text": "need to generate a report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "dec 17 cell",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a report with name Dec 17 Cell"
+      },
+      {
+        "intent": "createreport",
         "entities": [
           {
             "start": 24,
-            "end": 29,
-            "value": "Paris",
-            "entity": "name"
-          },
-          {
-            "start": 38,
-            "end": 48,
-            "value": "13/03/2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "last jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report trip to Paris between 13/03/2018 and last jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 25,
-            "end": 36,
-            "value": "last sunday",
-            "entity": "startdate"
-          },
-          {
-            "start": 48,
-            "end": 59,
-            "value": "Turkey trip",
-            "entity": "name"
-          }
-        ],
-        "text": "start date of my trip is last sunday named with Turkey trip"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 20,
-            "end": 28,
-            "value": "15th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 33,
-            "end": 43,
-            "value": "last month",
-            "entity": "enddate"
-          }
-        ],
-        "text": "my trip in  between 15th jan and last month"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 28,
-            "value": "trip to dallas",
-            "entity": "name"
-          },
-          {
-            "start": 40,
-            "end": 48,
-            "value": "25th Jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 52,
-            "end": 60,
-            "value": "29th Jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report trip to dallas with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 22,
-            "value": "keralite",
-            "entity": "name"
-          },
-          {
-            "start": 34,
-            "end": 42,
-            "value": "25th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 46,
-            "end": 54,
-            "value": "29th jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report keralite with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 14,
-            "end": 20,
-            "value": "kerala",
-            "entity": "name"
-          },
-          {
-            "start": 32,
-            "end": 40,
-            "value": "25th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 44,
-            "end": 52,
-            "value": "29th jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report kerala with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 33,
-            "end": 41,
-            "value": "25th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 45,
-            "end": 53,
-            "value": "29th jan",
-            "entity": "enddate"
-          }
-        ],
-        "text": "make a report nellore with dates 25th Jan to 29th Jan"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 44,
-            "value": "Walmart tire repair May 2017",
-            "entity": "name"
-          },
-          {
-            "start": 65,
-            "end": 73,
-            "value": "may 2017",
-            "entity": "startdate"
-          },
-          {
-            "start": 77,
-            "end": 86,
-            "value": "june 2018",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report Walmart tire repair May 2017 for my trip between May 2017 to June 2018"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 16,
-            "end": 30,
-            "value": "who conference",
-            "entity": "name"
-          },
-          {
-            "start": 41,
-            "end": 49,
-            "value": "jan 23rd",
-            "entity": "startdate"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "feb 25th",
-            "entity": "enddate"
-          }
-        ],
-        "text": "create a report who conference for dates jan 23rd to feb 25th"
-      },
-      {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 35,
-            "end": 41,
-            "value": "29 dec",
-            "entity": "startdate"
-          },
-          {
-            "start": 45,
             "end": 51,
-            "value": "28 jan",
-            "entity": "enddate"
+            "value": "Jeanette Thomas PNC 01.2017",
+            "entity": "name"
           }
         ],
-        "text": "generate a report for my travel on 29 dec to 28 jan titled conderence 2018"
+        "text": "need to create a report Jeanette Thomas PNC 01.2017"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
-            "start": 16,
-            "end": 27,
-            "value": "trip to usa",
+            "start": 28,
+            "end": 60,
+            "value": "Baer - March 2015 - meal at CalU",
             "entity": "name"
-          },
-          {
-            "start": 38,
-            "end": 48,
-            "value": "21 - 03 - 2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 52,
-            "end": 62,
-            "value": "25 - 04 -2018",
-            "entity": "enddate"
           }
         ],
-        "text": "create a report trip to USA dates are 21-03-2018 to 25-04-2018"
+        "text": "generate a report with name Baer - March 2015 - meal at CalU"
       },
       {
-        "intent": "createreportfull",
-        "text": "create a custom report"
+        "intent": "createreport",
+        "text": "generate me a new report"
       },
       {
-        "intent": "createreportfull",
-        "text": "November travel to China"
+        "intent": "createreport",
+        "text": "create a new report"
       },
       {
-        "intent": "createreportfull",
-        "entities": [
-          {
-            "start": 15,
-            "end": 25,
-            "value": "Nov_travel",
-            "entity": "name"
-          },
-          {
-            "start": 43,
-            "end": 52,
-            "value": "29 - 5 - 2018",
-            "entity": "startdate"
-          },
-          {
-            "start": 56,
-            "end": 65,
-            "value": "29-6-2019",
-            "entity": "enddate"
-          }
-        ],
-        "text": "build a report Nov_travel for my trip from 29-5-2018 to 29-6-2019"
-      },
-      {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 19,
             "end": 32,
-            "value": "trip to paris",
+            "value": "W/E 9/07/2017",
             "entity": "name"
           }
         ],
-        "text": "create report with trip to paris"
+        "text": "create report with W/E 9/07/2017"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 26,
-            "end": 34,
-            "value": "xyz12354",
+            "end": 37,
+            "value": "firstreport",
             "entity": "name"
-          },
-          {
-            "start": 57,
-            "end": 65,
-            "value": "29th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 69,
-            "end": 78,
-            "value": "23rd feb .",
-            "entity": "enddate"
           }
         ],
-        "text": "Create a report with name XYZ12354 for my travel between 29th Jan to 23rd Feb."
+        "text": "create a report with name firstreport"
       },
       {
-        "intent": "createreportfull",
+        "intent": "createreport",
         "entities": [
           {
             "start": 26,
-            "end": 41,
-            "value": "conference_meet",
+            "end": 44,
+            "value": "Wachter - May 2016",
             "entity": "name"
-          },
-          {
-            "start": 53,
-            "end": 61,
-            "value": "20th jan",
-            "entity": "startdate"
-          },
-          {
-            "start": 66,
-            "end": 74,
-            "value": "15th feb",
-            "entity": "enddate"
           }
         ],
-        "text": "create a report with name conference_meet in between 20th jan and 15th feb"
+        "text": "create a report with name Wachter - May 2016"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 16,
+            "end": 39,
+            "value": "hanschen - october 2014",
+            "entity": "name"
+          }
+        ],
+        "text": "create a report Hanschen - October 2014"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 22,
+            "end": 45,
+            "value": "wolfe - november 2014 - 1",
+            "entity": "name"
+          }
+        ],
+        "text": "generate a new report Wolfe - November 2014-1"
       },
       {
         "intent": "deny",
@@ -1861,31 +1623,19 @@
       },
       {
         "intent": "deny",
-        "text": "no"
+        "text": "i dont"
       },
       {
         "intent": "deny",
-        "text": "no"
+        "text": "/deny"
       },
       {
         "intent": "deny",
-        "text": "no"
-      },
-      {
-        "intent": "deny",
-        "text": "no"
+        "text": "/deny"
       },
       {
         "intent": "enterdata",
         "text": "first report"
-      },
-      {
-        "intent": "enterdata",
-        "text": "15th jan 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "30 jan 2019"
       },
       {
         "intent": "enterdata",
@@ -1897,23 +1647,7 @@
       },
       {
         "intent": "enterdata",
-        "text": "16 feb 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "28 feb 2019"
-      },
-      {
-        "intent": "enterdata",
         "text": "finalreport"
-      },
-      {
-        "intent": "enterdata",
-        "text": "30-12-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "30/01/2019"
       },
       {
         "intent": "enterdata",
@@ -2005,23 +1739,7 @@
       },
       {
         "intent": "enterdata",
-        "text": "13th feb 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20th feb 2019"
-      },
-      {
-        "intent": "enterdata",
         "text": "second report"
-      },
-      {
-        "intent": "enterdata",
-        "text": "24th jan 2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20th feb 2019"
       },
       {
         "intent": "enterdata",
@@ -2029,127 +1747,7 @@
       },
       {
         "intent": "enterdata",
-        "text": "20th june 2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "jan 20th 2019"
-      },
-      {
-        "intent": "enterdata",
         "text": "hyderabad"
-      },
-      {
-        "intent": "enterdata",
-        "text": "26th Jan 2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "1st february 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "may 5th 2014"
-      },
-      {
-        "intent": "enterdata",
-        "text": "14th July 2016"
-      },
-      {
-        "intent": "enterdata",
-        "text": "25th jan"
-      },
-      {
-        "intent": "enterdata",
-        "text": "28th feb"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last month"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last week"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last year"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous week"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous month"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous year"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous sunday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous monday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous tuesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous wednesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous thursday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous friday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "previous saturday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last sunday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last monday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last tuesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last wednesday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last thursday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last friday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last saturday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "yesterday"
-      },
-      {
-        "intent": "enterdata",
-        "text": "today"
       },
       {
         "intent": "enterdata",
@@ -2173,23 +1771,7 @@
       },
       {
         "intent": "enterdata",
-        "text": "03/03/2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "last week"
-      },
-      {
-        "intent": "enterdata",
         "text": "project demo"
-      },
-      {
-        "intent": "enterdata",
-        "text": "25th nov"
-      },
-      {
-        "intent": "enterdata",
-        "text": "jan 26th"
       },
       {
         "intent": "enterdata",
@@ -2197,23 +1779,7 @@
       },
       {
         "intent": "enterdata",
-        "text": "dec 16th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "july 8th"
-      },
-      {
-        "intent": "enterdata",
         "text": "GGAP Audits- Driscoll's Growers (week of 4.2.18)"
-      },
-      {
-        "intent": "enterdata",
-        "text": "4.2.18"
-      },
-      {
-        "intent": "enterdata",
-        "text": "26th feb 2018"
       },
       {
         "intent": "enterdata",
@@ -2221,55 +1787,11 @@
       },
       {
         "intent": "enterdata",
-        "text": "25th Jan"
-      },
-      {
-        "intent": "enterdata",
-        "text": "23 Feb"
-      },
-      {
-        "intent": "enterdata",
         "text": "Lauren Kristick Expenses"
       },
       {
         "intent": "enterdata",
-        "text": "Jan 2019"
-      },
-      {
-        "intent": "enterdata",
-        "text": "Dec 2019"
-      },
-      {
-        "intent": "enterdata",
         "text": "Delhi"
-      },
-      {
-        "intent": "enterdata",
-        "text": "jan 26th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "dec 18th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "india-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20-03-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "30-04-2018"
-      },
-      {
-        "intent": "enterdata",
-        "text": "march 13th"
-      },
-      {
-        "intent": "enterdata",
-        "text": "april 4th"
       },
       {
         "intent": "enterdata",
@@ -2281,23 +1803,51 @@
       },
       {
         "intent": "enterdata",
-        "text": "20 jan"
-      },
-      {
-        "intent": "enterdata",
-        "text": "20 feb"
-      },
-      {
-        "intent": "enterdata",
         "text": "UK trip"
       },
       {
         "intent": "enterdata",
-        "text": "feb 20th"
+        "text": "londontrip4"
       },
       {
         "intent": "enterdata",
-        "text": "mar 13th"
+        "text": "transport"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Landers - November 2014"
+      },
+      {
+        "intent": "enterdata",
+        "text": "West - April 2015 2nd Report-1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Jennison - April 2015"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Cthearle - May 2015 Expenses-1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Lewis - May 2015"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Routine Expenses Tyler Smith through Jan 30 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Blakey - May 2015-1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "JC 1-8-19"
+      },
+      {
+        "intent": "enterdata",
+        "text": "week of 2/5/18"
       },
       {
         "intent": "greet",
@@ -2565,18 +2115,6 @@
       },
       {
         "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
         "text": "whats up"
       },
       {
@@ -2585,7 +2123,19 @@
       },
       {
         "intent": "greet",
+        "text": "hey hi"
+      },
+      {
+        "intent": "greet",
         "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
       },
       {
         "intent": "greet",
@@ -2598,6 +2148,34 @@
       {
         "intent": "greet",
         "text": "hey hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "hello bot"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
       },
       {
         "intent": "pendingreport",
@@ -2698,39 +2276,60 @@
       {
         "intent": "pendingreport",
         "text": "pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all pending reports"
       }
     ],
-    "regex_features": [],
+    "regex_features": [
+      {
+        "name": "name",
+        "pattern": "(\\s)(create|generate|file|need to create|need)\\sreport(\\swith)?(\\s(name|titled|named|title|))(\\s(as|for|to be|be|being))(\\s)?.*"
+      },
+      {
+        "name": "name",
+        "pattern": "(\\s)*(create|generate|file|need to create)\\sreport.*"
+      },
+      {
+        "name": "name",
+        "pattern": "[A-Z]{2}\\d{8}"
+      },
+      {
+        "name": "name",
+        "pattern": "[A-Za-z\\s]+\\s(EXP|PNC)\\s\\d{2}\\.\\d{4}"
+      },
+      {
+        "name": "name",
+        "pattern": "[A-Za-z\\s]+\\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\\s\\d+-\\d+"
+      },
+      {
+        "name": "name",
+        "pattern": "[A-Za-z]+\\s-\\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\\s[2]\\d{3}"
+      },
+      {
+        "name": "name",
+        "pattern": "[A-Za-z]\\/[A-Za-z]\\s\\d+\\/\\d{2}\\/\\d+"
+      }
+    ],
     "lookup_tables": [],
     "entity_synonyms": [
       {
-        "value": "jan 15th",
+        "value": "camera",
         "synonyms": [
-          "Jan 15th"
+          "{\"no_more_receipts\":\"camera\"}"
         ]
       },
       {
-        "value": "jan 20th",
+        "value": "attach",
         "synonyms": [
-          "Jan 20th"
+          "{\"no_more_receipts\":\"attach\"}"
         ]
       },
       {
-        "value": "16th jan 2019",
+        "value": "No",
         "synonyms": [
-          "16th Jan 2019"
-        ]
-      },
-      {
-        "value": "26th feb",
-        "synonyms": [
-          "26th Feb"
-        ]
-      },
-      {
-        "value": "29th feb",
-        "synonyms": [
-          "29th Feb"
+          "{\"no_more_receipts\":\"No\"}"
         ]
       },
       {
@@ -2740,69 +2339,21 @@
         ]
       },
       {
-        "value": "delhi_trip",
+        "value": "dec 17 cell",
         "synonyms": [
-          "Delhi_trip"
+          "Dec 17 Cell"
         ]
       },
       {
-        "value": "25th jan",
+        "value": "hanschen - october 2014",
         "synonyms": [
-          "25th Jan"
+          "Hanschen - October 2014"
         ]
       },
       {
-        "value": "29th jan",
+        "value": "wolfe - november 2014 - 1",
         "synonyms": [
-          "29th Jan"
-        ]
-      },
-      {
-        "value": "may 2017",
-        "synonyms": [
-          "May 2017"
-        ]
-      },
-      {
-        "value": "june 2018",
-        "synonyms": [
-          "June 2018"
-        ]
-      },
-      {
-        "value": "trip to usa",
-        "synonyms": [
-          "trip to USA"
-        ]
-      },
-      {
-        "value": "21 - 03 - 2018",
-        "synonyms": [
-          "21-03-2018"
-        ]
-      },
-      {
-        "value": "25 - 04 -2018",
-        "synonyms": [
-          "25-04-2018"
-        ]
-      },
-      {
-        "value": "29 - 5 - 2018",
-        "synonyms": [
-          "29-5-2018"
-        ]
-      },
-      {
-        "value": "xyz12354",
-        "synonyms": [
-          "XYZ12354"
-        ]
-      },
-      {
-        "value": "23rd feb .",
-        "synonyms": [
-          "23rd Feb."
+          "Wolfe - November 2014-1"
         ]
       }
     ]
