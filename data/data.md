@@ -66,6 +66,30 @@
 - /affirm
 - /affirm
 - /affirm
+- /affirm[{"appr_or_rej":"Approve"}](appr_or_rej:Approve)
+- /affirm[{"appr_or_rej":"Approve"}](appr_or_rej:Approve)
+
+## intent:approvals
+- approve my first report
+- approve my second report
+- approve my 3rd report
+- approve my all reports
+- approve 1st report
+- show report [E000123](expid)
+- show report with [E000100](expid)
+- show report [E000124](expid)
+- show report  [E000200](expid)
+- show report [ER0214256]
+- show report with name [july 2018](report_name)
+- show report with name [may 2016](report_name)
+- E000125
+- E000125
+- ER0214256
+- E000125
+- June 2018
+- Opera_2013
+- June 2018
+- E000125
 
 ## intent:bye
 - goodbye
@@ -118,6 +142,7 @@
 - see you later
 - goodbye
 - see you later
+- later
 
 ## intent:choose
 - /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
@@ -263,6 +288,7 @@
 - i dont
 - /deny
 - /deny
+- /deny[{"appr_or_rej":"Reject"}](appr_or_rej:Reject)
 
 ## intent:enterdata
 - first report
@@ -389,6 +415,7 @@
 - hi
 - hello bot
 - hello
+- hi
 
 ## intent:pendingreport
 - pending
@@ -418,8 +445,14 @@
 - pending reports
 - show all pending reports
 
+## synonym:Approve
+- {"appr_or_rej":"Approve"}
+
 ## synonym:No
 - {"no_more_receipts":"No"}
+
+## synonym:Reject
+- {"appr_or_rej":"Reject"}
 
 ## synonym:attach
 - {"no_more_receipts":"attach"}
@@ -436,9 +469,10 @@
 ## synonym:usa_trip
 - USA_trip
 
+## synonym:wolfe - november 2014 - 1
+- Wolfe - November 2014-1
+
 ## regex:name
-- (\s)(create|generate|file|need to create|need)\sreport(\swith)?(\s(name|titled|named|title|))(\s(as|for|to be|be|being))(\s)?.*
-- (\s)*(create|generate|file|need to create)\sreport.*
 - [A-Z]{2}\d{8}
 - [A-Za-z\s]+\s(EXP|PNC)\s\d{2}\.\d{4}
 - [A-Za-z\s]+\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s\d+-\d+

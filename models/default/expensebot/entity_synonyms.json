@@ -1,9 +1,11 @@
 {
+  "{\"appr_or_rej\":\"approve\"}": "Approve",
   "{\"no_more_receipts\":\"camera\"}": "camera",
   "{\"no_more_receipts\":\"attach\"}": "attach",
   "{\"no_more_receipts\":\"no\"}": "No",
   "usa_trip": "usa_trip",
   "dec 17 cell": "dec 17 cell",
   "hanschen - october 2014": "hanschen - october 2014",
-  "wolfe - november 2014-1": "wolfe - november 2014 - 1"
+  "wolfe - november 2014-1": "wolfe - november 2014 - 1",
+  "{\"appr_or_rej\":\"reject\"}": "Reject"
 }

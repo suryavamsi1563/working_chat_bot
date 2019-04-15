@@ -42,6 +42,7 @@
     var user_credentials = {}
     var arr
     var outdata
+    var outdata1
 
     function IsJsonString(str) {
         try {
@@ -142,9 +143,11 @@
         dataType: 'json',
         success: function (msg) {
             console.log(msg)
+            
             msg.forEach(function(element) {
                 outdata = element.text
                 if (element.hasOwnProperty("buttons")) {
+                    outdata = element.text
                     element.buttons.forEach(function(button){
                         if (button.title == "No Receipt" ){
                             outdata += "<br><button onclick='chat_button(this.id)' class = 'btn btn-sm btn-danger mt-3 chat_btn' id = '" + button.payload +"'>"+ button.title  +"</button>"
@@ -155,19 +158,40 @@
                 }
                 else if (IsJsonString(outdata)){
                     var json_data = JSON.parse(outdata)
-                    outdata = "Total their are " + json_data.length +  " pending reports as follows: <br><br>"
                     if (typeof(json_data) == 'object') {
-                        for (var i = 0; i < json_data.length; i++){
-                            outdata += "<a href = '#'>" + json_data[i].text + "</a>" + "<br />"
+                        if (json_data[0].hasOwnProperty("crtuserid")){
+                            
+                            for (var i = 0; i < json_data.length; i++){
+                                if (i == 0) {
+                                    outdata1 = json_data[i].text +"<button class = 'btn btn-sm btn-primary ml-3 '>View</button><button class = 'btn btn-sm btn-success ml-3'>Approve</button><button class = 'btn btn-sm btn-danger ml-3'>Reject</button>" +"<br />"    
+                                } else {
+                                    outdata1 += json_data[i].text +"<button class = 'btn btn-sm btn-primary ml-3'>View</button><button class = 'btn btn-sm btn-success ml-3'>Approve</button><button class = 'btn btn-sm btn-danger ml-3'>Reject</button>" +"<br />"
+                                }
+
+                            }
+                            console.log(outdata1)
+                        }
+                        else {
+                            outdata = "Total their are " + json_data.length +  " pending reports as follows: <br><br>"
+                            for (var i = 0; i < json_data.length; i++){
+                                outdata += "<a href = '#'>" + json_data[i].text + "</a>" + "<br />"
+                            }
                         }
                     }
                 }
                 else if(outdata.includes('@#$')){
                     outdata = outdata.split('@#$').join('<br/>')
                 }
-                botui.message.add({
-                    content: outdata
-                });              
+                if (outdata1 == null){
+                    botui.message.add({
+                        content: outdata
+                    });  
+                } else {
+                    botui.message.add({
+                        content: outdata1
+                    });
+                    outdata1 = null
+                }
             });
         },
 

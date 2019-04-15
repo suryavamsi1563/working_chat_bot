@@ -1,44 +1,74 @@
 %YAML 1.1
 ---
 actions:
-- utter_created_report
-- utter_greet
-- utter_ask_submit_report
-- action_submit_report
-- action_slot_reset
-- utter_ask_receipt
 - utter_goodbye
-- pending_report
+- utter_ask_expid_or_name
+- utter_ask_approve
+- utter_ask_submit_report
 - utter_okay
+- utter_greet
+- pending_report
+- action_approve_or_reject
+- utter_created_report
+- action_slot_reset
+- action_submit_report
+- utter_ask_receipt
+- action_greet
+- action_approve_report
 entities:
+- compexpid
 - no_more_receipts
 - name
-- compexpid
+- report_name
+- appr_or_rej
 - expid
 forms:
+- approve_report_form
 - add_receipt_form
 - create_report_form
 intents:
 - affirm
-- greet
 - bye
+- greet
+- approvals
 - createreport
 - choose
 - deny
 - enterdata
 - pendingreport
 slots:
+  appr_or_rej:
+    type: text
+  approver_or_not:
+    type: bool
   compexpid:
     type: unfeaturized
   expid:
     type: unfeaturized
+  expid_list:
+    type: list
+  expid_or_name:
+    type: unfeaturized
   name:
     type: unfeaturized
+  name_list:
+    type: list
   no_more_receipts:
+    type: unfeaturized
+  report_data:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
 templates:
+  utter_ask_approve:
+  - buttons:
+    - payload: /affirm{"appr_or_rej":"Approve"}
+      title: Approve
+    - payload: /deny{"appr_or_rej":"Reject"}
+      title: Reject
+    text: Do you want to approve this report ?
+  utter_ask_expid_or_name:
+  - text: Enter name or expid of the report for summary
   utter_ask_name:
   - text: Provide a name for your report ?
   utter_ask_receipt:

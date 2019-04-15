@@ -1,14 +1,6 @@
 [
     {
         "name": "name",
-        "pattern": "(\\s)(create|generate|file|need to create|need)\\sreport(\\swith)?(\\s(name|titled|named|title|))(\\s(as|for|to be|be|being))(\\s)?.*"
-    },
-    {
-        "name": "name",
-        "pattern": "(\\s)*(create|generate|file|need to create)\\sreport.*"
-    },
-    {
-        "name": "name",
         "pattern": "[A-Z]{2}\\d{8}"
     },
     {

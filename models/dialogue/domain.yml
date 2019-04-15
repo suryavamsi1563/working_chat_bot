@@ -1,35 +1,45 @@
 %YAML 1.1
 ---
 actions:
-- action_slot_reset
-- utter_ask_receipt
-- utter_greet
-- utter_ask_submit_report
-- action_submit_report
 - utter_goodbye
+- utter_ask_expid_or_name
+- utter_ask_approve
+- utter_ask_submit_report
 - utter_okay
-- utter_created_report
+- utter_greet
 - pending_report
+- action_approve_or_reject
+- utter_created_report
+- action_slot_reset
+- action_submit_report
+- utter_ask_receipt
+- action_greet
+- action_approve_report
 config:
   store_entities_as_slots: true
 entities:
-- expid
 - compexpid
-- name
 - no_more_receipts
+- name
+- report_name
+- appr_or_rej
+- expid
 forms:
+- approve_report_form
 - add_receipt_form
 - create_report_form
 intents:
-- choose:
+- affirm:
     use_entities: true
 - bye:
     use_entities: true
+- greet:
+    use_entities: true
+- approvals:
+    use_entities: true
 - createreport:
     use_entities: true
-- affirm:
-    use_entities: true
-- greet:
+- choose:
     use_entities: true
 - deny:
     use_entities: true
@@ -38,6 +48,14 @@ intents:
 - pendingreport:
     use_entities: true
 slots:
+  appr_or_rej:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  approver_or_not:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   compexpid:
     auto_fill: true
     initial_value: null
@@ -46,11 +64,27 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  expid_list:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  expid_or_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   name:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  name_list:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   no_more_receipts:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  report_data:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
@@ -59,6 +93,15 @@ slots:
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
 templates:
+  utter_ask_approve:
+  - buttons:
+    - payload: /affirm{"appr_or_rej":"Approve"}
+      title: Approve
+    - payload: /deny{"appr_or_rej":"Reject"}
+      title: Reject
+    text: Do you want to approve this report ?
+  utter_ask_expid_or_name:
+  - text: Enter name or expid of the report for summary
   utter_ask_name:
   - text: Provide a name for your report ?
   utter_ask_receipt:

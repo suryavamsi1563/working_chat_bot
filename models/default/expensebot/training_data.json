@@ -270,6 +270,158 @@
         "text": "/affirm"
       },
       {
+        "intent": "affirm",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "Approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/affirm{\"appr_or_rej\":\"Approve\"}"
+      },
+      {
+        "intent": "affirm",
+        "entities": [
+          {
+            "start": 7,
+            "end": 32,
+            "value": "Approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/affirm{\"appr_or_rej\":\"Approve\"}"
+      },
+      {
+        "intent": "approvals",
+        "text": "approve my first report"
+      },
+      {
+        "intent": "approvals",
+        "text": "approve my second report"
+      },
+      {
+        "intent": "approvals",
+        "text": "approve my 3rd report"
+      },
+      {
+        "intent": "approvals",
+        "text": "approve my all reports"
+      },
+      {
+        "intent": "approvals",
+        "text": "approve 1st report"
+      },
+      {
+        "intent": "approvals",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "E000123",
+            "entity": "expid"
+          }
+        ],
+        "text": "show report E000123"
+      },
+      {
+        "intent": "approvals",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "E000100",
+            "entity": "expid"
+          }
+        ],
+        "text": "show report with E000100"
+      },
+      {
+        "intent": "approvals",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "E000124",
+            "entity": "expid"
+          }
+        ],
+        "text": "show report E000124"
+      },
+      {
+        "intent": "approvals",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "E000200",
+            "entity": "expid"
+          }
+        ],
+        "text": "show report  E000200"
+      },
+      {
+        "intent": "approvals",
+        "text": "show report [ER0214256]"
+      },
+      {
+        "intent": "approvals",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "july 2018",
+            "entity": "report_name"
+          }
+        ],
+        "text": "show report with name july 2018"
+      },
+      {
+        "intent": "approvals",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "may 2016",
+            "entity": "report_name"
+          }
+        ],
+        "text": "show report with name may 2016"
+      },
+      {
+        "intent": "approvals",
+        "text": "E000125"
+      },
+      {
+        "intent": "approvals",
+        "text": "E000125"
+      },
+      {
+        "intent": "approvals",
+        "text": "ER0214256"
+      },
+      {
+        "intent": "approvals",
+        "text": "E000125"
+      },
+      {
+        "intent": "approvals",
+        "text": "June 2018"
+      },
+      {
+        "intent": "approvals",
+        "text": "Opera_2013"
+      },
+      {
+        "intent": "approvals",
+        "text": "June 2018"
+      },
+      {
+        "intent": "approvals",
+        "text": "E000125"
+      },
+      {
         "intent": "bye",
         "text": "goodbye"
       },
@@ -468,6 +620,10 @@
       {
         "intent": "bye",
         "text": "see you later"
+      },
+      {
+        "intent": "bye",
+        "text": "later"
       },
       {
         "intent": "choose",
@@ -1634,6 +1790,18 @@
         "text": "/deny"
       },
       {
+        "intent": "deny",
+        "entities": [
+          {
+            "start": 5,
+            "end": 29,
+            "value": "Reject",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/deny{\"appr_or_rej\":\"Reject\"}"
+      },
+      {
         "intent": "enterdata",
         "text": "first report"
       },
@@ -2178,6 +2346,10 @@
         "text": "hello"
       },
       {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
         "intent": "pendingreport",
         "text": "pending"
       },
@@ -2285,14 +2457,6 @@
     "regex_features": [
       {
         "name": "name",
-        "pattern": "(\\s)(create|generate|file|need to create|need)\\sreport(\\swith)?(\\s(name|titled|named|title|))(\\s(as|for|to be|be|being))(\\s)?.*"
-      },
-      {
-        "name": "name",
-        "pattern": "(\\s)*(create|generate|file|need to create)\\sreport.*"
-      },
-      {
-        "name": "name",
         "pattern": "[A-Z]{2}\\d{8}"
       },
       {
@@ -2314,6 +2478,12 @@
     ],
     "lookup_tables": [],
     "entity_synonyms": [
+      {
+        "value": "Approve",
+        "synonyms": [
+          "{\"appr_or_rej\":\"Approve\"}"
+        ]
+      },
       {
         "value": "camera",
         "synonyms": [
@@ -2354,6 +2524,12 @@
         "value": "wolfe - november 2014 - 1",
         "synonyms": [
           "Wolfe - November 2014-1"
+        ]
+      },
+      {
+        "value": "Reject",
+        "synonyms": [
+          "{\"appr_or_rej\":\"Reject\"}"
         ]
       }
     ]
