@@ -2,6 +2,126 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
+        "intent": "addlineitem",
+        "text": "i want to add lineitem for this report"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "Add Lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add a lineitem to this report"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "will you add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "i wanna add a lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "i want to add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "can you please add a lineitem to this report"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "i want a add a lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 41,
+            "value": "addlineitem",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 41,
+            "value": "addlineitem",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 41,
+            "value": "addlineitem",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 41,
+            "value": "addlineitem",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add lineitem to this report"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "i want to add a lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add a lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 41,
+            "value": "addlineitem",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "i want to add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add lineitems"
+      },
+      {
         "intent": "affirm",
         "text": "yes"
       },
@@ -211,30 +331,6 @@
       },
       {
         "intent": "affirm",
-        "text": "I want to"
-      },
-      {
-        "intent": "affirm",
-        "text": "I want to create lineitem"
-      },
-      {
-        "intent": "affirm",
-        "text": "Need to create a lineitem"
-      },
-      {
-        "intent": "affirm",
-        "text": "generate a lineitem"
-      },
-      {
-        "intent": "affirm",
-        "text": "create it please"
-      },
-      {
-        "intent": "affirm",
-        "text": "file my lineitems"
-      },
-      {
-        "intent": "affirm",
         "text": "Yes"
       },
       {
@@ -263,14 +359,6 @@
       },
       {
         "intent": "affirm",
-        "text": "/affirm"
-      },
-      {
-        "intent": "affirm",
-        "text": "/affirm"
-      },
-      {
-        "intent": "affirm",
         "entities": [
           {
             "start": 7,
@@ -287,139 +375,195 @@
           {
             "start": 7,
             "end": 32,
-            "value": "Approve",
+            "value": "approve",
             "entity": "appr_or_rej"
           }
         ],
-        "text": "/affirm{\"appr_or_rej\":\"Approve\"}"
+        "text": "/affirm{\"appr_or_rej\":\"approve\"}"
       },
       {
-        "intent": "approvals",
-        "text": "approve my first report"
+        "intent": "affirm",
+        "text": "/affirm"
       },
       {
-        "intent": "approvals",
-        "text": "approve my second report"
+        "intent": "affirm",
+        "text": "/affirm"
       },
       {
-        "intent": "approvals",
-        "text": "approve my 3rd report"
+        "intent": "affirm",
+        "text": "/affirm"
       },
       {
-        "intent": "approvals",
-        "text": "approve my all reports"
+        "intent": "affirm",
+        "text": "yes"
       },
       {
-        "intent": "approvals",
-        "text": "approve 1st report"
+        "intent": "affirm",
+        "text": "yes"
       },
       {
-        "intent": "approvals",
+        "intent": "affirm",
+        "text": "i do"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "approve",
+        "text": "i want to approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve"
+      },
+      {
+        "intent": "approve",
+        "text": "can you approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "i approve"
+      },
+      {
+        "intent": "approve",
+        "text": "approve"
+      },
+      {
+        "intent": "approve",
+        "text": "yes approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve"
+      },
+      {
+        "intent": "approve",
+        "text": "i want to approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "yes i approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "i want to approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "i want to approve this report"
+      },
+      {
+        "intent": "approve",
         "entities": [
           {
-            "start": 12,
-            "end": 19,
-            "value": "E000123",
-            "entity": "expid"
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
           }
         ],
-        "text": "show report E000123"
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
       },
       {
-        "intent": "approvals",
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
         "entities": [
           {
-            "start": 17,
-            "end": 24,
-            "value": "E000100",
-            "entity": "expid"
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
           }
         ],
-        "text": "show report with E000100"
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
       },
       {
-        "intent": "approvals",
-        "entities": [
-          {
-            "start": 12,
-            "end": 19,
-            "value": "E000124",
-            "entity": "expid"
-          }
-        ],
-        "text": "show report E000124"
+        "intent": "approve",
+        "text": "approve this report"
       },
       {
-        "intent": "approvals",
-        "entities": [
-          {
-            "start": 13,
-            "end": 20,
-            "value": "E000200",
-            "entity": "expid"
-          }
-        ],
-        "text": "show report  E000200"
+        "intent": "approve",
+        "text": "i want to approve this report"
       },
       {
-        "intent": "approvals",
-        "text": "show report [ER0214256]"
+        "intent": "attachreceipt",
+        "text": "attach a receipt"
       },
       {
-        "intent": "approvals",
-        "entities": [
-          {
-            "start": 22,
-            "end": 31,
-            "value": "july 2018",
-            "entity": "report_name"
-          }
-        ],
-        "text": "show report with name july 2018"
+        "intent": "attachreceipt",
+        "text": "add a reciept"
       },
       {
-        "intent": "approvals",
-        "entities": [
-          {
-            "start": 22,
-            "end": 30,
-            "value": "may 2016",
-            "entity": "report_name"
-          }
-        ],
-        "text": "show report with name may 2016"
+        "intent": "attachreceipt",
+        "text": "attach a receipt for me"
       },
       {
-        "intent": "approvals",
-        "text": "E000125"
+        "intent": "attachreceipt",
+        "text": "can you attach receipt"
       },
       {
-        "intent": "approvals",
-        "text": "E000125"
+        "intent": "attachreceipt",
+        "text": "i want to attach receipt"
       },
       {
-        "intent": "approvals",
-        "text": "ER0214256"
+        "intent": "attachreceipt",
+        "text": "attach receipt"
       },
       {
-        "intent": "approvals",
-        "text": "E000125"
+        "intent": "attachreceipt",
+        "text": "i have one receipt please attach it"
       },
       {
-        "intent": "approvals",
-        "text": "June 2018"
+        "intent": "attachreceipt",
+        "text": "attach a receipt"
       },
       {
-        "intent": "approvals",
-        "text": "Opera_2013"
+        "intent": "attachreceipt",
+        "text": "i have one receipt please attach to this report"
       },
       {
-        "intent": "approvals",
-        "text": "June 2018"
+        "intent": "attachreceipt",
+        "text": "i have a receipts"
       },
       {
-        "intent": "approvals",
-        "text": "E000125"
+        "intent": "attachreceipt",
+        "text": "attach a receipt"
+      },
+      {
+        "intent": "attachreceipt",
+        "text": "i have receipts"
       },
       {
         "intent": "bye",
@@ -542,90 +686,6 @@
         "text": "thanks"
       },
       {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "goodbye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "good bye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "take care"
-      },
-      {
-        "intent": "bye",
-        "text": "see ya"
-      },
-      {
-        "intent": "bye",
-        "text": "thanks"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "goodbye"
-      },
-      {
-        "intent": "bye",
-        "text": "goodbye"
-      },
-      {
-        "intent": "bye",
-        "text": "bye"
-      },
-      {
-        "intent": "bye",
-        "text": "see you later"
-      },
-      {
-        "intent": "bye",
-        "text": "see you later"
-      },
-      {
-        "intent": "bye",
-        "text": "goodbye"
-      },
-      {
-        "intent": "bye",
-        "text": "see you later"
-      },
-      {
-        "intent": "bye",
-        "text": "later"
-      },
-      {
         "intent": "choose",
         "entities": [
           {
@@ -678,72 +738,12 @@
         "entities": [
           {
             "start": 7,
-            "end": 36,
-            "value": "camera",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"camera\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
             "end": 32,
             "value": "No",
             "entity": "no_more_receipts"
           }
         ],
         "text": "/choose{\"no_more_receipts\":\"No\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "camera",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"camera\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "attach",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"attach\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "attach",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"attach\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "camera",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"camera\"}"
       },
       {
         "intent": "choose",
@@ -816,42 +816,6 @@
           }
         ],
         "text": "/choose{\"no_more_receipts\":\"No\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "camera",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"camera\"}"
       },
       {
         "intent": "choose",
@@ -1551,10 +1515,6 @@
       },
       {
         "intent": "createreport",
-        "text": "create a new report"
-      },
-      {
-        "intent": "createreport",
         "entities": [
           {
             "start": 19,
@@ -1612,6 +1572,18 @@
           }
         ],
         "text": "generate a new report Wolfe - November 2014-1"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 34,
+            "end": 45,
+            "value": "Begium Trip",
+            "entity": "name"
+          }
+        ],
+        "text": "Can you create a report with name Begium Trip"
       },
       {
         "intent": "deny",
@@ -1787,10 +1759,6 @@
       },
       {
         "intent": "deny",
-        "text": "/deny"
-      },
-      {
-        "intent": "deny",
         "entities": [
           {
             "start": 5,
@@ -1800,6 +1768,54 @@
           }
         ],
         "text": "/deny{\"appr_or_rej\":\"Reject\"}"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "entities": [
+          {
+            "start": 5,
+            "end": 29,
+            "value": "reject",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/deny{\"appr_or_rej\":\"reject\"}"
+      },
+      {
+        "intent": "deny",
+        "text": "i dont"
+      },
+      {
+        "intent": "deny",
+        "entities": [
+          {
+            "start": 5,
+            "end": 29,
+            "value": "submit",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/deny{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "deny",
+        "text": "dont submit the report"
+      },
+      {
+        "intent": "deny",
+        "text": "no receipt"
+      },
+      {
+        "intent": "deny",
+        "text": "i dont"
+      },
+      {
+        "intent": "deny",
+        "text": "/deny"
       },
       {
         "intent": "enterdata",
@@ -2016,6 +2032,542 @@
       {
         "intent": "enterdata",
         "text": "week of 2/5/18"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Approved the report because its valid."
+      },
+      {
+        "intent": "enterdata",
+        "text": "Rejected because of high risk value."
+      },
+      {
+        "intent": "enterdata",
+        "text": "first one"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Accepted becoz evrything looks good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "3"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2nd report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1st"
+      },
+      {
+        "intent": "enterdata",
+        "text": "amount limit is over"
+      },
+      {
+        "intent": "enterdata",
+        "text": "WE012564"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fine information"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1st"
+      },
+      {
+        "intent": "enterdata",
+        "text": "everything fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "everything  fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "correct information"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "every thing is fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "everything is fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "provide correct details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "everything good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "provide correct details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "everything is fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fine details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "July 2017 Expense Log"
+      },
+      {
+        "intent": "enterdata",
+        "text": "june-2018 trip"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Stoehr January 2015"
+      },
+      {
+        "intent": "enterdata",
+        "text": "april_trip"
+      },
+      {
+        "intent": "enterdata",
+        "text": "everything good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "ya its fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fine information"
+      },
+      {
+        "intent": "enterdata",
+        "text": "i think its fake data"
+      },
+      {
+        "intent": "enterdata",
+        "text": "correct details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "nooo reason"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "noo reason for this report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "correct information"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "i think its fake information, please provide correct information"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Levenson August 2015"
+      },
+      {
+        "intent": "enterdata",
+        "text": "latest"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no reasons for this report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "last report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no reasons"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "crossed your expense limit"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "last report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first one"
+      },
+      {
+        "intent": "enterdata",
+        "text": "latest"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "show pending report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no comments to this report"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 13,
+            "end": 16,
+            "value": "xyz",
+            "entity": "name"
+          }
+        ],
+        "text": "New trip for xyz"
+      },
+      {
+        "intent": "enterdata",
+        "text": "december 2015"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "Very good work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "nov 2016"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "feb_mar-2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "test 1233"
+      },
+      {
+        "intent": "enterdata",
+        "text": "hims meet"
+      },
+      {
+        "intent": "enterdata",
+        "text": "russel-2015"
+      },
+      {
+        "intent": "enterdata",
+        "text": "attach receipts"
+      },
+      {
+        "intent": "enterdata",
+        "text": "last"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "good work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "trip_newyork"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fake details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no reasons"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no reasons"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "please provide correct details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "third report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1st"
+      },
+      {
+        "intent": "enterdata",
+        "text": "bad work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fake details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "hjhdsajash"
+      },
+      {
+        "intent": "enterdata",
+        "text": "good work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "good work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "hdshfashfasfh"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "/go_to_approvals"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "/go_to_approvals"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "go to approvals"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "goto approval page"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "navigate to approval page"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "goto approvals"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "go to approval page"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "goto approval page"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "/go_to_approvals"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "/go_to_approvals"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "navigate to approvals page"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "i want to go to approval page"
+      },
+      {
+        "intent": "go_to_approvals",
+        "text": "navigate to approval page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "/go_to_pendingrports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "/go_to_pendingrports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "go to pending reports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "goto pendingreports page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "navigate to pending reports page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "goto pendingreports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "go to pendingreports page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "go to pending reports page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "goto  pending reports page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "goto  pendingreports page"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "goto pending reports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "/go_to_pendingreports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "/go_to_pendingreports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "/go_to_pendingreports"
+      },
+      {
+        "intent": "go_to_pendingreports",
+        "text": "navigate to pending reports"
       },
       {
         "intent": "greet",
@@ -2303,51 +2855,227 @@
       },
       {
         "intent": "greet",
-        "text": "Hi"
-      },
-      {
-        "intent": "greet",
         "text": "hi"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "intent": "init",
+        "text": "/init"
       },
       {
-        "intent": "greet",
-        "text": "hey hi"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hello"
+        "intent": "init",
+        "text": "\\init"
       },
       {
-        "intent": "greet",
-        "text": "hello"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hello"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hello bot"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hello"
+        "intent": "init",
+        "text": "init"
       },
       {
-        "intent": "greet",
-        "text": "hi"
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "i dont have any receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "noreceipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts i have"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "i have no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "i dont have any receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "i have no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "i dont have any receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "Nope"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts i have"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no more receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "no receipts"
+      },
+      {
+        "intent": "noreceipts",
+        "text": "i dont have any receipts"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "can you please open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "go to camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "camera open"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open camera for me"
+      },
+      {
+        "intent": "opencamera",
+        "text": "i want to open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open my camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "camera open"
+      },
+      {
+        "intent": "opencamera",
+        "text": "will you open my open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "can you open my camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open camera for me"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "can you please open my camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "i want to open camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open camera for me"
+      },
+      {
+        "intent": "opencamera",
+        "text": "i want to open my  camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "i want to open my camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "goto my camera"
+      },
+      {
+        "intent": "opencamera",
+        "text": "open my camera"
       },
       {
         "intent": "pendingreport",
@@ -2375,19 +3103,11 @@
       },
       {
         "intent": "pendingreport",
-        "text": "ready for approval"
-      },
-      {
-        "intent": "pendingreport",
         "text": "show the outstanding reports"
       },
       {
         "intent": "pendingreport",
         "text": "show the drafts"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show the pending approvals"
       },
       {
         "intent": "pendingreport",
@@ -2452,36 +3172,479 @@
       {
         "intent": "pendingreport",
         "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "get all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "list out my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "get my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "get my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i want to know my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "I want to know my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "how many pending reports i have"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "can you show me how many pending reports i have"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "can you show me the pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "what about my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "give my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "display pending reports"
+      },
+      {
+        "intent": "reject",
+        "text": "i want to reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "reject"
+      },
+      {
+        "intent": "reject",
+        "text": "can you reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "i reject"
+      },
+      {
+        "intent": "reject",
+        "text": "i dont want to approve this report"
+      },
+      {
+        "intent": "reject",
+        "text": "i don't want to approve this report"
+      },
+      {
+        "intent": "reject",
+        "text": "reject"
+      },
+      {
+        "intent": "reject",
+        "text": "reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "i want to reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "reject this report"
+      },
+      {
+        "intent": "reject",
+        "entities": [
+          {
+            "start": 7,
+            "end": 31,
+            "value": "reject",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/reject{\"appr_or_rej\":\"reject\"}"
+      },
+      {
+        "intent": "reject",
+        "text": "reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "reject this report"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approval reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "list out the approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show me approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show the approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show all approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "reports waiting my approval"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "display reports for my approval"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "display reports requiring my consent"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "retrieve approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "get my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "list out all my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show all approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "get my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show me all approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "list out my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "get my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show all reports waiting for approval"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "list reports for submitting for approval"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "get all reports waiting for approval"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "list all submitted reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approval reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show me approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show all approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show all approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "what about reports waiting my approvals?"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "what about reports waiting my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "can you show me approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "i want to know my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "I want to know my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "how many approvals i have"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "can you show me how many approve reports i have"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "can you show me the approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "what about my approvals reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "give my approvals reports"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "i wanna submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "do you submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "will you submit this report for me"
+      },
+      {
+        "intent": "submit",
+        "text": "submit"
+      },
+      {
+        "intent": "submit",
+        "text": "submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "i want submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit a report"
+      },
+      {
+        "intent": "submit",
+        "entities": [
+          {
+            "start": 7,
+            "end": 31,
+            "value": "submit",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "submit",
+        "entities": [
+          {
+            "start": 7,
+            "end": 31,
+            "value": "submit",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "submit",
+        "text": "submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "submit a report"
+      },
+      {
+        "intent": "submit",
+        "entities": [
+          {
+            "start": 7,
+            "end": 31,
+            "value": "submit",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "submit",
+        "text": "submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "submit"
+      },
+      {
+        "intent": "submit",
+        "text": "submit"
+      },
+      {
+        "intent": "submit",
+        "entities": [
+          {
+            "start": 7,
+            "end": 31,
+            "value": "submit",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "submit",
+        "entities": [
+          {
+            "start": 7,
+            "end": 31,
+            "value": "submit",
+            "entity": "adlt_or_sub"
+          }
+        ],
+        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "submit",
+        "text": "submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "submit a report"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit a report"
       }
     ],
-    "regex_features": [
-      {
-        "name": "name",
-        "pattern": "[A-Z]{2}\\d{8}"
-      },
-      {
-        "name": "name",
-        "pattern": "[A-Za-z\\s]+\\s(EXP|PNC)\\s\\d{2}\\.\\d{4}"
-      },
-      {
-        "name": "name",
-        "pattern": "[A-Za-z\\s]+\\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\\s\\d+-\\d+"
-      },
-      {
-        "name": "name",
-        "pattern": "[A-Za-z]+\\s-\\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\\s[2]\\d{3}"
-      },
-      {
-        "name": "name",
-        "pattern": "[A-Za-z]\\/[A-Za-z]\\s\\d+\\/\\d{2}\\/\\d+"
-      }
-    ],
+    "regex_features": [],
     "lookup_tables": [],
     "entity_synonyms": [
+      {
+        "value": "addlineitem",
+        "synonyms": [
+          "{\"adlt_or_sub\":\"addlineitem\"}"
+        ]
+      },
       {
         "value": "Approve",
         "synonyms": [
           "{\"appr_or_rej\":\"Approve\"}"
+        ]
+      },
+      {
+        "value": "approve",
+        "synonyms": [
+          "{\"appr_or_rej\":\"approve\"}"
         ]
       },
       {
@@ -2530,6 +3693,24 @@
         "value": "Reject",
         "synonyms": [
           "{\"appr_or_rej\":\"Reject\"}"
+        ]
+      },
+      {
+        "value": "reject",
+        "synonyms": [
+          "{\"appr_or_rej\":\"reject\"}"
+        ]
+      },
+      {
+        "value": "submit",
+        "synonyms": [
+          "{\"adlt_or_sub\":\"submit\"}"
+        ]
+      },
+      {
+        "value": "feb - mar-2015",
+        "synonyms": [
+          "feb-mar-2015"
         ]
       }
     ]

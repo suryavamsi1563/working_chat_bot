@@ -1,46 +1,83 @@
 %YAML 1.1
 ---
 actions:
-- utter_goodbye
+- reject_report
+- action_goto_pendingreports
+- utter_ask_addline
+- attach_receipt
 - utter_ask_expid_or_name
-- utter_ask_approve
+- pending_report
+- action_goto_approvals
+- utter_ask_receipt
+- no_receipt
+- action_display_appr_report
 - utter_ask_submit_report
+- approve_report
+- utter_ask_comments
+- action_submit_report
+- action_addlineitem_to_report
+- utter_do
+- action_first_message
+- open_camera
 - utter_okay
 - utter_greet
-- pending_report
+- action_select_report
+- action_slot_reset
+- action_submitpdr_report
+- utter_ask_addline_or_submit
 - action_approve_or_reject
 - utter_created_report
-- action_slot_reset
-- action_submit_report
-- utter_ask_receipt
-- action_greet
-- action_approve_report
+- utter_goodbye
+- utter_ask_approve
 entities:
-- compexpid
 - no_more_receipts
+- compexpid
+- expid
 - name
+- comments
+- adlt_or_sub
 - report_name
 - appr_or_rej
-- expid
 forms:
-- approve_report_form
-- add_receipt_form
 - create_report_form
+- add_receipt_form
+- approve_report_form
 intents:
-- affirm
-- bye
-- greet
-- approvals
-- createreport
-- choose
-- deny
+- init
+- approve
 - enterdata
+- reject
+- submit
+- affirm
+- addlineitem
 - pendingreport
+- noreceipts
+- deny
+- greet
+- choose
+- createreport
+- attachreceipt
+- go_to_pendingreports
+- go_to_approvals
+- showapprvls
+- opencamera
+- bye
+- approvals
 slots:
+  adlt_or_sub:
+    type: text
+  appr_or_pend:
+    type: text
   appr_or_rej:
     type: text
+  appr_rej_comments:
+    type: text
+  appr_report_list:
+    type: list
   approver_or_not:
     type: bool
+  comments:
+    type: unfeaturized
   compexpid:
     type: unfeaturized
   expid:
@@ -55,18 +92,34 @@ slots:
     type: list
   no_more_receipts:
     type: unfeaturized
+  pending_report_list:
+    type: list
   report_data:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
 templates:
+  utter_ask_addline:
+  - buttons:
+    - payload: /addlineitem{"adlt_or_sub":"addlineitem"}
+      title: Add Lineitem
+    text: Do you wish to add a line item ?.
+  utter_ask_addline_or_submit:
+  - buttons:
+    - payload: /addlineitem{"adlt_or_sub":"addlineitem"}
+      title: Add Lineitem
+    - payload: /submit{"adlt_or_sub":"submit"}
+      title: Submit
+    text: What do you like to do ?
   utter_ask_approve:
   - buttons:
-    - payload: /affirm{"appr_or_rej":"Approve"}
+    - payload: /approve{"appr_or_rej":"approve"}
       title: Approve
-    - payload: /deny{"appr_or_rej":"Reject"}
+    - payload: /reject{"appr_or_rej":"reject"}
       title: Reject
-    text: Do you want to approve this report ?
+    text: What do you like to do?
+  utter_ask_comments:
+  - text: 'Enter your comments to {appr_or_rej} : '
   utter_ask_expid_or_name:
   - text: Enter name or expid of the report for summary
   utter_ask_name:
@@ -91,6 +144,10 @@ templates:
   - text: Report Created Successfully
   utter_default:
   - text: sorry, I didn't understand you, please try input something else
+  utter_do:
+  - text: What can I do for you?
+  - text: Tell me what to do !!
+  - text: How can i help you.
   utter_goodbye:
   - text: Bye.Take Care
   utter_greet:
@@ -99,3 +156,4 @@ templates:
   - text: Cool!. navigating you to camera...
   utter_okay:
   - text: Okay.can i help you with anything else ?
+  - text: Do you need anything else

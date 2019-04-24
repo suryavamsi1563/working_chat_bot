@@ -55,6 +55,7 @@ class CreateReportForm(FormAction):
         # comp_id = sender['comp_id']
         user_id = "9364"
         comp_id = "1403"
+        print("Inside Create Report Form")
         
         r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneexpsave.do?navfrom=android&sutitest=true', data =  {"compid": f"{comp_id}","userid": f"{user_id}","delusr": "0","version": "8.4.0","copylines": "Slelect","mcurr": "","Department Name": "Dept1","Product Line Code": "gfg - Cghg","Client Code": "kkkkkk","Project Code": "fdfdf - fdfdf","expType": "report","expNm": f"{name}","expDt": f'{date}',"fdate": f'{date}',"tdate": f"{date}","expDesc": "","isencrypt":"No"})
         if r.status_code == 200:
@@ -119,6 +120,7 @@ class AddReceiptForm(FormAction):
                domain: Dict[Text, Any]) -> List[Dict]:               
 
         no_receipts = tracker.get_slot('no_more_receipts')
+        print("Inside Add Receipt Form")
         if no_receipts ==  "camera":
             dispatcher.utter_message("openning Camera")
             dispatcher.utter_message("Added the receipt.")
@@ -141,43 +143,13 @@ class AddReceiptForm(FormAction):
             print(f"Inside No of Add Receipt Form.Slots are {expid},{name},{compexpid}")
             return [FollowupAction('utter_ask_submit_report')]
 
-def report_summary(expid,appr_or_draft,user_id,comp_id):
-    r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneapp.do?callto=getsubexps', data =  {"userid": user_id,"compid": comp_id,"expid" : expid,"reqfrm" : appr_or_draft,"version": "8.4.0"})
-    line_item_summary = []
-    total_amount = 0
-    no_of_lineitems = 0
-    if r.status_code == 200:
-        json_data = r.json()
-        if json_data.get('status') == 'success':
-            if len(json_data['subexps']) == 1 and json_data['subexps'][0]['subexpid'] == 0 :
-                print("No line items for the report")
-                return {
-                    "Line_items_cnt":0,
-                    "expid":expid
-                }
-            else:
-                for line_item in json_data['subexps']:
-                    line_item_summary.append(f"Expenditure on {line_item['subexptype']} at {line_item['merchant'] } for an amount of ${line_item['amount']}")
-                    no_of_lineitems += 1
-                Expenses_Subtotal = json_data['amountsTable'][0]['v']
-                Grand_Total = json_data['amountsTable'][1]['v']
-                Amount_Owed = json_data['amountsTable'][2]['v']
-                return {
-                    "Line_items_cnt":no_of_lineitems,
-                    "Line_items_summary":line_item_summary,
-                    "Expenses_Subtotal":Expenses_Subtotal,
-                    "Grand_Total":Grand_Total,
-                    "Amount_Owed":Amount_Owed
-                }
-        else:
-            return "Status Failed"
-    else:
-        return "Status Code is non 200"
 class PendingReport(Action):
     def name(self):
         return "pending_report"
 
     def run(self, dispatcher, tracker, domain):
+        
+        print("Inside Pending Reports")
         # if 'user' in tracker.current_state()['sender_id']:
         #     sender_details = tracker.current_state()['sender_id']
         #     sender_details = sender_details.replace('\'','\"')
@@ -196,49 +168,40 @@ class PendingReport(Action):
             json_data = r.json()
             if json_data.get('status') == 'success':
                 if json_data['exps']:
-                    print(json_data['exps'])
+                    # for exp in json_data['exps']:
+                    #     json_response.append({
+                    #         'compexpid' : exp['compexpid'],
+                    #         'expdt': exp['expdt'],
+                    #         'nav_to':'drafts',
+                    #         'text': f"{exp['expname']} with report id {exp['compexpid']}, generated on {exp['expdt']}"
+                    #     }) 
+                    # response = json.dumps(json_response)
                     no_of_reports = len(json_data['exps'])
                     # Custom code for setting reports to 1
-                    no_of_reports = 3
+                    no_of_reports = 1
                     if no_of_reports == 1:
-                        dispatcher.utter_message("You have one pending report as follows :")
+                        # dispatcher.utter_message(f"There is one pending report you have ")
                         compexpid = ""
                         expid=""
-                        expname = ""
-                        expdt = ""
-#<-------------------- API call for showing the pending report full data ------------->
-#<-------------------- with line items summary---------------------------------------->
                         for exp in json_data['exps']:
-                            expid = exp['expid']
-                            compexpid = exp['compexpid']
-                            expname = exp['expname']
-                            expdt = exp['expdt']
+                            json_response.append({
+                            'compexpid' : exp['compexpid'],
+                            'expdt': exp['expdt'],
+                            'nav_to':'drafts',
+                            'text': f"{exp['expname']} with report id {exp['compexpid']}, generated on {exp['expdt']}"
+                                                }) 
                             break
-#<-------------------------- Calling report SUMMARY API ------------------------------>
-                        out_summary = report_summary(expid,'drafts',user_id,comp_id)
-                        print(out_summary)
-                        if 'Line_items_cnt' in out_summary:
-                            if out_summary.get('Line_items_cnt') == 0:
-                                response = f"Report '{expname} with report id {compexpid}, created on {expdt}'.@#$@#$The report has no line items"
-                                dispatcher.utter_message(response)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','pend'),FollowupAction("utter_ask_addline")]
-                            elif out_summary.get('Line_items_cnt') > 0:
-                                response += f"Report '{expname} with report id {compexpid}, created on {expdt}'.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
-                                response += '@#$'.join(out_summary["Line_items_summary"])
-                                response += f"@#$Expenses Subtotal {out_summary['Expenses_Subtotal']}"
-                                response += f"@#$Grand Total : {out_summary['Grand_Total']}"
-                                response += f"@#$Amount Owed : {out_summary['Amount_Owed']}"
-                                dispatcher.utter_message(response)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','pend'),FollowupAction("utter_ask_addline_or_submit")]
-                        else:
-                            dispatcher.utter_message("Pending report API not working.")
-#<-------------------------- Report SUMMARY API END------------------------------>
+                        response = json.dumps(json_response)    
+                        dispatcher.utter_message(response)
+                        # dispatcher.utter_template("utter_ask_receipt")
+                        return [FollowupAction("utter_ask_addline_or_submit")]
                     elif no_of_reports > 1 and no_of_reports <= 3:
                         number_word = {
                             2:"two",
                             3:"three"
                         }
                         # dispatcher.utter_message(f"There are {number_word[no_of_reports]} pending reports you have. ")
+                        
                         for exp in json_data['exps'][:no_of_reports]:
                             json_response.append({
                                 'compexpid' : exp['compexpid'],
@@ -248,8 +211,8 @@ class PendingReport(Action):
                             })
                         response = json.dumps(json_response)
                         dispatcher.utter_message(response)
-                        # dispatcher.utter_message("Select a report to see summary :")
-                        return [ SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','pend'),FollowupAction('action_listen')]
+                        dispatcher.utter_message("Select a report to see summary :")
+                        return [ SlotSet('pending_report_list',json_data['exps'][:no_of_reports]), FollowupAction('action_listen')]
                     elif no_of_reports > 3:
                         buttons = [
                                     {
@@ -258,6 +221,7 @@ class PendingReport(Action):
                                     }]
                         dispatcher.utter_button_message(f"There are {no_of_reports} pending reports you have",buttons)
                         return [FollowupAction('action_listen')]
+
                     else:
                         dispatcher.utter_message("You have no pending reports .")
                         dispatcher.utter_message("Do you need anything else ? ")
@@ -341,71 +305,45 @@ class ActionSlotReset(Action):
         return [AllSlotsReset()]
 
 
-class Display_Approval(Action):
+class Writing_approve(Action):
     def name(self):
-        return "action_display_appr_report"
+        return "action_approve_report"
 
     def run(self, dispatcher, tracker, domain):
-            #<------------------ API CALL BELOW ---------------->
+        response = "Showing 2 reports requiring your approval:@#$@#$"
+        report_names = []
+        #<------------------ API CALL BELOW ---------------->
         json_response = []
         r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=getExpAppRecords&navfrom=android&sutitest=yes",data={"userid": "9409","compid": "1403","version": "8.4.0"})
         if r.status_code == 200:
             json_data = r.json()
             if json_data.get('status') == 'success':
+                print(json_data['exps'])
                 if json_data['exps']:
                     no_of_reports = len(json_data['exps'])
-                    no_of_reports = 3 # Custom code for setting reports to 1
-        #<------------- Code for no of reports equal to 1-------------------->
+                    # Custom code for setting reports to 1
+                    no_of_reports = 3
                     if no_of_reports == 1:
-                        dispatcher.utter_message(f"There is one report waiting for your approval.")
-                        dispatcher.utter_message(f'Report summary is as follows: ')
+                        dispatcher.utter_message(f"There is one report waiting for your approval. ")
+                        dispatcher.utter_message(f'Report summary is: ')
                         compexpid = ""
                         expid=""
-                        expname = ""
-                        expdt = ""
-#<-------------------- API call for showing the approval report full data ------------->
-#<-------------------- with line items summary---------------------------------------->
                         for exp in json_data['exps']:
-                            expid = exp['expid']
-                            expsubby = exp['subby']
-                            expamt = exp['amt']
+                            response = f"Report '{exp['expname']}' created by '{exp['subby']}' for an amount  ${exp['amt']} on {exp['expdt']}.Comp expid is {exp['compexpid']}"
                             compexpid = exp['compexpid']
-                            expname = exp['expname']
-                            expdt = exp['expdt']
+                            expid = exp['expid']
+                            # Custom code for setting reports to 1
                             break
-#<-------------------------- Calling report SUMMARY API ------------------------------>
-                        user_id = "9409"
-                        comp_id = "1403"
-                        out_summary = report_summary(expid,'approvals',user_id,comp_id)
-                        response = ""
-                        print(out_summary)
-                        if 'Line_items_cnt' in out_summary:
-                            if out_summary.get('Line_items_cnt') == 0:
-                                response = f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}"
-                                dispatcher.utter_message(response)
-                                dispatcher.utter_template("utter_ask_approve",tracker)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),FollowupAction("action_listen")]
-                            elif out_summary.get('Line_items_cnt') > 0:
-                                response += f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
-                                response += '@#$'.join(out_summary["Line_items_summary"])
-                                response += f"@#$Expenses Subtotal {out_summary['Expenses_Subtotal']}"
-                                response += f"@#$Grand Total : {out_summary['Grand_Total']}"
-                                response += f"@#$Amount Owed : {out_summary['Amount_Owed']}"
-                                dispatcher.utter_message(response)
-                                dispatcher.utter_template("utter_ask_approve",tracker)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),FollowupAction("action_listen")]
-                        else:
-                            dispatcher.utter_message("Report Summary API not working.")
-#<-------------------------- Report SUMMARY API END------------------------------->
-        #<------------- Code for no of reports equal to 1 END---------------------->
-
-        #<------------- Code for no of reports between 2 and 3 -------------------->
+                        dispatcher.utter_message(response)
+                        dispatcher.utter_template("utter_ask_approve",tracker)
+                        return [SlotSet('compexpid',compexpid),SlotSet('expid',expid),FollowupAction("action_listen")]
                     elif no_of_reports > 1 and no_of_reports <= 3:
                         number_word = {
                             2:"two",
                             3:"three"
                         }
-                        dispatcher.utter_message(f"There are {number_word[no_of_reports]} reports waiting for your approval. ")                        
+                        dispatcher.utter_message(f"There are {number_word[no_of_reports]} reports waiting for your approval. ")
+                        
                         for exp in json_data['exps'][:no_of_reports]:
                             json_response.append({
                                 'expname': exp['expname'],
@@ -419,16 +357,17 @@ class Display_Approval(Action):
                             })
                         response = json.dumps(json_response)
                         dispatcher.utter_message(response)
-                        # dispatcher.utter_message("Select a report for summary:")
-                        return [ SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),FollowupAction('action_listen')]
+                        dispatcher.utter_message("Select a report for summary:")
+                        return [ SlotSet('appr_report_list',json_data['exps'][:no_of_reports]), FollowupAction('action_listen')]
                     elif no_of_reports > 3:
                         buttons = [
-                                {
-                                    "title": "Go to approvals", 
-                                    "payload": "/go_to_approvals"
-                                }]
+                                    {
+                                        "title": "Go to approvals", 
+                                        "payload": "/go_to_approvals"
+                                    }]
                         dispatcher.utter_button_message(f"There are {no_of_reports} reports waiting for your approval. ",buttons)
                         return [FollowupAction('action_listen')]
+
                     else:
                         dispatcher.utter_message("You have no reports to approve.")
                         dispatcher.utter_message("Do you need anything else ? ")
@@ -510,8 +449,8 @@ class ApproveOrRejectAction(Action):
     def run(self, dispatcher, tracker, domain):
         sender = {
             'user_id':9364,
-            'comp_id':1403
-            # 'approver':"yes"
+            'comp_id':1403,
+            'approver':"Yes"
         }
         appr_or_rej = tracker.get_slot('appr_or_rej')
         if appr_or_rej == 'approve':
@@ -537,9 +476,10 @@ class First_message(Action):
         }
         
         dispatcher.utter_message("Hey there, welcome to Suti!")
+        
         if 'approver' in sender:
             SlotSet("approver_or_not", True)
-            return[FollowupAction('action_display_appr_report')]
+            return[FollowupAction('action_approve_report')]
         else:
             SlotSet("approver_or_not", False)
             return[FollowupAction("pending_report")]
@@ -552,13 +492,14 @@ class go_to_approvals(Action):
     def run(self,dispatcher,tracker,domain):
         sender = {
             'user_id':9364,
-            'comp_id':1403,
-            'approver':'yes'
+            'comp_id':1403
+            # 'approver':'yes'
   
         } 
         if 'approver' in sender:
             dispatcher.utter_message("Navigating to Approvals")
         else:
+            
             dispatcher.utter_message("you are not an approver")
         
         return [AllSlotsReset()]
@@ -577,17 +518,11 @@ class select_report(Action):
         return "action_select_report"
 
     def run(self,dispatcher,tracker,domain):
-        sender = {
-            'user_id':9364,
-            'comp_id':1403,
-            'approver':'yes'
-  
-        }
-        user_id = 9364
-        comp_id = 1403
+        print(tracker.latest_message['text'])
         selection_message = tracker.latest_message['text'].lower()
         appr_report_list = tracker.get_slot("appr_report_list")
-        appr_or_pend = tracker.get_slot("appr_or_pend")
+        print(appr_report_list)
+        print()
         if 'second' in selection_message or '2' in selection_message or 'two' in selection_message:
             exp = appr_report_list[1]
         elif 'third' in selection_message or '3' in selection_message or 'three' in selection_message or 'last' in selection_message:
@@ -595,105 +530,61 @@ class select_report(Action):
         elif 'first' in selection_message or '1' in selection_message or 'one' in selection_message or 'latest' in selection_message:
             exp = appr_report_list[0]
         else:
-            dispatcher.utter_message("Please Click on a report: ")
+            dispatcher.utter_message("Please select a report: ")
             return [FollowupAction("action_listen")]
-        print(exp)
-        expid = exp['expid']
-        compexpid = exp['compexpid']
-        expname = exp['expname']
-        expdt = exp['expdt']
-        response = ""
-#<-------------------------- Calling report SUMMARY API for approval report ------------------------------>        
-        if appr_or_pend == 'appr':
-            expsubby = exp['subby']
-            expamt = exp['amt']
-            user_id = "9409"
-            comp_id = "1403"
-            out_summary = report_summary(expid,'approvals',user_id,comp_id)
-            response = ""
-            print(out_summary)
-            if 'Line_items_cnt' in out_summary:
-                if out_summary.get('Line_items_cnt') == 0:
-                    response = f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}"
-                    dispatcher.utter_message(response)
-                    dispatcher.utter_template("utter_ask_approve",tracker)
-                    return [SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),FollowupAction("action_listen")]
-                elif out_summary.get('Line_items_cnt') > 0:
-                    response += f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
-                    response += '@#$'.join(out_summary["Line_items_summary"])
-                    response += f"@#$Expenses Subtotal {out_summary['Expenses_Subtotal']}"
-                    response += f"@#$Grand Total : {out_summary['Grand_Total']}"
-                    response += f"@#$Amount Owed : {out_summary['Amount_Owed']}"
-                    dispatcher.utter_message(response)
-                    dispatcher.utter_template("utter_ask_approve",tracker)
-                    return [SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),FollowupAction("action_listen")]
-            else:
-                dispatcher.utter_message("Report Summary API not working.")
+        response = f"Report '{exp['expname']}' created by '{exp['subby']}' for an amount  ${exp['amt']} on {exp['expdt']}.Comp expid is {exp['compexpid']}"
+        dispatcher.utter_message(response)
+        dispatcher.utter_template("utter_ask_approve",tracker)
+        return [SlotSet('compexpid',exp['compexpid']),SlotSet('expid',exp['expid']),FollowupAction("action_listen")]
+
+class select_pendingreport(Action):
+    def name(self):
+        return "action_select_penidngreport"
+
+    def run(self,dispatcher,tracker,domain):
+        print(tracker.latest_message['text'])
+        selection_message = tracker.latest_message['text'].lower()
+        pending_report_list = tracker.get_slot("pending_report_list")
+        print(pending_report_list)
+        print()
+        if 'second' in selection_message or '2' in selection_message or 'two' in selection_message:
+            exp = pending_report_list[1]
+        elif 'third' in selection_message or '3' in selection_message or 'three' in selection_message or 'last' in selection_message:
+            exp = pending_report_list[2]
+        elif 'first' in selection_message or '1' in selection_message or 'one' in selection_message or 'latest' in selection_message:
+            exp = pending_report_list[0]
         else:
-#<-------------------------- Calling report SUMMARY API for pending report ------------------------------>
-            out_summary = report_summary(expid,'drafts',user_id,comp_id)
-            
-            print(out_summary)
-            if 'Line_items_cnt' in out_summary:
-                if out_summary.get('Line_items_cnt') == 0:
-                    response = f"Report '{expname} with report id {compexpid}, created on {expdt}'.@#$@#$The report has no line items"
-                    dispatcher.utter_message(response)
-                    return [FollowupAction("utter_ask_addline")]
-                elif out_summary.get('Line_items_cnt') > 0:
-                    response += f"Report '{expname} with report id {compexpid}, created on {expdt}'.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
-                    response += '@#$'.join(out_summary["Line_items_summary"])
-                    dispatcher.utter_message(response)
-                    return [FollowupAction("utter_ask_addline_or_submit")]
-            else:
-                dispatcher.utter_message("Pending report API not working.")
+            dispatcher.utter_message("Please select a report: ")
+            return [FollowupAction("action_listen")]    
+        response = f"{exp['expname']} with report id {exp['compexpid']}, generated on {exp['expdt']}"
+        dispatcher.utter_message(response)
+        # dispatcher.utter_template("utter_ask_approve",tracker)
+        # return [SlotSet('compexpid',exp['compexpid']),SlotSet('expid',exp['expid']),FollowupAction("action_listen")]
+        return [SlotSet("name",exp['expname']),FollowupAction("utter_ask_addline_or_submit")]        
 
 class approve_report(Action):
     def name(self):
         return "approve_report"
     def run(self,dispatcher,tracker,domain):
-        appr_report_list = tracker.get_slot("appr_report_list")
-        appr_or_pend = tracker.get_slot("appr_or_pend")
-        if appr_report_list and appr_or_pend == 'appr':
-            return[SlotSet("appr_or_rej","approve")]
-        else:
-            if not appr_report_list:
-                dispatcher.utter_message("No report Selected to approve")
-                return [FollowupAction('action_display_appr_report')]
+        return[SlotSet("appr_or_rej","approve")]
 
 class reject_report(Action):
     def name(self):
         return "reject_report"
     def run(self,dispatcher,tracker,domain):
-        appr_report_list = tracker.get_slot("appr_report_list")
-        appr_or_pend = tracker.get_slot("appr_or_pend")
-        if appr_report_list and appr_or_pend == 'appr':
-            return[SlotSet("appr_or_rej","reject")]
-        else:
-            if not appr_report_list:
-                dispatcher.utter_message("No report Selected to approve")
-                return [FollowupAction('action_display_appr_report')]
+        return[SlotSet("appr_or_rej","reject")]
 
 class addlineitem_to_report(Action):
     def name(self):
         return "action_addlineitem_to_report"
     def run(self,dispatcher,tracker,domain):
-        appr_report_list = tracker.get_slot("appr_report_list")
-        appr_or_pend = tracker.get_slot("appr_or_pend")
-        if appr_report_list and appr_or_pend == 'pend' :
-            return[SlotSet("adlt_or_sub","addlineitem")]
-        else :
-            return [FollowupAction('pending_report')]
+        return[SlotSet("adlt_or_sub","addlineitem")]
 
 class submit_report(Action):
     def name(self):
         return "action_submitpdr_report"
     def run(self,dispatcher,tracker,domain):
-        appr_report_list = tracker.get_slot("appr_report_list")
-        appr_or_pend = tracker.get_slot("appr_or_pend")
-        if appr_report_list and appr_or_pend == 'pend' :
-            return[SlotSet("adlt_or_sub","sumbit")]
-        else :
-            return [FollowupAction('pending_report')]
+        return[SlotSet("adlt_or_sub","sumbit")]
 
 class open_camera(Action):
     def name(self):

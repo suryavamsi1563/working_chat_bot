@@ -4,14 +4,34 @@
       "slots": [
         "no_more_receipts",
         "name",
-        "appr_or_rej"
+        "appr_or_rej",
+        "adlt_or_sub"
       ]
     },
-    "create_report_form": {
+    "action_first_message": {
+      "slots": []
+    },
+    "pending_report": {
       "slots": [
-        "compexpid",
+        "appr_or_pend",
+        "appr_report_list"
+      ]
+    },
+    "action_select_report": {
+      "slots": [
+        "expid",
         "name",
-        "requested_slot"
+        "compexpid"
+      ]
+    },
+    "action_addlineitem_to_report": {
+      "slots": [
+        "adlt_or_sub"
+      ]
+    },
+    "no_receipt": {
+      "slots": [
+        "no_more_receipts"
       ]
     },
     "add_receipt_form": {
@@ -23,29 +43,68 @@
     "action_slot_reset": {
       "slots": []
     },
-    "utter_goodbye": {
+    "action_submit_report": {
       "slots": []
     },
     "utter_okay": {
       "slots": []
     },
-    "action_greet": {
-      "slots": []
-    },
-    "action_approve_report": {
+    "attach_receipt": {
       "slots": [
-        "report_data",
-        "name_list",
-        "expid_list"
+        "no_more_receipts"
+      ]
+    },
+    "action_display_appr_report": {
+      "slots": [
+        "expid",
+        "appr_or_pend",
+        "appr_report_list"
+      ]
+    },
+    "action_submitpdr_report": {
+      "slots": [
+        "adlt_or_sub"
+      ]
+    },
+    "create_report_form": {
+      "slots": [
+        "expid",
+        "requested_slot",
+        "name",
+        "compexpid"
+      ]
+    },
+    "open_camera": {
+      "slots": [
+        "no_more_receipts"
       ]
     },
     "approve_report_form": {
       "slots": [
-        "expid_or_name",
-        "requested_slot"
+        "requested_slot",
+        "comments"
       ]
     },
-    "pending_report": {
+    "utter_do": {
+      "slots": []
+    },
+    "action_goto_pendingreports": {
+      "slots": []
+    },
+    "approve_report": {
+      "slots": [
+        "appr_or_rej"
+      ]
+    },
+    "reject_report": {
+      "slots": [
+        "appr_or_rej"
+      ]
+    },
+    "action_goto_approvals": {
+      "slots": []
+    },
+    "utter_goodbye": {
       "slots": []
     }
   },
@@ -61,7 +120,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190413-101844",
+  "trained_at": "20190424-123659",
   "rasa_core": "0.13.5",
   "tensorflow": "1.12.0",
   "sklearn": "0.20.3"

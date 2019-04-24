@@ -1,61 +1,119 @@
 %YAML 1.1
 ---
 actions:
+- utter_ask_receipt
+- action_submitpdr_report
+- reject_report
 - utter_goodbye
-- utter_ask_expid_or_name
-- utter_ask_approve
+- action_slot_reset
+- action_select_report
 - utter_ask_submit_report
+- attach_receipt
+- utter_ask_addline
+- utter_do
+- action_goto_approvals
+- action_display_appr_report
+- action_addlineitem_to_report
+- utter_ask_expid_or_name
+- no_receipt
+- utter_ask_addline_or_submit
+- action_submit_report
+- action_goto_pendingreports
+- utter_ask_approve
+- action_first_message
+- utter_ask_comments
+- utter_created_report
+- approve_report
+- open_camera
 - utter_okay
 - utter_greet
 - pending_report
 - action_approve_or_reject
-- utter_created_report
-- action_slot_reset
-- action_submit_report
-- utter_ask_receipt
-- action_greet
-- action_approve_report
 config:
   store_entities_as_slots: true
 entities:
 - compexpid
-- no_more_receipts
-- name
-- report_name
+- adlt_or_sub
+- comments
 - appr_or_rej
+- no_more_receipts
+- report_name
+- name
 - expid
 forms:
-- approve_report_form
 - add_receipt_form
+- approve_report_form
 - create_report_form
 intents:
-- affirm:
-    use_entities: true
-- bye:
-    use_entities: true
-- greet:
-    use_entities: true
-- approvals:
-    use_entities: true
-- createreport:
-    use_entities: true
-- choose:
-    use_entities: true
-- deny:
+- init:
     use_entities: true
 - enterdata:
     use_entities: true
+- approve:
+    use_entities: true
+- reject:
+    use_entities: true
+- submit:
+    use_entities: true
+- affirm:
+    use_entities: true
+- addlineitem:
+    use_entities: true
 - pendingreport:
     use_entities: true
+- noreceipts:
+    use_entities: true
+- deny:
+    use_entities: true
+- greet:
+    use_entities: true
+- choose:
+    use_entities: true
+- createreport:
+    use_entities: true
+- attachreceipt:
+    use_entities: true
+- go_to_pendingreports:
+    use_entities: true
+- go_to_approvals:
+    use_entities: true
+- showapprvls:
+    use_entities: true
+- opencamera:
+    use_entities: true
+- bye:
+    use_entities: true
+- approvals:
+    use_entities: true
 slots:
+  adlt_or_sub:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  appr_or_pend:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   appr_or_rej:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
+  appr_rej_comments:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  appr_report_list:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   approver_or_not:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
+  comments:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   compexpid:
     auto_fill: true
     initial_value: null
@@ -84,6 +142,10 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  pending_report_list:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   report_data:
     auto_fill: true
     initial_value: null
@@ -93,13 +155,27 @@ slots:
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
 templates:
+  utter_ask_addline:
+  - buttons:
+    - payload: /addlineitem{"adlt_or_sub":"addlineitem"}
+      title: Add Lineitem
+    text: Do you wish to add a line item ?.
+  utter_ask_addline_or_submit:
+  - buttons:
+    - payload: /addlineitem{"adlt_or_sub":"addlineitem"}
+      title: Add Lineitem
+    - payload: /submit{"adlt_or_sub":"submit"}
+      title: Submit
+    text: What do you like to do ?
   utter_ask_approve:
   - buttons:
-    - payload: /affirm{"appr_or_rej":"Approve"}
+    - payload: /approve{"appr_or_rej":"approve"}
       title: Approve
-    - payload: /deny{"appr_or_rej":"Reject"}
+    - payload: /reject{"appr_or_rej":"reject"}
       title: Reject
-    text: Do you want to approve this report ?
+    text: What do you like to do?
+  utter_ask_comments:
+  - text: 'Enter your comments to {appr_or_rej} : '
   utter_ask_expid_or_name:
   - text: Enter name or expid of the report for summary
   utter_ask_name:
@@ -124,6 +200,10 @@ templates:
   - text: Report Created Successfully
   utter_default:
   - text: sorry, I didn't understand you, please try input something else
+  utter_do:
+  - text: What can I do for you?
+  - text: Tell me what to do !!
+  - text: How can i help you.
   utter_goodbye:
   - text: Bye.Take Care
   utter_greet:
@@ -132,3 +212,4 @@ templates:
   - text: Cool!. navigating you to camera...
   utter_okay:
   - text: Okay.can i help you with anything else ?
+  - text: Do you need anything else

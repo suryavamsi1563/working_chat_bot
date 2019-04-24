@@ -1,3 +1,25 @@
+## intent:addlineitem
+- i want to add lineitem for this report
+- add lineitem
+- Add Lineitem
+- add a lineitem to this report
+- will you add lineitem
+- i wanna add a lineitem
+- i want to add lineitem
+- add lineitem
+- can you please add a lineitem to this report
+- i want a add a lineitem
+- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
+- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
+- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
+- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
+- add lineitem to this report
+- i want to add a lineitem
+- add a lineitem
+- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
+- i want to add lineitem
+- add lineitems
+
 ## intent:affirm
 - yes
 - of course
@@ -51,12 +73,6 @@
 - great
 - oh cool
 - fine
-- I want to
-- I want to create lineitem
-- Need to create a lineitem
-- generate a lineitem
-- create it please
-- file my lineitems
 - Yes
 - s
 - yes
@@ -64,32 +80,54 @@
 - Yes
 - i want
 - /affirm
+- /affirm[{"appr_or_rej":"Approve"}](appr_or_rej:Approve)
+- /affirm[{"appr_or_rej":"approve"}](appr_or_rej:approve)
 - /affirm
 - /affirm
-- /affirm[{"appr_or_rej":"Approve"}](appr_or_rej:Approve)
-- /affirm[{"appr_or_rej":"Approve"}](appr_or_rej:Approve)
+- /affirm
+- yes
+- yes
+- i do
+- yes
+- yes
+- yes
+- yes
 
-## intent:approvals
-- approve my first report
-- approve my second report
-- approve my 3rd report
-- approve my all reports
-- approve 1st report
-- show report [E000123](expid)
-- show report with [E000100](expid)
-- show report [E000124](expid)
-- show report  [E000200](expid)
-- show report [ER0214256]
-- show report with name [july 2018](report_name)
-- show report with name [may 2016](report_name)
-- E000125
-- E000125
-- ER0214256
-- E000125
-- June 2018
-- Opera_2013
-- June 2018
-- E000125
+## intent:approve
+- i want to approve this report
+- approve this report
+- approve
+- can you approve this report
+- i approve
+- approve
+- yes approve this report
+- approve this report
+- approve
+- i want to approve this report
+- approve this report
+- yes i approve this report
+- i want to approve this report
+- approve this report
+- i want to approve this report
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- approve this report
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- approve this report
+- i want to approve this report
+
+## intent:attachreceipt
+- attach a receipt
+- add a reciept
+- attach a receipt for me
+- can you attach receipt
+- i want to attach receipt
+- attach receipt
+- i have one receipt please attach it
+- attach a receipt
+- i have one receipt please attach to this report
+- i have a receipts
+- attach a receipt
+- i have receipts
 
 ## intent:bye
 - goodbye
@@ -122,48 +160,19 @@
 - see you later
 - bye
 - thanks
-- bye
-- goodbye
-- bye
-- bye
-- bye
-- good bye
-- bye
-- take care
-- see ya
-- thanks
-- bye
-- bye
-- bye
-- goodbye
-- goodbye
-- bye
-- see you later
-- see you later
-- goodbye
-- see you later
-- later
 
 ## intent:choose
 - /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
 - /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
 - /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
-- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
-- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
 - /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
 - /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
 - /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
@@ -236,12 +245,12 @@
 - need to create a report [Jeanette Thomas PNC 01.2017](name)
 - generate a report with name [Baer - March 2015 - meal at CalU](name)
 - generate me a new report
-- create a new report
 - create report with [W/E 9/07/2017](name)
 - create a report with name [firstreport](name)
 - create a report with name [Wachter - May 2016](name)
 - create a report [Hanschen - October 2014](name:hanschen - october 2014)
 - generate a new report [Wolfe - November 2014-1](name:wolfe - november 2014 - 1)
+- Can you create a report with name [Begium Trip](name)
 
 ## intent:deny
 - no
@@ -287,8 +296,15 @@
 - dont file my lineitems
 - i dont
 - /deny
-- /deny
 - /deny[{"appr_or_rej":"Reject"}](appr_or_rej:Reject)
+- no
+- /deny[{"appr_or_rej":"reject"}](appr_or_rej:reject)
+- i dont
+- /deny[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- dont submit the report
+- no receipt
+- i dont
+- /deny
 
 ## intent:enterdata
 - first report
@@ -331,6 +347,142 @@
 - Blakey - May 2015-1
 - JC 1-8-19
 - week of 2/5/18
+- Approved the report because its valid.
+- Rejected because of high risk value.
+- first one
+- Accepted becoz evrything looks good
+- 2
+- 3
+- 2nd report
+- 1st
+- amount limit is over
+- WE012564
+- second
+- good
+- second
+- second
+- fine information
+- 1st
+- everything fine
+- second
+- everything  fine
+- first
+- correct information
+- second
+- every thing is fine
+- second
+- everything is fine
+- first report
+- provide correct details
+- second
+- everything good
+- 1
+- provide correct details
+- second
+- everything is fine
+- first
+- fine details
+- July 2017 Expense Log
+- june-2018 trip
+- Stoehr January 2015
+- april_trip
+- everything good
+- ya its fine
+- fine information
+- i think its fake data
+- correct details
+- nooo reason
+- first
+- noo reason for this report
+- first report
+- correct information
+- second
+- i think its fake information, please provide correct information
+- Levenson August 2015
+- latest
+- no reasons for this report
+- last report
+- no reasons
+- 1
+- crossed your expense limit
+- second
+- last report
+- 2
+- first one
+- latest
+- first
+- show pending report
+- first
+- no comments to this report
+- New trip for [xyz](name)
+- december 2015
+- first
+- Very good work
+- nov 2016
+- first report
+- second
+- first report
+- feb_mar-2019
+- second
+- test 1233
+- hims meet
+- russel-2015
+- attach receipts
+- last
+- first report
+- second report
+- good work
+- trip_newyork
+- fake details
+- 2
+- no reasons
+- second report
+- no reasons
+- first report
+- please provide correct details
+- first
+- first
+- second report
+- third report
+- 1st
+- bad work
+- fake details
+- hjhdsajash
+- good work
+- good work
+- hdshfashfasfh
+
+## intent:go_to_approvals
+- /go_to_approvals
+- /go_to_approvals
+- go to approvals
+- goto approval page
+- navigate to approval page
+- goto approvals
+- go to approval page
+- goto approval page
+- /go_to_approvals
+- /go_to_approvals
+- navigate to approvals page
+- i want to go to approval page
+- navigate to approval page
+
+## intent:go_to_pendingreports
+- /go_to_pendingrports
+- /go_to_pendingrports
+- go to pending reports
+- goto pendingreports page
+- navigate to pending reports page
+- goto pendingreports
+- go to pendingreports page
+- go to pending reports page
+- goto  pending reports page
+- goto  pendingreports page
+- goto pending reports
+- /go_to_pendingreports
+- /go_to_pendingreports
+- /go_to_pendingreports
+- navigate to pending reports
 
 ## intent:greet
 - whats up
@@ -404,18 +556,68 @@
 - hey hi
 - hi
 - hi
-- Hi
 - hi
-- hi
-- hey hi
-- hello
-- hello
-- hello
-- hi
-- hi
-- hello bot
-- hello
-- hi
+
+## intent:init
+- /init
+- init
+- \init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+
+## intent:noreceipts
+- i dont have any receipts
+- no receipts
+- noreceipts
+- no receipts
+- no receipts
+- no receipts i have
+- i have no receipts
+- i dont have any receipts
+- no receipts
+- i have no receipts
+- no receipts
+- no receipts
+- i dont have any receipts
+- Nope
+- no receipts
+- no receipts i have
+- no more receipts
+- no receipts
+- i dont have any receipts
+
+## intent:opencamera
+- open camera
+- can you please open camera
+- go to camera
+- camera open
+- open camera for me
+- i want to open camera
+- open my camera
+- open camera
+- camera
+- camera open
+- will you open my open camera
+- can you open my camera
+- open camera for me
+- open camera
+- can you please open my camera
+- i want to open camera
+- open camera for me
+- i want to open my  camera
+- i want to open my camera
+- goto my camera
+- open my camera
 
 ## intent:pendingreport
 - pending
@@ -424,10 +626,8 @@
 - show me pending report
 - reports on hold
 - drafts
-- ready for approval
 - show the outstanding reports
 - show the drafts
-- show the pending approvals
 - show me all the drafts
 - show all pending reports
 - pending reports
@@ -444,6 +644,113 @@
 - list out my pending reports
 - pending reports
 - show all pending reports
+- show pending reports
+- get all pending reports
+- show pending reports
+- list out my pending reports
+- get my pending reports
+- show pending reports
+- show all pending reports
+- get my drafts
+- show all pending reports
+- show all pending reports
+- show pending reports
+- show all my pending reports
+- show all pending reports
+- show pending reports
+- show all pending reports
+- i want to know my pending reports
+- I want to know my pending reports
+- how many pending reports i have
+- can you show me how many pending reports i have
+- can you show me the pending reports
+- what about my pending reports
+- give my pending reports
+- display pending reports
+
+## intent:reject
+- i want to reject this report
+- reject this report
+- reject
+- can you reject this report
+- i reject
+- i dont want to approve this report
+- i don't want to approve this report
+- reject
+- reject this report
+- i want to reject this report
+- reject this report
+- reject this report
+- /reject[{"appr_or_rej":"reject"}](appr_or_rej:reject)
+- reject this report
+- reject this report
+
+## intent:showapprvls
+- show approval reports
+- list out the approve reports
+- show me approve reports
+- show the approve reports
+- show all approve reports
+- reports waiting my approval
+- display reports for my approval
+- display reports requiring my consent
+- approve reports
+- retrieve approve reports
+- show approve reports
+- get my approve reports
+- list out all my approve reports
+- show all approve reports
+- get my approve reports
+- show me all approve reports
+- list out my approve reports
+- get my approvals
+- show all reports waiting for approval
+- list reports for submitting for approval
+- get all reports waiting for approval
+- list all submitted reports
+- show approval reports
+- show me approvals
+- show all approvals
+- show my approvals
+- show approvals
+- show all approve reports
+- show approvals
+- what about reports waiting my approvals?
+- what about reports waiting my approvals
+- can you show me approvals
+- i want to know my approvals
+- I want to know my approve reports
+- how many approvals i have
+- can you show me how many approve reports i have
+- can you show me the approvals
+- what about my approvals reports
+- give my approvals reports
+
+## intent:submit
+- i want to submit this report
+- submit this report
+- i wanna submit this report
+- do you submit this report
+- will you submit this report for me
+- submit
+- submit this report
+- i want submit this report
+- i want to submit this report
+- i want to submit a report
+- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- submit this report
+- submit this report
+- submit a report
+- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- submit this report
+- submit
+- submit
+- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- submit this report
+- submit a report
+- i want to submit a report
 
 ## synonym:Approve
 - {"appr_or_rej":"Approve"}
@@ -454,6 +761,12 @@
 ## synonym:Reject
 - {"appr_or_rej":"Reject"}
 
+## synonym:addlineitem
+- {"adlt_or_sub":"addlineitem"}
+
+## synonym:approve
+- {"appr_or_rej":"approve"}
+
 ## synonym:attach
 - {"no_more_receipts":"attach"}
 
@@ -463,18 +776,20 @@
 ## synonym:dec 17 cell
 - Dec 17 Cell
 
+## synonym:feb - mar-2015
+- feb-mar-2015
+
 ## synonym:hanschen - october 2014
 - Hanschen - October 2014
+
+## synonym:reject
+- {"appr_or_rej":"reject"}
+
+## synonym:submit
+- {"adlt_or_sub":"submit"}
 
 ## synonym:usa_trip
 - USA_trip
 
 ## synonym:wolfe - november 2014 - 1
 - Wolfe - November 2014-1
-
-## regex:name
-- [A-Z]{2}\d{8}
-- [A-Za-z\s]+\s(EXP|PNC)\s\d{2}\.\d{4}
-- [A-Za-z\s]+\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s\d+-\d+
-- [A-Za-z]+\s-\s(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s[2]\d{3}
-- [A-Za-z]\/[A-Za-z]\s\d+\/\d{2}\/\d+
