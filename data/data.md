@@ -19,6 +19,69 @@
 - /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
 - i want to add lineitem
 - add lineitems
+- Add line item to peding report
+- Please add new line line item to pending report
+
+## intent:addtransaction
+- add all transactions from [Jan 15th](startdate) [Jan 20th](enddate) to the report named "[trip to xzy](name)"
+- add transactions
+- add all transactions from [Jan 15th](startdate) [Jan 20th](enddate) to the report
+- add all transactions from [Jan 15th](startdate) till [Jan 20th](enddate)
+- add all card transactions to the report
+- add all card transactions
+- add all [jan](startmonth) transactions to the report
+- add all transactions from [jan](startmonth) to [April](endmonth) to [KellobsTravel](name)
+- import all transactions from my [AMEX](cardname) card into [Summit 2018](name) from [12th Jan](startdate) to [31st Jan](enddate)
+- add all transactions from [25th November](startdate) to [30th December](enddate)
+- import all card transactions from [jan 15th](startdate) to [feb 13th](enddate)
+- add all transactions from [AMEX](cardname)
+- add [AMEX] transactions to [trip to newyork](name)
+- add all transactions from  my [AMEX](cardname) card
+- import all card transactions from my [VISA](cardname) card from [15th jan](startdate) to [25th jan](enddate)
+- add all card transactions to [david-2015](name)
+- add  all [jan](startmonth)  transactions
+- add all [feb](startmonth) transactions
+- tally all my transactions
+- sum all my transactions
+- add all [VISA](cardname) card transactions for the month of [May](startmonth) to this report
+- add my [VISA](cardname) [may](startmonth) transactions to the present report
+- make all my transaction from [23rd Jan](startdate) to [26th March](enddate) to [Kelly House](name)
+- add all transactions from [Jan 15th](startdate:jan 15th) [Jan 20th](enddate:jan 20th) to the report named "[trip to xzy](name)"
+- add all my transactions from [VISA](cardname:visa) card to the report [kellogs summit](name)
+- add transactions from my [amex](cardname) card to a report
+- i want to add transactions
+- i want to add some transactions to a report
+- i want to assign some transactions to this report
+- assign some transactions from my [amex](cardname) card to this report
+- assign my [visa](cardname) card transactions of [last month](startdate) to the report [Winter summit meet 2018](name)
+- add transactions from [25th jan](startdate) to [13th feb](enddate) to report name [dec_2015](name)
+- i want to add my all transactions to paris_trip
+- add all transactions from my [VISA](cardname:visa) card
+- import transactions from [jan](startmonth) to [feb](endmonth)
+- import all [feb](startmonth) transactions to the  report name [trip to newyork](name)
+- add all transactions from [march](startmonth)
+- add all transactions from [mar](startmonth) to [may](endmonth)
+- i want to assign all my transactions [june](startmonth) to [july](endmonth) to [belgium trip](endmonth)
+- can you add my transactions [april](startmonth)
+- add transaction [may](startmonth) to [june](endmonth)
+- assign all transactions [aug](startmonth) and [sep](endmonth)
+- tally my [june](startmonth) to [oct](endmonth) from [VISA](cardname) card
+- add all transactions from [25th jan](startdate) and [feb 13th](enddate)
+- add all transactions from [last week](startdate)
+- add all transactions from [last month](startdate)
+- add my [visa](cardname) card [lastweek](startdate) transactions to the report [ETMoney 125 travel](name) and categorise them as [food](line_category)
+- categorize all my [last month](startdate) transactions into [hotel](line_category)
+- categorize all my [lastmonth](startdate) transactions from [AMEX](cardname) cards into [hotel](line_category)
+- categorize all my [last month](startdate) transactions from [AMEX](cardname) cards into [hotel](line_category) and add them to this report
+- I wish to add some transactions
+- I want to add my card transactions into this report
+- Can you please import all my transactions from [Visa](cardname) card into this report and categorize them into [meals](line_category)
+- I wish to import transactions into the report hyderabad trip from my cards . Categorize them as [Entertainment](line_category)
+- i want to add transactions
+- add all transactions
+- add transacations to [meals](line_category) category
+- add all transactions
+- add transactions
 
 ## intent:affirm
 - yes
@@ -114,6 +177,7 @@
 - /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
 - approve this report
 - i want to approve this report
+- Approve this report
 
 ## intent:attachreceipt
 - attach a receipt
@@ -128,6 +192,7 @@
 - i have a receipts
 - attach a receipt
 - i have receipts
+- I have one more receipt, please add it
 
 ## intent:bye
 - goodbye
@@ -160,6 +225,7 @@
 - see you later
 - bye
 - thanks
+- bye
 
 ## intent:choose
 - /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
@@ -252,6 +318,23 @@
 - generate a new report [Wolfe - November 2014-1](name:wolfe - november 2014 - 1)
 - Can you create a report with name [Begium Trip](name)
 
+## intent:deactivate_report
+- i dont want to create report at this moment
+- i want to work on this later
+- i change my mind
+- i don't want to create report at the moment
+- i dont want to do this one ,i want to work on this later
+- change my i want to work on this later
+- stop this report
+- dont create
+- don't create
+- do not create
+- change my mind
+- i want to stop this process work on this later
+- can you stop this process
+- can you stop this report creation
+- i dont want to add transactions
+
 ## intent:deny
 - no
 - No
@@ -302,6 +385,9 @@
 - i dont
 - /deny[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - dont submit the report
+- save as draft
+- save as draft I want to work on this later
+- I want to work on this later
 - no receipt
 - i dont
 - /deny
@@ -411,8 +497,6 @@
 - first one
 - latest
 - first
-- show pending report
-- first
 - no comments to this report
 - New trip for [xyz](name)
 - december 2015
@@ -447,10 +531,16 @@
 - 1st
 - bad work
 - fake details
-- hjhdsajash
 - good work
-- good work
-- hdshfashfasfh
+- first one
+- 2
+- five
+- second report
+- second
+- second
+- second report
+- second report
+- second report
 
 ## intent:go_to_approvals
 - /go_to_approvals
@@ -557,6 +647,7 @@
 - hi
 - hi
 - hi
+- hi
 
 ## intent:init
 - /init
@@ -574,6 +665,33 @@
 - init
 - init
 - init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+- init
+
+## intent:line_category
+- [food](line_category)
+- food
+- travel
+- meals
+- entertainment
+- i want to add this under [travel](line_category)
+- [travel](line_category)
+- travel
+- entertainment
+- entertainment
 
 ## intent:noreceipts
 - i dont have any receipts
@@ -623,6 +741,7 @@
 - pending
 - show drafts
 - show pending reports
+- Show me my draft reports
 - show me pending report
 - reports on hold
 - drafts
@@ -733,6 +852,8 @@
 - do you submit this report
 - will you submit this report for me
 - submit
+- Submit my pending report
+- submit it
 - submit this report
 - i want submit this report
 - i want to submit this report
@@ -740,15 +861,12 @@
 - /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - submit this report
-- submit this report
 - submit a report
 - /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - submit this report
 - submit
-- submit
 - /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
-- submit this report
 - submit a report
 - i want to submit a report
 
@@ -782,6 +900,12 @@
 ## synonym:hanschen - october 2014
 - Hanschen - October 2014
 
+## synonym:jan 15th
+- Jan 15th
+
+## synonym:jan 20th
+- Jan 20th
+
 ## synonym:reject
 - {"appr_or_rej":"reject"}
 
@@ -790,6 +914,9 @@
 
 ## synonym:usa_trip
 - USA_trip
+
+## synonym:visa
+- VISA
 
 ## synonym:wolfe - november 2014 - 1
 - Wolfe - November 2014-1

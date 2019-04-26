@@ -3,35 +3,33 @@
     "action_listen": {
       "slots": [
         "no_more_receipts",
+        "line_category",
         "name",
         "appr_or_rej",
-        "adlt_or_sub"
+        "endmonth",
+        "enddate",
+        "adlt_or_sub",
+        "startdate",
+        "cardname",
+        "startmonth"
       ]
     },
     "action_first_message": {
       "slots": []
     },
-    "pending_report": {
-      "slots": [
-        "appr_or_pend",
-        "appr_report_list"
-      ]
-    },
-    "action_select_report": {
+    "action_display_appr_report": {
       "slots": [
         "expid",
-        "name",
-        "compexpid"
+        "appr_report_list",
+        "appr_or_pend"
       ]
     },
-    "action_addlineitem_to_report": {
+    "create_report_form": {
       "slots": [
-        "adlt_or_sub"
-      ]
-    },
-    "no_receipt": {
-      "slots": [
-        "no_more_receipts"
+        "requested_slot",
+        "expid",
+        "compexpid",
+        "name"
       ]
     },
     "add_receipt_form": {
@@ -40,8 +38,20 @@
         "requested_slot"
       ]
     },
-    "action_slot_reset": {
-      "slots": []
+    "action_addlineitem_to_report": {
+      "slots": [
+        "adlt_or_sub"
+      ]
+    },
+    "action_open_camera": {
+      "slots": [
+        "no_more_receipts"
+      ]
+    },
+    "action_no_receipt": {
+      "slots": [
+        "no_more_receipts"
+      ]
     },
     "action_submit_report": {
       "slots": []
@@ -49,16 +59,44 @@
     "utter_okay": {
       "slots": []
     },
-    "attach_receipt": {
+    "action_check_name": {
+      "slots": []
+    },
+    "action_display_tran_reports": {
       "slots": [
-        "no_more_receipts"
+        "appr_report_list",
+        "appr_or_pend"
       ]
     },
-    "action_display_appr_report": {
+    "action_select_for_tran": {
       "slots": [
         "expid",
-        "appr_or_pend",
-        "appr_report_list"
+        "name"
+      ]
+    },
+    "import_tran_form": {
+      "slots": [
+        "line_category",
+        "requested_slot"
+      ]
+    },
+    "action_pending_report": {
+      "slots": [
+        "appr_report_list",
+        "appr_or_pend"
+      ]
+    },
+    "action_select_report": {
+      "slots": [
+        "compexpid",
+        "expid",
+        "name"
+      ]
+    },
+    "approve_report_form": {
+      "slots": [
+        "comments",
+        "requested_slot"
       ]
     },
     "action_submitpdr_report": {
@@ -66,45 +104,34 @@
         "adlt_or_sub"
       ]
     },
-    "create_report_form": {
-      "slots": [
-        "expid",
-        "requested_slot",
-        "name",
-        "compexpid"
-      ]
+    "action_slot_reset": {
+      "slots": []
     },
-    "open_camera": {
+    "action_attach_receipt": {
       "slots": [
         "no_more_receipts"
-      ]
-    },
-    "approve_report_form": {
-      "slots": [
-        "requested_slot",
-        "comments"
-      ]
-    },
-    "utter_do": {
-      "slots": []
-    },
-    "action_goto_pendingreports": {
-      "slots": []
-    },
-    "approve_report": {
-      "slots": [
-        "appr_or_rej"
-      ]
-    },
-    "reject_report": {
-      "slots": [
-        "appr_or_rej"
       ]
     },
     "action_goto_approvals": {
       "slots": []
     },
+    "action_goto_pendingreports": {
+      "slots": []
+    },
+    "action_approve_report": {
+      "slots": [
+        "appr_or_rej"
+      ]
+    },
+    "action_reject_report": {
+      "slots": [
+        "appr_or_rej"
+      ]
+    },
     "utter_goodbye": {
+      "slots": []
+    },
+    "utter_do": {
       "slots": []
     }
   },
@@ -120,7 +147,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190424-123659",
+  "trained_at": "20190426-160807",
   "rasa_core": "0.13.5",
   "tensorflow": "1.12.0",
   "sklearn": "0.20.3"

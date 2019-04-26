@@ -122,6 +122,860 @@
         "text": "add lineitems"
       },
       {
+        "intent": "addlineitem",
+        "text": "Add line item to peding report"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "Please add new line line item to pending report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 35,
+            "end": 43,
+            "value": "Jan 20th",
+            "entity": "enddate"
+          },
+          {
+            "start": 65,
+            "end": 76,
+            "value": "trip to xzy",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transactions from Jan 15th Jan 20th to the report named \"trip to xzy\""
+      },
+      {
+        "intent": "addtransaction",
+        "text": "add transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 35,
+            "end": 43,
+            "value": "Jan 20th",
+            "entity": "enddate"
+          }
+        ],
+        "text": "add all transactions from Jan 15th Jan 20th to the report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 40,
+            "end": 48,
+            "value": "Jan 20th",
+            "entity": "enddate"
+          }
+        ],
+        "text": "add all transactions from Jan 15th till Jan 20th"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "add all card transactions to the report"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "add all card transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "jan",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "add all jan transactions to the report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 29,
+            "value": "jan",
+            "entity": "startmonth"
+          },
+          {
+            "start": 33,
+            "end": 38,
+            "value": "April",
+            "entity": "endmonth"
+          },
+          {
+            "start": 42,
+            "end": 55,
+            "value": "KellobsTravel",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transactions from jan to April to KellobsTravel"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 32,
+            "end": 36,
+            "value": "AMEX",
+            "entity": "cardname"
+          },
+          {
+            "start": 47,
+            "end": 58,
+            "value": "Summit 2018",
+            "entity": "name"
+          },
+          {
+            "start": 64,
+            "end": 72,
+            "value": "12th Jan",
+            "entity": "startdate"
+          },
+          {
+            "start": 76,
+            "end": 84,
+            "value": "31st Jan",
+            "entity": "enddate"
+          }
+        ],
+        "text": "import all transactions from my AMEX card into Summit 2018 from 12th Jan to 31st Jan"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 39,
+            "value": "25th November",
+            "entity": "startdate"
+          },
+          {
+            "start": 43,
+            "end": 56,
+            "value": "30th December",
+            "entity": "enddate"
+          }
+        ],
+        "text": "add all transactions from 25th November to 30th December"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 34,
+            "end": 42,
+            "value": "jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 46,
+            "end": 54,
+            "value": "feb 13th",
+            "entity": "enddate"
+          }
+        ],
+        "text": "import all card transactions from jan 15th to feb 13th"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 30,
+            "value": "AMEX",
+            "entity": "cardname"
+          }
+        ],
+        "text": "add all transactions from AMEX"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 27,
+            "end": 42,
+            "value": "trip to newyork",
+            "entity": "name"
+          }
+        ],
+        "text": "add [AMEX] transactions to trip to newyork"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 30,
+            "end": 34,
+            "value": "AMEX",
+            "entity": "cardname"
+          }
+        ],
+        "text": "add all transactions from  my AMEX card"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 37,
+            "end": 41,
+            "value": "VISA",
+            "entity": "cardname"
+          },
+          {
+            "start": 52,
+            "end": 60,
+            "value": "15th jan",
+            "entity": "startdate"
+          },
+          {
+            "start": 64,
+            "end": 72,
+            "value": "25th jan",
+            "entity": "enddate"
+          }
+        ],
+        "text": "import all card transactions from my VISA card from 15th jan to 25th jan"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 29,
+            "end": 39,
+            "value": "david-2015",
+            "entity": "name"
+          }
+        ],
+        "text": "add all card transactions to david-2015"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 9,
+            "end": 12,
+            "value": "jan",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "add  all jan  transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "feb",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "add all feb transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "tally all my transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "sum all my transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "VISA",
+            "entity": "cardname"
+          },
+          {
+            "start": 48,
+            "end": 51,
+            "value": "May",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "add all VISA card transactions for the month of May to this report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "VISA",
+            "entity": "cardname"
+          },
+          {
+            "start": 12,
+            "end": 15,
+            "value": "may",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "add my VISA may transactions to the present report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 29,
+            "end": 37,
+            "value": "23rd Jan",
+            "entity": "startdate"
+          },
+          {
+            "start": 41,
+            "end": 51,
+            "value": "26th March",
+            "entity": "enddate"
+          },
+          {
+            "start": 55,
+            "end": 66,
+            "value": "Kelly House",
+            "entity": "name"
+          }
+        ],
+        "text": "make all my transaction from 23rd Jan to 26th March to Kelly House"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "jan 15th",
+            "entity": "startdate"
+          },
+          {
+            "start": 35,
+            "end": 43,
+            "value": "jan 20th",
+            "entity": "enddate"
+          },
+          {
+            "start": 65,
+            "end": 76,
+            "value": "trip to xzy",
+            "entity": "name"
+          }
+        ],
+        "text": "add all transactions from Jan 15th Jan 20th to the report named \"trip to xzy\""
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 29,
+            "end": 33,
+            "value": "visa",
+            "entity": "cardname"
+          },
+          {
+            "start": 53,
+            "end": 67,
+            "value": "kellogs summit",
+            "entity": "name"
+          }
+        ],
+        "text": "add all my transactions from VISA card to the report kellogs summit"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 25,
+            "end": 29,
+            "value": "amex",
+            "entity": "cardname"
+          }
+        ],
+        "text": "add transactions from my amex card to a report"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "i want to add transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "i want to add some transactions to a report"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "i want to assign some transactions to this report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 33,
+            "end": 37,
+            "value": "amex",
+            "entity": "cardname"
+          }
+        ],
+        "text": "assign some transactions from my amex card to this report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "visa",
+            "entity": "cardname"
+          },
+          {
+            "start": 36,
+            "end": 46,
+            "value": "last month",
+            "entity": "startdate"
+          },
+          {
+            "start": 61,
+            "end": 84,
+            "value": "Winter summit meet 2018",
+            "entity": "name"
+          }
+        ],
+        "text": "assign my visa card transactions of last month to the report Winter summit meet 2018"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "25th jan",
+            "entity": "startdate"
+          },
+          {
+            "start": 34,
+            "end": 42,
+            "value": "13th feb",
+            "entity": "enddate"
+          },
+          {
+            "start": 58,
+            "end": 66,
+            "value": "dec_2015",
+            "entity": "name"
+          }
+        ],
+        "text": "add transactions from 25th jan to 13th feb to report name dec_2015"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "i want to add my all transactions to paris_trip"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 29,
+            "end": 33,
+            "value": "visa",
+            "entity": "cardname"
+          }
+        ],
+        "text": "add all transactions from my VISA card"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 25,
+            "end": 28,
+            "value": "jan",
+            "entity": "startmonth"
+          },
+          {
+            "start": 32,
+            "end": 35,
+            "value": "feb",
+            "entity": "endmonth"
+          }
+        ],
+        "text": "import transactions from jan to feb"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "feb",
+            "entity": "startmonth"
+          },
+          {
+            "start": 48,
+            "end": 63,
+            "value": "trip to newyork",
+            "entity": "name"
+          }
+        ],
+        "text": "import all feb transactions to the  report name trip to newyork"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 31,
+            "value": "march",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "add all transactions from march"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 29,
+            "value": "mar",
+            "entity": "startmonth"
+          },
+          {
+            "start": 33,
+            "end": 36,
+            "value": "may",
+            "entity": "endmonth"
+          }
+        ],
+        "text": "add all transactions from mar to may"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 37,
+            "end": 41,
+            "value": "june",
+            "entity": "startmonth"
+          },
+          {
+            "start": 45,
+            "end": 49,
+            "value": "july",
+            "entity": "endmonth"
+          },
+          {
+            "start": 53,
+            "end": 65,
+            "value": "belgium trip",
+            "entity": "endmonth"
+          }
+        ],
+        "text": "i want to assign all my transactions june to july to belgium trip"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "april",
+            "entity": "startmonth"
+          }
+        ],
+        "text": "can you add my transactions april"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 16,
+            "end": 19,
+            "value": "may",
+            "entity": "startmonth"
+          },
+          {
+            "start": 23,
+            "end": 27,
+            "value": "june",
+            "entity": "endmonth"
+          }
+        ],
+        "text": "add transaction may to june"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 24,
+            "end": 27,
+            "value": "aug",
+            "entity": "startmonth"
+          },
+          {
+            "start": 32,
+            "end": 35,
+            "value": "sep",
+            "entity": "endmonth"
+          }
+        ],
+        "text": "assign all transactions aug and sep"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 9,
+            "end": 13,
+            "value": "june",
+            "entity": "startmonth"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "value": "oct",
+            "entity": "endmonth"
+          },
+          {
+            "start": 26,
+            "end": 30,
+            "value": "VISA",
+            "entity": "cardname"
+          }
+        ],
+        "text": "tally my june to oct from VISA card"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "25th jan",
+            "entity": "startdate"
+          },
+          {
+            "start": 39,
+            "end": 47,
+            "value": "feb 13th",
+            "entity": "enddate"
+          }
+        ],
+        "text": "add all transactions from 25th jan and feb 13th"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 35,
+            "value": "last week",
+            "entity": "startdate"
+          }
+        ],
+        "text": "add all transactions from last week"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 26,
+            "end": 36,
+            "value": "last month",
+            "entity": "startdate"
+          }
+        ],
+        "text": "add all transactions from last month"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "visa",
+            "entity": "cardname"
+          },
+          {
+            "start": 17,
+            "end": 25,
+            "value": "lastweek",
+            "entity": "startdate"
+          },
+          {
+            "start": 53,
+            "end": 71,
+            "value": "ETMoney 125 travel",
+            "entity": "name"
+          },
+          {
+            "start": 95,
+            "end": 99,
+            "value": "food",
+            "entity": "line_category"
+          }
+        ],
+        "text": "add my visa card lastweek transactions to the report ETMoney 125 travel and categorise them as food"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "last month",
+            "entity": "startdate"
+          },
+          {
+            "start": 47,
+            "end": 52,
+            "value": "hotel",
+            "entity": "line_category"
+          }
+        ],
+        "text": "categorize all my last month transactions into hotel"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 18,
+            "end": 27,
+            "value": "lastmonth",
+            "entity": "startdate"
+          },
+          {
+            "start": 46,
+            "end": 50,
+            "value": "AMEX",
+            "entity": "cardname"
+          },
+          {
+            "start": 62,
+            "end": 67,
+            "value": "hotel",
+            "entity": "line_category"
+          }
+        ],
+        "text": "categorize all my lastmonth transactions from AMEX cards into hotel"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "last month",
+            "entity": "startdate"
+          },
+          {
+            "start": 47,
+            "end": 51,
+            "value": "AMEX",
+            "entity": "cardname"
+          },
+          {
+            "start": 63,
+            "end": 68,
+            "value": "hotel",
+            "entity": "line_category"
+          }
+        ],
+        "text": "categorize all my last month transactions from AMEX cards into hotel and add them to this report"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "I wish to add some transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "I want to add my card transactions into this report"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 47,
+            "end": 51,
+            "value": "Visa",
+            "entity": "cardname"
+          },
+          {
+            "start": 99,
+            "end": 104,
+            "value": "meals",
+            "entity": "line_category"
+          }
+        ],
+        "text": "Can you please import all my transactions from Visa card into this report and categorize them into meals"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 96,
+            "end": 109,
+            "value": "Entertainment",
+            "entity": "line_category"
+          }
+        ],
+        "text": "I wish to import transactions into the report hyderabad trip from my cards . Categorize them as Entertainment"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "i want to add transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "add all transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "meals",
+            "entity": "line_category"
+          }
+        ],
+        "text": "add transacations to meals category"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "add all transactions"
+      },
+      {
+        "intent": "addtransaction",
+        "text": "add transactions"
+      },
+      {
         "intent": "affirm",
         "text": "yes"
       },
@@ -518,6 +1372,10 @@
         "text": "i want to approve this report"
       },
       {
+        "intent": "approve",
+        "text": "Approve this report"
+      },
+      {
         "intent": "attachreceipt",
         "text": "attach a receipt"
       },
@@ -564,6 +1422,10 @@
       {
         "intent": "attachreceipt",
         "text": "i have receipts"
+      },
+      {
+        "intent": "attachreceipt",
+        "text": "I have one more receipt, please add it"
       },
       {
         "intent": "bye",
@@ -684,6 +1546,10 @@
       {
         "intent": "bye",
         "text": "thanks"
+      },
+      {
+        "intent": "bye",
+        "text": "bye"
       },
       {
         "intent": "choose",
@@ -1586,6 +2452,66 @@
         "text": "Can you create a report with name Begium Trip"
       },
       {
+        "intent": "deactivate_report",
+        "text": "i dont want to create report at this moment"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i want to work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i change my mind"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i don't want to create report at the moment"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i dont want to do this one ,i want to work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "change my i want to work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "stop this report"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "dont create"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "don't create"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "do not create"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "change my mind"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i want to stop this process work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "can you stop this process"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "can you stop this report creation"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i dont want to add transactions"
+      },
+      {
         "intent": "deny",
         "text": "no"
       },
@@ -1804,6 +2730,18 @@
       {
         "intent": "deny",
         "text": "dont submit the report"
+      },
+      {
+        "intent": "deny",
+        "text": "save as draft"
+      },
+      {
+        "intent": "deny",
+        "text": "save as draft I want to work on this later"
+      },
+      {
+        "intent": "deny",
+        "text": "I want to work on this later"
       },
       {
         "intent": "deny",
@@ -2291,14 +3229,6 @@
       },
       {
         "intent": "enterdata",
-        "text": "show pending report"
-      },
-      {
-        "intent": "enterdata",
-        "text": "first"
-      },
-      {
-        "intent": "enterdata",
         "text": "no comments to this report"
       },
       {
@@ -2443,19 +3373,43 @@
       },
       {
         "intent": "enterdata",
-        "text": "hjhdsajash"
-      },
-      {
-        "intent": "enterdata",
         "text": "good work"
       },
       {
         "intent": "enterdata",
-        "text": "good work"
+        "text": "first one"
       },
       {
         "intent": "enterdata",
-        "text": "hdshfashfasfh"
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "five"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
       },
       {
         "intent": "go_to_approvals",
@@ -2858,6 +3812,10 @@
         "text": "hi"
       },
       {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
         "intent": "init",
         "text": "/init"
       },
@@ -2916,6 +3874,130 @@
       {
         "intent": "init",
         "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "init",
+        "text": "init"
+      },
+      {
+        "intent": "line_category",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "food",
+            "entity": "line_category"
+          }
+        ],
+        "text": "food"
+      },
+      {
+        "intent": "line_category",
+        "text": "food"
+      },
+      {
+        "intent": "line_category",
+        "text": "travel"
+      },
+      {
+        "intent": "line_category",
+        "text": "meals"
+      },
+      {
+        "intent": "line_category",
+        "text": "entertainment"
+      },
+      {
+        "intent": "line_category",
+        "entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "value": "travel",
+            "entity": "line_category"
+          }
+        ],
+        "text": "i want to add this under travel"
+      },
+      {
+        "intent": "line_category",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "travel",
+            "entity": "line_category"
+          }
+        ],
+        "text": "travel"
+      },
+      {
+        "intent": "line_category",
+        "text": "travel"
+      },
+      {
+        "intent": "line_category",
+        "text": "entertainment"
+      },
+      {
+        "intent": "line_category",
+        "text": "entertainment"
       },
       {
         "intent": "noreceipts",
@@ -3088,6 +4170,10 @@
       {
         "intent": "pendingreport",
         "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "Show me my draft reports"
       },
       {
         "intent": "pendingreport",
@@ -3515,6 +4601,14 @@
       },
       {
         "intent": "submit",
+        "text": "Submit my pending report"
+      },
+      {
+        "intent": "submit",
+        "text": "submit it"
+      },
+      {
+        "intent": "submit",
         "text": "submit this report"
       },
       {
@@ -3559,10 +4653,6 @@
       },
       {
         "intent": "submit",
-        "text": "submit this report"
-      },
-      {
-        "intent": "submit",
         "text": "submit a report"
       },
       {
@@ -3587,10 +4677,6 @@
       },
       {
         "intent": "submit",
-        "text": "submit"
-      },
-      {
-        "intent": "submit",
         "entities": [
           {
             "start": 7,
@@ -3612,10 +4698,6 @@
           }
         ],
         "text": "/submit{\"adlt_or_sub\":\"submit\"}"
-      },
-      {
-        "intent": "submit",
-        "text": "submit this report"
       },
       {
         "intent": "submit",
@@ -3633,6 +4715,24 @@
         "value": "addlineitem",
         "synonyms": [
           "{\"adlt_or_sub\":\"addlineitem\"}"
+        ]
+      },
+      {
+        "value": "jan 15th",
+        "synonyms": [
+          "Jan 15th"
+        ]
+      },
+      {
+        "value": "jan 20th",
+        "synonyms": [
+          "Jan 20th"
+        ]
+      },
+      {
+        "value": "visa",
+        "synonyms": [
+          "VISA"
         ]
       },
       {

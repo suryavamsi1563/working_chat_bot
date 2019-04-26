@@ -1,0 +1,10 @@
+ tran_dict={
+            "name":name,
+            "expid":expid,
+            "startdate":startdate,
+            "enddate":enddate,
+            "startmonth":startmonth,
+            "endmonth":endmonth,
+            "cardnum":cardnum,
+            "cardname":cardname
+        }

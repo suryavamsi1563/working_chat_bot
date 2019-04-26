@@ -1,51 +1,65 @@
 %YAML 1.1
 ---
 actions:
-- reject_report
-- action_goto_pendingreports
-- utter_ask_addline
-- attach_receipt
 - utter_ask_expid_or_name
-- pending_report
-- action_goto_approvals
-- utter_ask_receipt
-- no_receipt
-- action_display_appr_report
-- utter_ask_submit_report
-- approve_report
-- utter_ask_comments
-- action_submit_report
-- action_addlineitem_to_report
-- utter_do
-- action_first_message
-- open_camera
-- utter_okay
-- utter_greet
 - action_select_report
-- action_slot_reset
-- action_submitpdr_report
-- utter_ask_addline_or_submit
+- action_approve_report
+- utter_do
+- action_no_receipt
+- action_attach_receipt
+- action_display_appr_report
+- action_select_for_tran
+- utter_greet
+- action_open_camera
+- action_submit_report
+- action_pending_report
 - action_approve_or_reject
-- utter_created_report
-- utter_goodbye
 - utter_ask_approve
+- utter_ask_receipt
+- action_display_tran_reports
+- action_check_name
+- action_reject_report
+- utter_ask_submit_report
+- action_submitpdr_report
+- utter_okay
+- utter_ask_addline
+- action_goto_approvals
+- action_addlineitem_to_report
+- action_slot_reset
+- utter_created_report
+- utter_ask_addline_or_submit
+- action_goto_pendingreports
+- action_first_message
+- utter_goodbye
+- utter_ask_comments
 entities:
 - no_more_receipts
-- compexpid
-- expid
-- name
-- comments
-- adlt_or_sub
 - report_name
+- comments
+- line_category
+- name
 - appr_or_rej
+- endmonth
+- expid
+- enddate
+- compexpid
+- adlt_or_sub
+- startdate
+- cardnum
+- cardname
+- startmonth
 forms:
-- create_report_form
 - add_receipt_form
+- import_tran_form
 - approve_report_form
+- create_report_form
 intents:
 - init
-- approve
+- line_category
+- addtransaction
 - enterdata
+- bye
+- approve
 - reject
 - submit
 - affirm
@@ -61,9 +75,10 @@ intents:
 - go_to_approvals
 - showapprvls
 - opencamera
-- bye
 - approvals
 slots:
+  action_pending_report_list:
+    type: list
   adlt_or_sub:
     type: text
   appr_or_pend:
@@ -76,15 +91,25 @@ slots:
     type: list
   approver_or_not:
     type: bool
+  cardname:
+    type: unfeaturized
+  cardnum:
+    type: unfeaturized
   comments:
     type: unfeaturized
   compexpid:
     type: unfeaturized
+  enddate:
+    type: text
+  endmonth:
+    type: text
   expid:
     type: unfeaturized
   expid_list:
     type: list
   expid_or_name:
+    type: unfeaturized
+  line_category:
     type: unfeaturized
   name:
     type: unfeaturized
@@ -92,12 +117,14 @@ slots:
     type: list
   no_more_receipts:
     type: unfeaturized
-  pending_report_list:
-    type: list
   report_data:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
+  startdate:
+    type: text
+  startmonth:
+    type: text
 templates:
   utter_ask_addline:
   - buttons:
@@ -122,6 +149,10 @@ templates:
   - text: 'Enter your comments to {appr_or_rej} : '
   utter_ask_expid_or_name:
   - text: Enter name or expid of the report for summary
+  utter_ask_line_category:
+  - text: To which category should I be adding these transactions ?
+  - text: what's the category of these transactions ?
+  - text: How shall I categorize these transactions into ?
   utter_ask_name:
   - text: Provide a name for your report ?
   utter_ask_receipt:

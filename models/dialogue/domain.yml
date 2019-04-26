@@ -1,53 +1,70 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_receipt
-- action_submitpdr_report
-- reject_report
-- utter_goodbye
-- action_slot_reset
-- action_select_report
 - utter_ask_submit_report
-- attach_receipt
-- utter_ask_addline
-- utter_do
-- action_goto_approvals
-- action_display_appr_report
-- action_addlineitem_to_report
-- utter_ask_expid_or_name
-- no_receipt
-- utter_ask_addline_or_submit
-- action_submit_report
-- action_goto_pendingreports
+- action_slot_reset
+- action_display_tran_reports
+- utter_okay
+- action_check_name
 - utter_ask_approve
 - action_first_message
-- utter_ask_comments
+- action_no_receipt
+- action_display_appr_report
+- action_attach_receipt
+- utter_ask_expid_or_name
 - utter_created_report
-- approve_report
-- open_camera
-- utter_okay
+- action_select_report
+- action_goto_approvals
+- utter_ask_addline_or_submit
+- utter_do
+- action_goto_pendingreports
+- action_select_for_tran
+- action_pending_report
+- action_approve_report
+- utter_ask_comments
+- utter_goodbye
+- utter_ask_receipt
+- action_submitpdr_report
+- utter_ask_addline
+- action_submit_report
+- action_reject_report
 - utter_greet
-- pending_report
 - action_approve_or_reject
+- action_addlineitem_to_report
+- action_open_camera
 config:
   store_entities_as_slots: true
 entities:
-- compexpid
-- adlt_or_sub
-- comments
 - appr_or_rej
-- no_more_receipts
+- adlt_or_sub
+- compexpid
 - report_name
+- comments
+- enddate
+- startdate
+- no_more_receipts
+- startmonth
 - name
+- cardnum
 - expid
+- cardname
+- line_category
+- endmonth
 forms:
-- add_receipt_form
 - approve_report_form
+- import_tran_form
+- add_receipt_form
 - create_report_form
 intents:
+- addtransaction:
+    use_entities: true
 - init:
     use_entities: true
+- line_category:
+    use_entities: true
 - enterdata:
+    use_entities: true
+- bye:
     use_entities: true
 - approve:
     use_entities: true
@@ -81,11 +98,13 @@ intents:
     use_entities: true
 - opencamera:
     use_entities: true
-- bye:
-    use_entities: true
 - approvals:
     use_entities: true
 slots:
+  action_pending_report_list:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.ListSlot
   adlt_or_sub:
     auto_fill: true
     initial_value: null
@@ -110,6 +129,14 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
+  cardname:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  cardnum:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   comments:
     auto_fill: true
     initial_value: null
@@ -118,6 +145,14 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  enddate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  endmonth:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   expid:
     auto_fill: true
     initial_value: null
@@ -127,6 +162,10 @@ slots:
     initial_value: null
     type: rasa_core.slots.ListSlot
   expid_or_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  line_category:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
@@ -142,10 +181,6 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
-  pending_report_list:
-    auto_fill: true
-    initial_value: null
-    type: rasa_core.slots.ListSlot
   report_data:
     auto_fill: true
     initial_value: null
@@ -154,6 +189,14 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  startdate:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  startmonth:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
 templates:
   utter_ask_addline:
   - buttons:
@@ -178,6 +221,10 @@ templates:
   - text: 'Enter your comments to {appr_or_rej} : '
   utter_ask_expid_or_name:
   - text: Enter name or expid of the report for summary
+  utter_ask_line_category:
+  - text: To which category should I be adding these transactions ?
+  - text: what's the category of these transactions ?
+  - text: How shall I categorize these transactions into ?
   utter_ask_name:
   - text: Provide a name for your report ?
   utter_ask_receipt:
