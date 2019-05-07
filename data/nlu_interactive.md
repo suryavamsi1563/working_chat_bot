@@ -1,17 +1,21 @@
-## intent:addlineitem
-- i want to add a lineitem
-- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
+## intent:createreport
+- create a report
 
-## intent:choose
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
-- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-
-## intent:deny
-- /deny
+## intent:deactivate_report
+- i changed my mind
 
 ## intent:enterdata
-- first
+- first report
+- second report
 
 ## intent:init
 - init
+
+## intent:pendingreport
+- i want to see the drafts
+
+## intent:submit
+- submit this report dude
+
+## intent:submittedreport
+- hey show me the submitted reports dude

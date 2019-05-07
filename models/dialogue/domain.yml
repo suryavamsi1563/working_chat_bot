@@ -1,104 +1,157 @@
 %YAML 1.1
 ---
 actions:
-- utter_ask_submit_report
-- action_slot_reset
-- action_display_tran_reports
-- utter_okay
-- action_check_name
-- utter_ask_approve
-- action_first_message
-- action_no_receipt
-- action_display_appr_report
-- action_attach_receipt
-- utter_ask_expid_or_name
-- utter_created_report
 - action_select_report
-- action_goto_approvals
-- utter_ask_addline_or_submit
-- utter_do
-- action_goto_pendingreports
-- action_select_for_tran
-- action_pending_report
-- action_approve_report
-- utter_ask_comments
+- utter_Exporting_Expense_Reports
+- action_display_appr_report
 - utter_goodbye
+- utter_ask_whoisit
+- action_approve_report
 - utter_ask_receipt
-- action_submitpdr_report
-- utter_ask_addline
-- action_submit_report
-- action_reject_report
+- utter_notif_fin_users
+- utter_reimbursable_or_billable
+- action_pending_report
+- utter_okay
+- action_first_message
 - utter_greet
+- utter_contact_support
+- utter_automatic_email_ACH
+- utter_created_report
+- action_no_receipt
 - action_approve_or_reject
+- action_navigate
+- utter_ask_approve
+- action_display_tran_reports
+- utter_ask_expid_or_name
 - action_addlineitem_to_report
-- action_open_camera
+- utter_notif_new_users
+- utter_ask_addline_or_submit
+- action_submit_report
+- action_slot_reset
+- utter_delete_corporate_card_tran
+- utter_copy_line_items
+- utter_ask_comments
+- utter_email_noifs
+- utter_do
+- utter_ask_whatspossible
+- utter_reassign_cc_tran
+- action_submitpdr_report
+- utter_reimbersebment_to_employees
+- action_check_name
+- utter_view_tran
+- utter_local_vs_travel
+- action_attach_receipt
+- utter_ask_submit_report
+- action_submited_report
+- action_reject_report
+- action_select_for_tran
+- utter_ask_addline
 config:
   store_entities_as_slots: true
 entities:
-- appr_or_rej
-- adlt_or_sub
 - compexpid
-- report_name
+- cardnum
+- cardname
+- adlt_or_sub
+- crt_name
+- navto
+- endmonth
 - comments
-- enddate
+- line_category
+- expid
 - startdate
+- report_name
 - no_more_receipts
 - startmonth
+- enddate
 - name
-- cardnum
-- expid
-- cardname
-- line_category
-- endmonth
+- appr_or_rej
 forms:
+- create_report_form
 - approve_report_form
 - import_tran_form
-- add_receipt_form
-- create_report_form
 intents:
-- addtransaction:
-    use_entities: true
-- init:
-    use_entities: true
-- line_category:
-    use_entities: true
-- enterdata:
-    use_entities: true
-- bye:
-    use_entities: true
-- approve:
-    use_entities: true
-- reject:
-    use_entities: true
-- submit:
-    use_entities: true
 - affirm:
     use_entities: true
-- addlineitem:
+- submittedreport:
+    use_entities: true
+- deactivate_report:
+    use_entities: true
+- selectionreport:
     use_entities: true
 - pendingreport:
     use_entities: true
-- noreceipts:
-    use_entities: true
-- deny:
-    use_entities: true
 - greet:
     use_entities: true
-- choose:
+- ask_whatspossible:
+    use_entities: true
+- enterdata:
     use_entities: true
 - createreport:
     use_entities: true
-- attachreceipt:
+- init:
+    use_entities: true
+- approve:
+    use_entities: true
+- navigation:
+    use_entities: true
+- addlineitem:
+    use_entities: true
+- showapprvls:
+    use_entities: true
+- bye:
+    use_entities: true
+- submit:
+    use_entities: true
+- ask_isbot:
+    use_entities: true
+- reject:
+    use_entities: true
+- deny:
     use_entities: true
 - go_to_pendingreports:
     use_entities: true
 - go_to_approvals:
     use_entities: true
-- showapprvls:
+- choose:
     use_entities: true
 - opencamera:
     use_entities: true
+- line_category:
+    use_entities: true
+- addtransaction:
+    use_entities: true
+- noreceipts:
+    use_entities: true
+- attachreceipt:
+    use_entities: true
 - approvals:
+    use_entities: true
+- ask_contactsupport:
+    use_entities: true
+- ask_Re-asinging_credit_card:
+    use_entities: true
+- ask_view_transactions:
+    use_entities: true
+- ask_local_vs_Travel:
+    use_entities: true
+- ask_billable_vs_reimbursable:
+    use_entities: true
+- ask_delete_corporate_card_tran:
+    use_entities: true
+- Exporting_Expense_Reports:
+    use_entities: true
+- reimbersebment_to_employees:
+    use_entities: true
+- automatic_email_ACH:
+    use_entities: true
+- copy_line_items:
+    use_entities: true
+- notif_fin_users:
+    use_entities: true
+- notif_new_users:
+    use_entities: true
+- email_notif:
     use_entities: true
 slots:
   action_pending_report_list:
@@ -145,6 +198,10 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  crt_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   enddate:
     auto_fill: true
     initial_value: null
@@ -177,10 +234,10 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.ListSlot
-  no_more_receipts:
+  navto:
     auto_fill: true
     initial_value: null
-    type: rasa_core.slots.UnfeaturizedSlot
+    type: rasa_core.slots.TextSlot
   report_data:
     auto_fill: true
     initial_value: null
@@ -198,15 +255,29 @@ slots:
     initial_value: null
     type: rasa_core.slots.TextSlot
 templates:
+  utter_Exporting_Expense_Reports:
+  - text: Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=158&productName=SutiExpense
   utter_ask_addline:
   - buttons:
-    - payload: /addlineitem{"adlt_or_sub":"addlineitem"}
+    - payload: /addlineitem{"navto":"summary"}
       title: Add Lineitem
+    - payload: /addlineitem{"navto":"camera"}
+      title: Add Line Item from Camera
+    - payload: /addlineitem{"navto":"receipt"}
+      title: Add Lineitem from receipts
+    - payload: /addlineitem{"navto":"transaction"}
+      title: Add Lineitem from transactions
     text: Do you wish to add a line item ?.
   utter_ask_addline_or_submit:
   - buttons:
-    - payload: /addlineitem{"adlt_or_sub":"addlineitem"}
+    - payload: /addlineitem{"navto":"summary"}
       title: Add Lineitem
+    - payload: /addlineitem{"navto":"camera"}
+      title: Add Line Item from Camera
+    - payload: /addlineitem{"navto":"receipt"}
+      title: Add Lineitem from receipts
+    - payload: /addlineitem{"navto":"transaction"}
+      title: Add Lineitem from transactions
     - payload: /submit{"adlt_or_sub":"submit"}
       title: Submit
     text: What do you like to do ?
@@ -219,20 +290,22 @@ templates:
     text: What do you like to do?
   utter_ask_comments:
   - text: 'Enter your comments to {appr_or_rej} : '
+  utter_ask_crt_name:
+  - text: Provide a name for your report ?
   utter_ask_expid_or_name:
   - text: Enter name or expid of the report for summary
   utter_ask_line_category:
   - text: To which category should I be adding these transactions ?
   - text: what's the category of these transactions ?
   - text: How shall I categorize these transactions into ?
-  utter_ask_name:
-  - text: Provide a name for your report ?
   utter_ask_receipt:
   - buttons:
     - payload: /choose{"no_more_receipts":"camera"}
       title: Open Camera
     - payload: /choose{"no_more_receipts":"attach"}
       title: Attach Receipt
+    - payload: /choose{"no_more_receipts":"import"}
+      title: Import transactions
     - payload: /choose{"no_more_receipts":"No"}
       title: No Receipt
     text: Do you want to add a receipt?
@@ -243,20 +316,84 @@ templates:
     - payload: /deny
       title: 'No'
     text: Do you want to submit the report for approval ?
+  utter_ask_whatspossible:
+  - text: You can ask me about@#$ @#$Creating new reports for you @#$Showing you pending
+      reports @#$Retrieving reports waiting for your approval @#$Submiting your drafts@#$
+      @#$Please click on the below link
+  - text: I can do the following works for you  @#$Creating new reports for you @#$Showing
+      you pending reports @#$Retrieving reports waiting for your approval @#$Submiting
+      your drafts@#$ @#$Please click on the below link
+  utter_ask_whoisit:
+  - text: I'm the suti expense bot!
+  - text: I am the  suti chatbot
+  - text: I'm suti expense chatbot!
+  utter_automatic_email_ACH:
+  - text: Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=425&productName=SutiExpense
+  utter_contact_support:
+  - text: For any queries, you can call our support team on (888) 445-2847 or (650)
+      396-7740 or drop an email at support@sutisoft.com.
+  - text: If you have any query, call us on (888) 445-2847 or (650) 396-7740
+  utter_copy_line_items:
+  - text: Employees can copy line items from other expense reports, if allowed by
+      the administrator.@#$ Go to Expenses and select New expense report.@#$The Add
+      New Expense Report pop-up will appear where you can select the expense report
+      from which you want to replicate the line items.@#$@#$Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=353&productName=SutiExpense
   utter_created_report:
   - text: Report Created Successfully
   utter_default:
-  - text: sorry, I didn't understand you, please try input something else
+  - text: sorry , I didn't understand you, please try input something else
+  utter_delete_corporate_card_tran:
+  - text: To delete a transaction, please follow the navigation.@#$@#$ Finance | Click
+      right corner icon | Finance | Reports | Outstanding Data | Outstanding Transactions
+      Details | Click on Red X to delete.@#$@#$Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=82&productName=SutiExpense
   utter_do:
   - text: What can I do for you?
   - text: Tell me what to do !!
   - text: How can i help you.
+  utter_email_noifs:
+  - text: An email notification will only be triggered if the approver edits the line
+      item amount.@#$@#$Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=97&productName=SutiExpense
   utter_goodbye:
   - text: Bye.Take Care
   utter_greet:
   - text: Hey there, welcome to Suti!
+  utter_local_vs_travel:
+  - text: A 'Local Request' can be a trip to a conference that is nearby, or an event
+      you may need to go to without airfare.@#$@#$Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=78&productName=SutiExpense
   utter_navcamera:
   - text: Cool!. navigating you to camera...
+  utter_notif_fin_users:
+  - text: To receive notifications for Finance User(s), please following the navigation@#$@#$Click
+      on your profile picture | Admin Settings | Expense Processing | Email Notification
+      for Finance User(s)@#$@#$Must be logged in as Admin.@#$@#$Please click on this
+      link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=80&productName=SutiExpense
+  utter_notif_new_users:
+  - text: To allow New users to be notified, please follow the navigation@#$@#$Click
+      on your profile picture | Admin Settings | Company Details | User Email Options.@#$Must
+      be logged in as Admin.@#$@#$Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=81&productName=SutiExpense
   utter_okay:
   - text: Okay.can i help you with anything else ?
   - text: Do you need anything else
+  utter_reassign_cc_tran:
+  - text: In some cases, a colleague may borrow your corporate credit card and that
+      transaction will appear in your list in your 'My Transactions' screen of transactions
+      to be added onto your expense report.@#$To assign these transactions that were
+      made by a colleague, you can click on the re-assign icon next to that transaction.@#$A
+      list will appear that will allow you to assign the transaction to that employee.@#$@#$Please
+      click on this link.@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=172&productName=SutiExpense
+  utter_reimbersebment_to_employees:
+  - text: Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=294&productName=SutiExpense
+  utter_reimbursable_or_billable:
+  - text: To configure expense as reimbursable/billable, follow the below instructions@#$@#$1.
+      Click settings and go to Admin.@#$2. Select Expense Defining on the left hand
+      side under the blue bar.@#$3. Look for Personal Paid Expenses, and select Both
+      from the drop-down and then click Update@#$4. Now, open an expense report from
+      drafts and click on any line item.@#$5. A pop-up will appear where you can find
+      Personal - Don't Reimburse, and Personal - Paid with Corporate Card options
+      at the bottom.@#$6. Select any of the checkboxes based on your requirement.@#$@#$Please
+      click on this link.@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=121&productName=SutiExpense
+  utter_view_tran:
+  - text: To view transactions, follow the instructions below:@#$Go to My Transactions
+      page and select the card, date range and click on search.@#$All the transactions
+      related to the card selected will be displayed.@#$You can also select the expense
+      report to which you want to import the transactions@#$Please click on this link.@#$@#$https://sutisoft.sutidesk.com/homePage_articleView.action?knowledgeBaseId=347&productName=SutiExpense

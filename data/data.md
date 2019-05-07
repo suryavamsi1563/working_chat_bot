@@ -1,26 +1,52 @@
+## intent:Exporting_Expense_Reports
+- How can I export expense reports from SutiExpense to import into my accounting system for processing
+- How can I export expense reports from suti expense
+- I want to export expense reports
+- export sutiexpense reports to import into my accounting system
+- How to Export Expense Reports to Import Into Accounting System
+
 ## intent:addlineitem
 - i want to add lineitem for this report
-- add lineitem
+- addlineitem
 - Add Lineitem
 - add a lineitem to this report
 - will you add lineitem
 - i wanna add a lineitem
 - i want to add lineitem
-- add lineitem
 - can you please add a lineitem to this report
 - i want a add a lineitem
-- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
-- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
-- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
-- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
 - add lineitem to this report
 - i want to add a lineitem
 - add a lineitem
-- /addlineitem[{"adlt_or_sub":"addlineitem"}](adlt_or_sub:addlineitem)
 - i want to add lineitem
 - add lineitems
 - Add line item to peding report
 - Please add new line line item to pending report
+- add lineitem
+- /addlineitem[{"navto":"camera"}](navto:camera)
+- /addlineitem[{"navto":"camera"}](navto:camera)
+- /addlineitem[{"navto":"camera"}](navto:camera)
+- /addlineitem[{"navto":"receipt"}](navto:receipt)
+- /addlineitem[{"navto":"receipt"}](navto:receipt)
+- /addlineitem[{"navto":"receipt"}](navto:receipt)
+- /addlineitem[{"navto":"transaction"}](navto:transaction)
+- /addlineitem[{"navto":"transaction"}](navto:transaction)
+- /addlineitem[{"navto":"camera"}](navto:camera)
+- add from [camera](navto)
+- add from [camera](navto)
+- add lineitem form my [transactions](navto)
+- add lineitem form my [camera](navto)
+- add lineitem form my [transactions](navto)
+- add lineitem form my [receipts](navto)
+- i wish to add through [camera](navto)
+- i wish to add through [receipts](navto)
+- i wish to add through [transactions](navto)
+- i want to [capture](navto:camera)
+- i want to add lineitem
+- i want to [capture](navto:camera)
+- i want to [capture](navto:camera)
+- /addlineitem[{"navto":"transaction"}](navto:transaction)
+- add line item
 
 ## intent:addtransaction
 - add all transactions from [Jan 15th](startdate) [Jan 20th](enddate) to the report named "[trip to xzy](name)"
@@ -82,11 +108,15 @@
 - add transacations to [meals](line_category) category
 - add all transactions
 - add transactions
+- add all transaction between [18th jan](startdate) to [12th may](enddate) from my [amex](cardname) card
 
 ## intent:affirm
 - yes
 - of course
 - S
+- go ahead
+- yep
+- proceed
 - sure
 - yeah
 - ok
@@ -143,41 +173,181 @@
 - Yes
 - i want
 - /affirm
-- /affirm[{"appr_or_rej":"Approve"}](appr_or_rej:Approve)
-- /affirm[{"appr_or_rej":"approve"}](appr_or_rej:approve)
-- /affirm
-- /affirm
-- /affirm
 - yes
 - yes
 - i do
 - yes
+- very bad
 - yes
-- yes
-- yes
+- yess
 
 ## intent:approve
 - i want to approve this report
-- approve this report
+- yep.go ahead and approve it.
+- go ahead with approve
+- proceed for approve
+- proceed towards approval
+- i wish to approve this report
 - approve
 - can you approve this report
+- please approve this report
+- can you please approve this report
 - i approve
 - approve
 - yes approve this report
-- approve this report
+- yes approve it
 - approve
-- i want to approve this report
-- approve this report
-- yes i approve this report
-- i want to approve this report
-- approve this report
-- i want to approve this report
 - /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
 - approve this report
 - /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- approve
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
 - approve this report
-- i want to approve this report
-- Approve this report
+- approve this report
+- approve this report
+- i want to approve a report
+- approve this report
+- approve this report
+- /approve[{"appr_or_rej":"approve"}](appr_or_rej:approve)
+- approve report
+- approve
+
+## intent:ask_Re-asinging_credit_card
+- How can I re assign credit card transactions to another user ?
+- can you tell me how I can re-assign the credit card transactions to a different user
+- i want to re assign credit card transactions.Can you help me ?
+- Explain me how can I reassign the credit card transactions?
+- I wish to re assign credit card transactions.
+- I wish to re assign card transactions.Can you help me with this ?
+
+## intent:ask_billable_vs_reimbursable
+- How do I determine an expense is reimbursable/billable
+- Can I know if a expense is reimbursable or billable
+- I want to know if expense is a billable one or reimbursable
+
+## intent:ask_contactsupport
+- how can i contact support ?
+- Who to contact for support?
+- What is the Support contact number?
+- Can I get the helpline number
+- can you provide me any phone number
+- can you provide me any customer support
+- can you give me any customer care
+- can you provide me any customer care contact number
+- i want to contact support
+
+## intent:ask_delete_corporate_card_tran
+- How do I delete Corporate Card Transaction?
+- How can i delete corporate card transaction
+- I want to remove transactions from my corporate card
+- I want to remove transactions from my card
+- remove transactions
+- remove corporate transactions
+- delete corporate card transactions
+
+## intent:ask_isbot
+- are you a bot?
+- are you a real bot?
+- are you a bot
+- are you really a bot
+- are you a robot
+- are you a robot
+- are you a rasa bot?
+- are you a rasa bot?
+- what are you, a bot?
+- tell me, are you a bot?
+- are you a Skynet ?
+- are you a chatbot
+- are you ai
+- are you artificial intelligence
+- are you artificial
+- i guess you are a chatbot
+- you are a robot
+- you are ai
+- you are chatbot
+- are you bot
+- are you a bot ?
+- you're a bot
+- Are you the bot?
+- Hi there, are you the bot?
+- Are you a chat bot?
+- are you rasa bot?
+- Ar you a bot ?
+- are you robot
+- are you real
+- What are you ?
+- So I'm here Today to ask one very simple question, what are you ?
+- are you real lol
+- cuz you are a bot
+- are you bot?
+- oh are you chatbot?
+- are you sure that you're a bot?
+- are you a BOT
+- who are you
+- are you bot
+- who are you
+- are you a bot
+
+## intent:ask_local_vs_Travel
+- When I am creating a Request, there is a 'Travel Type' field with two options: 'Local Request' and 'Travel Request'. What is the difference between the two?
+- Whats the difference between local request and travel request
+- Explain me between local and travel request
+- What is the travel type ?
+- what is the difference between local and travel request ?
+
+## intent:ask_view_transactions
+- Where can I view transactions from a particular card?
+- How can i view transactions from a particular card
+- I want to view transactions from my card
+- Help me how can I view transactions from my credit card ?
+
+## intent:ask_whatspossible
+- help
+- help please
+- i don't know what i want
+- I need some help
+- options
+- show me the menu
+- show me what's possible
+- so what can you do
+- so what can you help me with?
+- what are you good at?
+- what can I do here
+- what can I do with this bot
+- what is this bot for
+- cool! can I do something else here?
+- help me
+- talk to me!
+- come back
+- how can you help me
+- what else can i do
+- are there any other options?
+- hm that doesnt quite help me is there anything else you can do?
+- what can i do here
+- what can i do now
+- um what now
+- so now what
+- help?
+- now what?
+- Great, is there anything else you can do, bot?
+- what can you do?
+- how can you help me?
+- can you do anything else?
+- i asked you if you can do anything else
+- so what next?
+- what else can I do here?
+- Can you explain me in one sentence what you are doing?
+- what are the options?
+- what suti bot can do for me
+- can you please help me
+- what are the things you can do
+- what this bot can do
+- can you help me
+- what i do in  this  chat bot
+- what can yo do for me
 
 ## intent:attachreceipt
 - attach a receipt
@@ -185,14 +355,22 @@
 - attach a receipt for me
 - can you attach receipt
 - i want to attach receipt
+- i wish to attach a receipt
+- accommodate a receipt
 - attach receipt
 - i have one receipt please attach it
-- attach a receipt
 - i have one receipt please attach to this report
+- i have more reciept please attach it also
 - i have a receipts
-- attach a receipt
 - i have receipts
 - I have one more receipt, please add it
+
+## intent:automatic_email_ACH
+- How to get an automatic email when a transaction is cancelled at the point of ACH?
+- Get a automatic email when a transaction is cancelled
+- I want to get automatic email.Can you help me please.
+- How can I get a email when a transaction is cancelled at the point of ACH
+- Can you help me in getting automatic email transaction is cancelled
 
 ## intent:bye
 - goodbye
@@ -215,7 +393,6 @@
 - ciao
 - Bye bye
 - then bye
-- tschüssikowski
 - bye!
 - bye
 - take care
@@ -226,97 +403,112 @@
 - bye
 - thanks
 - bye
+- bye
+- bye
 
 ## intent:choose
 - /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
 - /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
+- /choose[{"no_more_receipts":"attach"}](no_more_receipts:import)
 - /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"camera"}](no_more_receipts:camera)
-- /choose[{"no_more_receipts":"attach"}](no_more_receipts:attach)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
-- /choose[{"no_more_receipts":"No"}](no_more_receipts:No)
+
+## intent:copy_line_items
+- How do I copy a line item?
+- Can you help me in copying line items
+- i want to copy line items
+- copy line items
+- help me in copying line items
 
 ## intent:createreport
 - November travel to China
+- I wish for a new report
+- hey can u generate a report for me
 - build a report
-- make a report [final_one](name)
-- make a report [XYZ](name)
-- file a new report with titled [Grzandziel - November 2014](name)
-- generate a report titled [Brandi Jordan EXP 12.2016](name)
-- generate a report with  [Renne - April 2017 Monthly Expenditures](name)
+- make a report [final_one](crt_name)
+- make a report [XYZ](crt_name)
+- file a new report with titled [Grzandziel - November 2014](crt_name)
+- generate a report titled [Brandi Jordan EXP 12.2016](crt_name)
+- generate a report with  [Renne - April 2017 Monthly Expenditures](crt_name)
 - create a record
-- create a report [anything](name)
-- create a report with name [Dual monitor mount for HR rep](name)
-- create a new report titled [Zerlina Oppenheim PNC 12.2016](name)
-- make a report with name [travel](name)
-- create a report [Brandi Jordan EXP 12.2016](name)
-- create a report with [ME08312018](name)
+- create a report [anything](crt_name)
+- create a report with name [Dual monitor mount for HR rep](crt_name)
+- create a new report titled [Zerlina Oppenheim PNC 12.2016](crt_name)
+- make a report with name [travel](crt_name)
+- create a report [Brandi Jordan EXP 12.2016](crt_name)
+- create a report with [ME08312018](crt_name)
 - create a report
-- create report with name [WE11192017](name)
-- make a report titled [Expenses April 14-29](name)- create a custom report
-- need to generate a report with[OA09262017](name)
+- create a report with name [business trip to singapore](crt_name)
+- create report with name [WE11192017](crt_name)
+- make a report titled [Expenses April 14-29](crt_name)
+- create a custom report
+- need to generate a report with[OA09262017](crt_name)
 - make a report
-- create a report [finalreport](name)
-- start a new report with titled [P/E 3/17/18](name)
+- create a report [finalreport](crt_name)
+- start a new report with titled [P/E 3/17/18](crt_name)
 - file a new report with name [USA_trip](name:usa_trip)
-- create a report with name [Filip - April 2016](name)
-- file a new report with [Shiwarski - February 2015](name)
-- generate a report with  [Baer - March 2015 - meal at CalU](name)
-- create a report with name [trip to new york](name)
-- need to generate a report with name [repeater Ops aug 2-2](name)
-- create a report with name [Rasky - October 2014](name)
-- generate a document titled [Netz Mar 5-9](name)
-- make a report on my Delhi trip with the name [meeting](name)
-- create a report with [ek05062018](name)
-- file my expenses into a report [trip to Hyderabad](name)
-- create a report with titled [Jeanette Thomas EXP 01.2017](name)
-- generate a report with [ez01142019](name)
-- create a report with [Hall - February 2015](name)
-- I travelled to bangalore.Make a report [finalreport](name)
+- create a report with name [Filip - April 2016](crt_name)
+- file a new report with [Shiwarski - February 2015](crt_name)
+- generate a report with  [Baer - March 2015 - meal at CalU](crt_name)
+- create a report with name [trip to new york](crt_name)
+- need to generate a report with name [repeater Ops aug 2-2](crt_name)
+- create a report with name [Rasky - October 2014](crt_name)
+- generate a document titled [Netz Mar 5-9](crt_name)
+- make a report on my Delhi trip with the name [meeting](crt_name)
+- create a report with [ek05062018](crt_name)
+- file my expenses into a report [trip to Hyderabad](crt_name)
+- create a report with titled [Jeanette Thomas EXP 01.2017](crt_name)
+- generate a report with [ez01142019](crt_name)
+- create a report with [Hall - February 2015](crt_name)
+- I travelled to bangalore.Make a report [finalreport](crt_name)
 - generate a report
 - need a report
-- need to create a report with [hyderabad](name)
-- generate a report with  [Bill - Dec 2018](name)
+- need to create a report with [hyderabad](crt_name)
+- generate a report with  [Bill - Dec 2018](crt_name)
 - create a document
 - report
 - need to create a report
-- create a report with name [Dec 17 Cell](name)
-- createa report with titled [Conway - February 2019](name)
-- file my expenses titled [HR Charges for August 2017-1](name)
-- create report with titled [P/E 06/17/18](name)
-- create report with titled [ez01142019](name)
-- create a report with name [hyderabad_trip](name)
-- generate a report with name [Bishop - December 2018-1](name)
+- create a report with name [Dec 17 Cell](crt_name)
+- createa report with titled [Conway - February 2019](crt_name)
+- file my expenses titled [HR Charges for August 2017-1](crt_name)
+- create report with titled [P/E 06/17/18](crt_name)
+- create report with titled [ez01142019](crt_name)
+- create a report with name [hyderabad_trip](crt_name)
+- generate a report with name [Bishop - December 2018-1](crt_name)
 - file a new report
 - file my expenses
-- generate a report with name [Boyd - April 2017](name)
+- generate a report with name [Boyd - April 2017](crt_name)
 - create a report with week of 2/5/18
-- need to generate a report with [Underwood - June 2015](name)
-- create a report with name [Feldmeier November 2015-1](name)
-- create a report with name "[trip to new york](name)"
+- need to generate a report with [Underwood - June 2015](crt_name)
+- create a report with name [Feldmeier November 2015-1](crt_name)
+- create a report with name "[trip to new york](crt_name)"
 - add my all expenses
-- make a report with [W/E 06/20/18](name)
-- make a report titled [Expenses April 14-29](name)- report
+- make a report with [W/E 06/20/18](crt_name)
+- make a report titled [Expenses April 14-29](crt_name)- report
 - start a new a report
 - create report
 - need to generate a report
-- generate a report with name [Dec 17 Cell](name:dec 17 cell)
-- need to create a report [Jeanette Thomas PNC 01.2017](name)
-- generate a report with name [Baer - March 2015 - meal at CalU](name)
+- generate a report with name [Dec 17 Cell](crt_name:dec 17 cell)
+- need to create a report [Jeanette Thomas PNC 01.2017](crt_name)
+- generate a report with name [Baer - March 2015 - meal at CalU](crt_name)
 - generate me a new report
-- create report with [W/E 9/07/2017](name)
-- create a report with name [firstreport](name)
-- create a report with name [Wachter - May 2016](name)
-- create a report [Hanschen - October 2014](name:hanschen - october 2014)
-- generate a new report [Wolfe - November 2014-1](name:wolfe - november 2014 - 1)
-- Can you create a report with name [Begium Trip](name)
+- create report with [W/E 9/07/2017](crt_name)
+- create a report with name [firstreport](crt_name)
+- create a report with name [Wachter - May 2016](crt_name)
+- create a report [Hanschen - October 2014](crt_name:hanschen - october 2014)
+- generate a new report [Wolfe - November 2014-1](crt_name:wolfe - november 2014 - 1)
+- Can you create a report with name [Begium Trip](crt_name)
+- hey can you please build a report
+- create a report with name [dec-jan2015](crt_name:dec - jan2015)
+- create a report with name [my birthday](crt_name)
+- create a report
+- create a report with name [david-jan 2015](crt_name:david - jan 2015)
+- hey can you generate a report form me with name [dhoni-mar 569](crt_name:dhoni - mar 569)
+- hey can build a report with name [lasya-trip 1](crt_name:lasya - trip 1)
+- create a report with name [feb](crt_name)
+- i did like to build a report
+- hey can make a report with name [repo 245](crt_name)
+- i wish to make a report
+- create a report
 
 ## intent:deactivate_report
 - i dont want to create report at this moment
@@ -334,17 +526,43 @@
 - can you stop this process
 - can you stop this report creation
 - i dont want to add transactions
+- i change my mind
+- i dont want to create
+- i want to work on this later
+- I dont need now
+- No Need to create
+- dont generate it
+- dont create it
+- I want to work on this later
+- i dont want to do this
+- stop the current work
+- stop the process
+- i changed my mind
+- i changed my mind
+- stop this
+- i changed my mind
+- dont create a report
+- hey stop ,i will work on this later
+- do it later
+- hold this right now
+- we will do this later
+- i dont want to do this now
+- skip this process
+- skip this
+- i will work on this later
+- dont do this
 
 ## intent:deny
 - no
 - No
 - definitely not
+- Naa
 - never
+- nothing
 - absolutely not
 - i don't think so
 - i dont
 - i'm afraid not
-- not required
 - no way
 - no sorry
 - No, not really.
@@ -355,6 +573,7 @@
 - no thanks
 - decline
 - deny
+- nope
 - i decline
 - never mind
 - Not at the moment
@@ -366,48 +585,38 @@
 - NEIN
 - nein
 - not really
-- i don't want to
-- i don't want either of those
 - nah thanks
 - no thanks
 - neither of these
-- I  dont want to create lineitem
-- I dont need now
-- No Need to create a lineitem
-- dont generate a lineitem
-- dont create it
 - dont file my lineitems
 - i dont
 - /deny
-- /deny[{"appr_or_rej":"Reject"}](appr_or_rej:Reject)
-- no
-- /deny[{"appr_or_rej":"reject"}](appr_or_rej:reject)
 - i dont
-- /deny[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
-- dont submit the report
-- save as draft
-- save as draft I want to work on this later
-- I want to work on this later
-- no receipt
-- i dont
-- /deny
+
+## intent:email_notif
+- If an approver edits something on an expense report, does an email notification get sent to the submitter
+- When does an email notification sent?
+- In which cases will an approver get the email notifications
+- An expense report gets edited.Will the submitter get a notification
+- Will your system nnotifies the submitter when an expense report gets edited
 
 ## intent:enterdata
 - first report
 - start a new report
 - second report
 - finalreport
-- report name is [XYZ](name)
+- report name is [XYZ](crt_name)
 - start date is [04-03-2015](startdate)
 - trip has started on [14-02-2016](startdate)
 - end date is [9th jan 2016](enddate)
 - trip has ended on [23rd Feb 2018](enddate)
-- make the name as [firstreport](name)
-- name it [extrem123](name)
+- make the name as [firstreport](crt_name)
+- name it [extrem123](crt_name)
 - uk report
 - second report
 - final report
 - hyderabad
+- business trip 2018
 - nellore
 - sep trip
 - jan 15
@@ -498,7 +707,7 @@
 - latest
 - first
 - no comments to this report
-- New trip for [xyz](name)
+- New trip for [xyz](crt_name)
 - december 2015
 - first
 - Very good work
@@ -541,38 +750,64 @@
 - second report
 - second report
 - second report
+- 1
+- first
+- second
+- correct information
+- 2
+- none
+- nokia summit
+- select first one
+- looks good
+- select demo for me please
+- select the report [June 2018](name:june 2018)
+- looks goood
+- fine details
+- david-jan-1
+- looks good
+- great work
+- france meet 2019
+- first report
+- no reasons
+- great work
+- no comments
+- nice work
+- second report
+- not impressed
+- 1
+- first report
+- third
+- 1
+- second report
+- looks good
+- third
+- march
+- march 13th
+- second report
+- first  report
+- travel to china
+- second report
+- looks good
+- 2
+- i want first report
+- 2
+- looks fine
+- second report
+- first report
+- third report
+- 3
+- great work
+- fifth report
+- nice work
+- 3
 
 ## intent:go_to_approvals
 - /go_to_approvals
-- /go_to_approvals
-- go to approvals
-- goto approval page
-- navigate to approval page
-- goto approvals
-- go to approval page
-- goto approval page
-- /go_to_approvals
-- /go_to_approvals
-- navigate to approvals page
-- i want to go to approval page
-- navigate to approval page
+- /go_to_approvals[{"navto":"approvals"}](navto:approvals)
 
 ## intent:go_to_pendingreports
-- /go_to_pendingrports
-- /go_to_pendingrports
-- go to pending reports
-- goto pendingreports page
-- navigate to pending reports page
-- goto pendingreports
-- go to pendingreports page
-- go to pending reports page
-- goto  pending reports page
-- goto  pendingreports page
-- goto pending reports
 - /go_to_pendingreports
-- /go_to_pendingreports
-- /go_to_pendingreports
-- navigate to pending reports
+- /go_to_pendingreports[{"navto":"drafts"}](navto:drafts)
 
 ## intent:greet
 - whats up
@@ -645,32 +880,13 @@
 - hey
 - hey hi
 - hi
-- hi
-- hi
+- hey hi
 - hi
 
 ## intent:init
 - /init
 - init
 - \init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
-- init
 - init
 - init
 - init
@@ -691,64 +907,214 @@
 - [travel](line_category)
 - travel
 - entertainment
-- entertainment
+
+## intent:navigation
+- open [settings](navto)
+- open my [receipts](navto)
+- open [receipts](navto)
+- open [submitted](navto)
+- open my [transactions](navto)
+- open my [drafts](navto)
+- open [transactions](navto)
+- go to [settings](navto)
+- go to [drafts](navto)
+- go to my [drafts](navto)
+- go to my [receipts](navto)
+- go to [receipts](navto)
+- go to [submitted](navto)
+- go to my [transactions](navto)
+- go to [transactions](navto)
+- navigate to [settings](navto)
+- navigate to [drafts](navto)
+- navigate to my [receipts](navto)
+- navigate to [receipts](navto)
+- navigate to [submitted](navto)
+- I want to go to [submitted](navto) reports
+- I want to go to [receipts](navto)
+- I want to go to [drafts](navto)
+- navigate to my [transactions](navto)
+- navigate to [transactions](navto)
+- Take me to [settings](navto)
+- Take me to my [receipts](navto)
+- Take me to my [drafts](navto)
+- Take me to [receipts](navto)
+- Take me to [submitted](navto)
+- open [submitted](navto) reports
+- Take me to my [transactions](navto)
+- Take me to my [drafts](navto)
+- Take me to [transactions](navto)
+- move to the screen of [settings](navto)
+- move to the screen of [drafts](navto)
+- move to [drafts](navto)
+- take me to the screen of [transactions](navto)
+- lets go to [transactions](navto)
+- lets go to [receipts](navto)
+- lets go to [drafts](navto)
+- show me [transactions](navto) in the app
+- show me [drafts](navto) in the app
+- show me in the app [receipts](navto)
+- show me in the app [drafts](navto)
+- i wish to open [receipts](navto)
+- i wish to open [drafts](navto)
+- can you please move to [drafts](navto)
+- hey can you please open [drafts](navto) for me
+- can you please move to [settings](navto)
+- go to [transactions](navto)
+- open [transactions](navto)
+- open [settings](navto)
+- nav to [drafts](navto)
+- nav to [settings](navto)
+- go to [settings](navto)
+- go to my [receipts](navto)
+- i want go to [receipts](navto) page
+- navigate to [submitted](navto) reports
+- i want to go to [submitted](navto) reports page
+- navigate to [transactions](navto)
+- hey open [drafts](navto)
+- hey open my [receipts](navto)
+- hey open my [transactions](navto)
+- nav to [approvals](navto)
+- nav to [approval](navto)
+- open [approval](navto)
+- go to [approval](navto)
+- move to [approval](navto)
+- go to [approve](navto) page
+- Take me to [approval](navto) page
+- can you please move to [approvals](navto)
+- hey can you please open [approval](navto) for me
+- navigate to [approvals](navto) in the app
+- take me to [approvals](navto)
+- I wish to go for [approvals](navto) page
+- I wish to open [approvals](navto) in the app
+- show me [approvals](navto)
+- send me to [approvals](navto) page
+- go to [approvals](navto)
+- go to [approval](navto) page
+- goto [approval](navto) page
+- navigate to [approvals](navto) page
+- i want to go to [approval](navto) page
+- navigate to [approval](navto) page
+- open [approvals](navto)
+- navigate to [approvals](navto)
+- Take me to [approvals](navto)
+- goto [approvals](navto)
+- hey open [approvals](navto)
+- hey open my [approvals](navto)
+- hey can you navigate to [approvals](navto)
+- hey can you please open my [approvals](navto)
+- go to [pending](navto:drafts) reports
+- goto [pendingreports](navto:drafts) page
+- navigate to [pending reports](navto:drafts) page
+- goto [pendingreports](navto:drafts)
+- go to [pendingreports](navto:drafts) page
+- go to [pending reports](navto:drafts) page
+- goto  [pending reports](navto:drafts) page
+- goto  [pendingreports](navto:drafts) page
+- goto [pending reports](navto:drafts)
+- go to [pending reports](navto:drafts)
+- open [pending reports](navto:drafts)
+- navigate to [pending reports](navto:drafts)
+- nav to [pending reports](navto:drafts)
+- take me to [pending reports](navto:drafts)
+- move to [pending reports](navto:drafts)
+- can you take me to [pending reports](navto:drafts)
+- please take me to [pending reports](navto:drafts)
+- can you please take me to [pending reports](navto:drafts)
+- can you move to [pending reports](navto:drafts)
+- navigate to [pendingreports](navto:drafts)
+- open [camera](navto)
+- can you please open [camera](navto)
+- go to [camera](navto)
+- [camera](navto) open
+- open [camera](navto) for me
+- i want to [open camera](navto:camera)
+- open my [camera](navto)
+- open [camera](navto)
+- open [camera](navto)
+- [camera](navto)
+- [open camera](navto:camera)
+- [camera](navto) open
+- will you open my open [camera](navto)
+- can you open my [camera](navto)
+- open [camera](navto) for me
+- open [camera](navto)
+- can you please open my [camera](navto)
+- i want to open [camera](navto)
+- open [camera](navto) for me
+- i want to open my  [camera](navto)
+- i want to open my [camera](navto)
+- goto my [camera](navto)
+- open my [camera](navto)
+- add from [camera](navto)
+- take me to [camera](navto)
+- I want to [navigate to camera](navto:camera)
+- I want to [capture a receipt](navto:camera)
+- I want to [take a receipt](navto:camera)
+- go to [camera](navto)
+- open [camera](navto)
+- hey open [camera](navto)
+- hey can you open  [my camera](navto:camera)
+- open [camera](navto)
+- hey open [camera](navto)
+- goto [pending reports](navto:drafts)
+- hey open [pending](navto:drafts) reports
+- move to [settings](navto)
+- hey send me to [settings](navto)
+- can you move to [receipts](navto)
+- hey can you go to [transactions](navto)
+- open [approvals](navto)
+- open my [transactions](navto)
+- go to [pending reports](navto:drafts)
+- i want to see my [transactions](navto)
+- add from my [receipts](navto)
+- add lineitem from my [receipts](navto)
+- i wish to add from my [receipts](navto)
+- open [submitted](navto) reports
+- from [camera](navto)
+- i did like to add from [transactions](navto)
+- add from [camera](navto)
+- open [camera](navto)
 
 ## intent:noreceipts
 - i dont have any receipts
 - no receipts
 - noreceipts
-- no receipts
-- no receipts
 - no receipts i have
 - i have no receipts
 - i dont have any receipts
-- no receipts
 - i have no receipts
-- no receipts
-- no receipts
 - i dont have any receipts
-- Nope
-- no receipts
 - no receipts i have
 - no more receipts
-- no receipts
 - i dont have any receipts
 
-## intent:opencamera
-- open camera
-- can you please open camera
-- go to camera
-- camera open
-- open camera for me
-- i want to open camera
-- open my camera
-- open camera
-- camera
-- camera open
-- will you open my open camera
-- can you open my camera
-- open camera for me
-- open camera
-- can you please open my camera
-- i want to open camera
-- open camera for me
-- i want to open my  camera
-- i want to open my camera
-- goto my camera
-- open my camera
+## intent:notif_fin_users
+- Sending Notifications to Finance Users
+- How to send notifications to finance users
+- I want to notify finance users
+- I wish to notify finance users
+- can you tell me how to send or notify finance users
+
+## intent:notif_new_users
+- Sending Notifications to New Users
+- How to send notifications to new users
+- I want to notify new users
+- I wish to notify new users
+- can you tell me how to send or notify new users
 
 ## intent:pendingreport
 - pending
 - show drafts
-- show pending reports
 - Show me my draft reports
 - show me pending report
 - reports on hold
 - drafts
 - show the outstanding reports
 - show the drafts
+- show me my drafts
 - show me all the drafts
 - show all pending reports
+- show all my pending reports
 - pending reports
 - retrieve pending reports
 - get all drafts
@@ -756,28 +1122,15 @@
 - get my pending reports
 - list out all my pending reports
 - list my drafts
-- show all pending reports
 - show me peding reports
 - get my pending reports
 - show me all pending reports
 - list out my pending reports
 - pending reports
-- show all pending reports
-- show pending reports
 - get all pending reports
-- show pending reports
 - list out my pending reports
 - get my pending reports
-- show pending reports
-- show all pending reports
 - get my drafts
-- show all pending reports
-- show all pending reports
-- show pending reports
-- show all my pending reports
-- show all pending reports
-- show pending reports
-- show all pending reports
 - i want to know my pending reports
 - I want to know my pending reports
 - how many pending reports i have
@@ -786,6 +1139,41 @@
 - what about my pending reports
 - give my pending reports
 - display pending reports
+- show all of my drafts
+- can you display me the drafts
+- can you display drafts for me
+- show me drafts
+- hey can you display  drafts for me
+- i want to know how many drafts i have
+- hey can you show me drafts
+- show all my drafts
+- hey can you show my drafts
+- show pending reports
+- show my drafts
+- show pending reports
+- show pending drafts
+- show pending reports
+- I want to see the drafts
+- I'd like you to display drafts
+- how many pending drafts i have
+- show pending reports
+- show drafts
+- i did like to see my pending reports
+- i'd like to see my pending reports
+- i did like to see my drafts
+- i'd like to see my drafts
+- i did like to see  drafts
+- i'd like to see  drafts
+- i did like to see my pending drafts
+- show pending drafts
+- listout my all pending reports
+
+## intent:reimbersebment_to_employees
+- How do I initiate the reimbursement to employees once the expense report has been approved?
+- How we do reimbursement once the report is approved
+- Tell mw how to reimbursement once the report is approved
+- Can you guide me how the reimbursement works ?
+- Help me in reimbursing once the expense report is approved
 
 ## intent:reject
 - i want to reject this report
@@ -796,13 +1184,38 @@
 - i dont want to approve this report
 - i don't want to approve this report
 - reject
-- reject this report
 - i want to reject this report
-- reject this report
-- reject this report
 - /reject[{"appr_or_rej":"reject"}](appr_or_rej:reject)
 - reject this report
+- reject   this   report
 - reject this report
+- i want to reject this report
+
+## intent:selectionreport
+- select demo
+- select the report with name June 2018
+- select first one
+- select second one
+- select third one
+- select last
+- can you please select the first report
+- can you please select the demo report
+- please select demo
+- select import
+- select the report titled  summit 2018
+- select first
+- select first please
+- select the latest one
+- the latest one please
+- first one please
+- second one please
+- mark the first one
+- select a report with the name demo please
+- select report IMport
+- select first report
+- please select third report
+- i want to select third report
+- select first report
 
 ## intent:showapprvls
 - show approval reports
@@ -813,26 +1226,26 @@
 - reports waiting my approval
 - display reports for my approval
 - display reports requiring my consent
-- approve reports
+- reports waiting for approvals
+- reports waiting my approve
 - retrieve approve reports
 - show approve reports
 - get my approve reports
 - list out all my approve reports
-- show all approve reports
+- yes.show me approvals
 - get my approve reports
 - show me all approve reports
+- show me all approval reports
 - list out my approve reports
 - get my approvals
 - show all reports waiting for approval
 - list reports for submitting for approval
 - get all reports waiting for approval
 - list all submitted reports
-- show approval reports
 - show me approvals
 - show all approvals
 - show my approvals
 - show approvals
-- show all approve reports
 - show approvals
 - what about reports waiting my approvals?
 - what about reports waiting my approvals
@@ -844,6 +1257,17 @@
 - can you show me the approvals
 - what about my approvals reports
 - give my approvals reports
+- show approvals
+- show my approvals
+- show all approvals
+- i want to see my approvals
+- display my approvals
+- i did like to see my approvals
+- i'd like to see my approvals
+- i did like to see my approve reports
+- i'd like to see my approve reports
+- show approvals
+- show approvals
 
 ## intent:submit
 - i want to submit this report
@@ -851,24 +1275,72 @@
 - i wanna submit this report
 - do you submit this report
 - will you submit this report for me
+- I wish to submit this report
 - submit
 - Submit my pending report
 - submit it
 - submit this report
 - i want submit this report
-- i want to submit this report
-- i want to submit a report
-- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - submit this report
 - submit a report
-- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - submit this report
 - submit
-- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
-- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
 - submit a report
 - i want to submit a report
+- /submit[{"adlt_or_sub":"submit"}](adlt_or_sub:submit)
+- i want to submit this report
+- i want to submit a report
+- submit a report
+- submit this report dude
+- submit a report
+
+## intent:submittedreport
+- submitted
+- show submitted
+- Show me my submitted reports
+- show me submitted report
+- reports submitted by me
+- show the submitted reports
+- show the submitted
+- show me my submitted
+- show me all the submitted
+- show all submitted reports
+- show all my submitted reports
+- submitted reports
+- retrieve submitted reports
+- get all submitted
+- show submitted reports
+- get my submitted reports
+- list out all my submitted reports
+- get my submitted reports
+- show me all submitted reports
+- list out my submitted reports
+- submitted reports
+- get all submitted reports
+- list out my submitted reports
+- get my submitted reports
+- i want to know my submitted reports
+- I want to know my submitted reports
+- how many submitted reports i have
+- can you show me how many submitted reports i have
+- can you show me the submitted reports
+- what about my submitted reports
+- give my submitted reports
+- display submitted reports
+- show all of my submitted
+- can you display me the submitted
+- can you display submitted reports for me
+- show me submitted
+- I want to see submitted reports
+- display me my submitted reports
+- hey i want to see my submitted reports
+- show submiited reports
+- can you display my submitted reports
+- i did like to see my submitted reports
+- i'd like to see my submitted reports
+- i did like to see my submitted reports
+- i want  to see my submitted report
 
 ## synonym:Approve
 - {"appr_or_rej":"Approve"}
@@ -882,6 +1354,9 @@
 ## synonym:addlineitem
 - {"adlt_or_sub":"addlineitem"}
 
+## synonym:approvals
+- {"navto":"approvals"}
+
 ## synonym:approve
 - {"appr_or_rej":"approve"}
 
@@ -889,10 +1364,32 @@
 - {"no_more_receipts":"attach"}
 
 ## synonym:camera
+- {"navto":"camera"}
+- capture
 - {"no_more_receipts":"camera"}
+- open camera
+- navigate to camera
+- capture a receipt
+- take a receipt
+- my camera
+
+## synonym:david - jan 2015
+- david-jan 2015
+
+## synonym:dec - jan2015
+- dec-jan2015
 
 ## synonym:dec 17 cell
 - Dec 17 Cell
+
+## synonym:dhoni - mar 569
+- dhoni-mar 569
+
+## synonym:drafts
+- {"navto":"drafts"}
+- pending
+- pendingreports
+- pending reports
 
 ## synonym:feb - mar-2015
 - feb-mar-2015
@@ -906,11 +1403,23 @@
 ## synonym:jan 20th
 - Jan 20th
 
+## synonym:june 2018
+- June 2018
+
+## synonym:lasya - trip 1
+- lasya-trip 1
+
+## synonym:receipt
+- {"navto":"receipt"}
+
 ## synonym:reject
 - {"appr_or_rej":"reject"}
 
 ## synonym:submit
 - {"adlt_or_sub":"submit"}
+
+## synonym:transaction
+- {"navto":"transaction"}
 
 ## synonym:usa_trip
 - USA_trip

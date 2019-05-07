@@ -16,17 +16,8 @@ from rasa_core_sdk.forms import REQUESTED_SLOT, FormAction
 
 # ---------------------FUNCTIONS USED IN ACTIONS---------------------------
 
-def get_user_details(sender_details):
-    sender_details = sender_details.replace('\'','\"')
-    sender = json.loads(sender_details)
-    print(sender)
-    print(sender["userid"])
-    print(sender["compid"])
-    return (sender["userid"],sender["compid"],sender['approver'].lower())
-
-
-def report_summary(expid,appr_or_draft,userid,compid):
-    r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneapp.do?callto=getsubexps', data =  {"userid": userid,"compid": compid,"expid" : expid,"reqfrm" : appr_or_draft,"version": "8.4.0"})
+def report_summary(expid,appr_or_draft,user_id,comp_id):
+    r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneapp.do?callto=getsubexps', data =  {"userid": user_id,"compid": comp_id,"expid" : expid,"reqfrm" : appr_or_draft,"version": "8.4.0"})
     line_item_summary = []
     total_amount = 0
     no_of_lineitems = 0
@@ -60,16 +51,16 @@ def report_summary(expid,appr_or_draft,userid,compid):
 
 
 # Function to get card transactions which accepts the card numbers as parameter
-def get_card_transactions(startdate,enddate,card,userid,compid):
+def get_card_transactions(startdate,enddate,card):
     card_trans = []
     if startdate and enddate:
-        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid":f"{compid}","delusr": 0,"pgno" : 1,"userid":f"{userid}","fdate":f"{startdate}","tdate":f"{enddate}"})
+        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid": 469,"delusr": 0,"pgno" : 1,"userid":3452,"fdate":f"{startdate}","tdate":f"{enddate}"})
     elif startdate and not enddate:
-        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid":f"{compid}","delusr": 0,"pgno" : 1,"userid":f"{userid}","fdate":f"{startdate}"})
+        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid": 469,"delusr": 0,"pgno" : 1,"userid":3452,"fdate":f"{startdate}"})
     elif  not startdate and enddate:
-        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid":f"{compid}","delusr": 0,"pgno" : 1,"userid":f"{userid}","tdate":f"{enddate}"})
+        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid": 469,"delusr": 0,"pgno" : 1,"userid":3452,"tdate":f"{enddate}"})
     else:
-        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid":f"{compid}","delusr": 0,"pgno" : 1,"userid":f"{userid}"})
+        r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=getTransactions&navfrom=iPhone',data={"ccno":f"{card}","compid": 469,"delusr": 0,"pgno" : 1,"userid":3452})
     if r.status_code == 200:
         json_data = r.json()
         if json_data.get('status') == 'success': 
@@ -81,7 +72,6 @@ def get_card_transactions(startdate,enddate,card,userid,compid):
                         'txid':txn['txid']                                            
                     })
             return card_trans
-
 
 # Code to get the perfect startdate and enddate
 def date_formater(dt):
@@ -100,9 +90,9 @@ def date_formater(dt):
         else:
             return date.strftime("%b %d,"),int(date.strftime("%Y"))-1
 
-def adding_transactions(name,expid,startdate,enddate,startmonth,endmonth,cardnum,cardname,userid,compid):
-    # userid = "9364"
-    # compid = "1403"
+def adding_transactions(name,expid,startdate,enddate,startmonth,endmonth,cardnum,cardname):
+    user_id = "9364"
+    comp_id = "1403"
     
     # Getting all the cardnumbers of the user through API
     cards_list = []
@@ -111,7 +101,7 @@ def adding_transactions(name,expid,startdate,enddate,startmonth,endmonth,cardnum
     selected_cards = []
     
     # getting cards that the user has
-    r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=ccTabInfo&navfrom=iPhone',data={"compid":f"{compid}","delusr": 0,"pgno" : 1,"userid":f"{userid}"})
+    r = requests.post('http://192.168.0.213/SutiExpense/iphonecc.do?callto=ccTabInfo&navfrom=iPhone',data={"compid": 469,"delusr": 0,"pgno" : 1,"userid":3452})
     if r.status_code == 200:
         json_data = r.json()
         if json_data.get('status') == 'success': 
@@ -291,15 +281,13 @@ def adding_transactions(name,expid,startdate,enddate,startmonth,endmonth,cardnum
                 if cardnum in card and cardname in card:
                     selected_card = card
                     break
-            trans_list = get_card_transactions(startdate,enddate,selected_card,userid,compid)
+            trans_list = get_card_transactions(startdate,enddate,selected_card)
             return {
                 "trans_list":trans_list,
                 "trans_count":len(trans_list),
                 "message":"success",
                 "cards_cnt":1,
-                "selected_card":selected_card,
-                "startdate":startdate,
-                "enddate":enddate
+                "selected_card":selected_card
                 }
         elif cardname:
             # getting all the cards with cardname
@@ -308,16 +296,14 @@ def adding_transactions(name,expid,startdate,enddate,startmonth,endmonth,cardnum
                     selected_cards.append(card)
             for card in selected_cards:
                 # <--------------All Cards transcations  api----------->
-                for tran in  get_card_transactions(startdate,enddate,card,userid,compid):
+                for tran in  get_card_transactions(startdate,enddate,card):
                     trans_list.append(tran)
             return {
                 "trans_list":trans_list,
                 "trans_count":len(trans_list),
                 "message":"success",
                 "cards_cnt":len(selected_cards),
-                "cardname":cardname,
-                "startdate":startdate,
-                "enddate":enddate
+                "cardname":cardname
                 }
         elif cardnum:
             # getting the card with card number
@@ -325,30 +311,26 @@ def adding_transactions(name,expid,startdate,enddate,startmonth,endmonth,cardnum
                 if cardnum in card:
                     selected_card = card
                     break
-            trans_list = get_card_transactions(startdate,enddate,selected_card,userid,compid)
+            trans_list = get_card_transactions(startdate,enddate,selected_card)
             return {
                 "trans_list":trans_list,
                 "trans_count":len(trans_list),
                 "message":"success",
                 "cards_cnt":1,
-                "selected_card":selected_card,
-                "startdate":startdate,
-                "enddate":enddate
+                "selected_card":selected_card
                 }
         elif not cardnum and not cardname:
             # getting all the transactions for all the cards
             for card in cards_list:
                 # <--------------All Cards transcations  api----------->
-                for tran in  get_card_transactions(startdate,enddate,card,userid,compid):
+                for tran in  get_card_transactions(startdate,enddate,card):
                     trans_list.append(tran)
             return {
                 "trans_list":trans_list,
                 "trans_count":len(trans_list),
                 "message":"success",
                 "cards_cnt":len(cards_list),
-                "cardname": "all",
-                "startdate":startdate,
-                "enddate":enddate
+                "cardname": "all"
                 }
     else:
         return {
@@ -400,7 +382,7 @@ class CreateReportForm(FormAction):
         date = str(datetime.now().date())
         userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
         
-        r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneexpsave.do?navfrom=android&sutitest=true', data =  {"compid": f"{compid}","userid": f"{userid}","delusr": "0","version": "8.4.0","copylines": "Slelect","mcurr": "","Department Name": "Dept1","Product Line Code": "gfg - Cghg","Client Code": "kkkkkk","Project Code": "fdfdf - fdfdf","expType": "report","expNm": f"{name}","expDt": f'{date}',"fdate": f'{date}',"tdate": f"{date}","expDesc": "","isencrypt":"No"})
+        r = requests.post('https://demo.sutiexpense.com/SutiExpense7.x/iphoneexpsave.do?navfrom=android&sutitest=true', data =  {"compid": f"{comp_id}","userid": f"{user_id}","delusr": "0","version": "8.4.0","copylines": "Slelect","mcurr": "","Department Name": "Dept1","Product Line Code": "gfg - Cghg","Client Code": "kkkkkk","Project Code": "fdfdf - fdfdf","expType": "report","expNm": f"{name}","expDt": f'{date}',"fdate": f'{date}',"tdate": f"{date}","expDesc": "","isencrypt":"No"})
         if r.status_code == 200:
             json_data = r.json()
             if json_data.get('status') == 'success':
@@ -460,18 +442,12 @@ class AddReceiptForm(FormAction):
                dispatcher: CollectingDispatcher,
                tracker: Tracker,
                domain: Dict[Text, Any]) -> List[Dict]:               
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+
         no_receipts = tracker.get_slot('no_more_receipts')
         if no_receipts ==  "camera":
-            json_response = [
-            {
-                "goto":"camera",
-                "type":"menu",
-                "status":"success"
-                }
-            ]
-            dispatcher.utter_message(json.dumps(json_response))
-            return [FollowupAction('action_deactivate_form'),AllSlotsReset(),FollowupAction('action_listen')]
+            dispatcher.utter_message("openning Camera")
+            dispatcher.utter_message("Added the receipt.")
+            return [FollowupAction('utter_ask_receipt')]
         elif no_receipts == "attach":
             dispatcher.utter_message("attachment successfull.")
             dispatcher.utter_message("Added the receipt.")
@@ -494,11 +470,13 @@ class ImportTranForm(FormAction):
 
     @staticmethod
     def required_slots(tracker:Tracker) :
-        return ["name"]
+        return ["name","line_category"]
 
     def slot_mappings(self):
         return {"name": [self.from_entity(entity="name",intent=["enterdata"]),
-                             self.from_text("")]}
+                             self.from_text("")],
+                "line_category": [self.from_entity(entity="line_category",intent=["line_category"]),
+                             self.from_text("line_category")]}
 
     def validate(self,
                  dispatcher: CollectingDispatcher,
@@ -624,39 +602,38 @@ class Approvingreports(FormAction):
         compexpid = tracker.get_slot('compexpid')
         expid = tracker.get_slot('expid')
         comments = tracker.get_slot("comments")
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
         
         if appr_or_rej == "approve":
             # ------------------ API CALL ------------
-            r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=approve&navfrom=android&sutitest=yes",data={"userid": "9366","compid": "1403","version": "8.4.0","expid":f"{expid}","comments":f"{comments}"})
-            if r.status_code == 200:
-                json_data = r.json()
-                if json_data.get('status') == 'approved':
-                    response = "Approved the report"
-                    # dispatcher.utter_message(f'{comments}')
-                else:
-                    response = "Failed to Approve .Please try again later."
-            else:
-                response = "Couldnt get the reports at this point of time."
+            # r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=approve&navfrom=android&sutitest=yes",data={"userid": "9366","compid": "1403","version": "8.4.0","expid":f"{expid}","comments":f"{comments}"})
+            # if r.status_code == 200:
+            #     json_data = r.json()
+            #     if json_data.get('status') == 'approved':
+            #         response = "Approved the report"
+            #         # dispatcher.utter_message(f'{comments}')
+            #     else:
+            #         response = "Failed to Approve .Please try again later."
+            # else:
+            #     response = "Couldnt get the reports at this point of time."
 
-            dispatcher.utter_message(response)
-            # dispatcher.utter_message(f"Approved the report ")
+            # dispatcher.utter_message(response)
+            dispatcher.utter_message(f"Approved the report ")
             # dispatcher.utter_message(f'{comments}')
         elif appr_or_rej == "reject":
               #------------------ API CALL ------------
-            r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=reject&navfrom=android&sutitest=yes",data={"userid": "9366","compid": "1403","version": "8.4.0","rejresn":"1062","expid":f"{expid}","comments":f"{comments}"})
-            if r.status_code == 200:
-                json_data = r.json()
-                if json_data.get('status') == 'rejected':
-                    response = "Rejected the report"
-                    # dispatcher.utter_message(f'{comments}')
-                else:
-                    response = "Failed to Reject .Please try again later."
-            else:
-                response = "Couldnt get the reports at this point of time."
+            # r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=reject&navfrom=android&sutitest=yes",data={"userid": "9366","compid": "1403","version": "8.4.0","rejresn":"1062","expid":f"{expid}","comments":f"{comments}"})
+            # if r.status_code == 200:
+            #     json_data = r.json()
+            #     if json_data.get('status') == 'rejected':
+            #         response = "Rejected the report"
+            #         # dispatcher.utter_message(f'{comments}')
+            #     else:
+            #         response = "Failed to Reject .Please try again later."
+            # else:
+            #     response = "Couldnt get the reports at this point of time."
 
-            dispatcher.utter_message(response)
-            # dispatcher.utter_message(f"Rejected the report")
+            # dispatcher.utter_message(response)
+            dispatcher.utter_message(f"Rejected the report")
             # dispatcher.utter_message(f'{comments}')
       
         return [AllSlotsReset()]
@@ -670,15 +647,20 @@ class PendingReport(Action):
         return "action_pending_report"
 
     def run(self, dispatcher, tracker, domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
-        #     print(userid)
-        #     print(compid)
+        # if 'user' in tracker.current_state()['sender_id']:
+        #     sender_details = tracker.current_state()['sender_id']
+        #     sender_details = sender_details.replace('\'','\"')
+        #     sender = json.loads(sender_details)
+        #     user_id = sender['user_id']
+        #     comp_id = sender['comp_id']
+        #     print(user_id)
+        #     print(comp_id)
         response = ''
-        # userid = "9364"
-        # compid = "1403"
+        user_id = "9364"
+        comp_id = "1403"
 # <------------------ API CALL BELOW ---------------->
         json_response = []
-        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data = {"userid": f"{userid}","compid": f"{compid}","delusr": "0","version": "8.4.0","isencrypt":"No"})
+        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data = {"userid": f"{user_id}","compid": f"{comp_id}","delusr": "0","version": "8.4.0","isencrypt":"No"})
         if r.status_code == 200:
             json_data = r.json()
             if json_data.get('status') == 'success':
@@ -686,7 +668,7 @@ class PendingReport(Action):
                     print(json_data['exps'])
                     no_of_reports = len(json_data['exps'])
                     # Custom code for setting reports to 1
-                    no_of_reports = 3
+                    no_of_reports = 1
                     if no_of_reports == 1:
                         dispatcher.utter_message("You have one pending report as follows :")
                         compexpid = ""
@@ -702,13 +684,13 @@ class PendingReport(Action):
                             expdt = exp['expdt']
                             break
 #<-------------------------- Calling report SUMMARY API ------------------------------>
-                        out_summary = report_summary(expid,'drafts',userid,compid)
+                        out_summary = report_summary(expid,'drafts',user_id,comp_id)
                         print(out_summary)
                         if 'Line_items_cnt' in out_summary:
                             if out_summary.get('Line_items_cnt') == 0:
                                 response = f"Report '{expname} with report id {compexpid}, created on {expdt}'.@#$@#$The report has no line items"
                                 dispatcher.utter_message(response)
-                                return [SlotSet('name',expname),SlotSet('compexpid',compexpid),SlotSet("expid",expid),SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','pend'),FollowupAction("utter_ask_addline")]
+                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet("name",expname),SlotSet("expid",expid),SlotSet("compexpid",compexpid),SlotSet('appr_or_pend','pend'),FollowupAction("utter_ask_addline")]
                             elif out_summary.get('Line_items_cnt') > 0:
                                 response += f"Report '{expname} with report id {compexpid}, created on {expdt}'.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
                                 response += '@#$'.join(out_summary["Line_items_summary"])
@@ -716,7 +698,7 @@ class PendingReport(Action):
                                 response += f"@#$Grand Total : {out_summary['Grand_Total']}"
                                 response += f"@#$Amount Owed : {out_summary['Amount_Owed']}"
                                 dispatcher.utter_message(response)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','pend'),FollowupAction("utter_ask_addline_or_submit")]
+                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet("name",expname),SlotSet("expid",expid),SlotSet("compexpid",compexpid),SlotSet('appr_or_pend','pend'),FollowupAction("utter_ask_addline_or_submit")]
                         else:
                             dispatcher.utter_message("Pending report API not working.")
 #<-------------------------- Report SUMMARY API END------------------------------>
@@ -725,7 +707,7 @@ class PendingReport(Action):
                             2:"two",
                             3:"three"
                         }
-                        # dispatcher.utter_message(f"There are {number_word[no_of_reports]} pending reports you have. ")
+                        dispatcher.utter_message(f"There are {number_word[no_of_reports]} pending reports you have. ")
                         for exp in json_data['exps'][:no_of_reports]:
                             json_response.append({
                                 'compexpid' : exp['compexpid'],
@@ -788,10 +770,11 @@ class DisplayTranReports(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message("You have not selected a report yet")
         response = ''
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+        user_id = "9364"
+        comp_id = "1403"
 # <------------------ API CALL BELOW ---------------->
         json_response = []
-        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data = {"userid": f"{userid}","compid": f"{compid}","delusr": "0","version": "8.4.0","isencrypt":"No"})
+        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneapp.do?callto=getExps&navfrom=android&sutitest=true', data = {"userid": f"{user_id}","compid": f"{comp_id}","delusr": "0","version": "8.4.0","isencrypt":"No"})
         if r.status_code == 200:
             json_data = r.json()
             if json_data.get('status') == 'success':
@@ -834,7 +817,13 @@ class SelectForTran(Action):
         return "action_select_for_tran"
 
     def run(self, dispatcher, tracker, domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+        sender = {
+            'user_id':9364,
+            'comp_id':1403,
+            'approver':'yes'
+        }
+        user_id = 9364
+        comp_id = 1403
         selection_message = tracker.latest_message['text'].lower()
         appr_report_list = tracker.get_slot("appr_report_list")
         if 'second' in selection_message or '2' in selection_message or 'two' in selection_message:
@@ -880,23 +869,31 @@ class SubmitReport(Action):
         return "action_submit_report"
 
     def run(self, dispatcher, tracker, domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+        # sender_details = ''
+        # sender_details = tracker.current_state()['sender_id']
+        # sender_details = sender_details.replace('\'','\"')
+        # sender = json.loads(sender_details)
+        # user_id = sender['user_id']
+        # comp_id = sender['comp_id']
+
+        user_id = "9364"
+        comp_id = "1403"
         compexpid = tracker.get_slot('compexpid')
         expid = tracker.get_slot('expid')
         name = tracker.get_slot('name')
         print("Inside Submit Report Action slots are {compexpid},{expid},{name}")
 # <------------------ API CALL BELOW ---------------->
 
-        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneexpsubmit.do?navfrom=android&sutitest=true', data = {"userid": f"{userid}","compid": f"{compid}","delusr": "0","version": "8.4.0","isencrypt":"No","expid":f'{expid}'})
+        r = requests.post('https://demo.sutiexpense.com/SutiExpense8.x/iphoneexpsubmit.do?navfrom=android&sutitest=true', data = {"userid": f"{user_id}","compid": f"{comp_id}","delusr": "0","version": "8.4.0","isencrypt":"No","expid":f'{expid}'})
         if r.status_code == 200:
             json_data = r.json()
             if json_data.get('status') == 'success':
-                dispatcher.utter_message(f'Submited the report with expid {compexpid} successfully for approval')
+                dispatcher.utter_message(f"Submited the report '{name}' successfully for approval")
             else:
-                dispatcher.utter_message("Failed to add the recipt.Please try again later.'")
+                dispatcher.utter_message("Failed to submit the report.Status Failed")
         else:
-            dispatcher.utter_message("Failed to make a request for addition of receipt.'")
-        dispatcher.utter_message("Submited the report")
+            dispatcher.utter_message("Failed at the submit api call.'")
+        # dispatcher.utter_message("Submited the report")
         return [AllSlotsReset()]
 
 # <------------------ API CALL ENDED ---------------->
@@ -913,8 +910,8 @@ class Display_Approval(Action):
     def run(self, dispatcher, tracker, domain):
             #<------------------ API CALL BELOW ---------------->
         json_response = []
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
-        r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=getExpAppRecords&navfrom=android&sutitest=yes",data={"userid": f"{userid}","compid": f"{compid}","version": "8.4.0"})
+        r = requests.post("https://demo.sutiexpense.com/SutiExpense8.x/iphoneapprove.do?callto=getExpAppRecords&navfrom=android&sutitest=yes",data={"userid": "9366","compid": "1403","version": "8.4.0"})
+        
         if r.status_code == 200:
             json_data = r.json()
             if json_data.get('status') == 'success':
@@ -940,8 +937,9 @@ class Display_Approval(Action):
                             expdt = exp['expdt']
                             break
 #<-------------------------- Calling report SUMMARY API ------------------------------>
-                        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
-                        out_summary = report_summary(expid,'approvals',userid,compid)
+                        user_id = "9409"
+                        comp_id = "1403"
+                        out_summary = report_summary(expid,'approvals',user_id,comp_id)
                         response = ""
                         print(out_summary)
                         if 'Line_items_cnt' in out_summary:
@@ -949,7 +947,7 @@ class Display_Approval(Action):
                                 response = f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}"
                                 dispatcher.utter_message(response)
                                 dispatcher.utter_template("utter_ask_approve",tracker)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),FollowupAction("action_listen")]
+                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),SlotSet("name",expname),SlotSet('expid',expid),FollowupAction("action_listen")]
                             elif out_summary.get('Line_items_cnt') > 0:
                                 response += f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
                                 response += '@#$'.join(out_summary["Line_items_summary"])
@@ -958,7 +956,7 @@ class Display_Approval(Action):
                                 response += f"@#$Amount Owed : {out_summary['Amount_Owed']}"
                                 dispatcher.utter_message(response)
                                 dispatcher.utter_template("utter_ask_approve",tracker)
-                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),FollowupAction("action_listen")]
+                                return [SlotSet('appr_report_list',json_data['exps'][:no_of_reports]),SlotSet('appr_or_pend','appr'),SlotSet("name",expname),SlotSet('expid',expid),FollowupAction("action_listen")]
                         else:
                             dispatcher.utter_message("Report Summary API not working.")
 #<-------------------------- Report SUMMARY API END------------------------------->
@@ -998,13 +996,17 @@ class Display_Approval(Action):
                         dispatcher.utter_message("You have no reports to approve.")
                         dispatcher.utter_message("Do you need anything else ? ")
                         return [FollowupAction('action_listen')]
-        
+    
 class ApproveOrRejectAction(Action):
     def name(self):
         return "action_approve_or_reject"
 
     def run(self, dispatcher, tracker, domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+        sender = {
+            'user_id':9364,
+            'comp_id':1403
+            # 'approver':"yes"
+        }
         appr_or_rej = tracker.get_slot('appr_or_rej')
         if appr_or_rej == 'approve':
             dispatcher.utter_message("Approved the report.")
@@ -1016,10 +1018,20 @@ class First_message(Action):
         return "action_first_message"
 
     def run(self, dispatcher, tracker, domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+        # sender_details = tracker.current_state()['sender_id']
+        # print(sender_details)
+        # sender_details = sender_details.replace('\'','\"')
+        # print(sender_details)
+        # sender = json.loads(sender_details)
+        # print(sender)
+        sender = {
+            'user_id':9364,
+            'comp_id':1403,
+            'approver':'yes'
+        }
         
         dispatcher.utter_message("Hey there, welcome to Suti!")
-        if approver == "yes":
+        if 'approver' in sender:
             SlotSet("approver_or_not", True)
             return[FollowupAction('action_display_appr_report')]
         else:
@@ -1032,30 +1044,51 @@ class go_to_approvals(Action):
         return "action_goto_approvals"
     
     def run(self,dispatcher,tracker,domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
-
-        if approver and approver.lower() == "yes":
+        sender = {
+            'user_id':9364,
+            'comp_id':1403,
+            'approver':'yes'
+  
+        } 
+        if 'approver' in sender:
             return [SlotSet("navto","approvals"),FollowupAction("action_navigate")]
         else:
             dispatcher.utter_message("you are not an approver")
-            return [AllSlotsReset(),FollowupAction("utter_okay")]
+        
+        return [AllSlotsReset()]
 
 class go_to_pendingrports(Action):
     def name(self):
         return "action_goto_pendingreports"
     
     def run(self,dispatcher,tracker,domain):
-         return [SlotSet("navto","drafts"),FollowupAction("action_navigate")]
+        dispatcher.utter_message("Navigating to penidng reports")
+        return [AllSlotsReset()]
+
 
 class select_report(Action):
     def name(self):
         return "action_select_report"
 
     def run(self,dispatcher,tracker,domain):
-        userid,compid,approver = get_user_details(tracker.current_state()['sender_id'])
+        sender = {
+            'user_id':9364,
+            'comp_id':1403,
+            'approver':'yes'
+  
+        }
+        user_id = 9364
+        comp_id = 1403
         selection_message = tracker.latest_message['text'].lower()
         appr_report_list = tracker.get_slot("appr_report_list")
         appr_or_pend = tracker.get_slot("appr_or_pend")
+        if not appr_report_list and appr_or_pend == "appr":
+            dispatcher.utter_message("No reports to select for approving")
+            return [FollowupAction("utter_okay")]
+        if not appr_report_list and appr_or_pend == "pend":
+            dispatcher.utter_message("No reports to select from drafts")
+            return [FollowupAction("utter_okay")]
+
         if 'second' in selection_message or '2' in selection_message or 'two' in selection_message:
             exp = appr_report_list[1]
         elif 'third' in selection_message or '3' in selection_message or 'three' in selection_message or 'last' in selection_message:
@@ -1075,9 +1108,9 @@ class select_report(Action):
         if appr_or_pend == 'appr':
             expsubby = exp['subby']
             expamt = exp['amt']
-            userid = "9409"
-            compid = "1403"
-            out_summary = report_summary(expid,'approvals',userid,compid)
+            user_id = "9409"
+            comp_id = "1403"
+            out_summary = report_summary(expid,'approvals',user_id,comp_id)
             response = ""
             print(out_summary)
             if 'Line_items_cnt' in out_summary:
@@ -1085,21 +1118,21 @@ class select_report(Action):
                     response = f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}"
                     dispatcher.utter_message(response)
                     dispatcher.utter_template("utter_ask_approve",tracker)
-                    return [SlotSet('appr_or_pend','appr'),SlotSet('compexpid',compexpid),SlotSet('expid',expid),SlotSet('name',expname),FollowupAction("action_listen")]
+                    return [SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),SlotSet('name',expname),FollowupAction("action_listen")]
                 elif out_summary.get('Line_items_cnt') > 0:
                     response += f"Report '{expname}' created by '{expsubby}' for an amount  ${expamt} on {expdt}.Comp expid is {compexpid}.@#$@#$The report has {out_summary.get('Line_items_cnt')} line items as follows@#$@#$"
-                    response += '@#$'.join(out_summary["Line_items_summary"])
+                    response += '@#$@#$'.join(out_summary["Line_items_summary"])
                     response += f"@#$Expenses Subtotal {out_summary['Expenses_Subtotal']}"
                     response += f"@#$Grand Total : {out_summary['Grand_Total']}"
                     response += f"@#$Amount Owed : {out_summary['Amount_Owed']}"
                     dispatcher.utter_message(response)
                     dispatcher.utter_template("utter_ask_approve",tracker)
-                    return [SlotSet('appr_or_pend','appr'),SlotSet('compexpid',compexpid),SlotSet('expid',expid),SlotSet('name',expname),FollowupAction("action_listen")]
+                    return [SlotSet('appr_or_pend','appr'),SlotSet('expid',expid),SlotSet('name',expname),FollowupAction("action_listen")]
             else:
                 dispatcher.utter_message("Report Summary API not working.")
         else:
 #<-------------------------- Calling report SUMMARY API for pending report ------------------------------>
-            out_summary = report_summary(expid,'drafts',userid,compid)
+            out_summary = report_summary(expid,'drafts',user_id,comp_id)
             
             print(out_summary)
             if 'Line_items_cnt' in out_summary:

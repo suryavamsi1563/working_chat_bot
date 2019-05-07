@@ -7,6 +7,7 @@ Automat==0.7.0
 blis==0.2.4
 boto3==1.9.124
 botocore==1.12.124
+cachetools==3.1.0
 certifi==2019.3.9
 cffi==1.12.2
 chardet==3.0.4
@@ -22,9 +23,9 @@ cryptography==2.6.1
 cycler==0.10.0
 cymem==2.0.2
 decorator==4.4.0
+dialogflow==0.5.2
 docopt==0.6.2
 docutils==0.14
-en-core-web-sm==2.1.0
 fakeredis==0.10.3
 fbmessenger==5.4.0
 Flask==1.0.2
@@ -33,6 +34,9 @@ Flask-JWT-Simple==0.0.3
 future==0.17.1
 gast==0.2.2
 gevent==1.4.0
+google-api-core==1.9.0
+google-auth==1.6.3
+googleapis-common-protos==1.5.9
 greenlet==0.4.15
 grpcio==1.19.0
 h5py==2.9.0
@@ -57,11 +61,14 @@ murmurhash==1.0.2
 networkx==2.2
 numpy==1.16.2
 packaging==18.0
+parsedatetime==2.4
 pika==0.12.0
 plac==0.9.6
 preshed==2.0.1
 prompt-toolkit==2.0.9
 protobuf==3.7.1
+pyasn1==0.4.5
+pyasn1-modules==0.2.5
 pycparser==2.19
 pydot==1.4.1
 PyHamcrest==1.9.0
@@ -84,11 +91,13 @@ PyYAML==5.1
 questionary==1.0.2
 rasa-core==0.13.5
 rasa-core-sdk==0.12.2
+rasa-mongo-tracker-store==0.1.1
 rasa-nlu==0.14.6
 redis==2.10.6
 requests==2.21.0
 requests-toolbelt==0.9.1
 rocketchat-API==0.6.27
+rsa==4.0
 ruamel.yaml==0.15.89
 s3transfer==0.2.0
 scikit-learn==0.20.3

@@ -1,0 +1,366 @@
+## intent:bye
+- goodbye
+- goodnight
+- good bye
+- good night
+- see ya
+- toodle-oo
+- bye bye
+- gotta go
+- farewell
+- catch you later
+- bye for now
+- bye was nice talking to you
+- bye udo
+- bye bye bot
+- bye bot
+- k byyye #slay
+- tlak to you later
+- ciao
+- Bye bye
+- then bye
+- tschüssikowski
+- bye!
+- bye
+- take care
+- see ya
+- goodbye
+- later
+- see you later
+- bye
+- thanks
+- bye
+
+## intent:createreport
+- November travel to China
+- build a report
+- make a report [final_one](name)
+- make a report [XYZ](name)
+- file a new report with titled [Grzandziel - November 2014](name)
+- generate a report titled [Brandi Jordan EXP 12.2016](name)
+- generate a report with  [Renne - April 2017 Monthly Expenditures](name)
+- create a record
+- create a report [anything](name)
+- create a report with name [Dual monitor mount for HR rep](name)
+- create a new report titled [Zerlina Oppenheim PNC 12.2016](name)
+- make a report with name [travel](name)
+- create a report [Brandi Jordan EXP 12.2016](name)
+- create a report with [ME08312018](name)
+- create a report
+- create report with name [WE11192017](name)
+- make a report titled [Expenses April 14-29](name)- create a custom report
+- need to generate a report with[OA09262017](name)
+- make a report
+- create a report [finalreport](name)
+- start a new report with titled [P/E 3/17/18](name)
+- file a new report with name [USA_trip](name:usa_trip)
+- create a report with name [Filip - April 2016](name)
+- file a new report with [Shiwarski - February 2015](name)
+- generate a report with  [Baer - March 2015 - meal at CalU](name)
+- create a report with name [trip to new york](name)
+- need to generate a report with name [repeater Ops aug 2-2](name)
+- create a report with name [Rasky - October 2014](name)
+- generate a document titled [Netz Mar 5-9](name)
+- make a report on my Delhi trip with the name [meeting](name)
+- create a report with [ek05062018](name)
+- file my expenses into a report [trip to Hyderabad](name)
+- create a report with titled [Jeanette Thomas EXP 01.2017](name)
+- generate a report with [ez01142019](name)
+- create a report with [Hall - February 2015](name)
+- I travelled to bangalore.Make a report [finalreport](name)
+- generate a report
+- need a report
+- need to create a report with [hyderabad](name)
+- generate a report with  [Bill - Dec 2018](name)
+- create a document
+- report
+- need to create a report
+- create a report with name [Dec 17 Cell](name)
+- createa report with titled [Conway - February 2019](name)
+- file my expenses titled [HR Charges for August 2017-1](name)
+- create report with titled [P/E 06/17/18](name)
+- create report with titled [ez01142019](name)
+- create a report with name [hyderabad_trip](name)
+- generate a report with name [Bishop - December 2018-1](name)
+- file a new report
+- file my expenses
+- generate a report with name [Boyd - April 2017](name)
+- create a report with week of 2/5/18
+- need to generate a report with [Underwood - June 2015](name)
+- create a report with name [Feldmeier November 2015-1](name)
+- create a report with name "[trip to new york](name)"
+- add my all expenses
+- make a report with [W/E 06/20/18](name)
+- make a report titled [Expenses April 14-29](name)- report
+- start a new a report
+- create report
+- need to generate a report
+- generate a report with name [Dec 17 Cell](name:dec 17 cell)
+- need to create a report [Jeanette Thomas PNC 01.2017](name)
+- generate a report with name [Baer - March 2015 - meal at CalU](name)
+- generate me a new report
+- create report with [W/E 9/07/2017](name)
+- create a report with name [firstreport](name)
+- create a report with name [Wachter - May 2016](name)
+- create a report [Hanschen - October 2014](name:hanschen - october 2014)
+- generate a new report [Wolfe - November 2014-1](name:wolfe - november 2014 - 1)
+- Can you create a report with name [Begium Trip](name)
+- create a report with name [paris trip 123](name)
+- i wish to make a report with [dec 2568](name)
+- hey make a report with name [cricket match2019](name)
+- can you generate a report with name [france 1456](name)
+- create a report with named [december 2018](name)
+- make a report titled [march expense](name)
+]
+## intent:greet
+- whats up
+- hi friend
+- hey bot!
+- yo
+- yoo
+- heeey
+- hii
+- ayyyy whaddup
+- hi there it's me
+- hiihihi
+- hi Mister
+- hello friend
+- Hallo
+- hi?
+- Hei
+- hey there
+- jop
+- Well hello there ;)
+- hello everybody
+- hey dude
+- hi
+- hi folks
+- Hi bot
+- hello robot
+- hi hi
+- hello there
+- good morning
+- heyo
+- Whats Up
+- hallo
+- Hellllooooooo
+- Hey bot
+- hey
+- Heya
+- heya
+- helloooo
+- hi again
+- I said, helllllloooooO!!!!
+- Hello
+- Hi
+- Whats up my bot
+- Hey
+- hey bot
+- Good morning
+- good evening
+- jojojo
+- hiii
+- hello is anybody there
+- good afternoon
+- howdy
+- hello?
+- hi there
+- hello
+- hey hey
+- heyho
+- hey let's talk
+- what up
+- greetings
+- hola
+- hii- hi pal!
+- hello sweet boy
+- hey, let's talk
+- hellooo
+- hello it is me again
+- hello sweatheart
+- hi
+- whats up
+- hey
+- hey hi
+- hi
+
+## intent:navigation
+- open [settings](navto)
+- open my [receipts](navto)
+- open [receipts](navto)
+- open [submitted](navto)
+- open my [transactions](navto)
+- open my [drafts](navto)
+- open [transactions](navto)
+- go to [settings](navto)
+- go to [drafts](navto)
+- go to my [drafts](navto)
+- go to my [receipts](navto)
+- go to [receipts](navto)
+- go to [submitted](navto)
+- go to my [transactions](navto)
+- go to [transactions](navto)
+- navigate to [settings](navto)
+- navigate to [drafts](navto)
+- navigate to my [receipts](navto)
+- navigate to [receipts](navto)
+- navigate to [submitted](navto)
+- I want to go to [submitted](navto) reports
+- I want to go to [receipts](navto)
+- I want to go to [drafts](navto)
+- navigate to my [transactions](navto)
+- navigate to [transactions](navto)
+- Take me to [settings](navto)
+- Take me to my [receipts](navto)
+- Take me to my [drafts](navto)
+- Take me to [receipts](navto)
+- Take me to [submitted](navto)
+- Take me to my [transactions](navto)
+- Take me to my [drafts](navto)
+- Take me to [transactions](navto)
+- move to the screen of [settings](navto)
+- move to the screen of [drafts](navto)
+- move to [drafts](navto)
+- take me to the screen of [transactions](navto)
+- lets go to [transactions](navto)
+- lets go to [receipts](navto)
+- lets go to [drafts](navto)
+- show me [transactions](navto) in the app
+- show me [drafts](navto) in the app
+- show me in the app [receipts](navto)
+- show me in the app [drafts](navto)
+- i wish to open [receipts](navto)
+- i wish to open [drafts](navto)
+- can you please move to [drafts](navto)
+- hey can you please open [drafts](navto) for me
+- can you please move to [settings](navto)
+- go to [transactions](navto)
+- open [transactions](navto)
+- open [settings](navto)
+- nav to [drafts](navto)
+- nav to [settings](navto)
+- go to [settings](navto)
+- go to my [receipts](navto)
+- i want go to [receipts](navto) page
+- navigate to [submitted](navto) reports
+- i want to go to [submitted](navto) reports page
+- navigate to [transactions](navto)
+- hey open [drafts](navto)
+- hey open my [receipts](navto)
+- hey open my [transactions](navto)
+- nav to [approvals](navto)
+- nav to [approval](navto)
+- open [approval](navto)
+- go to [approval](navto)
+- move to [approval](navto)
+- hey can you please open [approval](navto) for me
+- navigate to [approvals](navto) in the app
+- take me to [approvals](navto)
+- I wish to go for [approvals](navto) page
+- I wish to open [approvals](navto) in the app
+- show me [approvals](navto)
+- send me to [approvals](navto) page
+- go to [approvals](navto)
+- goto [approval](navto) page
+- navigate to [approval](navto) page
+- goto [approvals](navto)
+- go to [approval](navto) page
+- goto [approval](navto) page
+- navigate to [approvals](navto) page
+- i want to go to [approval](navto) page
+- navigate to [approval](navto) page
+- open [approvals](navto)
+- navigate to [approvals](navto)
+- Take me to [approvals](navto)
+- Take me to [approval](navto) page
+- goto [approvals](navto)
+- hey open [approvals](navto)
+- hey open my [approvals](navto)
+- hey can you navigate to [approvals](navto)
+- hey can you please open my [approvals](navto)
+- go to [pending](navto:drafts) reports
+- goto [pendingreports](navto:drafts) page
+- navigate to [pending reports](navto:drafts) page
+- goto [pendingreports](navto:drafts)
+- go to [pendingreports](navto:drafts) page
+- go to [pending reports](navto:drafts) page
+- goto  [pending reports](navto:drafts) page
+- goto  [pendingreports](navto:drafts) page
+- goto [pending reports](navto:drafts)
+- navigate to [pendingreports](navto:drafts)
+- open [camera](navto)
+- can you please open [camera](navto)
+- go to [camera](navto)
+- [camera](navto) open
+- open [camera](navto) for me
+- i want to [open camera](navto:camera)
+- open my [camera](navto)
+- open [camera](navto)
+- [camera](navto)
+- [camera](navto) open
+- will you open my open [camera](navto)
+- can you open my [camera](navto)
+- open [camera](navto) for me
+- open [camera](navto)
+- can you please open my [camera](navto)
+- i want to open [camera](navto)
+- open [camera](navto) for me
+- i want to open my  [camera](navto)
+- i want to open my [camera](navto)
+- goto my [camera](navto)
+- open my [camera](navto)
+- add from [camera](navto)
+- take me to [camera](navto)
+- I want to [navigate to camera](navto:camera)
+- I want to [capture a receipt](navto:camera)
+- I want to [take a receipt](navto:camera)
+- go to [camera](navto)
+- open [camera](navto)
+- hey open [camera](navto)
+- hey can you open  [my camera](navto:camera)
+- open [camera](navto)
+- hey open [camera](navto)
+- goto [pending reports](navto:drafts)
+- hey open [pending](navto:drafts) reports
+- move to [settings](navto)
+- hey send me to [settings](navto)
+- can you move to [receipts](navto)
+- hey can you go to [transactions](navto)
+- open [approvals](navto)
+- open my [transactions](navto)
+
+## synonym:camera
+- open camera
+- navigate to camera
+- capture a receipt
+- take a receipt
+- my camera
+
+## synonym:dec 17 cell
+- Dec 17 Cell
+
+## synonym:drafts
+- pending
+- pendingreports
+- pending reports
+
+## synonym:feb - mar-2015
+- feb-mar-2015
+
+## synonym:hanschen - october 2014
+- Hanschen - October 2014
+
+## synonym:jan 15th
+- Jan 15th
+
+## synonym:jan 20th
+- Jan 20th
+
+## synonym:usa_trip
+- USA_trip
+
+## synonym:visa
+- VISA
+
+## synonym:wolfe - november 2014 - 1
+- Wolfe - November 2014-1

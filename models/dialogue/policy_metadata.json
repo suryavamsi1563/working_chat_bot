@@ -2,16 +2,31 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "no_more_receipts",
-        "line_category",
-        "name",
+        "crt_name",
+        "navto",
         "appr_or_rej",
-        "endmonth",
-        "enddate",
-        "adlt_or_sub",
-        "startdate",
-        "cardname",
-        "startmonth"
+        "adlt_or_sub"
+      ]
+    },
+    "action_pending_report": {
+      "slots": [
+        "expid",
+        "appr_or_pend",
+        "appr_report_list",
+        "compexpid",
+        "name"
+      ]
+    },
+    "action_select_report": {
+      "slots": [
+        "expid",
+        "name",
+        "appr_or_pend"
+      ]
+    },
+    "action_navigate": {
+      "slots": [
+        "navto"
       ]
     },
     "action_first_message": {
@@ -20,118 +35,65 @@
     "action_display_appr_report": {
       "slots": [
         "expid",
-        "appr_report_list",
-        "appr_or_pend"
-      ]
-    },
-    "create_report_form": {
-      "slots": [
+        "crt_name",
         "requested_slot",
-        "expid",
+        "appr_report_list",
+        "appr_or_pend",
         "compexpid",
         "name"
       ]
-    },
-    "add_receipt_form": {
-      "slots": [
-        "no_more_receipts",
-        "requested_slot"
-      ]
-    },
-    "action_addlineitem_to_report": {
-      "slots": [
-        "adlt_or_sub"
-      ]
-    },
-    "action_open_camera": {
-      "slots": [
-        "no_more_receipts"
-      ]
-    },
-    "action_no_receipt": {
-      "slots": [
-        "no_more_receipts"
-      ]
-    },
-    "action_submit_report": {
-      "slots": []
-    },
-    "utter_okay": {
-      "slots": []
-    },
-    "action_check_name": {
-      "slots": []
-    },
-    "action_display_tran_reports": {
-      "slots": [
-        "appr_report_list",
-        "appr_or_pend"
-      ]
-    },
-    "action_select_for_tran": {
-      "slots": [
-        "expid",
-        "name"
-      ]
-    },
-    "import_tran_form": {
-      "slots": [
-        "line_category",
-        "requested_slot"
-      ]
-    },
-    "action_pending_report": {
-      "slots": [
-        "appr_report_list",
-        "appr_or_pend"
-      ]
-    },
-    "action_select_report": {
-      "slots": [
-        "compexpid",
-        "expid",
-        "name"
-      ]
-    },
-    "approve_report_form": {
-      "slots": [
-        "comments",
-        "requested_slot"
-      ]
-    },
-    "action_submitpdr_report": {
-      "slots": [
-        "adlt_or_sub"
-      ]
-    },
-    "action_slot_reset": {
-      "slots": []
-    },
-    "action_attach_receipt": {
-      "slots": [
-        "no_more_receipts"
-      ]
-    },
-    "action_goto_approvals": {
-      "slots": []
-    },
-    "action_goto_pendingreports": {
-      "slots": []
     },
     "action_approve_report": {
       "slots": [
         "appr_or_rej"
       ]
     },
+    "approve_report_form": {
+      "slots": [
+        "requested_slot",
+        "comments"
+      ]
+    },
+    "utter_do": {
+      "slots": []
+    },
+    "action_addlineitem_to_report": {
+      "slots": []
+    },
     "action_reject_report": {
       "slots": [
         "appr_or_rej"
       ]
     },
+    "action_submitpdr_report": {
+      "slots": []
+    },
+    "action_submit_report": {
+      "slots": []
+    },
+    "create_report_form": {
+      "slots": [
+        "requested_slot",
+        "expid",
+        "crt_name",
+        "compexpid",
+        "navto",
+        "name"
+      ]
+    },
+    "action_submited_report": {
+      "slots": [
+        "appr_report_list",
+        "appr_or_pend"
+      ]
+    },
+    "utter_email_noifs": {
+      "slots": []
+    },
     "utter_goodbye": {
       "slots": []
     },
-    "utter_do": {
+    "utter_ask_whatspossible": {
       "slots": []
     }
   },
@@ -147,7 +109,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190426-160807",
+  "trained_at": "20190507-171658",
   "rasa_core": "0.13.5",
   "tensorflow": "1.12.0",
   "sklearn": "0.20.3"

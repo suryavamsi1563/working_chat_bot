@@ -82,13 +82,13 @@
     }
 
     $(document).ready(function() {
-        var data = "/init"
+        var data = "init"
         user_credentials = {user_id:9364,comp_id:1403,approver:"Yes"}
         arr = { sender: user_credentials, message: data}
         console.log("Sending init")
         $.ajax({
             type: "POST",
-            url: 'http://localhost:5005/webhooks/rest/webhook',
+            url: 'http://192.168.10.66:5005/webhooks/rest/webhook',
             data: JSON.stringify(arr),
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
@@ -130,7 +130,7 @@
         arr = { sender: user_credentials, message: data}
         $.ajax({
         type: "POST",
-        url: 'http://localhost:5005/webhooks/rest/webhook',
+        url: 'http://192.168.10.66:5005/webhooks/rest/webhook',
         data: JSON.stringify(arr),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
@@ -202,7 +202,7 @@
         arr = { sender: user_credentials, message:payload}
         $.ajax({
         type: "POST",
-        url: 'http://localhost:5005/webhooks/rest/webhook',
+        url: 'http://192.168.10.66:5005/webhooks/rest/webhook',
         data: JSON.stringify(arr),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
@@ -254,7 +254,7 @@
         arr = { sender: user_credentials, message:entered_data}
         $.ajax({
         type: "POST",
-        url: 'http://localhost:5005/webhooks/rest/webhook',
+        url: 'http://192.168.10.66:5005/webhooks/rest/webhook',
         data: JSON.stringify(arr),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',

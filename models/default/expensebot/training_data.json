@@ -2,12 +2,32 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
+        "intent": "Exporting_Expense_Reports",
+        "text": "How can I export expense reports from SutiExpense to import into my accounting system for processing"
+      },
+      {
+        "intent": "Exporting_Expense_Reports",
+        "text": "How can I export expense reports from suti expense"
+      },
+      {
+        "intent": "Exporting_Expense_Reports",
+        "text": "I want to export expense reports"
+      },
+      {
+        "intent": "Exporting_Expense_Reports",
+        "text": "export sutiexpense reports to import into my accounting system"
+      },
+      {
+        "intent": "Exporting_Expense_Reports",
+        "text": "How to Export Expense Reports to Import Into Accounting System"
+      },
+      {
         "intent": "addlineitem",
         "text": "i want to add lineitem for this report"
       },
       {
         "intent": "addlineitem",
-        "text": "add lineitem"
+        "text": "addlineitem"
       },
       {
         "intent": "addlineitem",
@@ -31,63 +51,11 @@
       },
       {
         "intent": "addlineitem",
-        "text": "add lineitem"
-      },
-      {
-        "intent": "addlineitem",
         "text": "can you please add a lineitem to this report"
       },
       {
         "intent": "addlineitem",
         "text": "i want a add a lineitem"
-      },
-      {
-        "intent": "addlineitem",
-        "entities": [
-          {
-            "start": 12,
-            "end": 41,
-            "value": "addlineitem",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
-      },
-      {
-        "intent": "addlineitem",
-        "entities": [
-          {
-            "start": 12,
-            "end": 41,
-            "value": "addlineitem",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
-      },
-      {
-        "intent": "addlineitem",
-        "entities": [
-          {
-            "start": 12,
-            "end": 41,
-            "value": "addlineitem",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
-      },
-      {
-        "intent": "addlineitem",
-        "entities": [
-          {
-            "start": 12,
-            "end": 41,
-            "value": "addlineitem",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
       },
       {
         "intent": "addlineitem",
@@ -100,18 +68,6 @@
       {
         "intent": "addlineitem",
         "text": "add a lineitem"
-      },
-      {
-        "intent": "addlineitem",
-        "entities": [
-          {
-            "start": 12,
-            "end": 41,
-            "value": "addlineitem",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/addlineitem{\"adlt_or_sub\":\"addlineitem\"}"
       },
       {
         "intent": "addlineitem",
@@ -128,6 +84,282 @@
       {
         "intent": "addlineitem",
         "text": "Please add new line line item to pending report"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"camera\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"camera\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"camera\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 31,
+            "value": "receipt",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"receipt\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 31,
+            "value": "receipt",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"receipt\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 31,
+            "value": "receipt",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"receipt\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 35,
+            "value": "transaction",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"transaction\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 35,
+            "value": "transaction",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"transaction\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"camera\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "add from camera"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "add from camera"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 21,
+            "end": 33,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "add lineitem form my transactions"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "add lineitem form my camera"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 21,
+            "end": 33,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "add lineitem form my transactions"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "add lineitem form my receipts"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i wish to add through camera"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "i wish to add through receipts"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 22,
+            "end": 34,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "i wish to add through transactions"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to capture"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "i want to add lineitem"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to capture"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to capture"
+      },
+      {
+        "intent": "addlineitem",
+        "entities": [
+          {
+            "start": 12,
+            "end": 35,
+            "value": "transaction",
+            "entity": "navto"
+          }
+        ],
+        "text": "/addlineitem{\"navto\":\"transaction\"}"
+      },
+      {
+        "intent": "addlineitem",
+        "text": "add line item"
       },
       {
         "intent": "addtransaction",
@@ -976,6 +1208,30 @@
         "text": "add transactions"
       },
       {
+        "intent": "addtransaction",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "18th jan",
+            "entity": "startdate"
+          },
+          {
+            "start": 40,
+            "end": 48,
+            "value": "12th may",
+            "entity": "enddate"
+          },
+          {
+            "start": 57,
+            "end": 61,
+            "value": "amex",
+            "entity": "cardname"
+          }
+        ],
+        "text": "add all transaction between 18th jan to 12th may from my amex card"
+      },
+      {
         "intent": "affirm",
         "text": "yes"
       },
@@ -986,6 +1242,18 @@
       {
         "intent": "affirm",
         "text": "S"
+      },
+      {
+        "intent": "affirm",
+        "text": "go ahead"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep"
+      },
+      {
+        "intent": "affirm",
+        "text": "proceed"
       },
       {
         "intent": "affirm",
@@ -1213,42 +1481,6 @@
       },
       {
         "intent": "affirm",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "Approve",
-            "entity": "appr_or_rej"
-          }
-        ],
-        "text": "/affirm{\"appr_or_rej\":\"Approve\"}"
-      },
-      {
-        "intent": "affirm",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "approve",
-            "entity": "appr_or_rej"
-          }
-        ],
-        "text": "/affirm{\"appr_or_rej\":\"approve\"}"
-      },
-      {
-        "intent": "affirm",
-        "text": "/affirm"
-      },
-      {
-        "intent": "affirm",
-        "text": "/affirm"
-      },
-      {
-        "intent": "affirm",
-        "text": "/affirm"
-      },
-      {
-        "intent": "affirm",
         "text": "yes"
       },
       {
@@ -1265,7 +1497,7 @@
       },
       {
         "intent": "affirm",
-        "text": "yes"
+        "text": "very bad"
       },
       {
         "intent": "affirm",
@@ -1273,7 +1505,7 @@
       },
       {
         "intent": "affirm",
-        "text": "yes"
+        "text": "yess"
       },
       {
         "intent": "approve",
@@ -1281,7 +1513,23 @@
       },
       {
         "intent": "approve",
-        "text": "approve this report"
+        "text": "yep.go ahead and approve it."
+      },
+      {
+        "intent": "approve",
+        "text": "go ahead with approve"
+      },
+      {
+        "intent": "approve",
+        "text": "proceed for approve"
+      },
+      {
+        "intent": "approve",
+        "text": "proceed towards approval"
+      },
+      {
+        "intent": "approve",
+        "text": "i wish to approve this report"
       },
       {
         "intent": "approve",
@@ -1290,6 +1538,14 @@
       {
         "intent": "approve",
         "text": "can you approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "please approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "can you please approve this report"
       },
       {
         "intent": "approve",
@@ -1305,7 +1561,7 @@
       },
       {
         "intent": "approve",
-        "text": "approve this report"
+        "text": "yes approve it"
       },
       {
         "intent": "approve",
@@ -1313,30 +1569,6 @@
       },
       {
         "intent": "approve",
-        "text": "i want to approve this report"
-      },
-      {
-        "intent": "approve",
-        "text": "approve this report"
-      },
-      {
-        "intent": "approve",
-        "text": "yes i approve this report"
-      },
-      {
-        "intent": "approve",
-        "text": "i want to approve this report"
-      },
-      {
-        "intent": "approve",
-        "text": "approve this report"
-      },
-      {
-        "intent": "approve",
-        "text": "i want to approve this report"
-      },
-      {
-        "intent": "approve",
         "entities": [
           {
             "start": 8,
@@ -1365,15 +1597,571 @@
       },
       {
         "intent": "approve",
+        "text": "approve"
+      },
+      {
+        "intent": "approve",
+        "entities": [
+          {
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
+      },
+      {
+        "intent": "approve",
+        "entities": [
+          {
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
+      },
+      {
+        "intent": "approve",
+        "entities": [
+          {
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
+      },
+      {
+        "intent": "approve",
+        "entities": [
+          {
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
+      },
+      {
+        "intent": "approve",
         "text": "approve this report"
       },
       {
         "intent": "approve",
-        "text": "i want to approve this report"
+        "text": "approve this report"
       },
       {
         "intent": "approve",
-        "text": "Approve this report"
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "i want to approve a report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve this report"
+      },
+      {
+        "intent": "approve",
+        "entities": [
+          {
+            "start": 8,
+            "end": 33,
+            "value": "approve",
+            "entity": "appr_or_rej"
+          }
+        ],
+        "text": "/approve{\"appr_or_rej\":\"approve\"}"
+      },
+      {
+        "intent": "approve",
+        "text": "approve report"
+      },
+      {
+        "intent": "approve",
+        "text": "approve"
+      },
+      {
+        "intent": "ask_Re-asinging_credit_card",
+        "text": "How can I re assign credit card transactions to another user ?"
+      },
+      {
+        "intent": "ask_Re-asinging_credit_card",
+        "text": "can you tell me how I can re-assign the credit card transactions to a different user"
+      },
+      {
+        "intent": "ask_Re-asinging_credit_card",
+        "text": "i want to re assign credit card transactions.Can you help me ?"
+      },
+      {
+        "intent": "ask_Re-asinging_credit_card",
+        "text": "Explain me how can I reassign the credit card transactions?"
+      },
+      {
+        "intent": "ask_Re-asinging_credit_card",
+        "text": "I wish to re assign credit card transactions."
+      },
+      {
+        "intent": "ask_Re-asinging_credit_card",
+        "text": "I wish to re assign card transactions.Can you help me with this ?"
+      },
+      {
+        "intent": "ask_billable_vs_reimbursable",
+        "text": "How do I determine an expense is reimbursable/billable"
+      },
+      {
+        "intent": "ask_billable_vs_reimbursable",
+        "text": "Can I know if a expense is reimbursable or billable"
+      },
+      {
+        "intent": "ask_billable_vs_reimbursable",
+        "text": "I want to know if expense is a billable one or reimbursable"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "how can i contact support ?"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "Who to contact for support?"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "What is the Support contact number?"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "Can I get the helpline number"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "can you provide me any phone number"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "can you provide me any customer support"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "can you give me any customer care"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "can you provide me any customer care contact number"
+      },
+      {
+        "intent": "ask_contactsupport",
+        "text": "i want to contact support"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "How do I delete Corporate Card Transaction?"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "How can i delete corporate card transaction"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "I want to remove transactions from my corporate card"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "I want to remove transactions from my card"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "remove transactions"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "remove corporate transactions"
+      },
+      {
+        "intent": "ask_delete_corporate_card_tran",
+        "text": "delete corporate card transactions"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a real bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you really a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "what are you, a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "tell me, are you a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a Skynet ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you ai"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you artificial intelligence"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you artificial"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "i guess you are a chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are a robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are ai"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you are chatbot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "you're a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you the bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Hi there, are you the bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you a chat bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you rasa bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Ar you a bot ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you robot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "What are you ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "So I'm here Today to ask one very simple question, what are you ?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real lol"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "cuz you are a bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "oh are you chatbot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you sure that you're a bot?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a BOT"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "who are you"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you bot"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "who are you"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot"
+      },
+      {
+        "intent": "ask_local_vs_Travel",
+        "text": "When I am creating a Request, there is a 'Travel Type' field with two options: 'Local Request' and 'Travel Request'. What is the difference between the two?"
+      },
+      {
+        "intent": "ask_local_vs_Travel",
+        "text": "Whats the difference between local request and travel request"
+      },
+      {
+        "intent": "ask_local_vs_Travel",
+        "text": "Explain me between local and travel request"
+      },
+      {
+        "intent": "ask_local_vs_Travel",
+        "text": "What is the travel type ?"
+      },
+      {
+        "intent": "ask_local_vs_Travel",
+        "text": "what is the difference between local and travel request ?"
+      },
+      {
+        "intent": "ask_view_transactions",
+        "text": "Where can I view transactions from a particular card?"
+      },
+      {
+        "intent": "ask_view_transactions",
+        "text": "How can i view transactions from a particular card"
+      },
+      {
+        "intent": "ask_view_transactions",
+        "text": "I want to view transactions from my card"
+      },
+      {
+        "intent": "ask_view_transactions",
+        "text": "Help me how can I view transactions from my credit card ?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "help"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "help please"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "i don't know what i want"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "I need some help"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "options"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "show me the menu"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "show me what's possible"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "so what can you do"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "so what can you help me with?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what are you good at?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what can I do here"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what can I do with this bot"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what is this bot for"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "cool! can I do something else here?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "help me"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "talk to me!"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "come back"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "how can you help me"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what else can i do"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "are there any other options?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "hm that doesnt quite help me is there anything else you can do?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what can i do here"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what can i do now"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "um what now"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "so now what"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "help?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "now what?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "Great, is there anything else you can do, bot?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what can you do?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "how can you help me?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "can you do anything else?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "i asked you if you can do anything else"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "so what next?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what else can I do here?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "Can you explain me in one sentence what you are doing?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what are the options?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what suti bot can do for me"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "can you please help me"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what are the things you can do"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what this bot can do"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "can you help me"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what i do in  this  chat bot"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what can yo do for me"
       },
       {
         "intent": "attachreceipt",
@@ -1397,6 +2185,14 @@
       },
       {
         "intent": "attachreceipt",
+        "text": "i wish to attach a receipt"
+      },
+      {
+        "intent": "attachreceipt",
+        "text": "accommodate a receipt"
+      },
+      {
+        "intent": "attachreceipt",
         "text": "attach receipt"
       },
       {
@@ -1405,19 +2201,15 @@
       },
       {
         "intent": "attachreceipt",
-        "text": "attach a receipt"
-      },
-      {
-        "intent": "attachreceipt",
         "text": "i have one receipt please attach to this report"
       },
       {
         "intent": "attachreceipt",
-        "text": "i have a receipts"
+        "text": "i have more reciept please attach it also"
       },
       {
         "intent": "attachreceipt",
-        "text": "attach a receipt"
+        "text": "i have a receipts"
       },
       {
         "intent": "attachreceipt",
@@ -1426,6 +2218,26 @@
       {
         "intent": "attachreceipt",
         "text": "I have one more receipt, please add it"
+      },
+      {
+        "intent": "automatic_email_ACH",
+        "text": "How to get an automatic email when a transaction is cancelled at the point of ACH?"
+      },
+      {
+        "intent": "automatic_email_ACH",
+        "text": "Get a automatic email when a transaction is cancelled"
+      },
+      {
+        "intent": "automatic_email_ACH",
+        "text": "I want to get automatic email.Can you help me please."
+      },
+      {
+        "intent": "automatic_email_ACH",
+        "text": "How can I get a email when a transaction is cancelled at the point of ACH"
+      },
+      {
+        "intent": "automatic_email_ACH",
+        "text": "Can you help me in getting automatic email transaction is cancelled"
       },
       {
         "intent": "bye",
@@ -1509,10 +2321,6 @@
       },
       {
         "intent": "bye",
-        "text": "tschüssikowski"
-      },
-      {
-        "intent": "bye",
         "text": "bye!"
       },
       {
@@ -1552,88 +2360,12 @@
         "text": "bye"
       },
       {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "camera",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"camera\"}"
+        "intent": "bye",
+        "text": "bye"
       },
       {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "attach",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"attach\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "camera",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"camera\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 36,
-            "value": "attach",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"attach\"}"
-      },
-      {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
+        "intent": "bye",
+        "text": "bye"
       },
       {
         "intent": "choose",
@@ -1664,12 +2396,12 @@
         "entities": [
           {
             "start": 7,
-            "end": 32,
-            "value": "No",
+            "end": 36,
+            "value": "import",
             "entity": "no_more_receipts"
           }
         ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
+        "text": "/choose{\"no_more_receipts\":\"attach\"}"
       },
       {
         "intent": "choose",
@@ -1684,44 +2416,36 @@
         "text": "/choose{\"no_more_receipts\":\"No\"}"
       },
       {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
+        "intent": "copy_line_items",
+        "text": "How do I copy a line item?"
       },
       {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
+        "intent": "copy_line_items",
+        "text": "Can you help me in copying line items"
       },
       {
-        "intent": "choose",
-        "entities": [
-          {
-            "start": 7,
-            "end": 32,
-            "value": "No",
-            "entity": "no_more_receipts"
-          }
-        ],
-        "text": "/choose{\"no_more_receipts\":\"No\"}"
+        "intent": "copy_line_items",
+        "text": "i want to copy line items"
+      },
+      {
+        "intent": "copy_line_items",
+        "text": "copy line items"
+      },
+      {
+        "intent": "copy_line_items",
+        "text": "help me in copying line items"
       },
       {
         "intent": "createreport",
         "text": "November travel to China"
+      },
+      {
+        "intent": "createreport",
+        "text": "I wish for a new report"
+      },
+      {
+        "intent": "createreport",
+        "text": "hey can u generate a report for me"
       },
       {
         "intent": "createreport",
@@ -1734,7 +2458,7 @@
             "start": 14,
             "end": 23,
             "value": "final_one",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make a report final_one"
@@ -1746,7 +2470,7 @@
             "start": 14,
             "end": 17,
             "value": "XYZ",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make a report XYZ"
@@ -1758,7 +2482,7 @@
             "start": 30,
             "end": 56,
             "value": "Grzandziel - November 2014",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "file a new report with titled Grzandziel - November 2014"
@@ -1770,7 +2494,7 @@
             "start": 25,
             "end": 50,
             "value": "Brandi Jordan EXP 12.2016",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report titled Brandi Jordan EXP 12.2016"
@@ -1782,7 +2506,7 @@
             "start": 24,
             "end": 63,
             "value": "Renne - April 2017 Monthly Expenditures",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with  Renne - April 2017 Monthly Expenditures"
@@ -1798,7 +2522,7 @@
             "start": 16,
             "end": 24,
             "value": "anything",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report anything"
@@ -1810,7 +2534,7 @@
             "start": 26,
             "end": 55,
             "value": "Dual monitor mount for HR rep",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name Dual monitor mount for HR rep"
@@ -1822,7 +2546,7 @@
             "start": 27,
             "end": 56,
             "value": "Zerlina Oppenheim PNC 12.2016",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a new report titled Zerlina Oppenheim PNC 12.2016"
@@ -1834,7 +2558,7 @@
             "start": 24,
             "end": 30,
             "value": "travel",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make a report with name travel"
@@ -1846,7 +2570,7 @@
             "start": 16,
             "end": 41,
             "value": "Brandi Jordan EXP 12.2016",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report Brandi Jordan EXP 12.2016"
@@ -1858,7 +2582,7 @@
             "start": 21,
             "end": 31,
             "value": "ME08312018",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with ME08312018"
@@ -1871,10 +2595,22 @@
         "intent": "createreport",
         "entities": [
           {
+            "start": 26,
+            "end": 52,
+            "value": "business trip to singapore",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "create a report with name business trip to singapore"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
             "start": 24,
             "end": 34,
             "value": "WE11192017",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create report with name WE11192017"
@@ -1886,10 +2622,14 @@
             "start": 21,
             "end": 41,
             "value": "Expenses April 14-29",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
-        "text": "make a report titled Expenses April 14-29- create a custom report"
+        "text": "make a report titled Expenses April 14-29"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a custom report"
       },
       {
         "intent": "createreport",
@@ -1898,7 +2638,7 @@
             "start": 30,
             "end": 40,
             "value": "OA09262017",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "need to generate a report withOA09262017"
@@ -1914,7 +2654,7 @@
             "start": 16,
             "end": 27,
             "value": "finalreport",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report finalreport"
@@ -1926,7 +2666,7 @@
             "start": 31,
             "end": 42,
             "value": "P/E 3/17/18",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "start a new report with titled P/E 3/17/18"
@@ -1950,7 +2690,7 @@
             "start": 26,
             "end": 44,
             "value": "Filip - April 2016",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name Filip - April 2016"
@@ -1962,7 +2702,7 @@
             "start": 23,
             "end": 48,
             "value": "Shiwarski - February 2015",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "file a new report with Shiwarski - February 2015"
@@ -1974,7 +2714,7 @@
             "start": 24,
             "end": 56,
             "value": "Baer - March 2015 - meal at CalU",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with  Baer - March 2015 - meal at CalU"
@@ -1986,7 +2726,7 @@
             "start": 26,
             "end": 42,
             "value": "trip to new york",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name trip to new york"
@@ -1998,7 +2738,7 @@
             "start": 36,
             "end": 56,
             "value": "repeater Ops aug 2-2",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "need to generate a report with name repeater Ops aug 2-2"
@@ -2010,7 +2750,7 @@
             "start": 26,
             "end": 46,
             "value": "Rasky - October 2014",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name Rasky - October 2014"
@@ -2022,7 +2762,7 @@
             "start": 27,
             "end": 39,
             "value": "Netz Mar 5-9",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a document titled Netz Mar 5-9"
@@ -2034,7 +2774,7 @@
             "start": 45,
             "end": 52,
             "value": "meeting",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make a report on my Delhi trip with the name meeting"
@@ -2046,7 +2786,7 @@
             "start": 21,
             "end": 31,
             "value": "ek05062018",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with ek05062018"
@@ -2058,7 +2798,7 @@
             "start": 31,
             "end": 48,
             "value": "trip to Hyderabad",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "file my expenses into a report trip to Hyderabad"
@@ -2070,7 +2810,7 @@
             "start": 28,
             "end": 55,
             "value": "Jeanette Thomas EXP 01.2017",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with titled Jeanette Thomas EXP 01.2017"
@@ -2082,7 +2822,7 @@
             "start": 23,
             "end": 33,
             "value": "ez01142019",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with ez01142019"
@@ -2094,7 +2834,7 @@
             "start": 21,
             "end": 41,
             "value": "Hall - February 2015",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with Hall - February 2015"
@@ -2106,7 +2846,7 @@
             "start": 39,
             "end": 50,
             "value": "finalreport",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "I travelled to bangalore.Make a report finalreport"
@@ -2126,7 +2866,7 @@
             "start": 29,
             "end": 38,
             "value": "hyderabad",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "need to create a report with hyderabad"
@@ -2138,7 +2878,7 @@
             "start": 24,
             "end": 39,
             "value": "Bill - Dec 2018",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with  Bill - Dec 2018"
@@ -2162,7 +2902,7 @@
             "start": 26,
             "end": 37,
             "value": "Dec 17 Cell",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name Dec 17 Cell"
@@ -2174,7 +2914,7 @@
             "start": 27,
             "end": 49,
             "value": "Conway - February 2019",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "createa report with titled Conway - February 2019"
@@ -2186,7 +2926,7 @@
             "start": 24,
             "end": 52,
             "value": "HR Charges for August 2017-1",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "file my expenses titled HR Charges for August 2017-1"
@@ -2198,7 +2938,7 @@
             "start": 26,
             "end": 38,
             "value": "P/E 06/17/18",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create report with titled P/E 06/17/18"
@@ -2210,7 +2950,7 @@
             "start": 26,
             "end": 36,
             "value": "ez01142019",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create report with titled ez01142019"
@@ -2222,7 +2962,7 @@
             "start": 26,
             "end": 40,
             "value": "hyderabad_trip",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name hyderabad_trip"
@@ -2234,7 +2974,7 @@
             "start": 28,
             "end": 52,
             "value": "Bishop - December 2018-1",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with name Bishop - December 2018-1"
@@ -2254,7 +2994,7 @@
             "start": 28,
             "end": 45,
             "value": "Boyd - April 2017",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with name Boyd - April 2017"
@@ -2270,7 +3010,7 @@
             "start": 31,
             "end": 52,
             "value": "Underwood - June 2015",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "need to generate a report with Underwood - June 2015"
@@ -2282,7 +3022,7 @@
             "start": 26,
             "end": 51,
             "value": "Feldmeier November 2015-1",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name Feldmeier November 2015-1"
@@ -2294,7 +3034,7 @@
             "start": 27,
             "end": 43,
             "value": "trip to new york",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name \"trip to new york\""
@@ -2310,7 +3050,7 @@
             "start": 19,
             "end": 31,
             "value": "W/E 06/20/18",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make a report with W/E 06/20/18"
@@ -2322,7 +3062,7 @@
             "start": 21,
             "end": 41,
             "value": "Expenses April 14-29",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make a report titled Expenses April 14-29- report"
@@ -2346,7 +3086,7 @@
             "start": 28,
             "end": 39,
             "value": "dec 17 cell",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with name Dec 17 Cell"
@@ -2358,7 +3098,7 @@
             "start": 24,
             "end": 51,
             "value": "Jeanette Thomas PNC 01.2017",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "need to create a report Jeanette Thomas PNC 01.2017"
@@ -2370,7 +3110,7 @@
             "start": 28,
             "end": 60,
             "value": "Baer - March 2015 - meal at CalU",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a report with name Baer - March 2015 - meal at CalU"
@@ -2386,7 +3126,7 @@
             "start": 19,
             "end": 32,
             "value": "W/E 9/07/2017",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create report with W/E 9/07/2017"
@@ -2398,7 +3138,7 @@
             "start": 26,
             "end": 37,
             "value": "firstreport",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name firstreport"
@@ -2410,7 +3150,7 @@
             "start": 26,
             "end": 44,
             "value": "Wachter - May 2016",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report with name Wachter - May 2016"
@@ -2422,7 +3162,7 @@
             "start": 16,
             "end": 39,
             "value": "hanschen - october 2014",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "create a report Hanschen - October 2014"
@@ -2434,7 +3174,7 @@
             "start": 22,
             "end": 45,
             "value": "wolfe - november 2014 - 1",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "generate a new report Wolfe - November 2014-1"
@@ -2446,10 +3186,114 @@
             "start": 34,
             "end": 45,
             "value": "Begium Trip",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "Can you create a report with name Begium Trip"
+      },
+      {
+        "intent": "createreport",
+        "text": "hey can you please build a report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 37,
+            "value": "dec - jan2015",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "create a report with name dec-jan2015"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 37,
+            "value": "my birthday",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "create a report with name my birthday"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 40,
+            "value": "david - jan 2015",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "create a report with name david-jan 2015"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 48,
+            "end": 61,
+            "value": "dhoni - mar 569",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "hey can you generate a report form me with name dhoni-mar 569"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 33,
+            "end": 45,
+            "value": "lasya - trip 1",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "hey can build a report with name lasya-trip 1"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 26,
+            "end": 29,
+            "value": "feb",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "create a report with name feb"
+      },
+      {
+        "intent": "createreport",
+        "text": "i did like to build a report"
+      },
+      {
+        "intent": "createreport",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "repo 245",
+            "entity": "crt_name"
+          }
+        ],
+        "text": "hey can make a report with name repo 245"
+      },
+      {
+        "intent": "createreport",
+        "text": "i wish to make a report"
+      },
+      {
+        "intent": "createreport",
+        "text": "create a report"
       },
       {
         "intent": "deactivate_report",
@@ -2512,6 +3356,106 @@
         "text": "i dont want to add transactions"
       },
       {
+        "intent": "deactivate_report",
+        "text": "i change my mind"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i dont want to create"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i want to work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "I dont need now"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "No Need to create"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "dont generate it"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "dont create it"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "I want to work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i dont want to do this"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "stop the current work"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "stop the process"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i changed my mind"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i changed my mind"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "stop this"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i changed my mind"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "dont create a report"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "hey stop ,i will work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "do it later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "hold this right now"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "we will do this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i dont want to do this now"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "skip this process"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "skip this"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "i will work on this later"
+      },
+      {
+        "intent": "deactivate_report",
+        "text": "dont do this"
+      },
+      {
         "intent": "deny",
         "text": "no"
       },
@@ -2525,7 +3469,15 @@
       },
       {
         "intent": "deny",
+        "text": "Naa"
+      },
+      {
+        "intent": "deny",
         "text": "never"
+      },
+      {
+        "intent": "deny",
+        "text": "nothing"
       },
       {
         "intent": "deny",
@@ -2542,10 +3494,6 @@
       {
         "intent": "deny",
         "text": "i'm afraid not"
-      },
-      {
-        "intent": "deny",
-        "text": "not required"
       },
       {
         "intent": "deny",
@@ -2586,6 +3534,10 @@
       {
         "intent": "deny",
         "text": "deny"
+      },
+      {
+        "intent": "deny",
+        "text": "nope"
       },
       {
         "intent": "deny",
@@ -2633,14 +3585,6 @@
       },
       {
         "intent": "deny",
-        "text": "i don't want to"
-      },
-      {
-        "intent": "deny",
-        "text": "i don't want either of those"
-      },
-      {
-        "intent": "deny",
         "text": "nah thanks"
       },
       {
@@ -2650,26 +3594,6 @@
       {
         "intent": "deny",
         "text": "neither of these"
-      },
-      {
-        "intent": "deny",
-        "text": "I  dont want to create lineitem"
-      },
-      {
-        "intent": "deny",
-        "text": "I dont need now"
-      },
-      {
-        "intent": "deny",
-        "text": "No Need to create a lineitem"
-      },
-      {
-        "intent": "deny",
-        "text": "dont generate a lineitem"
-      },
-      {
-        "intent": "deny",
-        "text": "dont create it"
       },
       {
         "intent": "deny",
@@ -2685,75 +3609,27 @@
       },
       {
         "intent": "deny",
-        "entities": [
-          {
-            "start": 5,
-            "end": 29,
-            "value": "Reject",
-            "entity": "appr_or_rej"
-          }
-        ],
-        "text": "/deny{\"appr_or_rej\":\"Reject\"}"
-      },
-      {
-        "intent": "deny",
-        "text": "no"
-      },
-      {
-        "intent": "deny",
-        "entities": [
-          {
-            "start": 5,
-            "end": 29,
-            "value": "reject",
-            "entity": "appr_or_rej"
-          }
-        ],
-        "text": "/deny{\"appr_or_rej\":\"reject\"}"
-      },
-      {
-        "intent": "deny",
         "text": "i dont"
       },
       {
-        "intent": "deny",
-        "entities": [
-          {
-            "start": 5,
-            "end": 29,
-            "value": "submit",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/deny{\"adlt_or_sub\":\"submit\"}"
+        "intent": "email_notif",
+        "text": "If an approver edits something on an expense report, does an email notification get sent to the submitter"
       },
       {
-        "intent": "deny",
-        "text": "dont submit the report"
+        "intent": "email_notif",
+        "text": "When does an email notification sent?"
       },
       {
-        "intent": "deny",
-        "text": "save as draft"
+        "intent": "email_notif",
+        "text": "In which cases will an approver get the email notifications"
       },
       {
-        "intent": "deny",
-        "text": "save as draft I want to work on this later"
+        "intent": "email_notif",
+        "text": "An expense report gets edited.Will the submitter get a notification"
       },
       {
-        "intent": "deny",
-        "text": "I want to work on this later"
-      },
-      {
-        "intent": "deny",
-        "text": "no receipt"
-      },
-      {
-        "intent": "deny",
-        "text": "i dont"
-      },
-      {
-        "intent": "deny",
-        "text": "/deny"
+        "intent": "email_notif",
+        "text": "Will your system nnotifies the submitter when an expense report gets edited"
       },
       {
         "intent": "enterdata",
@@ -2778,7 +3654,7 @@
             "start": 15,
             "end": 18,
             "value": "XYZ",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "report name is XYZ"
@@ -2838,7 +3714,7 @@
             "start": 17,
             "end": 28,
             "value": "firstreport",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "make the name as firstreport"
@@ -2850,7 +3726,7 @@
             "start": 8,
             "end": 17,
             "value": "extrem123",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "name it extrem123"
@@ -2870,6 +3746,10 @@
       {
         "intent": "enterdata",
         "text": "hyderabad"
+      },
+      {
+        "intent": "enterdata",
+        "text": "business trip 2018"
       },
       {
         "intent": "enterdata",
@@ -3238,7 +4118,7 @@
             "start": 13,
             "end": 16,
             "value": "xyz",
-            "entity": "name"
+            "entity": "crt_name"
           }
         ],
         "text": "New trip for xyz"
@@ -3412,8 +4292,212 @@
         "text": "second report"
       },
       {
-        "intent": "go_to_approvals",
-        "text": "/go_to_approvals"
+        "intent": "enterdata",
+        "text": "1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second"
+      },
+      {
+        "intent": "enterdata",
+        "text": "correct information"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "none"
+      },
+      {
+        "intent": "enterdata",
+        "text": "nokia summit"
+      },
+      {
+        "intent": "enterdata",
+        "text": "select first one"
+      },
+      {
+        "intent": "enterdata",
+        "text": "looks good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "select demo for me please"
+      },
+      {
+        "intent": "enterdata",
+        "entities": [
+          {
+            "start": 18,
+            "end": 27,
+            "value": "june 2018",
+            "entity": "name"
+          }
+        ],
+        "text": "select the report June 2018"
+      },
+      {
+        "intent": "enterdata",
+        "text": "looks goood"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fine details"
+      },
+      {
+        "intent": "enterdata",
+        "text": "david-jan-1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "looks good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "great work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "france meet 2019"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no reasons"
+      },
+      {
+        "intent": "enterdata",
+        "text": "great work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "no comments"
+      },
+      {
+        "intent": "enterdata",
+        "text": "nice work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "not impressed"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "third"
+      },
+      {
+        "intent": "enterdata",
+        "text": "1"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "looks good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "third"
+      },
+      {
+        "intent": "enterdata",
+        "text": "march"
+      },
+      {
+        "intent": "enterdata",
+        "text": "march 13th"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first  report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "travel to china"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "looks good"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "i want first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "2"
+      },
+      {
+        "intent": "enterdata",
+        "text": "looks fine"
+      },
+      {
+        "intent": "enterdata",
+        "text": "second report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "first report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "third report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "3"
+      },
+      {
+        "intent": "enterdata",
+        "text": "great work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "fifth report"
+      },
+      {
+        "intent": "enterdata",
+        "text": "nice work"
+      },
+      {
+        "intent": "enterdata",
+        "text": "3"
       },
       {
         "intent": "go_to_approvals",
@@ -3421,91 +4505,15 @@
       },
       {
         "intent": "go_to_approvals",
-        "text": "go to approvals"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "goto approval page"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "navigate to approval page"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "goto approvals"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "go to approval page"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "goto approval page"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "/go_to_approvals"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "/go_to_approvals"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "navigate to approvals page"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "i want to go to approval page"
-      },
-      {
-        "intent": "go_to_approvals",
-        "text": "navigate to approval page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "/go_to_pendingrports"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "/go_to_pendingrports"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "go to pending reports"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "goto pendingreports page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "navigate to pending reports page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "goto pendingreports"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "go to pendingreports page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "go to pending reports page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "goto  pending reports page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "goto  pendingreports page"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "goto pending reports"
+        "entities": [
+          {
+            "start": 16,
+            "end": 37,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "/go_to_approvals{\"navto\":\"approvals\"}"
       },
       {
         "intent": "go_to_pendingreports",
@@ -3513,15 +4521,15 @@
       },
       {
         "intent": "go_to_pendingreports",
-        "text": "/go_to_pendingreports"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "/go_to_pendingreports"
-      },
-      {
-        "intent": "go_to_pendingreports",
-        "text": "navigate to pending reports"
+        "entities": [
+          {
+            "start": 21,
+            "end": 39,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "/go_to_pendingreports{\"navto\":\"drafts\"}"
       },
       {
         "intent": "greet",
@@ -3805,11 +4813,7 @@
       },
       {
         "intent": "greet",
-        "text": "hi"
-      },
-      {
-        "intent": "greet",
-        "text": "hi"
+        "text": "hey hi"
       },
       {
         "intent": "greet",
@@ -3826,78 +4830,6 @@
       {
         "intent": "init",
         "text": "\\init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
-      },
-      {
-        "intent": "init",
-        "text": "init"
       },
       {
         "intent": "init",
@@ -3996,8 +4928,1984 @@
         "text": "entertainment"
       },
       {
-        "intent": "line_category",
-        "text": "entertainment"
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "open settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "open my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "open receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "open submitted"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "open my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "open my drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 17,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "open transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to my drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to submitted"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 21,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 18,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to submitted"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "I want to go to submitted reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "I want to go to receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "I want to go to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 27,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to my drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to submitted"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "open submitted reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 14,
+            "end": 26,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to my drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 23,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "move to the screen of settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "move to the screen of drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "move to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 25,
+            "end": 37,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "take me to the screen of transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 23,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "lets go to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "lets go to receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "lets go to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "show me transactions in the app"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "show me drafts in the app"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "show me in the app receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "show me in the app drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "i wish to open receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "i wish to open drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you please move to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey can you please open drafts for me"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you please move to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 18,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 17,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "open transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "open settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "nav to drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "nav to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want go to receipts page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to submitted reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to go to submitted reports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open drafts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "nav to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "nav to approval"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "open approval"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to approval"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "move to approval"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "approve",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to approve page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to approval page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 23,
+            "end": 32,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you please move to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 24,
+            "end": 32,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey can you please open approval for me"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to approvals in the app"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "take me to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 17,
+            "end": 26,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "I wish to go for approvals page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 24,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "I wish to open approvals in the app"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "show me approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "send me to approvals page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to approval page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 13,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto approval page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to approvals page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to go to approval page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "approval",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to approval page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "open approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "Take me to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 18,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open my approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 24,
+            "end": 33,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey can you navigate to approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 27,
+            "end": 36,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey can you please open my approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 19,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto pendingreports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 27,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to pending reports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 19,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto pendingreports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to pendingreports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 21,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to pending reports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 21,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto  pending reports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto  pendingreports page"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 21,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "open pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 27,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 7,
+            "end": 22,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "nav to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 26,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "take me to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 23,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "move to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 19,
+            "end": 34,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you take me to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 18,
+            "end": 33,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "please take me to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 26,
+            "end": 41,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you please take me to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 31,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you move to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 26,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "navigate to pendingreports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you please open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "camera open"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera for me"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 10,
+            "end": 21,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "camera open"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "will you open my open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you open my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera for me"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you please open my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera for me"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to open my  camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to open my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "add from camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "take me to camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 10,
+            "end": 28,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "I want to navigate to camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 10,
+            "end": 27,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "I want to capture a receipt"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 10,
+            "end": 24,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "I want to take a receipt"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 18,
+            "end": 27,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey can you open  my camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 20,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "goto pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey open pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "move to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "settings",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey send me to settings"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "can you move to receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 18,
+            "end": 30,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "hey can you go to transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "approvals",
+            "entity": "navto"
+          }
+        ],
+        "text": "open approvals"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "open my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 6,
+            "end": 21,
+            "value": "drafts",
+            "entity": "navto"
+          }
+        ],
+        "text": "go to pending reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 17,
+            "end": 29,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "i want to see my transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "add from my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "add lineitem from my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "receipts",
+            "entity": "navto"
+          }
+        ],
+        "text": "i wish to add from my receipts"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "submitted",
+            "entity": "navto"
+          }
+        ],
+        "text": "open submitted reports"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "from camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 23,
+            "end": 35,
+            "value": "transactions",
+            "entity": "navto"
+          }
+        ],
+        "text": "i did like to add from transactions"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "add from camera"
+      },
+      {
+        "intent": "navigation",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "camera",
+            "entity": "navto"
+          }
+        ],
+        "text": "open camera"
       },
       {
         "intent": "noreceipts",
@@ -4013,14 +6921,6 @@
       },
       {
         "intent": "noreceipts",
-        "text": "no receipts"
-      },
-      {
-        "intent": "noreceipts",
-        "text": "no receipts"
-      },
-      {
-        "intent": "noreceipts",
         "text": "no receipts i have"
       },
       {
@@ -4033,31 +6933,11 @@
       },
       {
         "intent": "noreceipts",
-        "text": "no receipts"
-      },
-      {
-        "intent": "noreceipts",
         "text": "i have no receipts"
       },
       {
         "intent": "noreceipts",
-        "text": "no receipts"
-      },
-      {
-        "intent": "noreceipts",
-        "text": "no receipts"
-      },
-      {
-        "intent": "noreceipts",
         "text": "i dont have any receipts"
-      },
-      {
-        "intent": "noreceipts",
-        "text": "Nope"
-      },
-      {
-        "intent": "noreceipts",
-        "text": "no receipts"
       },
       {
         "intent": "noreceipts",
@@ -4069,95 +6949,47 @@
       },
       {
         "intent": "noreceipts",
-        "text": "no receipts"
-      },
-      {
-        "intent": "noreceipts",
         "text": "i dont have any receipts"
       },
       {
-        "intent": "opencamera",
-        "text": "open camera"
+        "intent": "notif_fin_users",
+        "text": "Sending Notifications to Finance Users"
       },
       {
-        "intent": "opencamera",
-        "text": "can you please open camera"
+        "intent": "notif_fin_users",
+        "text": "How to send notifications to finance users"
       },
       {
-        "intent": "opencamera",
-        "text": "go to camera"
+        "intent": "notif_fin_users",
+        "text": "I want to notify finance users"
       },
       {
-        "intent": "opencamera",
-        "text": "camera open"
+        "intent": "notif_fin_users",
+        "text": "I wish to notify finance users"
       },
       {
-        "intent": "opencamera",
-        "text": "open camera for me"
+        "intent": "notif_fin_users",
+        "text": "can you tell me how to send or notify finance users"
       },
       {
-        "intent": "opencamera",
-        "text": "i want to open camera"
+        "intent": "notif_new_users",
+        "text": "Sending Notifications to New Users"
       },
       {
-        "intent": "opencamera",
-        "text": "open my camera"
+        "intent": "notif_new_users",
+        "text": "How to send notifications to new users"
       },
       {
-        "intent": "opencamera",
-        "text": "open camera"
+        "intent": "notif_new_users",
+        "text": "I want to notify new users"
       },
       {
-        "intent": "opencamera",
-        "text": "camera"
+        "intent": "notif_new_users",
+        "text": "I wish to notify new users"
       },
       {
-        "intent": "opencamera",
-        "text": "camera open"
-      },
-      {
-        "intent": "opencamera",
-        "text": "will you open my open camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "can you open my camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "open camera for me"
-      },
-      {
-        "intent": "opencamera",
-        "text": "open camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "can you please open my camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "i want to open camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "open camera for me"
-      },
-      {
-        "intent": "opencamera",
-        "text": "i want to open my  camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "i want to open my camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "goto my camera"
-      },
-      {
-        "intent": "opencamera",
-        "text": "open my camera"
+        "intent": "notif_new_users",
+        "text": "can you tell me how to send or notify new users"
       },
       {
         "intent": "pendingreport",
@@ -4166,10 +6998,6 @@
       {
         "intent": "pendingreport",
         "text": "show drafts"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show pending reports"
       },
       {
         "intent": "pendingreport",
@@ -4197,11 +7025,19 @@
       },
       {
         "intent": "pendingreport",
+        "text": "show me my drafts"
+      },
+      {
+        "intent": "pendingreport",
         "text": "show me all the drafts"
       },
       {
         "intent": "pendingreport",
         "text": "show all pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all my pending reports"
       },
       {
         "intent": "pendingreport",
@@ -4233,10 +7069,6 @@
       },
       {
         "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
         "text": "show me peding reports"
       },
       {
@@ -4257,19 +7089,7 @@
       },
       {
         "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show pending reports"
-      },
-      {
-        "intent": "pendingreport",
         "text": "get all pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show pending reports"
       },
       {
         "intent": "pendingreport",
@@ -4281,43 +7101,7 @@
       },
       {
         "intent": "pendingreport",
-        "text": "show pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
         "text": "get my drafts"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show all my pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show all pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show pending reports"
-      },
-      {
-        "intent": "pendingreport",
-        "text": "show all pending reports"
       },
       {
         "intent": "pendingreport",
@@ -4350,6 +7134,138 @@
       {
         "intent": "pendingreport",
         "text": "display pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all of my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "can you display me the drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "can you display drafts for me"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show me drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "hey can you display  drafts for me"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i want to know how many drafts i have"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "hey can you show me drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show all my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "hey can you show my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "I want to see the drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "I'd like you to display drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "how many pending drafts i have"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i did like to see my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i'd like to see my pending reports"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i did like to see my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i'd like to see my drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i did like to see  drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i'd like to see  drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "i did like to see my pending drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "show pending drafts"
+      },
+      {
+        "intent": "pendingreport",
+        "text": "listout my all pending reports"
+      },
+      {
+        "intent": "reimbersebment_to_employees",
+        "text": "How do I initiate the reimbursement to employees once the expense report has been approved?"
+      },
+      {
+        "intent": "reimbersebment_to_employees",
+        "text": "How we do reimbursement once the report is approved"
+      },
+      {
+        "intent": "reimbersebment_to_employees",
+        "text": "Tell mw how to reimbursement once the report is approved"
+      },
+      {
+        "intent": "reimbersebment_to_employees",
+        "text": "Can you guide me how the reimbursement works ?"
+      },
+      {
+        "intent": "reimbersebment_to_employees",
+        "text": "Help me in reimbursing once the expense report is approved"
       },
       {
         "intent": "reject",
@@ -4385,19 +7301,7 @@
       },
       {
         "intent": "reject",
-        "text": "reject this report"
-      },
-      {
-        "intent": "reject",
         "text": "i want to reject this report"
-      },
-      {
-        "intent": "reject",
-        "text": "reject this report"
-      },
-      {
-        "intent": "reject",
-        "text": "reject this report"
       },
       {
         "intent": "reject",
@@ -4417,7 +7321,111 @@
       },
       {
         "intent": "reject",
+        "text": "reject   this   report"
+      },
+      {
+        "intent": "reject",
         "text": "reject this report"
+      },
+      {
+        "intent": "reject",
+        "text": "i want to reject this report"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select demo"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select the report with name June 2018"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select first one"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select second one"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select third one"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select last"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "can you please select the first report"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "can you please select the demo report"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "please select demo"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select import"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select the report titled  summit 2018"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select first"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select first please"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select the latest one"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "the latest one please"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "first one please"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "second one please"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "mark the first one"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select a report with the name demo please"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select report IMport"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select first report"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "please select third report"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "i want to select third report"
+      },
+      {
+        "intent": "selectionreport",
+        "text": "select first report"
       },
       {
         "intent": "showapprvls",
@@ -4453,7 +7461,11 @@
       },
       {
         "intent": "showapprvls",
-        "text": "approve reports"
+        "text": "reports waiting for approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "reports waiting my approve"
       },
       {
         "intent": "showapprvls",
@@ -4473,7 +7485,7 @@
       },
       {
         "intent": "showapprvls",
-        "text": "show all approve reports"
+        "text": "yes.show me approvals"
       },
       {
         "intent": "showapprvls",
@@ -4482,6 +7494,10 @@
       {
         "intent": "showapprvls",
         "text": "show me all approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show me all approval reports"
       },
       {
         "intent": "showapprvls",
@@ -4509,10 +7525,6 @@
       },
       {
         "intent": "showapprvls",
-        "text": "show approval reports"
-      },
-      {
-        "intent": "showapprvls",
         "text": "show me approvals"
       },
       {
@@ -4526,10 +7538,6 @@
       {
         "intent": "showapprvls",
         "text": "show approvals"
-      },
-      {
-        "intent": "showapprvls",
-        "text": "show all approve reports"
       },
       {
         "intent": "showapprvls",
@@ -4576,6 +7584,50 @@
         "text": "give my approvals reports"
       },
       {
+        "intent": "showapprvls",
+        "text": "show approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show all approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "i want to see my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "display my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "i did like to see my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "i'd like to see my approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "i did like to see my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "i'd like to see my approve reports"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approvals"
+      },
+      {
+        "intent": "showapprvls",
+        "text": "show approvals"
+      },
+      {
         "intent": "submit",
         "text": "i want to submit this report"
       },
@@ -4594,6 +7646,10 @@
       {
         "intent": "submit",
         "text": "will you submit this report for me"
+      },
+      {
+        "intent": "submit",
+        "text": "I wish to submit this report"
       },
       {
         "intent": "submit",
@@ -4617,26 +7673,6 @@
       },
       {
         "intent": "submit",
-        "text": "i want to submit this report"
-      },
-      {
-        "intent": "submit",
-        "text": "i want to submit a report"
-      },
-      {
-        "intent": "submit",
-        "entities": [
-          {
-            "start": 7,
-            "end": 31,
-            "value": "submit",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
-      },
-      {
-        "intent": "submit",
         "entities": [
           {
             "start": 7,
@@ -4654,18 +7690,6 @@
       {
         "intent": "submit",
         "text": "submit a report"
-      },
-      {
-        "intent": "submit",
-        "entities": [
-          {
-            "start": 7,
-            "end": 31,
-            "value": "submit",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
       },
       {
         "intent": "submit",
@@ -4677,15 +7701,11 @@
       },
       {
         "intent": "submit",
-        "entities": [
-          {
-            "start": 7,
-            "end": 31,
-            "value": "submit",
-            "entity": "adlt_or_sub"
-          }
-        ],
-        "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+        "text": "submit a report"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit a report"
       },
       {
         "intent": "submit",
@@ -4698,6 +7718,14 @@
           }
         ],
         "text": "/submit{\"adlt_or_sub\":\"submit\"}"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit this report"
+      },
+      {
+        "intent": "submit",
+        "text": "i want to submit a report"
       },
       {
         "intent": "submit",
@@ -4705,16 +7733,219 @@
       },
       {
         "intent": "submit",
-        "text": "i want to submit a report"
+        "text": "submit this report dude"
+      },
+      {
+        "intent": "submit",
+        "text": "submit a report"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "Show me my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show me submitted report"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "reports submitted by me"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show the submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show the submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show me my submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show me all the submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show all submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show all my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "retrieve submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "get all submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "get my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "list out all my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "get my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show me all submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "list out my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "get all submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "list out my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "get my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "i want to know my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "I want to know my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "how many submitted reports i have"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "can you show me how many submitted reports i have"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "can you show me the submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "what about my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "give my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "display submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show all of my submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "can you display me the submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "can you display submitted reports for me"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show me submitted"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "I want to see submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "display me my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "hey i want to see my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "show submiited reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "can you display my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "i did like to see my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "i'd like to see my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "i did like to see my submitted reports"
+      },
+      {
+        "intent": "submittedreport",
+        "text": "i want  to see my submitted report"
       }
     ],
     "regex_features": [],
     "lookup_tables": [],
     "entity_synonyms": [
       {
-        "value": "addlineitem",
+        "value": "camera",
         "synonyms": [
-          "{\"adlt_or_sub\":\"addlineitem\"}"
+          "{\"navto\":\"camera\"}",
+          "capture",
+          "{\"no_more_receipts\":\"camera\"}",
+          "open camera",
+          "navigate to camera",
+          "capture a receipt",
+          "take a receipt",
+          "my camera"
+        ]
+      },
+      {
+        "value": "receipt",
+        "synonyms": [
+          "{\"navto\":\"receipt\"}"
+        ]
+      },
+      {
+        "value": "transaction",
+        "synonyms": [
+          "{\"navto\":\"transaction\"}"
         ]
       },
       {
@@ -4736,21 +7967,9 @@
         ]
       },
       {
-        "value": "Approve",
-        "synonyms": [
-          "{\"appr_or_rej\":\"Approve\"}"
-        ]
-      },
-      {
         "value": "approve",
         "synonyms": [
           "{\"appr_or_rej\":\"approve\"}"
-        ]
-      },
-      {
-        "value": "camera",
-        "synonyms": [
-          "{\"no_more_receipts\":\"camera\"}"
         ]
       },
       {
@@ -4790,9 +8009,48 @@
         ]
       },
       {
-        "value": "Reject",
+        "value": "dec - jan2015",
         "synonyms": [
-          "{\"appr_or_rej\":\"Reject\"}"
+          "dec-jan2015"
+        ]
+      },
+      {
+        "value": "david - jan 2015",
+        "synonyms": [
+          "david-jan 2015"
+        ]
+      },
+      {
+        "value": "dhoni - mar 569",
+        "synonyms": [
+          "dhoni-mar 569"
+        ]
+      },
+      {
+        "value": "lasya - trip 1",
+        "synonyms": [
+          "lasya-trip 1"
+        ]
+      },
+      {
+        "value": "june 2018",
+        "synonyms": [
+          "June 2018"
+        ]
+      },
+      {
+        "value": "approvals",
+        "synonyms": [
+          "{\"navto\":\"approvals\"}"
+        ]
+      },
+      {
+        "value": "drafts",
+        "synonyms": [
+          "{\"navto\":\"drafts\"}",
+          "pending",
+          "pendingreports",
+          "pending reports"
         ]
       },
       {
@@ -4805,6 +8063,24 @@
         "value": "submit",
         "synonyms": [
           "{\"adlt_or_sub\":\"submit\"}"
+        ]
+      },
+      {
+        "value": "Approve",
+        "synonyms": [
+          "{\"appr_or_rej\":\"Approve\"}"
+        ]
+      },
+      {
+        "value": "Reject",
+        "synonyms": [
+          "{\"appr_or_rej\":\"Reject\"}"
+        ]
+      },
+      {
+        "value": "addlineitem",
+        "synonyms": [
+          "{\"adlt_or_sub\":\"addlineitem\"}"
         ]
       },
       {

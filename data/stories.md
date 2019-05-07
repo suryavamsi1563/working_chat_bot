@@ -1,1707 +1,419 @@
 ## story 1
 * init
     - action_first_message
-    - followup{"name": "action_pending_report"}
+## appr+pending+nav camera
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "417.72", "compexpid": "E000010", "crtuserid": "9364", "currency": "USD", "expdt": "Dec 4, 2018", "expid": 55611, "expname": "IMport", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* pendingreport
     - action_pending_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "travType": "Expense"}]}
+    - slot{"name": "fdf"}
+    - slot{"expid": 56453}
+    - slot{"compexpid": "E000299"}
+    - slot{"appr_or_pend": "pend"}
     - followup{"name": "utter_ask_addline_or_submit"}
     - utter_ask_addline_or_submit
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
     - reset_slots
-    - utter_okay
-    
-## Generated Story -3585865023927045001
 
-* greet
-    - utter_greet
+## appr+crt rpt +add litm +nav camera
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "417.72", "compexpid": "E000010", "crtuserid": "9364", "currency": "USD", "expdt": "Dec 4, 2018", "expid": 55611, "expname": "IMport", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"crt_name": "david-jan-1"}
+    - slot{"compexpid": "E000303"}
+    - slot{"expid": 56458}
+    - slot{"name": "david-jan-1"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots
+
+## apprr+nav drafts
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "417.72", "compexpid": "E000010", "crtuserid": "9364", "currency": "USD", "expdt": "Dec 4, 2018", "expid": 55611, "expname": "IMport", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* navigation{"navto": "drafts"}
+    - slot{"navto": "drafts"}
+    - action_navigate
+    - slot{"navto": null}
+
+## appr+nav appr
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - followup{"name": "action_listen"}
+* go_to_approvals{"navto": "approvals"}
+    - slot{"navto": "approvals"}
+    - action_navigate
+    - slot{"navto": null}
+
+## appr+pending+nav drft
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - followup{"name": "action_listen"}
+* pendingreport
+    - action_pending_report
+    - followup{"name": "action_listen"}
+* go_to_pendingreports{"navto": "drafts"}
+    - slot{"navto": "drafts"}
+    - action_navigate
+    - slot{"navto": null}
+
+## appr+crrt rpt+ add litm nav camera+ appr+approve 
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"crt_name": "david-jan-1"}
+    - slot{"compexpid": "E000303"}
+    - slot{"expid": 56458}
+    - slot{"name": "david-jan-1"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* approve{"appr_or_rej": "approve"}
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "looks goood"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
     - utter_do
 
+## appr+apprve
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000177"}
-    - slot{"expid": 56297}
-    - followup{"name": "action_listen"}
-* affirm{"appr_or_rej": "approve"}
+* approve{"appr_or_rej": "approve"}
     - slot{"appr_or_rej": "approve"}
     - approve_report_form
     - form{"name": "approve_report_form"}
     - slot{"requested_slot": "comments"}
 * form: enterdata
     - form: approve_report_form
-    - slot{"comments": "Very good work"}
+    - slot{"comments": "fine details"}
     - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-## Generated Story 1701616164937545232
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "camera"}
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "camera"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "No"}
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "No"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-<!-- ----- prasanth work------ -->
-## Generated Story 8013699853458311246
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "nov 2016"}
-    - slot{"compexpid": "E000194"}
-    - slot{"expid": 56321}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "attach"}
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "attach"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-
-## Generated Story -2313946811660095926
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* greet
-    - utter_greet
     - utter_do
 
-## Generated Story -8340467822388395327
+## appr+crrt rpt+addlitm nav rec+pending+sel rpt+nav rec+appr+apprve
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* bye
-    - utter_goodbye
-
-## Generated Story 1
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub": "submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-## Generated Story 2942844647825540147
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "december 2015"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "camera"}
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "camera"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "attach"}
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "attach"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-
-## Generated Story 8641464499929981919
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addlineitem
-    - action_addlineitem_to_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "camera"}
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "camera"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "attach"}
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "attach"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-## Generated Story -9083439832207100483
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-
-## Generated Story 1810774146043363969
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
 * createreport
     - create_report_form
     - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
+    - slot{"requested_slot": "crt_name"}
 * form: enterdata
     - form: create_report_form
-    - slot{"name": "feb_mar-2019"}
-    - slot{"compexpid": "E000195"}
-    - slot{"expid": 56324}
+    - slot{"crt_name": "david-jan-1"}
+    - slot{"compexpid": "E000303"}
+    - slot{"expid": 56458}
+    - slot{"name": "david-jan-1"}
+    - form: followup{"name": "utter_ask_addline"}
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* attachreceipt
-    - action_attach_receipt
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-
-* deny
-    - utter_okay
-    - action_slot_reset
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-## Generated Story 449044272276413869
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
+    - utter_ask_addline
+* addlineitem{"navto": "receipt"}
+    - slot{"navto": "receipt"}
+    - action_navigate
+    - reset_slots
 * pendingreport
     - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000195", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56324, "expname": "feb_mar-2019", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000303", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56458, "expname": "david-jan-1", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000302", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56457, "expname": "dec_mar2564", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000301", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56456, "expname": "my birthday", "reportType": "report", "travType": "Expense"}]}
     - slot{"appr_or_pend": "pend"}
     - followup{"name": "action_listen"}
-* enterdata
+* selectionreport
     - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub": "submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve{"appr_or_rej": "approve"}
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay   
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset     
-## Generated Story 4700216445743528784
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "test 1233"}
-    - slot{"compexpid": "E000198"}
-    - slot{"expid": 56329}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve{"appr_or_rej": "approve"}
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay   
-    - action_slot_reset 
-## Generated Story -3814962485315233730
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "hims meet"}
-    - slot{"compexpid": "E000200"}
-    - slot{"expid": 56331}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "No"}
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "No"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-## Generated Story 2477778495865934915
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "russel-2015"}
-    - slot{"compexpid": "E000203"}
-    - slot{"expid": 56334}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* enterdata
-    - action_attach_receipt
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000203", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56334, "expname": "russel-2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000202", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56333, "expname": "nasa 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000201", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56332, "expname": "nasa 2018", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nasa 2018"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000177"}
-    - slot{"expid": 56297}
-    - followup{"name": "action_listen"}
-* affirm{"appr_or_rej": "approve"}
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "Very good work"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-* addlineitem
-    - action_addlineitem_to_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "camera"}
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "camera"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "attach"}
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "attach"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay 
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000194", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56321, "expname": "nov 2016", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000193", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56319, "expname": "december 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000192", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56318, "expname": "xyz", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "nov 2016"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay  
-    - action_slot_reset     
-## Generated Story 2848295067655817418
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve
-    - action_approve_report
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "good work"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "trip_newyork"}
-    - slot{"compexpid": "E000205"}
-    - slot{"expid": 56336}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* opencamera
-    - action_open_camera
-    - slot{"no_more_receipts": "camera"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* attachreceipt
-    - action_attach_receipt
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000205", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56336, "expname": "trip_newyork", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000204", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56335, "expname": "xyz trip", "reportType": "report", "travType": "Expense"}, {"amt": "125.00", "compexpid": "E000203", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56334, "expname": "russel-2015", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "xyz trip"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub": "submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* reject
-    - action_reject_report
-    - slot{"appr_or_rej": "reject"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "fake details"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000205", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56336, "expname": "trip_newyork", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000204", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56335, "expname": "xyz trip", "reportType": "report", "travType": "Expense"}, {"amt": "245.00", "compexpid": "E000203", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56334, "expname": "russel-2015", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "xyz trip"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit
-    - action_submitpdr_report
-    - slot{"adlt_or_sub": "sumbit"}
-    - action_submit_report
-    - reset_slots
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve{"appr_or_rej": "approve"}
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-## Generated Story -1152944773577057022
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve{"appr_or_rej": "approve"}
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-## Generated Story 3
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "hims meet"}
-    - slot{"compexpid": "E000200"}
-    - slot{"expid": 56331}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "No"}
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "No"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve{"appr_or_rej": "approve"}
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-## Generated Story -6135534706895138843
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve
-    - action_approve_report
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000177"}
-    - slot{"expid": 56297}
-    - followup{"name": "action_listen"}
-* reject
-    - action_reject_report
-    - slot{"appr_or_rej": "reject"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "please provide correct details"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "120.00", "compexpid": "E000206", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56337, "expname": "west2103", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000205", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56336, "expname": "trip_newyork", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000204", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56335, "expname": "xyz trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "trip_newyork"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit
-    - action_submitpdr_report
-    - slot{"adlt_or_sub": "sumbit"}
-    - action_submit_report
-    - reset_slots
-
-## Generated Story -6
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000176"}
-    - slot{"expid": 56283}
-    - followup{"name": "action_listen"}
-* approve
-    - action_approve_report
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "no reasons"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* showapprvls
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"compexpid": "E000177"}
-    - slot{"expid": 56297}
-    - followup{"name": "action_listen"}
-* reject
-    - action_reject_report
-    - slot{"appr_or_rej": "reject"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "please provide correct details"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "120.00", "compexpid": "E000206", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56337, "expname": "west2103", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000205", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56336, "expname": "trip_newyork", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000204", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56335, "expname": "xyz trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "trip_newyork"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit
-    - action_submitpdr_report
-    - slot{"adlt_or_sub": "sumbit"}
-    - action_submit_report
-    - reset_slots
-* createreport
-    - create_report_form
-    - form{"name": "create_report_form"}
-    - slot{"requested_slot": "name"}
-* form: enterdata
-    - form: create_report_form
-    - slot{"name": "hims meet"}
-    - slot{"compexpid": "E000200"}
-    - slot{"expid": 56331}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "No"}
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "No"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-## Generated Story 1136028023702880312
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000212", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56343, "expname": "hyderAbad", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000211", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56342, "expname": "hyderbad_trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000210", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56341, "expname": "hdhdhj", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "hyderbad_trip"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub": "submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-* addlineitem
-    - action_addlineitem_to_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000212", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56343, "expname": "hyderAbad", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000211", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56342, "expname": "hyderbad_trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000210", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56341, "expname": "hdhdhj", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "hyderAbad"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub":"submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-
-## Generated Story -7429253991622411002
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addlineitem
-    - action_addlineitem_to_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000213", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56344, "expname": "fgsfgdggdggg", "reportType": "report", "travType": "Expense"}, {"amt": "225.00", "compexpid": "E000212", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56343, "expname": "hyderAbad", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000211", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56342, "expname": "hyderbad_trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - slot{"name": "fgsfgdggdggg"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub":"submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-
-## Generated Story -2014172669696819818
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* submit
-    - action_submitpdr_report
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000213", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56344, "expname": "fgsfgdggdggg", "reportType": "report", "travType": "Expense"}, {"amt": "225.00", "compexpid": "E000212", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56343, "expname": "hyderAbad", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000211", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56342, "expname": "hyderbad_trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub": "submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-
-## Generated Story -7993262216048518006
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000213", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56344, "expname": "fgsfgdggdggg", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000211", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56342, "expname": "hyderbad_trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000210", "displayType": "Expense", "expdt": "Apr 23, 2019", "expid": 56341, "expname": "hdhdhj", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
+    - slot{"expid": 56458}
+    - slot{"name": "david-jan-1"}
     - followup{"name": "utter_ask_addline"}
     - utter_ask_addline
-* addlineitem{"adlt_or_sub": "addlineitem"}
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "No"}
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "No"}
-    - form: followup{"name": "utter_ask_submit_report"}
+* addlineitem{"navto": "receipt"}
+    - slot{"navto": "receipt"}
+    - action_navigate
+    - reset_slots
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* approve{"appr_or_rej": "approve"}
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "looks good"}
+    - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-
-## Generated Story -1299139777205908949
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* pendingreport
-    - action_pending_report
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit{"adlt_or_sub": "submit"}
-    - slot{"adlt_or_sub": "submit"}
-    - action_submit_report
-    - reset_slots
-
-## Generated Story 7483536591405322101
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* pendingreport
-    - action_pending_report
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "utter_ask_addline_or_submit"}
-    - utter_ask_addline_or_submit
-* submit
-    - action_submitpdr_report
-    - slot{"adlt_or_sub": "sumbit"}
-    - action_submit_report
-    - reset_slots
-
-## Generated Story -6892342278877612769
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - followup{"name": "action_listen"}
-* go_to_approvals
-    - action_goto_approvals
-    - reset_slots
-
-## Generated Story -6106599940083195364
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - followup{"name": "action_listen"}
-* go_to_approvals
-    - action_goto_approvals
-    - reset_slots
-
-## Generated Story -7557906947663114339
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - followup{"name": "action_listen"}
-* go_to_approvals
-    - action_goto_approvals
-    - reset_slots
-
-## Generated Story 5188960408398298158
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - followup{"name": "action_listen"}
-* go_to_approvals
-    - action_goto_approvals
-    - reset_slots
-
-## Generated Story -8232179941413663026
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* pendingreport
-    - action_pending_report
-    - followup{"name": "action_listen"}
-* go_to_pendingreports
-    - action_goto_pendingreports
-    - reset_slots
-
-## Generated Story -4581384462436713929
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* pendingreport
-    - action_pending_report
-    - followup{"name": "action_listen"}
-* go_to_pendingreports
-    - action_goto_pendingreports
-    - reset_slots
-
-## Generated Story 4803286594066648310
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* go_to_approvals
-    - action_goto_approvals
-    - reset_slots
-
-## Generated Story -4616818450458811404
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - followup{"name": "action_listen"}
-* go_to_pendingreports
-    - action_goto_pendingreports
-    - reset_slots
-
-## Generated Story -3098775243866405528
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000216", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56350, "expname": "gfgfdgfgfgddfgsrwetwt", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000215", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56349, "expname": "hyd_1245", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000214", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56348, "expname": "hyderabad_trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - followup{"name": "utter_ask_addline"}
-    - utter_ask_addline
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-* go_to_pendingreports
-    - action_goto_pendingreports
-    - reset_slots
-
-## Generated Story 849844126166911991
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000216", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56350, "expname": "gfgfdgfgfgddfgsrwetwt", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000215", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56349, "expname": "hyd_1245", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000214", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56348, "expname": "hyderabad_trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - followup{"name": "utter_ask_addline"}
-    - utter_ask_addline
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* attachreceipt
-    - action_attach_receipt
-    - slot{"no_more_receipts": "attach"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_receipt"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* affirm
-    - action_submit_report
-    - reset_slots
-    - utter_okay
-
-## Generated Story -8384750071389708136
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000218", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56352, "expname": "summit 2000", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000217", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56351, "expname": "Belgium Trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000216", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56350, "expname": "gfgfdgfgfgddfgsrwetwt", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* greet
-    - utter_greet
     - utter_do
-* createreport{"name": "Begium Trip"}
-    - slot{"name": "Begium Trip"}
+
+## init+crt rpt+deactivate
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* createreport
     - create_report_form
     - form{"name": "create_report_form"}
-    - slot{"compexpid": "E000219"}
-    - slot{"expid": 56353}
+    - slot{"requested_slot": "crt_name"}
+* form: deactivate_report
+    - form: create_report_form
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_ask_receipt
-* choose{"no_more_receipts": "No"}
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - slot{"no_more_receipts": "No"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000219", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56353, "expname": "Begium Trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000218", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56352, "expname": "summit 2000", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000217", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56351, "expname": "Belgium Trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - followup{"name": "utter_ask_addline"}
-    - utter_ask_addline
-* addlineitem
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
+    - utter_do
 
-## Generated Story 302293593542108687
+
+## crt rpt+deactivate
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: deactivate_report
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+
+## appr+is bot+whts possible
 * init
     - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000219", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56353, "expname": "Begium Trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000218", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56352, "expname": "summit 2000", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000217", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56351, "expname": "Belgium Trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - followup{"name": "utter_ask_addline"}
-    - utter_ask_addline
-* addlineitem
-    - action_addlineitem_to_report
-    - slot{"adlt_or_sub": "addlineitem"}
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
-* deny
-    - utter_okay
-    - action_slot_reset
-    - reset_slots
-* pendingreport
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000219", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56353, "expname": "Begium Trip", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000218", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56352, "expname": "summit 2000", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000217", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56351, "expname": "Belgium Trip", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
+* ask_isbot
+    - utter_ask_whoisit
+* ask_whatspossible
+    - utter_ask_whatspossible
+
+## appr+is bot+whts possible
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
-* enterdata
-    - action_select_report
-    - followup{"name": "utter_ask_addline"}
-    - utter_ask_addline
-* addlineitem
-    - utter_ask_receipt
-* noreceipts
-    - action_no_receipt
-    - slot{"no_more_receipts": "No"}
-    - add_receipt_form
-    - form{"name": "add_receipt_form"}
-    - form: followup{"name": "utter_ask_submit_report"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_submit_report
+* ask_isbot
+    - utter_ask_whoisit
+* ask_whatspossible
+    - utter_ask_whatspossible
+
+## FAQ STORIES
+* ask_contactsupport
+    - utter_contact_support
+* ask_Re-asinging_credit_card 
+    - utter_reassign_cc_tran
+* ask_view_transactions
+    - utter_view_tran
+* ask_local_vs_Travel
+    - utter_local_vs_travel
+* ask_billable_vs_reimbursable
+    - utter_reimbursable_or_billable
+* ask_delete_corporate_card_tran
+    - utter_delete_corporate_card_tran
+* Exporting_Expense_Reports
+    - utter_Exporting_Expense_Reports
+* reimbersebment_to_employees 
+    - utter_reimbersebment_to_employees
+* automatic_email_ACH
+    - utter_automatic_email_ACH
+* copy_line_items
+    - utter_copy_line_items
+* notif_fin_users
+    - utter_notif_fin_users
+* notif_new_users
+    - utter_notif_new_users
+* email_notif
+    - utter_email_noifs
+## appr+ affirm to apprv +crt rpt+add litm+nav rec+ pending+nav trans
+
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
 * affirm
-    - action_submit_report
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "great work"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"crt_name": "france meet 2019"}
+    - slot{"compexpid": "E000304"}
+    - slot{"expid": 56459}
+    - slot{"name": "france meet 2019"}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* addlineitem{"navto": "receipt"}
+    - slot{"navto": "receipt"}
+    - action_navigate
     - reset_slots
-    - utter_okay
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000304", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56459, "expname": "france meet 2019", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000303", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56458, "expname": "david-jan-1", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000302", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56457, "expname": "dec_mar2564", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56459}
+    - slot{"name": "france meet 2019"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "transaction"}
+    - slot{"navto": "transaction"}
+    - action_navigate
+    - reset_slots
 
-## Generated Story 1473131247957466830
-* init
-    - action_first_message
-    - followup{"name": "action_pending_report"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* submit
-    - action_submitpdr_report
-    - slot{"adlt_or_sub": "sumbit"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* submit
-    - action_submitpdr_report
-    - slot{"adlt_or_sub": "sumbit"}
-    - action_pending_report
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-
-## Generated Story -1446976448454862857
+## appr+pending+slct rpt+add litm nav trasc
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
-    - slot{"expid": 56297}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
-* reject{"appr_or_rej": "reject"}
-    - slot{"appr_or_rej": "reject"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "bad work"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000305", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56460, "expname": "france 20156", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000304", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56459, "expname": "france meet 2019", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000303", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56458, "expname": "david-jan-1", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* selectionreport
+    - action_select_report
+    - slot{"expid": 56458}
+    - slot{"name": "david-jan-1"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "transaction"}
+    - slot{"navto": "transaction"}
+    - action_navigate
+    - reset_slots
 
-## Generated Story 1683025201661693406
+## appr+
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
-    - slot{"expid": 56297}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* deactivate_report
+    - utter_do
+* ask_isbot
+    - utter_ask_whoisit
+* ask_whatspossible
+    - utter_ask_whatspossible
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000305", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56460, "expname": "france 20156", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000304", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56459, "expname": "france meet 2019", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000303", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56458, "expname": "david-jan-1", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* deny
+    - utter_do
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
 * reject
     - action_reject_report
@@ -1711,43 +423,25 @@
     - slot{"requested_slot": "comments"}
 * form: enterdata
     - form: approve_report_form
-    - slot{"comments": "fake details"}
+    - slot{"comments": "no reasons"}
     - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
+    - utter_do
+* navigation{"navto": "transactions"}
+    - slot{"navto": "transactions"}
+    - action_navigate
+    - slot{"navto": null}
 
-## Generated Story 5048305882051480063
+## Generated Story 7611420521860877996
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
-    - slot{"expid": 56297}
-    - followup{"name": "action_listen"}
-* reject
-    - action_reject_report
-    - slot{"appr_or_rej": "reject"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "hjhdsajash"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story -9023445722911124636
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - slot{"expid": 56297}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
 * approve{"appr_or_rej": "approve"}
     - slot{"appr_or_rej": "approve"}
@@ -1756,20 +450,47 @@
     - slot{"requested_slot": "comments"}
 * form: enterdata
     - form: approve_report_form
-    - slot{"comments": "good work"}
+    - slot{"comments": "great work"}
     - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story 7509165579018518049
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
+    - utter_do
+* createreport{"crt_name": "david - jan 2015"}
+    - slot{"crt_name": "david - jan 2015"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000317"}
+    - slot{"expid": 56472}
+    - slot{"name": "david - jan 2015"}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000317", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56472, "expname": "david - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000316", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56471, "expname": "dravid - dec 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000315", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56470, "expname": "edvgvg", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* selectionreport
+    - action_select_report
+    - slot{"expid": 56470}
+    - slot{"name": "edvgvg"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots
+* showapprvls
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
-    - slot{"expid": 56297}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
 * approve
     - action_approve_report
@@ -1779,522 +500,1073 @@
     - slot{"requested_slot": "comments"}
 * form: enterdata
     - form: approve_report_form
-    - slot{"comments": "good work"}
+    - slot{"comments": "no comments"}
     - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story -8794375039170859815
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - slot{"expid": 56297}
-    - followup{"name": "action_listen"}
-* approve
-    - action_approve_report
-    - slot{"appr_or_rej": "approve"}
-    - approve_report_form
-    - form{"name": "approve_report_form"}
-    - slot{"requested_slot": "comments"}
-* form: enterdata
-    - form: approve_report_form
-    - slot{"comments": "hdshfashfasfh"}
-    - form: reset_slots
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-
-
-<!-- Import transactions stories -->
-
-
-## Generated Story -127173379372017192
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"startdate": "jan 15th", "enddate": "jan 20th", "name": "trip to xzy"}
-    - slot{"enddate": "jan 20th"}
-    - slot{"name": "trip to xzy"}
-    - slot{"startdate": "jan 15th"}
-    - action_check_name
-    - followup{"name": "import_tran_form"}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_do
 * bye
     - utter_goodbye
 
-## Generated Story 8344576525336199802
+## appr 
+
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
-* addtransaction{"cardname": "visa", "name": "kellogs summit"}
-    - slot{"cardname": "visa"}
-    - slot{"name": "kellogs summit"}
-    - action_check_name
-    - followup{"name": "import_tran_form"}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "no comments"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000317", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56472, "expname": "david - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000316", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56471, "expname": "dravid - dec 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000315", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56470, "expname": "edvgvg", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* selectionreport
+    - action_select_report
+    - slot{"expid": 56470}
+    - slot{"name": "edvgvg"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots    
+## Generated Story -271892755880691866
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "nice work"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+## appr full
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "nice work"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do    
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000317", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56472, "expname": "david - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000316", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56471, "expname": "dravid - dec 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000315", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56470, "expname": "edvgvg", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* selectionreport
+    - action_select_report
+    - slot{"expid": 56470}
+    - slot{"name": "edvgvg"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots 
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "nice work"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+* createreport{"crt_name": "david - jan 20156"}
+    - slot{"crt_name": "david - jan 2015"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000317"}
+    - slot{"expid": 56472}
+    - slot{"name": "david - jan 2015"}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots 
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000317", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56472, "expname": "david - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000316", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56471, "expname": "dravid - dec 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000315", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56470, "expname": "edvgvg", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* selectionreport
+    - action_select_report
+    - slot{"expid": 56470}
+    - slot{"name": "edvgvg"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots  
+## Generated Story 2136666136834785677
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000317", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56472, "expname": "david - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000316", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56471, "expname": "dravid - dec 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000315", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56470, "expname": "edvgvg", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56471}
+    - slot{"name": "dravid - dec 2015"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* addlineitem{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots
+
+## Generated Story -6541730143017437818
+* createreport{"crt_name": "dhoni - mar 569"}
+    - slot{"crt_name": "dhoni - mar 569"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000318"}
+    - slot{"expid": 56473}
+    - slot{"name": "dhoni - mar 569"}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* addlineitem{"navto": "transactions"}
+    - slot{"navto": "transactions"}
+    - action_navigate
+    - reset_slots
+
+## Generated Story 1603887209364330886
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* reject
+    - action_reject_report
+    - slot{"appr_or_rej": "reject"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "not impressed"}
+    - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_do
 
-## Generated Story 280418395808632469
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"cardname": "amex"}
-    - slot{"cardname": "amex"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
+## Generated Story 6965292365299225091
+* createreport{"crt_name": "lasya - trip 1"}
+    - slot{"crt_name": "lasya - trip 1"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000320"}
+    - slot{"expid": 56475}
+    - slot{"name": "lasya - trip 1"}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* navigation{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots
+
+## Generated Story -7665890323544739568
+* addlineitem
+    - action_addlineitem_to_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000322", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56477, "expname": "hyd-usa", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000321", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56476, "expname": "dev - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000320", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56475, "expname": "lasya - trip 1", "reportType": "report", "travType": "Expense"}]}
     - slot{"appr_or_pend": "pend"}
     - followup{"name": "action_listen"}
 * enterdata
-    - action_select_for_tran
-    - slot{"name": "keras 2015"}
-    - slot{"expid": 56357}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story 7259234020314249073
+    - action_select_report
+    - slot{"expid": 56477}
+    - slot{"name": "hyd-usa"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* navigation{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots
+## direct addlineitm
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* addlineitem
+    - action_addlineitem_to_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000322", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56477, "expname": "hyd-usa", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000321", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56476, "expname": "dev - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000320", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56475, "expname": "lasya - trip 1", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56477}
+    - slot{"name": "hyd-usa"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* navigation{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots
+## appr+addlinitem direct
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "nice work"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do    
+* addlineitem
+    - action_addlineitem_to_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000322", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56477, "expname": "hyd-usa", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000321", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56476, "expname": "dev - jan 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000320", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56475, "expname": "lasya - trip 1", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56477}
+    - slot{"name": "hyd-usa"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* navigation{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots   
+## Generated Story -36184388130007689456
+
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56453}
+    - slot{"name": "fdf"}
+    - followup{"name": "utter_ask_addline_or_submit"}
+    - utter_ask_addline_or_submit
+* submit{"adlt_or_sub": "submit"}
+    - slot{"adlt_or_sub": "submit"}
+    - action_submit_report
+    - reset_slots
+    - utter_do
+
+## Generated Story -3618438813000768949
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
     - followup{"name": "action_listen"}
-* addtransaction{"startdate": "25th jan", "enddate": "13th feb", "name": "dec_2015"}
-    - slot{"enddate": "13th feb"}
-    - slot{"name": "dec_2015"}
-    - slot{"startdate": "25th jan"}
-    - action_check_name
-    - followup{"name": "import_tran_form"}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56447}
+    - slot{"name": "demo"}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "looks good"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "displayType": "Expense", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56453}
+    - slot{"name": "fdf"}
+    - followup{"name": "utter_ask_addline_or_submit"}
+    - utter_ask_addline_or_submit
+* submit{"adlt_or_sub": "submit"}
+    - slot{"adlt_or_sub": "submit"}
+    - action_submit_report
+    - reset_slots
+    - utter_do
+
+## Generated Story 5593426817140986571
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56448}
+    - slot{"name": "trip to belgium"}
+    - followup{"name": "utter_ask_addline_or_submit"}
+    - utter_ask_addline_or_submit
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_submit_report"}
+    - action_submit_report
+    - reset_slots
+    - utter_do
+## only pending report    
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56448}
+    - slot{"name": "trip to belgium"}
+    - followup{"name": "utter_ask_addline_or_submit"}
+    - utter_ask_addline_or_submit
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_submit_report"}
+    - action_submit_report
+    - reset_slots
+
+## only submit report
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56479}
+    - slot{"name": "create report"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_submit_report"}
+    - action_submit_report
+    - reset_slots
+## appr+sub
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56447}
+    - slot{"name": "demo"}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "looks good"}
+    - form: reset_slots
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56479}
+    - slot{"name": "create report"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_submit_report"}
+    - action_submit_report
+    - reset_slots
+    - utter_do
+## Generated Story 8156501687698676135
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56447}
+    - slot{"name": "demo"}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "looks good"}
+    - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_do
 
-## Generated Story 2025756804259586360
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
+## Generated Story 6907662549035477484
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56448}
+    - slot{"name": "trip to belgium"}
+    - followup{"name": "utter_ask_addline_or_submit"}
+    - utter_ask_addline_or_submit
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* showapprvls
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
+    - slot{"name": "demo"}
+    - slot{"expid": 56447}
     - followup{"name": "action_listen"}
-* addtransaction
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "paris20156"}
-    - slot{"expid": 56355}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "travel"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story 4844683948083742181
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"cardname": "visa"}
-    - slot{"cardname": "visa"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "entertainment"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-
-## Generated Story 8498230392749684680
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"startmonth": "jan", "endmonth": "feb"}
-    - slot{"endmonth": "feb"}
-    - slot{"startmonth": "jan"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "travel"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-
-## Generated Story 7896279625768852495
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"startmonth": "march"}
-    - slot{"startmonth": "march"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "meals"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story 2308209036213039520
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "meals"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story -8066507123874709233
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"startdate": "25th jan", "endmonth": "feb", "cardname": "amex"}
-    - slot{"cardname": "amex"}
-    - slot{"endmonth": "feb"}
-    - slot{"startdate": "25th jan"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "entertainment"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story -1432530016390725505
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction{"endmonth": "dec"}
-    - slot{"endmonth": "dec"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "paris20156"}
-    - slot{"expid": 56355}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
+* reject
+    - action_reject_report
+    - slot{"appr_or_rej": "reject"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "not impressed"}
     - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story 433574392646596492
+    - utter_do  
+## pend+pend      
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56448}
+    - slot{"name": "trip to belgium"}
+    - followup{"name": "utter_ask_addline_or_submit"}
+    - utter_ask_addline_or_submit
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000324", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56479, "expname": "create report", "reportType": "report", "travType": "Expense"}, {"amt": "148.73", "compexpid": "E000296", "displayType": "Expense", "expdt": "May 1, 2019", "expid": 56449, "expname": "demo - 94", "reportType": "report", "travType": "Expense"}, {"amt": "10.00", "compexpid": "E000295", "displayType": "Expense", "expdt": "May 2, 2019", "expid": 56448, "expname": "trip to belgium", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+## Generated Story -8817791663014818223
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
     - followup{"name": "action_listen"}
-* addtransaction{"cardname": "amex"}
-    - slot{"cardname": "amex"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
+* createreport{"crt_name": "feb"}
+    - slot{"crt_name": "feb"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"crt_name": null}
+    - form: followup{"name": "create_report_form"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"crt_name": "march"}
+    - slot{"compexpid": "E000330"}
+    - slot{"expid": 56485}
+    - slot{"name": "march"}
+    - slot{"crt_name": null}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"crt_name": "march 13th"}
+    - slot{"compexpid": "E000332"}
+    - slot{"expid": 56487}
+    - slot{"name": "march 13th"}
+    - slot{"crt_name": null}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* navigation{"navto": "receipts"}
+    - slot{"navto": "receipts"}
+    - action_navigate
+    - reset_slots
+
+## Generated Story 6430766980111527535
+* submittedreport
+    - action_submited_report
+    - slot{"appr_report_list": [{"amt": "1783.78", "appby": "Harry Wilson", "compexpid": "E000031", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 27, 2019", "expid": 55906, "expname": "Trip  to SFO", "reportType": "report", "status": "Approved", "travType": "Expense"}, {"amt": "2788.05", "appby": "Approver Two", "compexpid": "E000031-3", "convert": "N", "dspmsg": "Rejected", "expdt": "Feb 27, 2019", "expid": 55917, "expname": "Trip  to SFO-3", "reportType": "report", "status": "Rejected", "travType": "Expense"}, {"amt": "156.00", "appby": "Harry Wilson", "compexpid": "E000029", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 25, 2019", "expid": 55904, "expname": "Trip to Mumbai", "reportType": "report", "status": "Approved", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+
+
+## Generated Story 2519388338953488581
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* submittedreport
+    - action_submited_report
+    - slot{"appr_report_list": [{"amt": "1783.78", "appby": "Harry Wilson", "compexpid": "E000031", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 27, 2019", "expid": 55906, "expname": "Trip  to SFO", "reportType": "report", "status": "Approved", "travType": "Expense"}, {"amt": "2788.05", "appby": "Approver Two", "compexpid": "E000031-3", "convert": "N", "dspmsg": "Rejected", "expdt": "Feb 27, 2019", "expid": 55917, "expname": "Trip  to SFO-3", "reportType": "report", "status": "Rejected", "travType": "Expense"}, {"amt": "156.00", "appby": "Harry Wilson", "compexpid": "E000029", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 25, 2019", "expid": 55904, "expname": "Trip to Mumbai", "reportType": "report", "status": "Approved", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: enterdata
+    - form: create_report_form
+    - slot{"crt_name": "travel to china"}
+    - slot{"compexpid": "E000339"}
+    - slot{"expid": 56494}
+    - slot{"name": "travel to china"}
+    - slot{"crt_name": null}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* addlineitem{"navto": "transaction"}
+    - slot{"navto": "transaction"}
+    - action_navigate
+    - reset_slots
+## sub+ bye
+* submittedreport
+    - action_submited_report
+    - slot{"appr_report_list": [{"amt": "1783.78", "appby": "Harry Wilson", "compexpid": "E000031", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 27, 2019", "expid": 55906, "expname": "Trip  to SFO", "reportType": "report", "status": "Approved", "travType": "Expense"}, {"amt": "2788.05", "appby": "Approver Two", "compexpid": "E000031-3", "convert": "N", "dspmsg": "Rejected", "expdt": "Feb 27, 2019", "expid": 55917, "expname": "Trip  to SFO-3", "reportType": "report", "status": "Rejected", "travType": "Expense"}, {"amt": "156.00", "appby": "Harry Wilson", "compexpid": "E000029", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 25, 2019", "expid": 55904, "expname": "Trip to Mumbai", "reportType": "report", "status": "Approved", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* bye
+    - utter_goodbye    
+## Generated Story -3130274903860487901
+* navigation{"navto": "submitted"}
+    - slot{"navto": "submitted"}
+    - action_navigate
+    - slot{"navto": null}
+
+## Generated Story -5193097595894736089
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000348", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56503, "expname": "create new report with the name czsertg", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000347", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56502, "expname": "create a new report with the name fvxzsdfnm", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000346", "displayType": "Expense", "expdt": "May 6, 2019", "expid": 56501, "expname": "i changed my mind", "reportType": "report", "travType": "Expense"}]}
     - slot{"appr_or_pend": "pend"}
     - followup{"name": "action_listen"}
 * enterdata
-    - action_select_for_tran
-    - slot{"name": "paris20156"}
-    - slot{"expid": 56355}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
+    - action_select_report
+    - slot{"expid": 56503}
+    - slot{"name": "create new report with the name czsertg"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_submit_report"}
+    - action_submit_report
+    - reset_slots
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: deactivate_report
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_do
+* submittedreport
+    - action_submited_report
+    - slot{"appr_report_list": [{"amt": "1783.78", "appby": "Harry Wilson", "compexpid": "E000031", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 27, 2019", "expid": 55906, "expname": "Trip  to SFO", "reportType": "report", "status": "Approved", "travType": "Expense"}, {"amt": "2788.05", "appby": "Approver Two", "compexpid": "E000031-3", "convert": "N", "dspmsg": "Rejected", "expdt": "Feb 27, 2019", "expid": 55917, "expname": "Trip  to SFO-3", "reportType": "report", "status": "Rejected", "travType": "Expense"}, {"amt": "156.00", "appby": "Harry Wilson", "compexpid": "E000029", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 25, 2019", "expid": 55904, "expname": "Trip to Mumbai", "reportType": "report", "status": "Approved", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+
+## Generated Story -1690422908205675008
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: deactivate_report
+    - form: create_report_form
+    - reset_slots
+    - slot{"requested_slot": "crt_name"}
+    - utter_do
+## Generated Story 6898451368154344173
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: pendingreport
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - reset_slots
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000351", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56508, "expname": "vbjkgds", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000350", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56507, "expname": "tesdddd", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000349", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56506, "expname": "holi trip 2018", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+
+## Generated Story 7342883999771693173
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: pendingreport
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - reset_slots
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000351", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56508, "expname": "vbjkgds", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000350", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56507, "expname": "tesdddd", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000349", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56506, "expname": "holi trip 2018", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+
+## Generated Story -6871196488810122248
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: greet
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - reset_slots
+    - followup{"name": "utter_greet"}
+    - utter_greet
+    - utter_do
+
+## Generated Story -8036963733749944680
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* ask_isbot
+    - utter_ask_whoisit
+* submit
+    - action_submitpdr_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000352", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56510, "expname": "holi 2", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000351", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56508, "expname": "vbjkgds", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000350", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56507, "expname": "tesdddd", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+
+## Generated Story 141740951319225164
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: deactivate_report
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - reset_slots
+    - followup{"name": "utter_do"}
+    - utter_do
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000352", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56510, "expname": "holi 2", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000351", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56508, "expname": "vbjkgds", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000350", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56507, "expname": "tesdddd", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"expid": 56510}
+    - slot{"name": "holi 2"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* navigation{"navto": "transactions"}
+    - slot{"navto": "transactions"}
+    - action_navigate
+    - reset_slots
+* createreport{"crt_name": "repo 245"}
+    - slot{"crt_name": "repo 245"}
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"compexpid": "E000353"}
+    - slot{"expid": 56512}
+    - slot{"name": "repo 245"}
+    - slot{"crt_name": null}
+    - form: followup{"name": "utter_ask_addline"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_ask_addline
+* deactivate_report
+    - utter_do
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000353", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56512, "expname": "repo 245", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000352", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56510, "expname": "holi 2", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000351", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56508, "expname": "vbjkgds", "reportType": "report", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "pend"}
+    - followup{"name": "action_listen"}
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56447}
+    - slot{"name": "demo"}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "looks fine"}
     - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
+    - utter_do
+* showapprvls
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56447}
+    - slot{"name": "demo"}
+    - followup{"name": "action_listen"}
+* approve{"appr_or_rej": "approve"}
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: submittedreport
+    - form: approve_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - reset_slots
+    - followup{"name": "action_submited_report"}
+    - action_submited_report
+    - slot{"appr_report_list": [{"amt": "1783.78", "appby": "Harry Wilson", "compexpid": "E000031", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 27, 2019", "expid": 55906, "expname": "Trip  to SFO", "reportType": "report", "status": "Approved", "travType": "Expense"}, {"amt": "2788.05", "appby": "Approver Two", "compexpid": "E000031-3", "convert": "N", "dspmsg": "Rejected", "expdt": "Feb 27, 2019", "expid": 55917, "expname": "Trip  to SFO-3", "reportType": "report", "status": "Rejected", "travType": "Expense"}, {"amt": "156.00", "appby": "Harry Wilson", "compexpid": "E000029", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 25, 2019", "expid": 55904, "expname": "Trip to Mumbai", "reportType": "report", "status": "Approved", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* bye
+    - utter_goodbye
 
-## Generated Story 3873571994545477240
-* addtransaction{"cardname": "amex"}
-    - slot{"cardname": "amex"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
+## Generated Story 1572186986822833651
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* deactivate_report
+    - utter_do
+* addlineitem
+    - action_addlineitem_to_report
+    - followup{"name": "action_pending_report"}
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000355", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56514, "expname": "june", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000354", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56513, "expname": "france trip 45667653", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000353", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56512, "expname": "repo 245", "reportType": "report", "travType": "Expense"}]}
     - slot{"appr_or_pend": "pend"}
     - followup{"name": "action_listen"}
 * enterdata
-    - action_select_for_tran
-    - slot{"name": "paris20156"}
-    - slot{"expid": 56355}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
+    - action_select_report
+    - slot{"expid": 56512}
+    - slot{"name": "repo 245"}
+    - followup{"name": "utter_ask_addline"}
+    - utter_ask_addline
+* navigation{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - action_navigate
+    - reset_slots
+* greet
+    - utter_greet
+    - utter_do
+
+## Generated Story -6898061343903005116
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* deactivate_report
+    - utter_do
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: navigation{"navto": "camera"}
+    - slot{"navto": "camera"}
+    - form: create_report_form
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - followup{"name": "action_navigate"}
+    - action_navigate
+    - slot{"navto": null}
+
+## Generated Story 6258393031449843133
+* init
+    - action_first_message
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - followup{"name": "action_display_appr_report"}
+    - action_display_appr_report
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_or_pend": "appr"}
+    - followup{"name": "action_listen"}
+* enterdata
+    - action_select_report
+    - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56236}
+    - slot{"name": "June 2018"}
+    - followup{"name": "action_listen"}
+* approve
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "great work"}
     - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
+    - utter_do
 
-## Generated Story -1187215393978970460
+## Generated Story 3131831893104994301
 * init
     - action_first_message
     - followup{"name": "action_display_appr_report"}
     - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - slot{"appr_report_list": [{"amt": "4.00", "compexpid": "E000299", "crtuserid": "9364", "currency": "USD", "expdt": "May 3, 2019", "expid": 56453, "expname": "fdf", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "136.73", "compexpid": "E000294", "crtuserid": "9364", "currency": "USD", "expdt": "May 2, 2019", "expid": 56447, "expname": "demo", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "20.00", "compexpid": "E000141", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 12, 2019", "expid": 56236, "expname": "June 2018", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
     - slot{"appr_or_pend": "appr"}
     - followup{"name": "action_listen"}
-* addtransaction
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
 * enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "travel"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story -7096556509328038462
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
+    - action_select_report
+    - followup{"name": "action_listen"}
+* selectionreport
+    - action_select_report
     - slot{"appr_or_pend": "appr"}
+    - slot{"expid": 56453}
+    - slot{"name": "fdf"}
     - followup{"name": "action_listen"}
-* addtransaction{"line_category": "meals"}
-    - slot{"line_category": "meals"}
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
-    - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
+* affirm
+    - action_approve_report
+    - slot{"appr_or_rej": "approve"}
+    - approve_report_form
+    - form{"name": "approve_report_form"}
+    - slot{"requested_slot": "comments"}
+* form: enterdata
+    - form: approve_report_form
+    - slot{"comments": "nice work"}
+    - form: reset_slots
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story 835017215500358094
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
-    - slot{"appr_or_pend": "pend"}
+    - utter_do
+* submittedreport
+    - action_submited_report
+    - slot{"appr_report_list": [{"amt": "1783.78", "appby": "Harry Wilson", "compexpid": "E000031", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 27, 2019", "expid": 55906, "expname": "Trip  to SFO", "reportType": "report", "status": "Approved", "travType": "Expense"}, {"amt": "2788.05", "appby": "Approver Two", "compexpid": "E000031-3", "convert": "N", "dspmsg": "Rejected", "expdt": "Feb 27, 2019", "expid": 55917, "expname": "Trip  to SFO-3", "reportType": "report", "status": "Rejected", "travType": "Expense"}, {"amt": "156.00", "appby": "Harry Wilson", "compexpid": "E000029", "convert": "N", "dspmsg": "Approved", "expdt": "Feb 25, 2019", "expid": 55904, "expname": "Trip to Mumbai", "reportType": "report", "status": "Approved", "travType": "Expense"}]}
+    - slot{"appr_or_pend": "sub"}
     - followup{"name": "action_listen"}
 * enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "entertainment"}
+    - action_select_report
+    - slot{"appr_or_pend": "sub"}
+    - followup{"name": "action_listen"}
+* greet
+    - utter_greet
+    - utter_do
+* ask_whatspossible
+    - utter_ask_whatspossible
+* createreport
+    - create_report_form
+    - form{"name": "create_report_form"}
+    - slot{"requested_slot": "crt_name"}
+* form: deactivate_report
+    - form: create_report_form
     - form{"name": null}
     - slot{"requested_slot": null}
-    - utter_okay
-
-## Generated Story -4073575265265515439
-* init
-    - action_first_message
-    - followup{"name": "action_display_appr_report"}
-    - action_display_appr_report
-    - slot{"appr_report_list": [{"amt": "132.00", "compexpid": "E000177", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 22, 2019", "expid": 56297, "expname": "dec 25th", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "152.00", "compexpid": "E000176", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56283, "expname": "june_trip", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}, {"amt": "235.00", "compexpid": "E000173", "crtuserid": "9364", "currency": "USD", "expdt": "Apr 18, 2019", "expid": 56280, "expname": "Sherry November 2015", "reportType": "report", "requestType": "Expense", "subby": "Admin Web"}]}
-    - slot{"appr_or_pend": "appr"}
-    - followup{"name": "action_listen"}
-* addtransaction
-    - action_check_name
-    - followup{"name": "action_display_tran_reports"}
-    - action_display_tran_reports
-    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000223", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56357, "expname": "keras 2015", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000222", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56356, "expname": "keras_125", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000221", "displayType": "Expense", "expdt": "Apr 24, 2019", "expid": 56355, "expname": "paris20156", "reportType": "report", "travType": "Expense"}]}
+    - reset_slots
+    - followup{"name": "utter_do"}
+    - utter_do
+* pendingreport
+    - action_pending_report
+    - slot{"appr_report_list": [{"amt": "0.00", "compexpid": "E000359", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56518, "expname": "create new report with name pras", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000358", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56517, "expname": "jdjdkflg", "reportType": "report", "travType": "Expense"}, {"amt": "0.00", "compexpid": "E000357", "displayType": "Expense", "expdt": "May 7, 2019", "expid": 56516, "expname": "ghbcx", "reportType": "report", "travType": "Expense"}]}
     - slot{"appr_or_pend": "pend"}
     - followup{"name": "action_listen"}
-* enterdata
-    - action_select_for_tran
-    - slot{"name": "keras_125"}
-    - slot{"expid": 56356}
-    - import_tran_form
-    - form{"name": "import_tran_form"}
-    - slot{"requested_slot": "line_category"}
-* form: line_category
-    - form: import_tran_form
-    - slot{"line_category": "entertainment"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_okay
 
